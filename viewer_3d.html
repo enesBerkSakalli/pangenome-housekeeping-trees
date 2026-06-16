@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pangenome 3D Variant Trees</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="viewer_3d.css" />
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="eyebrow">Pangenome / Variant Taxa</div>
+      <h1>3D layered gene trees</h1>
+      <p class="lede">
+        Each tree now uses variants as taxa, not aggregate populations. The scene is split into three structural depth layers to keep 250+ leaves legible.
+      </p>
+
+      <section class="panel">
+        <h2>Genes</h2>
+        <div id="gene-buttons" class="gene-buttons"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Selected tree</h2>
+        <div id="gene-meta" class="meta-grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>3D layers</h2>
+        <ul class="layer-list">
+          <li><span class="swatch layer-a"></span>Layer 1: root and trunk clades</li>
+          <li><span class="swatch layer-b"></span>Layer 2: intermediate branches</li>
+          <li><span class="swatch layer-c"></span>Layer 3: outer taxon frontier</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>Leaf colors</h2>
+        <ul class="layer-list">
+          <li><span class="swatch protein"></span>Protein-altering</li>
+          <li><span class="swatch regulatory"></span>Regulatory/splice</li>
+          <li><span class="swatch background"></span>Background</li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="stage-wrap">
+      <div class="stage-header">
+        <div>
+          <div class="eyebrow">Interactive scene</div>
+          <h2 id="scene-title">Loading variant tree</h2>
+        </div>
+        <div class="tips">Drag to orbit. Scroll to zoom. Hover taxa for details.</div>
+      </div>
+      <div id="stage" class="stage"></div>
+      <div id="tooltip" class="tooltip" hidden></div>
+    </main>
+  </div>
+
+  <script src="variant_tree_data.js"></script>
+  <script src="viewer_3d.js"></script>
+</body>
+</html>

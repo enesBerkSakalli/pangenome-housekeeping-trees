@@ -1,0 +1,39 @@
+# Python/runtime state
+.DS_Store
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# Local app/runtime output
+*.log
+*.tmp
+
+# Large generated analysis caches.
+# Regenerate these with the scripts documented in README.md.
+scratch/*
+networks/*
+outputs/*
+outputs_reference/*
+outputs_3d/*
+
+# Keep selected reviewable generated artifacts small enough for a public repo.
+!outputs_3d/
+!outputs_3d/plotly_hyperbolic_stacked_trees.html
+!outputs_3d/plotly_layered_stacked_trees.html
+!outputs_3d/plotly_unrooted_3d_variant_trees.html
+!outputs_3d/stacked_3d_unrooted_layout_audit.json
+!outputs_3d/hyperbolic_stacked_tree_layout_audit.json
+!outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json
+!outputs_3d/Pangenome_Housekeeping_Stacked_Trees_datadivr_audit.json
+!outputs_3d/visualization_review.md
+!outputs_3d/mixed_ancestry_literature_notes.md
+
+# DataDiVR is kept as an external checkout/submodule; do not commit its local env
+# or generated projects from the parent repository.
+external/DataDiVR_WebApp/venv/
+external/DataDiVR_WebApp/static/projects/
+external/DataDiVR_WebApp/.DS_Store

@@ -1,0 +1,303 @@
+diff --git a/static/js/webGL_preview.js b/static/js/webGL_preview.js
+index 7891fe4..1be7b27 100644
+--- a/static/js/webGL_preview.js
++++ b/static/js/webGL_preview.js
+@@ -9,6 +9,7 @@ var actLinks = 0;
+ var linksRGB = [];
+ var linksRGBTemp = [];
+ var actLinksRGB = 0;
++var nodeSizes = [];
+ //var pfile = {"val":{"name":"AUToCOre","layouts":["01-Autocore_globalXYZ","02-Autocore_mix_globalclusterXYZ","03-Autocore_clusterfeaturesXYZ"],"layoutsRGB":["01-Autocore_globalRGB","02-Autocore_mix_globalclusterRGB","03-Autocore_clusterfeaturesRGB"],"links":["Autocore_linksXYZ"],"linksRGB":["Autocore_linksRGB"]},"fn":"project"};
+ var pfile = {};
+ var mesh, renderer, scene, camera, controls;
+@@ -16,6 +17,7 @@ var mesh, renderer, scene, camera, controls;
+ var data = {};
+ var scale = 20; //20
+ const nscale = .045; //0.04
++var globalNodeScale = 1.0;
+ var nodemeshes = [];
+ var linkmeshes = [];
+ var link_ids = [];
+@@ -108,6 +110,22 @@ function getNColor(index) {
+     return color;
+ }
+ 
++function getNodeRadius(index) {
++    if (nodeSizes.length > actLayout && nodeSizes[actLayout] && index < nodeSizes[actLayout].length) {
++        var value = Number(nodeSizes[actLayout][index]);
++        if (Number.isFinite(value)) {
++            return Math.max(0.25, Math.min(2.4, value));
++        }
++    }
++    return 1.0;
++}
++
++function applyNodeRadius(mesh, index) {
++    var radius = getNodeRadius(index);
++    mesh.userData.baseRadius = radius;
++    mesh.scale.set(globalNodeScale * radius, globalNodeScale * radius, globalNodeScale * radius);
++}
++
+ function getLColor(index) {
+     var i = index * 4;
+     var scene = actLinksRGB;
+@@ -219,7 +237,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+         for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
+             if (i < maxNodesPreview) {
+ 
+-                const ngeometry = new THREE.BoxGeometry(nscale, nscale, nscale);
++                const ngeometry = new THREE.SphereGeometry(nscale, 12, 8);
+                 var color = getNColor(i);
+ 
+                 if (color[3] > 100) {
+@@ -242,6 +260,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+                 //const nmaterial = new THREE.MeshBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2])});//"rgb(155, 102, 102)" 
+                 const cube = new THREE.Mesh(ngeometry, nmaterial);
+                 cube.name = i;//;
++                applyNodeRadius(cube, i);
+                 cube.layers.set(0);
+                 nodemeshes.push(cube);
+ 
+@@ -330,7 +349,7 @@ function makeNetwork() {
+         for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
+             if (i < maxNodesPreview) {
+ 
+-                const ngeometry = new THREE.BoxGeometry(nscale, nscale, nscale);
++                const ngeometry = new THREE.SphereGeometry(nscale, 12, 8);
+                 var color = getNColor(i);
+ 
+ 
+@@ -356,6 +375,7 @@ function makeNetwork() {
+ 
+                 const cube = new THREE.Mesh(ngeometry, nmaterial);
+                 cube.name = i;//;
++                applyNodeRadius(cube, i);
+                 cube.layers.set(0);
+                 nodemeshes.push(cube);
+                 
+@@ -509,8 +529,10 @@ function right() {
+ }
+ function nodescale(scale) {
+     //console.log(scale);
++    globalNodeScale = scale;
+     for (let l = 0; l < nodemeshes.length; l++) {
+-        nodemeshes[l].scale.set(scale, scale, scale);
++        var radius = nodemeshes[l].userData.baseRadius || 1.0;
++        nodemeshes[l].scale.set(scale * radius, scale * radius, scale * radius);
+     }
+     indexsphere.scale.set(scale + 2, scale + 2, scale + 2);
+     //render();
+@@ -639,7 +661,21 @@ function clearProject() {
+     actLinks = 0;
+     linksRGB = [];
+     actLinksRGB = 0;
++    nodeSizes = [];
++
++}
+ 
++async function DownloadJSON(url) {
++    try {
++        const response = await fetch(url, { cache: "no-store" });
++        if (!response.ok) {
++            return null;
++        }
++        return await response.json();
++    } catch (error) {
++        console.warn("optional JSON sidecar not loaded", url, error);
++        return null;
++    }
+ }
+ 
+ 
+@@ -672,6 +708,13 @@ async function downloadProjectTextures() {
+         linksRGB.push(await DownloadImage(path));
+     }
+ 
++    if (pfile["nodeSizes"]) {
++        for (let index = 0; index < pfile["nodeSizes"].length; index++) {
++            var path = "/static/projects/" + pfile["name"] + "/nodesizes/" + pfile["nodeSizes"][index] + ".json";
++            nodeSizes.push(await DownloadJSON(path));
++        }
++    }
++
+     makeNetwork(); //
+     var text = '{"id":"x", "success": "true", "fn": "projectLoaded"}';
+     var out = JSON.parse(text);
+@@ -701,4 +744,3 @@ function hexToTHREEColor(hex) {
+     return color;
+ }
+ 
+-
+diff --git a/templates/mLegend.html b/templates/mLegend.html
+index 09ebfc2..e54b6a1 100644
+--- a/templates/mLegend.html
++++ b/templates/mLegend.html
+@@ -183,6 +183,48 @@
+         return div;
+     }
+ 
++    function Legend_uniqueNamedGroups(groups, selectedLayoutName) {
++        const namedGroups = [];
++        const seen = {};
++        if (!Array.isArray(groups)) {
++            return namedGroups;
++        }
++
++        for (const group of groups) {
++            if (!group || !group["name"] || !group["labelcolor"]) {
++                continue;
++            }
++            if ("layoutname" in group && group["layoutname"] !== selectedLayoutName) {
++                continue;
++            }
++            const colorKey = group["labelcolor"].slice(0, 3).join(",");
++            const uniqueKey = colorKey + "::" + group["name"];
++            if (seen[uniqueKey]) {
++                continue;
++            }
++            seen[uniqueKey] = true;
++            namedGroups.push({"name": group["name"], "labelcolor": group["labelcolor"]});
++        }
++        return namedGroups;
++    }
++
++    function Legend_drawNamedGroups(namedGroups, descriptionDiv, colorDiv) {
++        for (const group of namedGroups) {
++            const colorParts = group["labelcolor"].map(Number);
++            const colorFormatted = 'rgb(' + colorParts.slice(0, 3).join(', ') + ')';
++
++            const textdiv = document.createElement("div");
++            const text = document.createTextNode(group["name"]);
++            textdiv.style.fontSize = "14px";
++            textdiv.style.lineHeight = "24px";
++            textdiv.appendChild(text);
++            descriptionDiv.appendChild(textdiv);
++
++            const colorImg = displayColorAsDiv(colorFormatted, 18.5, 18.5, 5.5, 0);
++            colorDiv.appendChild(colorImg);
++        }
++    }
++
+     // Node Info by selected ID 
+     function Legend_displayNodeInfobyID(project_selected, selected_id) {
+         if (document.getElementById('legendpanel')) {
+@@ -227,51 +269,15 @@
+ 
+                 if (l_layout_with_clusters.includes(layoutname) || layoutname === l_layout_with_clusters) {   // W I T H   D E F I N E D   C L U S T E R S 
+             
+-                    const clusterlist = pfiledata["selections"];
+-                    //console.log("C_DEBUG - clusterlist = ", clusterlist); //.reverse());
+-                    
+                     const allnode_Div = document.getElementById("legend_node_all");
+ 
+                     const nodedesc_Div = document.getElementById("legend_nodedescription");
+                     const nodecol_Div = document.getElementById("legend_nodecolor");
+                     nodedesc_Div.innerHTML = "";
+                     nodecol_Div.innerHTML = "";
+-                    
+-                    // loop through clusterlist 
+-                    const labelColorDict = {};
+-                    for (const key in clusterlist) {
+-
+-                        const labelColor = clusterlist[key]['labelcolor']; //value.labelcolor.slice(0, -1).join(',');
+-                        const name = clusterlist[key]['name']; //value.name;
+ 
+-                        //console.log("C_DEBUG: labelcolor: ", labelColor);
+-                        //console.log("C_DEBUG: name: ", name);
+-
+-                        labelColorDict[labelColor] = name;
+-                        
+-                    }
+-                    //: labelColorDict = ", labelColorDict);
+-            
+-                    let idx = 0;
+-                    for (const color in labelColorDict) { 
+-                        const keys = Object.keys(labelColorDict);
+-                        //const color_reformated = 'rgb(' + color + ')';  
+-                        const colorParts = color.split(',').map(Number); // Split and convert to numbers
+-                        const color_reformated = 'rgb(' + colorParts.slice(0, 3).join(', ') + ')';
+-    
+-                        // console.log("C_DEBUG: color =", color_reformated);
+-                        
+-                        const textdiv = document.createElement("div");
+-                        const text = document.createTextNode(labelColorDict[keys[idx]]); //newNamesDict[color]["name"]);                            
+-                        textdiv.style.fontSize="14px";
+-                        textdiv.style.lineHeight="24px"; // this should be same as colorImg.height+colorImg.marginBottom
+-                        textdiv.appendChild(text);
+-                        nodedesc_Div.appendChild(textdiv);
+-                        const colorImg = displayColorAsDiv(color_reformated, 18.5, 18.5, 5.5, 0); 
+-                        nodecol_Div.appendChild(colorImg);
+-                        
+-                        idx += 1;
+-                    } 
++                    const namedNodeGroups = Legend_uniqueNamedGroups(pfiledata["selections"], layoutname);
++                    Legend_drawNamedGroups(namedNodeGroups, nodedesc_Div, nodecol_Div);
+                     allnode_Div.appendChild(nodecol_Div);
+                     allnode_Div.appendChild(nodedesc_Div);
+                 } else {                    
+@@ -485,53 +491,17 @@
+                 }
+ 
+                 let layoutname = pfiledata["linksRGB"][corrected_id];  // Assuming links also have layout names similar to nodes
+-                
+-                let l_layout_with_clusters = [];
+-                if (pfiledata["selections"].length != 0) {
+-                    for (layoutid in pfiledata["selections"]) {
+-                        if ("layoutname" in pfiledata["selections"][layoutid]) {
+-                            let layout_with_clusters = pfiledata["selections"][layoutid]["layoutname"];
+-                            if (!l_layout_with_clusters.includes(layout_with_clusters)) {
+-                                l_layout_with_clusters.push(layout_with_clusters); // Push unique layout with clusters
+-                            }
+-                        }
+-                    }
+-                }
++                const activeLinkGroups = Legend_uniqueNamedGroups(pfiledata["linkSelections"], layoutname);
++                const activeNodeGroups = Legend_uniqueNamedGroups(pfiledata["selections"], layoutname);
+ 
+                 const linkdesc_Div = document.getElementById("legend_linkdescription");
+                 const linkcol_Div = document.getElementById("legend_linkcolor");
+                 linkdesc_Div.innerHTML = "";
+                 linkcol_Div.innerHTML = "";
+ 
+-                if (l_layout_with_clusters.includes(layoutname) || layoutname === l_layout_with_clusters) { 
+-                    // Handle case when layout is in selections (with clusters)
+-                    const clusterlist = pfiledata["selections"];
+-                    const labelColorDict = {};
+-
+-                    for (const key in clusterlist) {
+-                        const labelColor = clusterlist[key]['labelcolor'];
+-                        const name = clusterlist[key]['name'];
+-                        labelColorDict[labelColor] = name;
+-                    }
+-
+-                    let idx = 0;
+-                    for (const color in labelColorDict) { 
+-                        const keys = Object.keys(labelColorDict);
+-                        const colorParts = color.split(',').map(Number);
+-                        const color_reformated = 'rgb(' + colorParts.slice(0, 3).join(', ') + ')';
+-
+-                        const textdiv = document.createElement("div");
+-                        const text = document.createTextNode(labelColorDict[keys[idx]]);
+-                        textdiv.style.fontSize = "14px";
+-                        textdiv.style.lineHeight = "24px";
+-                        textdiv.appendChild(text);
+-                        linkdesc_Div.appendChild(textdiv);
+-
+-                        const colorImg = displayColorAsDiv(color_reformated, 18.5, 18.5, 5.5, 0);
+-                        linkcol_Div.appendChild(colorImg);
+-
+-                        idx += 1;
+-                    } 
++                if (activeLinkGroups.length > 0 || activeNodeGroups.length > 0) { 
++                    const namedLinkGroups = activeLinkGroups.length > 0 ? activeLinkGroups : activeNodeGroups;
++                    Legend_drawNamedGroups(namedLinkGroups, linkdesc_Div, linkcol_Div);
+                     alllink_Div.appendChild(linkcol_Div);
+                     alllink_Div.appendChild(linkdesc_Div);
+ 
+@@ -861,4 +831,4 @@
+ 
+ 
+ 
+-</script>
+\ No newline at end of file
++</script>

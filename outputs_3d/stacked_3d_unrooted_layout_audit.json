@@ -1,0 +1,505 @@
+{
+  "layout_algorithm": "equal-angle unrooted phylogenetic tree layout with disjoint leaf-count angular wedges; affine cuboid fitting preserves the planar no-crossing embedding; local z encodes normalized cumulative branch distance from the selected unrooted center",
+  "graph_interpretation": "undirected unrooted NetworkX gene trees inferred from aligned ortholog protein sequences; the inferred human sequence leaf is expanded into the same neutral human subtree; same-species history-flow links connect adjacent gene layers as correspondence guides only",
+  "tree_inference": {
+    "method": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+    "methods_by_gene": {
+      "GAPDH": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "ENO1": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "RPLP0": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions"
+    },
+    "distance": "p-distance over shared aligned amino-acid positions",
+    "sequence_source": "NCBI Datasets ortholog protein packages aligned with MAFFT when outputs_3d/ncbi_*_all_homologies.json exists; otherwise Ensembl REST homology align_seq payloads",
+    "minimum_target_coverage": 0.25,
+    "human_expansion": "the inferred human protein leaf is expanded into neutral human-subtree leaves"
+  },
+  "geometry": {
+    "mode": "box",
+    "box_half_size": 430.0,
+    "local_z_span": 360.0,
+    "box_fill_fraction": 0.92
+  },
+  "inter_tree_connections": {
+    "mode": "enabled",
+    "style": "curved same-taxon gene-history correspondence links",
+    "adjacent_gene_pairs": [
+      "GAPDH->ENO1",
+      "ENO1->RPLP0"
+    ],
+    "visible_flow_segments": 72,
+    "species_or_outgroup_segments": 72,
+    "selection_policy": "always show focal species/outgroups; fill remaining slots with the largest same-taxon shifts by branch-distance-to-human, protein identity change, and screen movement",
+    "real_data_basis": "species links use independently inferred gene-tree positions plus protein identity and branch-distance changes from Ensembl homology alignments",
+    "interpretation_caveat": "curves show how the same taxon lands in different gene trees; they are not physical gene-transfer paths",
+    "top_shift_examples": [
+      {
+        "taxon": "Bison bison bison",
+        "pair": "ENO1->RPLP0",
+        "score": 574.98,
+        "human_branch_distance_delta": 0.02603,
+        "protein_identity_delta": 5.42,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Bos indicus",
+        "pair": "ENO1->RPLP0",
+        "score": 574.896,
+        "human_branch_distance_delta": 0.02603,
+        "protein_identity_delta": 5.42,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Delphinus delphis",
+        "pair": "ENO1->RPLP0",
+        "score": 563.256,
+        "human_branch_distance_delta": 0.02679,
+        "protein_identity_delta": 5.881,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Bos indicus x Bos taurus",
+        "pair": "ENO1->RPLP0",
+        "score": 562.356,
+        "human_branch_distance_delta": 0.02603,
+        "protein_identity_delta": 5.42,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Lagenorhynchus albirostris",
+        "pair": "ENO1->RPLP0",
+        "score": 554.231,
+        "human_branch_distance_delta": 0.02678,
+        "protein_identity_delta": 5.881,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Globicephala melas",
+        "pair": "ENO1->RPLP0",
+        "score": 552.808,
+        "human_branch_distance_delta": 0.02686,
+        "protein_identity_delta": 5.566,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Bos javanicus",
+        "pair": "ENO1->RPLP0",
+        "score": 549.886,
+        "human_branch_distance_delta": 0.02603,
+        "protein_identity_delta": 5.42,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Orcinus orca",
+        "pair": "ENO1->RPLP0",
+        "score": 541.71,
+        "human_branch_distance_delta": 0.0268,
+        "protein_identity_delta": 5.881,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Bos mutus",
+        "pair": "ENO1->RPLP0",
+        "score": 537.492,
+        "human_branch_distance_delta": 0.02603,
+        "protein_identity_delta": 5.42,
+        "support_delta": 0
+      },
+      {
+        "taxon": "Capra hircus",
+        "pair": "ENO1->RPLP0",
+        "score": 535.548,
+        "human_branch_distance_delta": 0.02608,
+        "protein_identity_delta": 5.42,
+        "support_delta": 0
+      }
+    ]
+  },
+  "color_encoding": {
+    "ortholog_color_unit": "taxonomic clade",
+    "human_subtree_color": "#FFF2CC",
+    "represented_clade_count": 22,
+    "represented_clade_colors": {
+      "Great apes": "#4ADE80",
+      "Lesser apes": "#22C55E",
+      "Old World monkeys": "#16A34A",
+      "New World monkeys": "#06B6D4",
+      "Strepsirrhines": "#2DD4BF",
+      "Scandentia": "#84CC16",
+      "Glires": "#38BDF8",
+      "Carnivores": "#F97316",
+      "Cetartiodactyla": "#FACC15",
+      "Perissodactyla": "#FB923C",
+      "Bats": "#A78BFA",
+      "Eulipotyphla": "#60A5FA",
+      "Afrotheria": "#F472B6",
+      "Xenarthra": "#EF4444",
+      "Monotremata": "#F9A8D4",
+      "Marsupialia": "#C084FC",
+      "Birds": "#B8F2E6",
+      "Reptiles": "#A3E635",
+      "Amphibians": "#10B981",
+      "Ray-finned fish": "#22D3EE",
+      "Cartilaginous fish": "#38BDF8",
+      "Lobe-finned fish": "#0EA5E9"
+    },
+    "duplicate_represented_clade_colors": {
+      "#38bdf8": [
+        "Glires",
+        "Cartilaginous fish"
+      ]
+    },
+    "human_color_reused_by_ortholog_clade": false
+  },
+  "leaf_rendering": {
+    "all_visible_node_symbols": "circle",
+    "all_visible_node_marker_size": 6.2,
+    "ortholog_size_policy": "constant radius for every rendered species/outgroup node",
+    "human_subtree_size_policy": "constant radius matching species/outgroup nodes",
+    "mixed_evidence_overlay_size_policy": "constant radius matching all other rendered node markers",
+    "hyperbolic_terminal_z_stagger": 34.0
+  },
+  "internal_clade_markers": "hidden",
+  "story": {
+    "headline": "Same taxa, different gene-version histories",
+    "conclusion": "Each housekeeping gene has its own inferred ortholog tree on the same species/outgroups; the neutral human subtree keeps the human sequence context expanded with one consistent visual style.",
+    "reading_path": [
+      "each gene layer displays the same aligned taxa: shared ortholog species plus neutral human-subtree leaves",
+      "ortholog species topology is independently inferred per gene from aligned protein homology sequences",
+      "the inferred human protein leaf is expanded into an unlabeled local human subtree",
+      "supporting human-variant counts are retained in hover/audit metadata using a neutral display",
+      "curved flow guides connect the same species or outgroup between adjacent gene trees"
+    ],
+    "taxon_meaning": "displayed taxa are aligned across all genes: ortholog leaves are the same Ensembl species; human leaves are neutral human-subtree leaves attached at the inferred human sequence position",
+    "human_display_policy": "human variants are summarized into neutral subtree leaves; ortholog layers without cached gene-specific human variant trees reuse the ACTB subtree as an explicitly marked proxy",
+    "mammal_taxon_filter": "only species with available ortholog records for all plotted genes are rendered",
+    "human_taxon_filter": "neutral human-subtree leaves are expanded from the inferred human sequence leaf for every displayed layer",
+    "flow_meaning": "curved lines are same-species/outgroup correspondence guides connected between adjacent independently inferred gene trees",
+    "color_meaning": "ortholog leaves use unique clade colors; the human subtree uses one neutral color",
+    "leaf_marker_meaning": "all rendered leaves use the same circular marker shape",
+    "interpretation_caveat": "same-taxon flow guides show gene-history shifts, not physical gene-transfer paths",
+    "represented_mammal_clades": [
+      "Great apes",
+      "Lesser apes",
+      "Old World monkeys",
+      "New World monkeys",
+      "Strepsirrhines",
+      "Scandentia",
+      "Glires",
+      "Carnivores",
+      "Cetartiodactyla",
+      "Perissodactyla",
+      "Bats",
+      "Eulipotyphla",
+      "Afrotheria",
+      "Xenarthra",
+      "Monotremata",
+      "Marsupialia",
+      "Birds",
+      "Reptiles",
+      "Amphibians",
+      "Ray-finned fish",
+      "Cartilaginous fish",
+      "Lobe-finned fish"
+    ],
+    "totals": {
+      "selected_human_taxa": 3072,
+      "displayed_aligned_taxa": 2556,
+      "displayed_human_subtree_leaves": 456,
+      "source_variants": 5178,
+      "mixed_candidates": 26,
+      "mammal_orthologs": 2100,
+      "ape_orthologs": 24
+    },
+    "mammal_context_source": "Ensembl REST homology/symbol endpoint"
+  },
+  "scene_ranges": {
+    "x": [
+      -516.0,
+      516.0
+    ],
+    "y": [
+      -516.0,
+      516.0
+    ],
+    "z": [
+      -1392.0,
+      1392.0
+    ]
+  },
+  "scene_aspectratio": {
+    "x": 1.18,
+    "y": 1.18,
+    "z": 2.05
+  },
+  "layer_separation": {
+    "configured_layer_z_separation": 980.0,
+    "gene_z_centers": {
+      "GAPDH": -980.0,
+      "ENO1": 0.0,
+      "RPLP0": 980.0
+    },
+    "layer_z_ranges": {
+      "GAPDH": [
+        -1160.0,
+        -800.0
+      ],
+      "ENO1": [
+        -180.0,
+        180.0
+      ],
+      "RPLP0": [
+        800.0,
+        1160.0
+      ]
+    },
+    "clear_z_gaps_between_adjacent_layers": {
+      "GAPDH->ENO1": 620.0,
+      "ENO1->RPLP0": 620.0
+    }
+  },
+  "genes": {
+    "GAPDH": {
+      "nodes": 1703,
+      "edges": 1702,
+      "leaves": 852,
+      "human_variant_leaves": 152,
+      "displayed_human_subtree_leaves": 152,
+      "supporting_human_variant_leaves": 1024,
+      "visible_human_markers": 152,
+      "mammal_ortholog_leaves": 700,
+      "mammal_clade_counts": {
+        "Great apes": 5,
+        "Lesser apes": 3,
+        "Old World monkeys": 14,
+        "New World monkeys": 5,
+        "Strepsirrhines": 6,
+        "Tarsiiformes": 0,
+        "Scandentia": 1,
+        "Glires": 44,
+        "Carnivores": 47,
+        "Cetartiodactyla": 55,
+        "Perissodactyla": 6,
+        "Bats": 29,
+        "Eulipotyphla": 7,
+        "Afrotheria": 6,
+        "Xenarthra": 3,
+        "Monotremata": 2,
+        "Marsupialia": 2,
+        "Birds": 167,
+        "Reptiles": 61,
+        "Amphibians": 29,
+        "Ray-finned fish": 198,
+        "Cartilaginous fish": 5,
+        "Lobe-finned fish": 1,
+        "Jawless fish": 0,
+        "Fungi outgroup": 0
+      },
+      "source_variants": 1953,
+      "source_selection": "top 1024 population-informative variants by AF spread/variance",
+      "tree_inference_method": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "species_backbone": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "homology_min_coverage": 0.25,
+      "mammal_context_source": "Ensembl REST GET /homology/symbol/:species/:symbol",
+      "mammal_context_source_url": "https://rest.ensembl.org/documentation/info/homology_symbol",
+      "mixed_candidates": 0,
+      "coordinates_finite": true,
+      "coordinates_inside_scene": true,
+      "tree_edge_crossings_xy": 0,
+      "tree_structure": {
+        "is_undirected_tree": true,
+        "is_directed_arborescence": true,
+        "self_loop_edges": 0,
+        "nodes_minus_one_equals_edges": true,
+        "max_internal_out_degree": 2,
+        "max_internal_undirected_degree": 3,
+        "unrooted_binary_check": true
+      },
+      "rendered_leaf_spacing": {
+        "rendered_leaf_count": 852,
+        "nearest_neighbor_xy_min": 0.00012,
+        "nearest_neighbor_xy_p05": 0.00014,
+        "nearest_neighbor_xy_median": 0.00034,
+        "nearest_neighbor_3d_min": 0.00012,
+        "nearest_neighbor_3d_p05": 0.00014,
+        "nearest_neighbor_3d_median": 0.00034,
+        "normalized_by_scene_aspect": true
+      },
+      "layout_center": "GAPDH_ortholog_linkage_266",
+      "xy_span": [
+        791.1999999999999,
+        791.2
+      ],
+      "xy_occupancy": [
+        0.9199999999999999,
+        0.92
+      ],
+      "local_z_range": [
+        -1160.0,
+        -800.0
+      ],
+      "local_z_span_used": 360.0
+    },
+    "ENO1": {
+      "nodes": 1703,
+      "edges": 1702,
+      "leaves": 852,
+      "human_variant_leaves": 152,
+      "displayed_human_subtree_leaves": 152,
+      "supporting_human_variant_leaves": 1024,
+      "visible_human_markers": 152,
+      "mammal_ortholog_leaves": 700,
+      "mammal_clade_counts": {
+        "Great apes": 5,
+        "Lesser apes": 3,
+        "Old World monkeys": 14,
+        "New World monkeys": 5,
+        "Strepsirrhines": 6,
+        "Tarsiiformes": 0,
+        "Scandentia": 1,
+        "Glires": 44,
+        "Carnivores": 47,
+        "Cetartiodactyla": 55,
+        "Perissodactyla": 6,
+        "Bats": 29,
+        "Eulipotyphla": 7,
+        "Afrotheria": 6,
+        "Xenarthra": 3,
+        "Monotremata": 2,
+        "Marsupialia": 2,
+        "Birds": 167,
+        "Reptiles": 61,
+        "Amphibians": 29,
+        "Ray-finned fish": 198,
+        "Cartilaginous fish": 5,
+        "Lobe-finned fish": 1,
+        "Jawless fish": 0,
+        "Fungi outgroup": 0
+      },
+      "source_variants": 1638,
+      "source_selection": "top 1024 population-informative variants by AF spread/variance",
+      "tree_inference_method": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "species_backbone": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "homology_min_coverage": 0.25,
+      "mammal_context_source": "Ensembl REST GET /homology/symbol/:species/:symbol",
+      "mammal_context_source_url": "https://rest.ensembl.org/documentation/info/homology_symbol",
+      "mixed_candidates": 0,
+      "coordinates_finite": true,
+      "coordinates_inside_scene": true,
+      "tree_edge_crossings_xy": 0,
+      "tree_structure": {
+        "is_undirected_tree": true,
+        "is_directed_arborescence": true,
+        "self_loop_edges": 0,
+        "nodes_minus_one_equals_edges": true,
+        "max_internal_out_degree": 2,
+        "max_internal_undirected_degree": 3,
+        "unrooted_binary_check": true
+      },
+      "rendered_leaf_spacing": {
+        "rendered_leaf_count": 852,
+        "nearest_neighbor_xy_min": 0.00015,
+        "nearest_neighbor_xy_p05": 0.00016,
+        "nearest_neighbor_xy_median": 0.00033,
+        "nearest_neighbor_3d_min": 0.00015,
+        "nearest_neighbor_3d_p05": 0.00016,
+        "nearest_neighbor_3d_median": 0.00033,
+        "normalized_by_scene_aspect": true
+      },
+      "layout_center": "ENO1_ortholog_linkage_448",
+      "xy_span": [
+        791.2,
+        791.2
+      ],
+      "xy_occupancy": [
+        0.92,
+        0.92
+      ],
+      "local_z_range": [
+        -180.0,
+        180.0
+      ],
+      "local_z_span_used": 360.0
+    },
+    "RPLP0": {
+      "nodes": 1703,
+      "edges": 1702,
+      "leaves": 852,
+      "human_variant_leaves": 152,
+      "displayed_human_subtree_leaves": 152,
+      "supporting_human_variant_leaves": 1024,
+      "visible_human_markers": 152,
+      "mammal_ortholog_leaves": 700,
+      "mammal_clade_counts": {
+        "Great apes": 5,
+        "Lesser apes": 3,
+        "Old World monkeys": 14,
+        "New World monkeys": 5,
+        "Strepsirrhines": 6,
+        "Tarsiiformes": 0,
+        "Scandentia": 1,
+        "Glires": 44,
+        "Carnivores": 47,
+        "Cetartiodactyla": 55,
+        "Perissodactyla": 6,
+        "Bats": 29,
+        "Eulipotyphla": 7,
+        "Afrotheria": 6,
+        "Xenarthra": 3,
+        "Monotremata": 2,
+        "Marsupialia": 2,
+        "Birds": 167,
+        "Reptiles": 61,
+        "Amphibians": 29,
+        "Ray-finned fish": 198,
+        "Cartilaginous fish": 5,
+        "Lobe-finned fish": 1,
+        "Jawless fish": 0,
+        "Fungi outgroup": 0
+      },
+      "source_variants": 1587,
+      "source_selection": "top 1024 population-informative variants by AF spread/variance",
+      "tree_inference_method": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "species_backbone": "average-linkage hierarchical clustering on p-distance over shared aligned amino-acid positions",
+      "homology_min_coverage": 0.25,
+      "mammal_context_source": "Ensembl REST GET /homology/symbol/:species/:symbol",
+      "mammal_context_source_url": "https://rest.ensembl.org/documentation/info/homology_symbol",
+      "mixed_candidates": 0,
+      "coordinates_finite": true,
+      "coordinates_inside_scene": true,
+      "tree_edge_crossings_xy": 0,
+      "tree_structure": {
+        "is_undirected_tree": true,
+        "is_directed_arborescence": true,
+        "self_loop_edges": 0,
+        "nodes_minus_one_equals_edges": true,
+        "max_internal_out_degree": 2,
+        "max_internal_undirected_degree": 3,
+        "unrooted_binary_check": true
+      },
+      "rendered_leaf_spacing": {
+        "rendered_leaf_count": 852,
+        "nearest_neighbor_xy_min": 0.00012,
+        "nearest_neighbor_xy_p05": 0.00012,
+        "nearest_neighbor_xy_median": 0.00039,
+        "nearest_neighbor_3d_min": 0.00012,
+        "nearest_neighbor_3d_p05": 0.00012,
+        "nearest_neighbor_3d_median": 0.00039,
+        "normalized_by_scene_aspect": true
+      },
+      "layout_center": "RPLP0_ortholog_linkage_546",
+      "xy_span": [
+        791.2000000000002,
+        791.2
+      ],
+      "xy_occupancy": [
+        0.9200000000000002,
+        0.92
+      ],
+      "local_z_range": [
+        800.0,
+        1160.0
+      ],
+      "local_z_span_used": 360.0
+    }
+  }
+}

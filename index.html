@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PanTree — Human Gene Population Trees</title>
+  <meta name="description" content="Interactive visualization of human population phylogenetic trees for key genes. Compare topological similarity across LCT, EPAS1, HLA-A, GAPDH, and MAPT using real gnomAD data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Background ambient glow elements -->
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+  <div class="bg-orb bg-orb-3"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <circle cx="14" cy="14" r="13" stroke="url(#logoGrad)" stroke-width="1.5"/>
+          <circle cx="14" cy="7" r="2.5" fill="url(#logoGrad)"/>
+          <circle cx="7"  cy="19" r="2.5" fill="url(#logoGrad)"/>
+          <circle cx="21" cy="19" r="2.5" fill="url(#logoGrad)"/>
+          <line x1="14" y1="9.5" x2="7"  y2="16.5" stroke="url(#logoGrad)" stroke-width="1.5"/>
+          <line x1="14" y1="9.5" x2="21" y2="16.5" stroke="url(#logoGrad)" stroke-width="1.5"/>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#6ee7b7"/>
+              <stop offset="100%" stop-color="#818cf8"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">Pan<span class="logo-accent">Tree</span></span>
+      </div>
+      <div class="header-meta">
+        <span class="badge badge-live">gnomAD v4</span>
+        <span class="header-sub">Human Population Gene Phylogenetics</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-layout">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar" role="complementary" aria-label="Gene selection and controls">
+
+      <section class="panel" id="gene-panel">
+        <h2 class="panel-title">Select Gene</h2>
+        <div class="gene-list" id="gene-list" role="listbox" aria-label="Available genes"></div>
+      </section>
+
+      <section class="panel" id="info-panel">
+        <h2 class="panel-title">Gene Info</h2>
+        <div id="gene-info-content" class="gene-info-content">
+          <p class="info-placeholder">Select a gene to view details.</p>
+        </div>
+      </section>
+
+      <section class="panel" id="af-panel">
+        <h2 class="panel-title">Population Allele Frequency</h2>
+        <div id="af-chart" class="af-chart"></div>
+      </section>
+
+      <section class="panel" id="distance-panel">
+        <h2 class="panel-title">Pairwise Distance Matrix</h2>
+        <p class="panel-hint">Allele-frequency distance between populations</p>
+        <div id="heatmap-container" class="heatmap-container">
+          <canvas id="heatmap-canvas"></canvas>
+          <div id="heatmap-tooltip" class="heatmap-tooltip" hidden></div>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- ── MAIN VIEWPORT ── -->
+    <div class="viewport">
+
+      <div class="viewport-header">
+        <div class="viewport-title-group">
+          <h1 id="tree-title" class="tree-title">Select a gene to explore</h1>
+          <p id="tree-subtitle" class="tree-subtitle">Population phylogenetic tree based on gnomAD allele frequencies</p>
+        </div>
+        <div class="viewport-controls">
+          <label class="control-label" for="layout-select">Layout</label>
+          <select id="layout-select" class="control-select">
+            <option value="rectangular">Rectangular</option>
+            <option value="radial">Radial</option>
+          </select>
+          <label class="control-label" for="show-labels">Labels</label>
+          <input type="checkbox" id="show-labels" checked class="control-check" />
+        </div>
+      </div>
+
+      <div class="tree-stage" id="tree-stage">
+        <canvas id="tree-canvas"></canvas>
+        <div id="tree-tooltip" class="tree-tooltip" hidden></div>
+        <div class="tree-placeholder" id="tree-placeholder">
+          <div class="placeholder-icon">🌿</div>
+          <p>Choose a gene from the sidebar to render its population tree</p>
+        </div>
+      </div>
+
+      <div class="viewport-footer">
+        <span id="footer-variant-count" class="footer-stat"></span>
+        <span id="footer-pop-count"     class="footer-stat"></span>
+        <span class="footer-credit">Data: <a href="https://gnomad.broadinstitute.org" target="_blank" rel="noopener">gnomAD v4</a> &middot; UPGMA clustering &middot; Branch lengths = allele-frequency distance</span>
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="data.js"></script>
+  <script src="parser.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
