@@ -1,0 +1,134 @@
+{
+  "gene": "MAPT",
+  "description": "Microtubule-associated protein tau",
+  "root": "internal_1",
+  "n_nodes": 8,
+  "n_edges": 7,
+  "nodes": {
+    "internal_1": {
+      "x": 0.416667,
+      "y": 0.0,
+      "layer": 0,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "internal_2": {
+      "x": 0.0,
+      "y": 1.0,
+      "layer": 1,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "Ashkenazi": {
+      "x": 0.0,
+      "y": 1.0,
+      "layer": 2,
+      "label": "Ashkenazi",
+      "is_leaf": true,
+      "af": null,
+      "color": "#334155"
+    },
+    "internal_3": {
+      "x": 0.333333,
+      "y": 0.225806,
+      "layer": 1,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "Non-Finnish": {
+      "x": 0.333333,
+      "y": 0.225806,
+      "layer": 2,
+      "label": "Non-Finnish",
+      "is_leaf": true,
+      "af": null,
+      "color": "#334155"
+    },
+    "internal_4": {
+      "x": 0.833333,
+      "y": 0.024194,
+      "layer": 1,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "American": {
+      "x": 0.666667,
+      "y": 0.048387,
+      "layer": 2,
+      "label": "American",
+      "is_leaf": true,
+      "af": 0.0011149,
+      "color": "#fb923c"
+    },
+    "Middle": {
+      "x": 1.0,
+      "y": 0.024194,
+      "layer": 2,
+      "label": "Middle",
+      "is_leaf": true,
+      "af": null,
+      "color": "#334155"
+    }
+  },
+  "edges": [
+    {
+      "source": "internal_1",
+      "target": "internal_2",
+      "branch_length": 0.000124
+    },
+    {
+      "source": "internal_1",
+      "target": "internal_3",
+      "branch_length": 2.8e-05
+    },
+    {
+      "source": "internal_1",
+      "target": "internal_4",
+      "branch_length": 3e-06
+    },
+    {
+      "source": "internal_2",
+      "target": "Ashkenazi",
+      "branch_length": 0.0
+    },
+    {
+      "source": "internal_3",
+      "target": "Non-Finnish",
+      "branch_length": 0.0
+    },
+    {
+      "source": "internal_4",
+      "target": "American",
+      "branch_length": 3e-06
+    },
+    {
+      "source": "internal_4",
+      "target": "Middle",
+      "branch_length": 0.0
+    }
+  ],
+  "layers": {
+    "0": [
+      "internal_1"
+    ],
+    "1": [
+      "internal_2",
+      "internal_3",
+      "internal_4"
+    ],
+    "2": [
+      "Ashkenazi",
+      "Non-Finnish",
+      "American",
+      "Middle"
+    ]
+  }
+}

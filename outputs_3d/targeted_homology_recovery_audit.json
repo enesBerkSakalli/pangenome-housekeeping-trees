@@ -1,0 +1,286 @@
+{
+  "initial": {
+    "GAPDH": 189,
+    "ACTB": 176,
+    "RPLP0": 178
+  },
+  "initial_intersection": 155,
+  "union": 198,
+  "missing_pairs": 51,
+  "status_counts": {
+    "empty": 42,
+    "curl_error": 9
+  },
+  "new": {
+    "GAPDH": 189,
+    "ACTB": 176,
+    "RPLP0": 178
+  },
+  "new_intersection": 155,
+  "results": [
+    {
+      "gene": "ACTB",
+      "species": "callorhinchus_milii",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "caenorhabditis_elegans",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "bos_grunniens",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "camelus_dromedarius",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "catagonus_wagneri",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "anas_platyrhynchos_platyrhynchos",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "carlito_syrichta",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "cervus_hanglu_yarkandensis",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "callorhinchus_milii",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "cervus_hanglu_yarkandensis",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "chinchilla_lanigera",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "chlorocebus_sabaeus",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "choloepus_hoffmanni",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14003 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "ACTB",
+      "species": "choloepus_hoffmanni",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14003 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "ACTB",
+      "species": "ciona_intestinalis",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14004 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "ACTB",
+      "species": "drosophila_melanogaster",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "eptatretus_burgeri",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "erinaceus_europaeus",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "felis_catus",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "gallus_gallus",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "ciona_savignyi",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14004 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "ACTB",
+      "species": "loxodonta_africana",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "dipodomys_ordii",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14001 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "ACTB",
+      "species": "erinaceus_europaeus",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "microtus_ochrogaster",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "mus_musculus",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "mus_pahari",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "macaca_mulatta",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "mus_spretus",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "echinops_telfairi",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14006 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "ACTB",
+      "species": "oryzias_javanicus",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "mus_pahari",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "podarcis_muralis",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "pteropus_vampyrus",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "pteropus_vampyrus",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "pseudonaja_textilis",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "panthera_tigris_altaica",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "nannospalax_galili",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14001 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "ACTB",
+      "species": "pelodiscus_sinensis",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "saimiri_boliviensis_boliviensis",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "rhinolophus_ferrumequinum",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "salvator_merianae",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "sorex_araneus",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "sarcophilus_harrisii",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "takifugu_rubripes",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "sciurus_vulgaris",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "vicugna_pacos",
+      "status": "empty"
+    },
+    {
+      "gene": "RPLP0",
+      "species": "terrapene_carolina_triunguis",
+      "status": "empty"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "sorex_araneus",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14005 milliseconds with 0 bytes received"
+    },
+    {
+      "gene": "GAPDH",
+      "species": "vicugna_pacos",
+      "status": "empty"
+    },
+    {
+      "gene": "ACTB",
+      "species": "ursus_americanus",
+      "status": "curl_error",
+      "error": "curl: (28) Operation timed out after 14001 milliseconds with 0 bytes received"
+    }
+  ]
+}

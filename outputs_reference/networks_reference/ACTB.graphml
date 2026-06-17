@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d14" for="edge" attr.name="weight" attr.type="double" />
+  <key id="d13" for="node" attr.name="af" attr.type="double" />
+  <key id="d12" for="node" attr.name="population_label" attr.type="string" />
+  <key id="d11" for="node" attr.name="population_id" attr.type="string" />
+  <key id="d10" for="node" attr.name="cluster_height" attr.type="double" />
+  <key id="d9" for="node" attr.name="branch_length" attr.type="double" />
+  <key id="d8" for="node" attr.name="taxon_count" attr.type="long" />
+  <key id="d7" for="node" attr.name="is_leaf" attr.type="boolean" />
+  <key id="d6" for="node" attr.name="label" attr.type="string" />
+  <key id="d5" for="graph" attr.name="pop_afs" attr.type="string" />
+  <key id="d4" for="graph" attr.name="taxa_order" attr.type="string" />
+  <key id="d3" for="graph" attr.name="taxon_definition" attr.type="string" />
+  <key id="d2" for="graph" attr.name="root" attr.type="string" />
+  <key id="d1" for="graph" attr.name="description" attr.type="string" />
+  <key id="d0" for="graph" attr.name="gene" attr.type="string" />
+  <graph edgedefault="directed">
+    <node id="internal_14">
+      <data key="d6">clade_14</data>
+      <data key="d7">False</data>
+      <data key="d8">8</data>
+      <data key="d9">0.0</data>
+      <data key="d10">0.00042598164351966857</data>
+    </node>
+    <node id="afr">
+      <data key="d6">African</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">0.00042598164351966857</data>
+      <data key="d10">0.0</data>
+      <data key="d11">afr</data>
+      <data key="d12">African</data>
+      <data key="d13">0.0016775083888533582</data>
+    </node>
+    <node id="internal_13">
+      <data key="d6">clade_13</data>
+      <data key="d7">False</data>
+      <data key="d8">7</data>
+      <data key="d9">0.0002531019435949691</data>
+      <data key="d10">0.0001728796999246995</data>
+    </node>
+    <node id="eas">
+      <data key="d6">East Asian</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">0.0001728796999246995</data>
+      <data key="d10">0.0</data>
+      <data key="d11">eas</data>
+      <data key="d12">East Asian</data>
+      <data key="d13">0.0005291799019431077</data>
+    </node>
+    <node id="internal_12">
+      <data key="d6">clade_12</data>
+      <data key="d7">False</data>
+      <data key="d8">6</data>
+      <data key="d9">7.970653020675395e-05</data>
+      <data key="d10">9.317316971794555e-05</data>
+    </node>
+    <node id="sas">
+      <data key="d6">South Asian</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">9.317316971794555e-05</data>
+      <data key="d10">0.0</data>
+      <data key="d11">sas</data>
+      <data key="d12">South Asian</data>
+      <data key="d13">0.0007196506855959308</data>
+    </node>
+    <node id="internal_11">
+      <data key="d6">clade_11</data>
+      <data key="d7">False</data>
+      <data key="d8">5</data>
+      <data key="d9">1.7051948901271682e-05</data>
+      <data key="d10">7.612122081667386e-05</data>
+    </node>
+    <node id="asj">
+      <data key="d6">Ashkenazi Jewish</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">7.612122081667386e-05</data>
+      <data key="d10">0.0</data>
+      <data key="d11">asj</data>
+      <data key="d12">Ashkenazi Jewish</data>
+      <data key="d13">0.0010277909783385</data>
+    </node>
+    <node id="internal_10">
+      <data key="d6">clade_10</data>
+      <data key="d7">False</data>
+      <data key="d8">4</data>
+      <data key="d9">3.440081517521453e-05</data>
+      <data key="d10">4.172040564145933e-05</data>
+    </node>
+    <node id="internal_8">
+      <data key="d6">clade_8</data>
+      <data key="d7">False</data>
+      <data key="d8">2</data>
+      <data key="d9">3.135378590137002e-05</data>
+      <data key="d10">1.0366619740089314e-05</data>
+    </node>
+    <node id="internal_9">
+      <data key="d6">clade_9</data>
+      <data key="d7">False</data>
+      <data key="d8">2</data>
+      <data key="d9">1.3959570133578958e-05</data>
+      <data key="d10">2.7760835507880375e-05</data>
+    </node>
+    <node id="mid">
+      <data key="d6">Middle Eastern</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">2.7760835507880375e-05</data>
+      <data key="d10">0.0</data>
+      <data key="d11">mid</data>
+      <data key="d12">Middle Eastern</data>
+      <data key="d13">0.0008615889665715734</data>
+    </node>
+    <node id="nfe">
+      <data key="d6">Non-Finnish European</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">2.7760835507880375e-05</data>
+      <data key="d10">0.0</data>
+      <data key="d11">nfe</data>
+      <data key="d12">Non-Finnish European</data>
+      <data key="d13">0.0008060672955558126</data>
+    </node>
+    <node id="amr">
+      <data key="d6">American</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">1.0366619740089314e-05</data>
+      <data key="d10">0.0</data>
+      <data key="d11">amr</data>
+      <data key="d12">American</data>
+      <data key="d13">0.0009069023226065223</data>
+    </node>
+    <node id="fin">
+      <data key="d6">Finnish</data>
+      <data key="d7">True</data>
+      <data key="d8">1</data>
+      <data key="d9">1.0366619740089314e-05</data>
+      <data key="d10">0.0</data>
+      <data key="d11">fin</data>
+      <data key="d12">Finnish</data>
+      <data key="d13">0.000927635562086701</data>
+    </node>
+    <edge source="internal_14" target="afr">
+      <data key="d14">0.00042598164351966857</data>
+    </edge>
+    <edge source="internal_14" target="internal_13">
+      <data key="d14">0.0002531019435949691</data>
+    </edge>
+    <edge source="internal_13" target="eas">
+      <data key="d14">0.0001728796999246995</data>
+    </edge>
+    <edge source="internal_13" target="internal_12">
+      <data key="d14">7.970653020675395e-05</data>
+    </edge>
+    <edge source="internal_12" target="sas">
+      <data key="d14">9.317316971794555e-05</data>
+    </edge>
+    <edge source="internal_12" target="internal_11">
+      <data key="d14">1.7051948901271682e-05</data>
+    </edge>
+    <edge source="internal_11" target="asj">
+      <data key="d14">7.612122081667386e-05</data>
+    </edge>
+    <edge source="internal_11" target="internal_10">
+      <data key="d14">3.440081517521453e-05</data>
+    </edge>
+    <edge source="internal_10" target="internal_8">
+      <data key="d14">3.135378590137002e-05</data>
+    </edge>
+    <edge source="internal_10" target="internal_9">
+      <data key="d14">1.3959570133578958e-05</data>
+    </edge>
+    <edge source="internal_8" target="amr">
+      <data key="d14">1.0366619740089314e-05</data>
+    </edge>
+    <edge source="internal_8" target="fin">
+      <data key="d14">1.0366619740089314e-05</data>
+    </edge>
+    <edge source="internal_9" target="mid">
+      <data key="d14">2.7760835507880375e-05</data>
+    </edge>
+    <edge source="internal_9" target="nfe">
+      <data key="d14">2.7760835507880375e-05</data>
+    </edge>
+    <data key="d0">ACTB</data>
+    <data key="d1">ACTB (beta-actin structural reference)</data>
+    <data key="d2">internal_14</data>
+    <data key="d3">population</data>
+    <data key="d4">African,American,Ashkenazi Jewish,East Asian,Finnish,Middle Eastern,Non-Finnish European,South Asian</data>
+    <data key="d5">{"African": 0.0016775083888533582, "American": 0.0009069023226065223, "Ashkenazi Jewish": 0.0010277909783385, "East Asian": 0.0005291799019431077, "Finnish": 0.000927635562086701, "Middle Eastern": 0.0008615889665715734, "Non-Finnish European": 0.0008060672955558126, "South Asian": 0.0007196506855959308}</data>
+  </graph>
+</graphml>

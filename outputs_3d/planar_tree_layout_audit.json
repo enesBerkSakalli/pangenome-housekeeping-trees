@@ -1,0 +1,130 @@
+{
+  "genes": {
+    "GAPDH": {
+      "African": {
+        "leaves": 55,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "East Asian": {
+        "leaves": 45,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "American": {
+        "leaves": 36,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Non-Finnish European": {
+        "leaves": 26,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "South Asian": {
+        "leaves": 39,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Finnish": {
+        "leaves": 15,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Ashkenazi Jewish": {
+        "leaves": 12,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Middle Eastern": {
+        "leaves": 28,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      }
+    },
+    "ACTB": {
+      "Ashkenazi Jewish": {
+        "leaves": 13,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "African": {
+        "leaves": 62,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Non-Finnish European": {
+        "leaves": 16,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "East Asian": {
+        "leaves": 47,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Finnish": {
+        "leaves": 11,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "American": {
+        "leaves": 37,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Middle Eastern": {
+        "leaves": 34,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "South Asian": {
+        "leaves": 36,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      }
+    },
+    "RPLP0": {
+      "East Asian": {
+        "leaves": 47,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "American": {
+        "leaves": 33,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Non-Finnish European": {
+        "leaves": 29,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "African": {
+        "leaves": 72,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Finnish": {
+        "leaves": 9,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Middle Eastern": {
+        "leaves": 29,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "Ashkenazi Jewish": {
+        "leaves": 13,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      },
+      "South Asian": {
+        "leaves": 24,
+        "planar_interval_violations": [],
+        "crossing_free_by_interval_audit": true
+      }
+    }
+  }
+}

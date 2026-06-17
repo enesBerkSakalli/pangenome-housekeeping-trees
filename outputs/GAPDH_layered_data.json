@@ -1,0 +1,166 @@
+{
+  "gene": "GAPDH",
+  "description": "GAPDH (housekeeping control)",
+  "root": "internal_1",
+  "n_nodes": 10,
+  "n_edges": 9,
+  "nodes": {
+    "internal_1": {
+      "x": 0.4375,
+      "y": 0.0,
+      "layer": 0,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "African": {
+      "x": 0.0,
+      "y": 1.0,
+      "layer": 1,
+      "label": "African",
+      "is_leaf": true,
+      "af": 0.0018906,
+      "color": "#f87171"
+    },
+    "internal_2": {
+      "x": 0.375,
+      "y": 0.193291,
+      "layer": 1,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "internal_3": {
+      "x": 0.375,
+      "y": 0.34984,
+      "layer": 2,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "American": {
+      "x": 0.25,
+      "y": 0.50639,
+      "layer": 3,
+      "label": "American",
+      "is_leaf": true,
+      "af": 0.0008527,
+      "color": "#fb923c"
+    },
+    "East": {
+      "x": 0.5,
+      "y": 0.34984,
+      "layer": 3,
+      "label": "East",
+      "is_leaf": true,
+      "af": null,
+      "color": "#334155"
+    },
+    "internal_4": {
+      "x": 0.875,
+      "y": 0.025559,
+      "layer": 1,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "internal_5": {
+      "x": 0.75,
+      "y": 0.051118,
+      "layer": 2,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "Ashkenazi": {
+      "x": 0.75,
+      "y": 0.051118,
+      "layer": 3,
+      "label": "Ashkenazi",
+      "is_leaf": true,
+      "af": null,
+      "color": "#334155"
+    },
+    "Middle": {
+      "x": 1.0,
+      "y": 0.025559,
+      "layer": 2,
+      "label": "Middle",
+      "is_leaf": true,
+      "af": null,
+      "color": "#334155"
+    }
+  },
+  "edges": [
+    {
+      "source": "internal_1",
+      "target": "African",
+      "branch_length": 0.000626
+    },
+    {
+      "source": "internal_1",
+      "target": "internal_2",
+      "branch_length": 0.000121
+    },
+    {
+      "source": "internal_1",
+      "target": "internal_4",
+      "branch_length": 1.6e-05
+    },
+    {
+      "source": "internal_2",
+      "target": "internal_3",
+      "branch_length": 9.8e-05
+    },
+    {
+      "source": "internal_3",
+      "target": "American",
+      "branch_length": 9.8e-05
+    },
+    {
+      "source": "internal_3",
+      "target": "East",
+      "branch_length": 0.0
+    },
+    {
+      "source": "internal_4",
+      "target": "internal_5",
+      "branch_length": 1.6e-05
+    },
+    {
+      "source": "internal_4",
+      "target": "Middle",
+      "branch_length": 0.0
+    },
+    {
+      "source": "internal_5",
+      "target": "Ashkenazi",
+      "branch_length": 0.0
+    }
+  ],
+  "layers": {
+    "0": [
+      "internal_1"
+    ],
+    "1": [
+      "African",
+      "internal_2",
+      "internal_4"
+    ],
+    "2": [
+      "internal_3",
+      "internal_5",
+      "Middle"
+    ],
+    "3": [
+      "American",
+      "East",
+      "Ashkenazi"
+    ]
+  }
+}

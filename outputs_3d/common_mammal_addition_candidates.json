@@ -1,0 +1,62 @@
+[
+  {
+    "species": "bos_indicus_hybrid",
+    "label": "hybrid cow",
+    "clade": "Cetartiodactyla",
+    "min_identity": 94.5946,
+    "taxon_id": "30522",
+    "types": [
+      "ortholog_one2one",
+      "ortholog_one2one",
+      "ortholog_one2one"
+    ]
+  },
+  {
+    "species": "bos_mutus",
+    "label": "wild yak",
+    "clade": "Cetartiodactyla",
+    "min_identity": 84.9741,
+    "taxon_id": "72004",
+    "types": [
+      "ortholog_one2many",
+      "ortholog_one2one",
+      "ortholog_one2one"
+    ]
+  },
+  {
+    "species": "canis_lupus_dingo",
+    "label": "Canis Lupus Dingo",
+    "clade": "Carnivores",
+    "min_identity": 84.1727,
+    "taxon_id": "286419",
+    "types": [
+      "ortholog_one2many",
+      "ortholog_one2many",
+      "ortholog_one2many"
+    ]
+  },
+  {
+    "species": "peromyscus_maniculatus_bairdii",
+    "label": "Peromyscus Maniculatus Bairdii",
+    "clade": "Glires",
+    "min_identity": 88.9231,
+    "taxon_id": "230844",
+    "types": [
+      "ortholog_one2one",
+      "ortholog_one2one",
+      "ortholog_one2many"
+    ]
+  },
+  {
+    "species": "tupaia_belangeri",
+    "label": "common tree shrew",
+    "clade": "Glires",
+    "min_identity": 90.8602,
+    "taxon_id": "37347",
+    "types": [
+      "ortholog_one2one",
+      "ortholog_one2one",
+      "ortholog_one2one"
+    ]
+  }
+]

@@ -1,0 +1,817 @@
+{
+  "LCT": {
+    "gene": "LCT",
+    "description": "Lactase (dairy tolerance adaptation)",
+    "root": "internal_1",
+    "n_nodes": 15,
+    "n_edges": 14,
+    "nodes": {
+      "internal_1": {
+        "x": 0.5,
+        "y": 0.0,
+        "layer": 0,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "African": {
+        "x": 0.0,
+        "y": 1.0,
+        "layer": 1,
+        "label": "African",
+        "is_leaf": true,
+        "af": 0.0030121,
+        "color": "#f87171"
+      },
+      "internal_2": {
+        "x": 0.142857,
+        "y": 0.6082,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Middle": {
+        "x": 0.142857,
+        "y": 0.6082,
+        "layer": 2,
+        "label": "Middle",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_3": {
+        "x": 0.5,
+        "y": 0.120729,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_4": {
+        "x": 0.357143,
+        "y": 0.464692,
+        "layer": 2,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "American": {
+        "x": 0.285714,
+        "y": 0.505695,
+        "layer": 3,
+        "label": "American",
+        "is_leaf": true,
+        "af": 0.0024167,
+        "color": "#fb923c"
+      },
+      "Finnish": {
+        "x": 0.428571,
+        "y": 0.505695,
+        "layer": 3,
+        "label": "Finnish",
+        "is_leaf": true,
+        "af": 0.0024531,
+        "color": "#34d399"
+      },
+      "internal_5": {
+        "x": 0.642857,
+        "y": 0.191344,
+        "layer": 2,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_6": {
+        "x": 0.571429,
+        "y": 0.261959,
+        "layer": 3,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Ashkenazi": {
+        "x": 0.571429,
+        "y": 0.261959,
+        "layer": 4,
+        "label": "Ashkenazi",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "South": {
+        "x": 0.714286,
+        "y": 0.191344,
+        "layer": 3,
+        "label": "South",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_7": {
+        "x": 0.857143,
+        "y": 0.08656,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "East": {
+        "x": 0.857143,
+        "y": 0.08656,
+        "layer": 2,
+        "label": "East",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "Non-Finnish": {
+        "x": 1.0,
+        "y": 0.0,
+        "layer": 1,
+        "label": "Non-Finnish",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      }
+    },
+    "edges": [
+      {
+        "source": "internal_1",
+        "target": "African",
+        "branch_length": 0.000439
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_2",
+        "branch_length": 0.000267
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_3",
+        "branch_length": 5.3e-05
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_7",
+        "branch_length": 3.8e-05
+      },
+      {
+        "source": "internal_1",
+        "target": "Non-Finnish",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_2",
+        "target": "Middle",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_3",
+        "target": "internal_4",
+        "branch_length": 0.000151
+      },
+      {
+        "source": "internal_3",
+        "target": "internal_5",
+        "branch_length": 3.1e-05
+      },
+      {
+        "source": "internal_4",
+        "target": "American",
+        "branch_length": 1.8e-05
+      },
+      {
+        "source": "internal_4",
+        "target": "Finnish",
+        "branch_length": 1.8e-05
+      },
+      {
+        "source": "internal_5",
+        "target": "internal_6",
+        "branch_length": 3.1e-05
+      },
+      {
+        "source": "internal_5",
+        "target": "South",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_6",
+        "target": "Ashkenazi",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_7",
+        "target": "East",
+        "branch_length": 0.0
+      }
+    ],
+    "layers": {
+      "0": [
+        "internal_1"
+      ],
+      "1": [
+        "African",
+        "internal_2",
+        "internal_3",
+        "internal_7",
+        "Non-Finnish"
+      ],
+      "2": [
+        "Middle",
+        "internal_4",
+        "internal_5",
+        "East"
+      ],
+      "3": [
+        "American",
+        "Finnish",
+        "internal_6",
+        "South"
+      ],
+      "4": [
+        "Ashkenazi"
+      ]
+    }
+  },
+  "EPAS1": {
+    "gene": "EPAS1",
+    "description": "HIF2\u03b1 (high-altitude adaptation)",
+    "root": "internal_1",
+    "n_nodes": 12,
+    "n_edges": 11,
+    "nodes": {
+      "internal_1": {
+        "x": 0.325,
+        "y": 0.0,
+        "layer": 0,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "African": {
+        "x": 0.0,
+        "y": 1.0,
+        "layer": 1,
+        "label": "African",
+        "is_leaf": true,
+        "af": 0.0017846,
+        "color": "#f87171"
+      },
+      "internal_2": {
+        "x": 0.65,
+        "y": 0.005976,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_3": {
+        "x": 0.3,
+        "y": 0.065737,
+        "layer": 2,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_4": {
+        "x": 0.2,
+        "y": 0.081673,
+        "layer": 3,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Ashkenazi": {
+        "x": 0.2,
+        "y": 0.081673,
+        "layer": 4,
+        "label": "Ashkenazi",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "Finnish": {
+        "x": 0.4,
+        "y": 0.081673,
+        "layer": 3,
+        "label": "Finnish",
+        "is_leaf": true,
+        "af": 0.0007671,
+        "color": "#34d399"
+      },
+      "internal_5": {
+        "x": 0.6,
+        "y": 0.053785,
+        "layer": 2,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "South": {
+        "x": 0.6,
+        "y": 0.053785,
+        "layer": 3,
+        "label": "South",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_6": {
+        "x": 0.8,
+        "y": 0.011952,
+        "layer": 2,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Middle": {
+        "x": 0.8,
+        "y": 0.011952,
+        "layer": 3,
+        "label": "Middle",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "Non-Finnish": {
+        "x": 1.0,
+        "y": 0.005976,
+        "layer": 2,
+        "label": "Non-Finnish",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      }
+    },
+    "edges": [
+      {
+        "source": "internal_1",
+        "target": "African",
+        "branch_length": 0.000502
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_2",
+        "branch_length": 3e-06
+      },
+      {
+        "source": "internal_2",
+        "target": "internal_3",
+        "branch_length": 3e-05
+      },
+      {
+        "source": "internal_2",
+        "target": "internal_5",
+        "branch_length": 2.4e-05
+      },
+      {
+        "source": "internal_2",
+        "target": "internal_6",
+        "branch_length": 3e-06
+      },
+      {
+        "source": "internal_2",
+        "target": "Non-Finnish",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_3",
+        "target": "internal_4",
+        "branch_length": 8e-06
+      },
+      {
+        "source": "internal_3",
+        "target": "Finnish",
+        "branch_length": 8e-06
+      },
+      {
+        "source": "internal_4",
+        "target": "Ashkenazi",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_5",
+        "target": "South",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_6",
+        "target": "Middle",
+        "branch_length": 0.0
+      }
+    ],
+    "layers": {
+      "0": [
+        "internal_1"
+      ],
+      "1": [
+        "African",
+        "internal_2"
+      ],
+      "2": [
+        "internal_3",
+        "internal_5",
+        "internal_6",
+        "Non-Finnish"
+      ],
+      "3": [
+        "internal_4",
+        "Finnish",
+        "South",
+        "Middle"
+      ],
+      "4": [
+        "Ashkenazi"
+      ]
+    }
+  },
+  "HLA-A": {
+    "gene": "HLA-A",
+    "description": "HLA Class I (immune recognition)",
+    "root": "internal_1",
+    "n_nodes": 4,
+    "n_edges": 3,
+    "nodes": {
+      "internal_1": {
+        "x": 0.5,
+        "y": 0.0,
+        "layer": 0,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_2": {
+        "x": 0.5,
+        "y": 0.5,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Finnish": {
+        "x": 0.0,
+        "y": 1.0,
+        "layer": 2,
+        "label": "Finnish",
+        "is_leaf": true,
+        "af": 0.002246,
+        "color": "#34d399"
+      },
+      "Non-Finnish": {
+        "x": 1.0,
+        "y": 0.5,
+        "layer": 2,
+        "label": "Non-Finnish",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      }
+    },
+    "edges": [
+      {
+        "source": "internal_1",
+        "target": "internal_2",
+        "branch_length": 0.000315
+      },
+      {
+        "source": "internal_2",
+        "target": "Finnish",
+        "branch_length": 0.000315
+      },
+      {
+        "source": "internal_2",
+        "target": "Non-Finnish",
+        "branch_length": 0.0
+      }
+    ],
+    "layers": {
+      "0": [
+        "internal_1"
+      ],
+      "1": [
+        "internal_2"
+      ],
+      "2": [
+        "Finnish",
+        "Non-Finnish"
+      ]
+    }
+  },
+  "GAPDH": {
+    "gene": "GAPDH",
+    "description": "GAPDH (housekeeping control)",
+    "root": "internal_1",
+    "n_nodes": 10,
+    "n_edges": 9,
+    "nodes": {
+      "internal_1": {
+        "x": 0.4375,
+        "y": 0.0,
+        "layer": 0,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "African": {
+        "x": 0.0,
+        "y": 1.0,
+        "layer": 1,
+        "label": "African",
+        "is_leaf": true,
+        "af": 0.0018906,
+        "color": "#f87171"
+      },
+      "internal_2": {
+        "x": 0.375,
+        "y": 0.193291,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_3": {
+        "x": 0.375,
+        "y": 0.34984,
+        "layer": 2,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "American": {
+        "x": 0.25,
+        "y": 0.50639,
+        "layer": 3,
+        "label": "American",
+        "is_leaf": true,
+        "af": 0.0008527,
+        "color": "#fb923c"
+      },
+      "East": {
+        "x": 0.5,
+        "y": 0.34984,
+        "layer": 3,
+        "label": "East",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_4": {
+        "x": 0.875,
+        "y": 0.025559,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_5": {
+        "x": 0.75,
+        "y": 0.051118,
+        "layer": 2,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Ashkenazi": {
+        "x": 0.75,
+        "y": 0.051118,
+        "layer": 3,
+        "label": "Ashkenazi",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "Middle": {
+        "x": 1.0,
+        "y": 0.025559,
+        "layer": 2,
+        "label": "Middle",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      }
+    },
+    "edges": [
+      {
+        "source": "internal_1",
+        "target": "African",
+        "branch_length": 0.000626
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_2",
+        "branch_length": 0.000121
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_4",
+        "branch_length": 1.6e-05
+      },
+      {
+        "source": "internal_2",
+        "target": "internal_3",
+        "branch_length": 9.8e-05
+      },
+      {
+        "source": "internal_3",
+        "target": "American",
+        "branch_length": 9.8e-05
+      },
+      {
+        "source": "internal_3",
+        "target": "East",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_4",
+        "target": "internal_5",
+        "branch_length": 1.6e-05
+      },
+      {
+        "source": "internal_4",
+        "target": "Middle",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_5",
+        "target": "Ashkenazi",
+        "branch_length": 0.0
+      }
+    ],
+    "layers": {
+      "0": [
+        "internal_1"
+      ],
+      "1": [
+        "African",
+        "internal_2",
+        "internal_4"
+      ],
+      "2": [
+        "internal_3",
+        "internal_5",
+        "Middle"
+      ],
+      "3": [
+        "American",
+        "East",
+        "Ashkenazi"
+      ]
+    }
+  },
+  "MAPT": {
+    "gene": "MAPT",
+    "description": "Microtubule-associated protein tau",
+    "root": "internal_1",
+    "n_nodes": 8,
+    "n_edges": 7,
+    "nodes": {
+      "internal_1": {
+        "x": 0.416667,
+        "y": 0.0,
+        "layer": 0,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_2": {
+        "x": 0.0,
+        "y": 1.0,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Ashkenazi": {
+        "x": 0.0,
+        "y": 1.0,
+        "layer": 2,
+        "label": "Ashkenazi",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_3": {
+        "x": 0.333333,
+        "y": 0.225806,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "Non-Finnish": {
+        "x": 0.333333,
+        "y": 0.225806,
+        "layer": 2,
+        "label": "Non-Finnish",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      },
+      "internal_4": {
+        "x": 0.833333,
+        "y": 0.024194,
+        "layer": 1,
+        "label": "",
+        "is_leaf": false,
+        "af": null,
+        "color": "#334155"
+      },
+      "American": {
+        "x": 0.666667,
+        "y": 0.048387,
+        "layer": 2,
+        "label": "American",
+        "is_leaf": true,
+        "af": 0.0011149,
+        "color": "#fb923c"
+      },
+      "Middle": {
+        "x": 1.0,
+        "y": 0.024194,
+        "layer": 2,
+        "label": "Middle",
+        "is_leaf": true,
+        "af": null,
+        "color": "#334155"
+      }
+    },
+    "edges": [
+      {
+        "source": "internal_1",
+        "target": "internal_2",
+        "branch_length": 0.000124
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_3",
+        "branch_length": 2.8e-05
+      },
+      {
+        "source": "internal_1",
+        "target": "internal_4",
+        "branch_length": 3e-06
+      },
+      {
+        "source": "internal_2",
+        "target": "Ashkenazi",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_3",
+        "target": "Non-Finnish",
+        "branch_length": 0.0
+      },
+      {
+        "source": "internal_4",
+        "target": "American",
+        "branch_length": 3e-06
+      },
+      {
+        "source": "internal_4",
+        "target": "Middle",
+        "branch_length": 0.0
+      }
+    ],
+    "layers": {
+      "0": [
+        "internal_1"
+      ],
+      "1": [
+        "internal_2",
+        "internal_3",
+        "internal_4"
+      ],
+      "2": [
+        "Ashkenazi",
+        "Non-Finnish",
+        "American",
+        "Middle"
+      ]
+    }
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "root": "internal_1",
+    "gene": "LCT",
+    "description": "Lactase (dairy tolerance adaptation)",
+    "n_variants": 5839,
+    "source": "gnomAD v4",
+    "method": "UPGMA on pairwise allele-frequency distance"
+  },
+  "nodes": [
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3.8e-05,
+      "id": "internal_1"
+    },
+    {
+      "label": "African",
+      "is_leaf": true,
+      "af": 0.0030121314362519724,
+      "branch_length": 0.000439,
+      "id": "African"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 0.000267,
+      "id": "internal_2"
+    },
+    {
+      "label": "Middle",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Middle"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 5.3e-05,
+      "id": "internal_3"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 0.000151,
+      "id": "internal_4"
+    },
+    {
+      "label": "American",
+      "is_leaf": true,
+      "af": 0.002416726040199915,
+      "branch_length": 1.8e-05,
+      "id": "American"
+    },
+    {
+      "label": "Finnish",
+      "is_leaf": true,
+      "af": 0.002453121003973383,
+      "branch_length": 1.8e-05,
+      "id": "Finnish"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3.1e-05,
+      "id": "internal_5"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3.1e-05,
+      "id": "internal_6"
+    },
+    {
+      "label": "Ashkenazi",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Ashkenazi"
+    },
+    {
+      "label": "South",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "South"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3.8e-05,
+      "id": "internal_7"
+    },
+    {
+      "label": "East",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "East"
+    },
+    {
+      "label": "Non-Finnish",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Non-Finnish"
+    }
+  ],
+  "links": [
+    {
+      "weight": 0.000439,
+      "source": "internal_1",
+      "target": "African"
+    },
+    {
+      "weight": 0.000267,
+      "source": "internal_1",
+      "target": "internal_2"
+    },
+    {
+      "weight": 5.3e-05,
+      "source": "internal_1",
+      "target": "internal_3"
+    },
+    {
+      "weight": 3.8e-05,
+      "source": "internal_1",
+      "target": "internal_7"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_1",
+      "target": "Non-Finnish"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_2",
+      "target": "Middle"
+    },
+    {
+      "weight": 0.000151,
+      "source": "internal_3",
+      "target": "internal_4"
+    },
+    {
+      "weight": 3.1e-05,
+      "source": "internal_3",
+      "target": "internal_5"
+    },
+    {
+      "weight": 1.8e-05,
+      "source": "internal_4",
+      "target": "American"
+    },
+    {
+      "weight": 1.8e-05,
+      "source": "internal_4",
+      "target": "Finnish"
+    },
+    {
+      "weight": 3.1e-05,
+      "source": "internal_5",
+      "target": "internal_6"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_5",
+      "target": "South"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_6",
+      "target": "Ashkenazi"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_7",
+      "target": "East"
+    }
+  ]
+}

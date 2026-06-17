@@ -1,0 +1,23 @@
+gene,dominant_population,secondary_population,candidate_variants,mean_secondary_to_dominant_af_ratio,example_variants,literature_context
+GAPDH,African,East Asian,2,0.9216,12-6537154-T-C;12-6534761-T-G,Literature context: broad human admixture/local ancestry can create locus-specific ancestry signals; this pair is AF-found in these genes.
+GAPDH,Middle Eastern,African,2,0.6362,12-6537209-A-G;12-6536665-C-T,Literature context: broad human admixture/local ancestry can create locus-specific ancestry signals; this pair is AF-found in these genes.
+GAPDH,African,Non-Finnish European,1,0.9521,12-6534825-C-G,Literature context: African/African American local ancestry; allele frequencies can differ by local haplotype ancestry.
+GAPDH,American,East Asian,1,0.389,12-6537995-TGGTATGTGGCTGGGGCCAGAGACTGGCTCTTAAAAAGTGCAGGGTCTGGCGCCCTCTGGTGGCTGGCTCAGAAAAAGGGCCCTGACAACTCTTTTCATCTTCTA-T,Literature context: admixed/local ancestry signal; gnomAD LAI work treats Admixed American ancestry as locus-specific.
+GAPDH,American,South Asian,1,0.5915,12-6537213-TCAGGTGAGGAAGGCAGGGCCCGTGGAGAAGCGGCCAGCCTGGCACCCTATGGACACGCTCCCCTGACTTGCGCCCCGCTCCCTCTTTCTTTG-T,Literature context: admixed/local ancestry signal; gnomAD LAI work treats Admixed American ancestry as locus-specific.
+GAPDH,East Asian,African,1,0.9421,12-6537943-T-C,Literature context: broad human admixture/local ancestry can create locus-specific ancestry signals; this pair is AF-found in these genes.
+GAPDH,Finnish,Non-Finnish European,1,0.68,12-6537028-C-T,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+GAPDH,Non-Finnish European,American,1,0.4852,12-6537456-C-T,Literature context: admixed/local ancestry signal; gnomAD LAI work treats Admixed American ancestry as locus-specific.
+GAPDH,Non-Finnish European,Finnish,1,0.3766,12-6537922-C-T,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+GAPDH,South Asian,Middle Eastern,1,0.6532,12-6536732-G-A,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+ACTB,Ashkenazi Jewish,Finnish,2,0.9736,7-5527965-C-T;7-5529696-G-A,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+ACTB,Non-Finnish European,Finnish,2,0.667,7-5529118-G-A;7-5529667-C-A,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+ACTB,African,Ashkenazi Jewish,1,0.7044,7-5528735-A-G,Literature context: broad human admixture/local ancestry can create locus-specific ancestry signals; this pair is AF-found in these genes.
+ACTB,Ashkenazi Jewish,African,1,0.8541,7-5528046-C-T,Literature context: broad human admixture/local ancestry can create locus-specific ancestry signals; this pair is AF-found in these genes.
+ACTB,Ashkenazi Jewish,Middle Eastern,1,0.5122,7-5529678-G-C,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+ACTB,Ashkenazi Jewish,Non-Finnish European,1,0.4436,7-5528657-C-A,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+ACTB,Non-Finnish European,South Asian,1,0.7287,7-5529468-T-C,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+RPLP0,African,South Asian,1,0.7884,12-120199999-T-C,Literature context: broad human admixture/local ancestry can create locus-specific ancestry signals; this pair is AF-found in these genes.
+RPLP0,American,Finnish,1,0.5398,12-120199396-G-A,"Literature context: AF-found cross-population signal; use as a reticulation candidate, not a proven recombination call."
+RPLP0,East Asian,African,1,0.7716,12-120198746-C-A,Literature context: broad human admixture/local ancestry can create locus-specific ancestry signals; this pair is AF-found in these genes.
+RPLP0,Non-Finnish European,Ashkenazi Jewish,1,0.7051,12-120197506-A-AATCCAAGT,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."
+RPLP0,Non-Finnish European,Finnish,1,0.3573,12-120199160-C-T,"Literature context: West Eurasian / regional shared-history axis; interpret as AF-sharing, not proof of a recombination event."

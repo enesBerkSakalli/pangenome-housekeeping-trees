@@ -15,6 +15,10 @@ subtree in every layer.
   NetworkX tree data.
 - `outputs_3d/plotly_*.html` are the current reviewable Plotly artifacts.
 - `outputs_3d/*audit.json` records machine-readable construction checks.
+- `outputs_3d/datadivr_coordinate_mappings.json` exposes explicit per-scene
+  DataDiVR node coordinates in the normalized 0..1 unit cube.
+- `datadivr_project/Pangenome_Housekeeping_Stacked_Trees/` is a ready-to-copy
+  DataDiVR project folder.
 - `external/DataDiVR_WebApp` is an external DataDiVR checkout used for the local
   WebGL/VR preview.
 
@@ -36,8 +40,9 @@ python datadivr_housekeeping_project.py
 ```
 
 The Plotly HTML outputs are written to `outputs_3d/`. The DataDiVR export is
-written to both `outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json` and
-`external/DataDiVR_WebApp/static/projects/Pangenome_Housekeeping_Stacked_Trees/`.
+written to `outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json`,
+`external/DataDiVR_WebApp/static/projects/Pangenome_Housekeeping_Stacked_Trees/`,
+and the portable top-level copy under `datadivr_project/`.
 
 ## Review the Plotly figure
 
@@ -67,6 +72,12 @@ scripts/start_datadivr.sh
 
 Open `http://127.0.0.1:3000/preview` and select
 `Pangenome_Housekeeping_Stacked_Trees`.
+
+For a ready-made project copy, use:
+
+```text
+datadivr_project/Pangenome_Housekeeping_Stacked_Trees/
+```
 
 The local workspace includes small preview customizations for node radii and
 cleaner legends. They are captured in

@@ -1,0 +1,248 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "gene": "ACTB",
+    "description": "ACTB (beta-actin structural reference)",
+    "root": "internal_14",
+    "taxon_definition": "population",
+    "taxa_order": [
+      "African",
+      "American",
+      "Ashkenazi Jewish",
+      "East Asian",
+      "Finnish",
+      "Middle Eastern",
+      "Non-Finnish European",
+      "South Asian"
+    ],
+    "pop_afs": {
+      "African": 0.0016775083888533582,
+      "American": 0.0009069023226065223,
+      "Ashkenazi Jewish": 0.0010277909783385,
+      "East Asian": 0.0005291799019431077,
+      "Finnish": 0.000927635562086701,
+      "Middle Eastern": 0.0008615889665715734,
+      "Non-Finnish European": 0.0008060672955558126,
+      "South Asian": 0.0007196506855959308
+    }
+  },
+  "nodes": [
+    {
+      "label": "clade_14",
+      "is_leaf": false,
+      "taxon_count": 8,
+      "branch_length": 0.0,
+      "cluster_height": 0.00042598164351966857,
+      "id": "internal_14"
+    },
+    {
+      "label": "African",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 0.00042598164351966857,
+      "cluster_height": 0.0,
+      "population_id": "afr",
+      "population_label": "African",
+      "af": 0.0016775083888533582,
+      "id": "afr"
+    },
+    {
+      "label": "clade_13",
+      "is_leaf": false,
+      "taxon_count": 7,
+      "branch_length": 0.0002531019435949691,
+      "cluster_height": 0.0001728796999246995,
+      "id": "internal_13"
+    },
+    {
+      "label": "East Asian",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 0.0001728796999246995,
+      "cluster_height": 0.0,
+      "population_id": "eas",
+      "population_label": "East Asian",
+      "af": 0.0005291799019431077,
+      "id": "eas"
+    },
+    {
+      "label": "clade_12",
+      "is_leaf": false,
+      "taxon_count": 6,
+      "branch_length": 7.970653020675395e-05,
+      "cluster_height": 9.317316971794555e-05,
+      "id": "internal_12"
+    },
+    {
+      "label": "South Asian",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 9.317316971794555e-05,
+      "cluster_height": 0.0,
+      "population_id": "sas",
+      "population_label": "South Asian",
+      "af": 0.0007196506855959308,
+      "id": "sas"
+    },
+    {
+      "label": "clade_11",
+      "is_leaf": false,
+      "taxon_count": 5,
+      "branch_length": 1.7051948901271682e-05,
+      "cluster_height": 7.612122081667386e-05,
+      "id": "internal_11"
+    },
+    {
+      "label": "Ashkenazi Jewish",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 7.612122081667386e-05,
+      "cluster_height": 0.0,
+      "population_id": "asj",
+      "population_label": "Ashkenazi Jewish",
+      "af": 0.0010277909783385,
+      "id": "asj"
+    },
+    {
+      "label": "clade_10",
+      "is_leaf": false,
+      "taxon_count": 4,
+      "branch_length": 3.440081517521453e-05,
+      "cluster_height": 4.172040564145933e-05,
+      "id": "internal_10"
+    },
+    {
+      "label": "clade_8",
+      "is_leaf": false,
+      "taxon_count": 2,
+      "branch_length": 3.135378590137002e-05,
+      "cluster_height": 1.0366619740089314e-05,
+      "id": "internal_8"
+    },
+    {
+      "label": "clade_9",
+      "is_leaf": false,
+      "taxon_count": 2,
+      "branch_length": 1.3959570133578958e-05,
+      "cluster_height": 2.7760835507880375e-05,
+      "id": "internal_9"
+    },
+    {
+      "label": "Middle Eastern",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 2.7760835507880375e-05,
+      "cluster_height": 0.0,
+      "population_id": "mid",
+      "population_label": "Middle Eastern",
+      "af": 0.0008615889665715734,
+      "id": "mid"
+    },
+    {
+      "label": "Non-Finnish European",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 2.7760835507880375e-05,
+      "cluster_height": 0.0,
+      "population_id": "nfe",
+      "population_label": "Non-Finnish European",
+      "af": 0.0008060672955558126,
+      "id": "nfe"
+    },
+    {
+      "label": "American",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 1.0366619740089314e-05,
+      "cluster_height": 0.0,
+      "population_id": "amr",
+      "population_label": "American",
+      "af": 0.0009069023226065223,
+      "id": "amr"
+    },
+    {
+      "label": "Finnish",
+      "is_leaf": true,
+      "taxon_count": 1,
+      "branch_length": 1.0366619740089314e-05,
+      "cluster_height": 0.0,
+      "population_id": "fin",
+      "population_label": "Finnish",
+      "af": 0.000927635562086701,
+      "id": "fin"
+    }
+  ],
+  "links": [
+    {
+      "weight": 0.00042598164351966857,
+      "source": "internal_14",
+      "target": "afr"
+    },
+    {
+      "weight": 0.0002531019435949691,
+      "source": "internal_14",
+      "target": "internal_13"
+    },
+    {
+      "weight": 0.0001728796999246995,
+      "source": "internal_13",
+      "target": "eas"
+    },
+    {
+      "weight": 7.970653020675395e-05,
+      "source": "internal_13",
+      "target": "internal_12"
+    },
+    {
+      "weight": 9.317316971794555e-05,
+      "source": "internal_12",
+      "target": "sas"
+    },
+    {
+      "weight": 1.7051948901271682e-05,
+      "source": "internal_12",
+      "target": "internal_11"
+    },
+    {
+      "weight": 7.612122081667386e-05,
+      "source": "internal_11",
+      "target": "asj"
+    },
+    {
+      "weight": 3.440081517521453e-05,
+      "source": "internal_11",
+      "target": "internal_10"
+    },
+    {
+      "weight": 3.135378590137002e-05,
+      "source": "internal_10",
+      "target": "internal_8"
+    },
+    {
+      "weight": 1.3959570133578958e-05,
+      "source": "internal_10",
+      "target": "internal_9"
+    },
+    {
+      "weight": 1.0366619740089314e-05,
+      "source": "internal_8",
+      "target": "amr"
+    },
+    {
+      "weight": 1.0366619740089314e-05,
+      "source": "internal_8",
+      "target": "fin"
+    },
+    {
+      "weight": 2.7760835507880375e-05,
+      "source": "internal_9",
+      "target": "mid"
+    },
+    {
+      "weight": 2.7760835507880375e-05,
+      "source": "internal_9",
+      "target": "nfe"
+    }
+  ]
+}

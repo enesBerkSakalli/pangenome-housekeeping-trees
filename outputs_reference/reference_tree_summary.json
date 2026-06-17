@@ -1,0 +1,20 @@
+[
+  {
+    "gene": "GAPDH",
+    "nodes": 15,
+    "edges": 14,
+    "taxa": 8
+  },
+  {
+    "gene": "ACTB",
+    "nodes": 15,
+    "edges": 14,
+    "taxa": 8
+  },
+  {
+    "gene": "RPLP0",
+    "nodes": 15,
+    "edges": 14,
+    "taxa": 8
+  }
+]

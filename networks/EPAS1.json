@@ -1,0 +1,155 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "root": "internal_1",
+    "gene": "EPAS1",
+    "description": "HIF2\u03b1 (high-altitude adaptation)",
+    "n_variants": 4914,
+    "source": "gnomAD v4",
+    "method": "UPGMA on pairwise allele-frequency distance"
+  },
+  "nodes": [
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 2.1e-05,
+      "id": "internal_1"
+    },
+    {
+      "label": "African",
+      "is_leaf": true,
+      "af": 0.001784606926957817,
+      "branch_length": 0.000502,
+      "id": "African"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3e-06,
+      "id": "internal_2"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3e-05,
+      "id": "internal_3"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 8e-06,
+      "id": "internal_4"
+    },
+    {
+      "label": "Ashkenazi",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Ashkenazi"
+    },
+    {
+      "label": "Finnish",
+      "is_leaf": true,
+      "af": 0.000767055951826751,
+      "branch_length": 8e-06,
+      "id": "Finnish"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 2.4e-05,
+      "id": "internal_5"
+    },
+    {
+      "label": "South",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "South"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3e-06,
+      "id": "internal_6"
+    },
+    {
+      "label": "Middle",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Middle"
+    },
+    {
+      "label": "Non-Finnish",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Non-Finnish"
+    }
+  ],
+  "links": [
+    {
+      "weight": 0.000502,
+      "source": "internal_1",
+      "target": "African"
+    },
+    {
+      "weight": 3e-06,
+      "source": "internal_1",
+      "target": "internal_2"
+    },
+    {
+      "weight": 3e-05,
+      "source": "internal_2",
+      "target": "internal_3"
+    },
+    {
+      "weight": 2.4e-05,
+      "source": "internal_2",
+      "target": "internal_5"
+    },
+    {
+      "weight": 3e-06,
+      "source": "internal_2",
+      "target": "internal_6"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_2",
+      "target": "Non-Finnish"
+    },
+    {
+      "weight": 8e-06,
+      "source": "internal_3",
+      "target": "internal_4"
+    },
+    {
+      "weight": 8e-06,
+      "source": "internal_3",
+      "target": "Finnish"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_4",
+      "target": "Ashkenazi"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_5",
+      "target": "South"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_6",
+      "target": "Middle"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "root": "internal_1",
+    "gene": "MAPT",
+    "description": "Microtubule-associated protein tau",
+    "n_variants": 4918,
+    "source": "gnomAD v4",
+    "method": "UPGMA on pairwise allele-frequency distance"
+  },
+  "nodes": [
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 2.5e-05,
+      "id": "internal_1"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 0.000124,
+      "id": "internal_2"
+    },
+    {
+      "label": "Ashkenazi",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Ashkenazi"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 2.8e-05,
+      "id": "internal_3"
+    },
+    {
+      "label": "Non-Finnish",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Non-Finnish"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 3e-06,
+      "id": "internal_4"
+    },
+    {
+      "label": "American",
+      "is_leaf": true,
+      "af": 0.001114881651251591,
+      "branch_length": 3e-06,
+      "id": "American"
+    },
+    {
+      "label": "Middle",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Middle"
+    }
+  ],
+  "links": [
+    {
+      "weight": 0.000124,
+      "source": "internal_1",
+      "target": "internal_2"
+    },
+    {
+      "weight": 2.8e-05,
+      "source": "internal_1",
+      "target": "internal_3"
+    },
+    {
+      "weight": 3e-06,
+      "source": "internal_1",
+      "target": "internal_4"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_2",
+      "target": "Ashkenazi"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_3",
+      "target": "Non-Finnish"
+    },
+    {
+      "weight": 3e-06,
+      "source": "internal_4",
+      "target": "American"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_4",
+      "target": "Middle"
+    }
+  ]
+}

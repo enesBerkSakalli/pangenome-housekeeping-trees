@@ -1,0 +1,59 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "root": "internal_1",
+    "gene": "HLA-A",
+    "description": "HLA Class I (immune recognition)",
+    "n_variants": 7606,
+    "source": "gnomAD v4",
+    "method": "UPGMA on pairwise allele-frequency distance"
+  },
+  "nodes": [
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 0.001134,
+      "id": "internal_1"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 0.000315,
+      "id": "internal_2"
+    },
+    {
+      "label": "Finnish",
+      "is_leaf": true,
+      "af": 0.0022460004345880562,
+      "branch_length": 0.000315,
+      "id": "Finnish"
+    },
+    {
+      "label": "Non-Finnish",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Non-Finnish"
+    }
+  ],
+  "links": [
+    {
+      "weight": 0.000315,
+      "source": "internal_1",
+      "target": "internal_2"
+    },
+    {
+      "weight": 0.000315,
+      "source": "internal_2",
+      "target": "Finnish"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_2",
+      "target": "Non-Finnish"
+    }
+  ]
+}

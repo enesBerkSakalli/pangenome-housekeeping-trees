@@ -1,0 +1,131 @@
+{
+  "directed": true,
+  "multigraph": false,
+  "graph": {
+    "root": "internal_1",
+    "gene": "GAPDH",
+    "description": "GAPDH (housekeeping control)",
+    "n_variants": 1953,
+    "source": "gnomAD v4",
+    "method": "UPGMA on pairwise allele-frequency distance"
+  },
+  "nodes": [
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 0.000106,
+      "id": "internal_1"
+    },
+    {
+      "label": "African",
+      "is_leaf": true,
+      "af": 0.0018905723948171675,
+      "branch_length": 0.000626,
+      "id": "African"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 0.000121,
+      "id": "internal_2"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 9.8e-05,
+      "id": "internal_3"
+    },
+    {
+      "label": "American",
+      "is_leaf": true,
+      "af": 0.0008527426387243303,
+      "branch_length": 9.8e-05,
+      "id": "American"
+    },
+    {
+      "label": "East",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "East"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 1.6e-05,
+      "id": "internal_4"
+    },
+    {
+      "label": "",
+      "is_leaf": false,
+      "af": -1.0,
+      "branch_length": 1.6e-05,
+      "id": "internal_5"
+    },
+    {
+      "label": "Ashkenazi",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Ashkenazi"
+    },
+    {
+      "label": "Middle",
+      "is_leaf": true,
+      "af": -1.0,
+      "branch_length": 0.0,
+      "id": "Middle"
+    }
+  ],
+  "links": [
+    {
+      "weight": 0.000626,
+      "source": "internal_1",
+      "target": "African"
+    },
+    {
+      "weight": 0.000121,
+      "source": "internal_1",
+      "target": "internal_2"
+    },
+    {
+      "weight": 1.6e-05,
+      "source": "internal_1",
+      "target": "internal_4"
+    },
+    {
+      "weight": 9.8e-05,
+      "source": "internal_2",
+      "target": "internal_3"
+    },
+    {
+      "weight": 9.8e-05,
+      "source": "internal_3",
+      "target": "American"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_3",
+      "target": "East"
+    },
+    {
+      "weight": 1.6e-05,
+      "source": "internal_4",
+      "target": "internal_5"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_4",
+      "target": "Middle"
+    },
+    {
+      "weight": 0.0,
+      "source": "internal_5",
+      "target": "Ashkenazi"
+    }
+  ]
+}

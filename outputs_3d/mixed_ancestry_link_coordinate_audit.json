@@ -1,0 +1,240 @@
+{
+  "scene_ranges": {
+    "x": [
+      -600.0,
+      600.0
+    ],
+    "y": [
+      -600.0,
+      600.0
+    ],
+    "z": [
+      -574.1902584452374,
+      652.1991144041125
+    ]
+  },
+  "genes": {
+    "GAPDH": {
+      "node_coordinates_finite": true,
+      "node_coordinates_inside_scene": true,
+      "mixed_candidate_count": 12,
+      "mixed_pair_count": 10,
+      "reticulation_links": [
+        {
+          "dominant": "African",
+          "secondary": "East Asian",
+          "candidate_variants": 2,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Middle Eastern",
+          "secondary": "African",
+          "candidate_variants": 2,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "African",
+          "secondary": "Non-Finnish European",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "American",
+          "secondary": "East Asian",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "American",
+          "secondary": "South Asian",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "East Asian",
+          "secondary": "African",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Finnish",
+          "secondary": "Non-Finnish European",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Non-Finnish European",
+          "secondary": "American",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Non-Finnish European",
+          "secondary": "Finnish",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "South Asian",
+          "secondary": "Middle Eastern",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        }
+      ]
+    },
+    "ACTB": {
+      "node_coordinates_finite": true,
+      "node_coordinates_inside_scene": true,
+      "mixed_candidate_count": 9,
+      "mixed_pair_count": 7,
+      "reticulation_links": [
+        {
+          "dominant": "Ashkenazi Jewish",
+          "secondary": "Finnish",
+          "candidate_variants": 2,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Non-Finnish European",
+          "secondary": "Finnish",
+          "candidate_variants": 2,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "African",
+          "secondary": "Ashkenazi Jewish",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Ashkenazi Jewish",
+          "secondary": "African",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Ashkenazi Jewish",
+          "secondary": "Middle Eastern",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Ashkenazi Jewish",
+          "secondary": "Non-Finnish European",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Non-Finnish European",
+          "secondary": "South Asian",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        }
+      ]
+    },
+    "RPLP0": {
+      "node_coordinates_finite": true,
+      "node_coordinates_inside_scene": true,
+      "mixed_candidate_count": 5,
+      "mixed_pair_count": 5,
+      "reticulation_links": [
+        {
+          "dominant": "African",
+          "secondary": "South Asian",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "American",
+          "secondary": "Finnish",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "East Asian",
+          "secondary": "African",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Non-Finnish European",
+          "secondary": "Ashkenazi Jewish",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        },
+        {
+          "dominant": "Non-Finnish European",
+          "secondary": "Finnish",
+          "candidate_variants": 1,
+          "curve_points_finite": true,
+          "curve_inside_scene": true,
+          "start_endpoint_xy_error": 0.0,
+          "end_endpoint_xy_error": 0.0
+        }
+      ]
+    }
+  }
+}

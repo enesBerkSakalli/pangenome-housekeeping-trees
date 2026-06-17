@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d10" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d9" for="node" attr.name="branch_length" attr.type="double"/>
+<key id="d8" for="node" attr.name="af" attr.type="double"/>
+<key id="d7" for="node" attr.name="is_leaf" attr.type="boolean"/>
+<key id="d6" for="node" attr.name="label" attr.type="string"/>
+<key id="d5" for="graph" attr.name="method" attr.type="string"/>
+<key id="d4" for="graph" attr.name="source" attr.type="string"/>
+<key id="d3" for="graph" attr.name="n_variants" attr.type="long"/>
+<key id="d2" for="graph" attr.name="description" attr.type="string"/>
+<key id="d1" for="graph" attr.name="gene" attr.type="string"/>
+<key id="d0" for="graph" attr.name="root" attr.type="string"/>
+<graph edgedefault="directed"><data key="d0">internal_1</data>
+<data key="d1">GAPDH</data>
+<data key="d2">GAPDH (housekeeping control)</data>
+<data key="d3">1953</data>
+<data key="d4">gnomAD v4</data>
+<data key="d5">UPGMA on pairwise allele-frequency distance</data>
+<node id="internal_1">
+  <data key="d6"></data>
+  <data key="d7">False</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">0.000106</data>
+</node>
+<node id="African">
+  <data key="d6">African</data>
+  <data key="d7">True</data>
+  <data key="d8">0.0018905723948171675</data>
+  <data key="d9">0.000626</data>
+</node>
+<node id="internal_2">
+  <data key="d6"></data>
+  <data key="d7">False</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">0.000121</data>
+</node>
+<node id="internal_3">
+  <data key="d6"></data>
+  <data key="d7">False</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">9.8e-05</data>
+</node>
+<node id="American">
+  <data key="d6">American</data>
+  <data key="d7">True</data>
+  <data key="d8">0.0008527426387243303</data>
+  <data key="d9">9.8e-05</data>
+</node>
+<node id="East">
+  <data key="d6">East</data>
+  <data key="d7">True</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">0.0</data>
+</node>
+<node id="internal_4">
+  <data key="d6"></data>
+  <data key="d7">False</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">1.6e-05</data>
+</node>
+<node id="internal_5">
+  <data key="d6"></data>
+  <data key="d7">False</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">1.6e-05</data>
+</node>
+<node id="Ashkenazi">
+  <data key="d6">Ashkenazi</data>
+  <data key="d7">True</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">0.0</data>
+</node>
+<node id="Middle">
+  <data key="d6">Middle</data>
+  <data key="d7">True</data>
+  <data key="d8">-1.0</data>
+  <data key="d9">0.0</data>
+</node>
+<edge source="internal_1" target="African">
+  <data key="d10">0.000626</data>
+</edge>
+<edge source="internal_1" target="internal_2">
+  <data key="d10">0.000121</data>
+</edge>
+<edge source="internal_1" target="internal_4">
+  <data key="d10">1.6e-05</data>
+</edge>
+<edge source="internal_2" target="internal_3">
+  <data key="d10">9.8e-05</data>
+</edge>
+<edge source="internal_3" target="American">
+  <data key="d10">9.8e-05</data>
+</edge>
+<edge source="internal_3" target="East">
+  <data key="d10">0.0</data>
+</edge>
+<edge source="internal_4" target="internal_5">
+  <data key="d10">1.6e-05</data>
+</edge>
+<edge source="internal_4" target="Middle">
+  <data key="d10">0.0</data>
+</edge>
+<edge source="internal_5" target="Ashkenazi">
+  <data key="d10">0.0</data>
+</edge>
+</graph></graphml>

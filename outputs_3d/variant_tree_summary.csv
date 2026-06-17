@@ -1,0 +1,4 @@
+gene,selected_taxa,node_count,edge_count,total_variants_in_source,protein_altering_taxa,regulatory_splice_taxa,background_taxa
+GAPDH,1024,2047,2046,1953,240,164,620
+ACTB,1024,2047,2046,1638,67,205,752
+RPLP0,1024,2047,2046,1587,288,203,533

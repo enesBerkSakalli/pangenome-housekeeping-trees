@@ -1,0 +1,4 @@
+f08caa1cef7bcb7bc62d5dd5de4cb0b1  ncbi_dataset/data/protein.faa
+adc424955edf6113cf8350a669e48a83  ncbi_dataset/data/data_report.jsonl
+a298ff244eb87a9eb3f268548534aa01  ncbi_dataset/data/product_report.jsonl
+b54e4d70f4a3f57a3da3c604b1ffcc63  ncbi_dataset/data/dataset_catalog.json

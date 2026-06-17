@@ -1,0 +1,4 @@
+gene,nodes,edges,leaves,African,American,Ashkenazi Jewish,East Asian,Finnish,Middle Eastern,Non-Finnish European,South Asian
+GAPDH,2047,2046,1024,200,151,20,152,75,35,162,229
+ACTB,2047,2046,1024,241,147,30,152,55,41,151,207
+RPLP0,2047,2046,1024,188,114,19,115,37,36,314,201

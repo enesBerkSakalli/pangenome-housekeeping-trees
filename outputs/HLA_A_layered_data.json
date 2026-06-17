@@ -1,0 +1,74 @@
+{
+  "gene": "HLA-A",
+  "description": "HLA Class I (immune recognition)",
+  "root": "internal_1",
+  "n_nodes": 4,
+  "n_edges": 3,
+  "nodes": {
+    "internal_1": {
+      "x": 0.5,
+      "y": 0.0,
+      "layer": 0,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "internal_2": {
+      "x": 0.5,
+      "y": 0.5,
+      "layer": 1,
+      "label": "",
+      "is_leaf": false,
+      "af": null,
+      "color": "#334155"
+    },
+    "Finnish": {
+      "x": 0.0,
+      "y": 1.0,
+      "layer": 2,
+      "label": "Finnish",
+      "is_leaf": true,
+      "af": 0.002246,
+      "color": "#34d399"
+    },
+    "Non-Finnish": {
+      "x": 1.0,
+      "y": 0.5,
+      "layer": 2,
+      "label": "Non-Finnish",
+      "is_leaf": true,
+      "af": null,
+      "color": "#334155"
+    }
+  },
+  "edges": [
+    {
+      "source": "internal_1",
+      "target": "internal_2",
+      "branch_length": 0.000315
+    },
+    {
+      "source": "internal_2",
+      "target": "Finnish",
+      "branch_length": 0.000315
+    },
+    {
+      "source": "internal_2",
+      "target": "Non-Finnish",
+      "branch_length": 0.0
+    }
+  ],
+  "layers": {
+    "0": [
+      "internal_1"
+    ],
+    "1": [
+      "internal_2"
+    ],
+    "2": [
+      "Finnish",
+      "Non-Finnish"
+    ]
+  }
+}
