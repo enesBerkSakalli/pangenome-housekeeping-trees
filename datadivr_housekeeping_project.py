@@ -51,6 +51,7 @@ INFO = (
     "taxa are used in every gene layer; focus scenes fade non-selected genes."
 )
 PATH_GROUP_DOMINANCE_THRESHOLD = 0.60
+ANCESTOR_CONTEXT_LEVELS = (1, 2)
 BACKBONE_LINK_COLOR = (202, 220, 250, 70)
 AMBIGUOUS_LINK_COLOR = (142, 160, 190, 48)
 FADED_LINK_COLOR = (52, 60, 76, 10)
@@ -68,7 +69,7 @@ PATH_ANIMATION_SETTINGS = {
     "mode": "flow_pulses",
     "drawPathCurves": True,
     "pulseEnabled": False,
-    "maxVisiblePaths": 180,
+    "maxVisiblePaths": 260,
     "curveSegments": 36,
     "pulseRadius": 0.072,
     "pulseSpeed": 0.18,
@@ -369,6 +370,9 @@ def edge_color_for_interlayer_edge(
         if focused:
             return (base[0], base[1], base[2], INTERLAYER_SELECTED_TAXON_FOCUS_ALPHA)
         return (48, 56, 72, INTERLAYER_SELECTED_TAXON_FLOW_ALPHA)
+    if attrs.get("is_interlayer_ancestor_context_edge"):
+        alpha = 58 if not focused else 92
+        return (base[0], base[1], base[2], alpha)
     if focused:
         return (base[0], base[1], base[2], min(154, base[3] + 20))
     return base
@@ -598,6 +602,34 @@ def add_interlayer_species_connections(
     path_records = []
     group_order = [group for group in [*pst.MAMMAL_CLADE_ORDER, "Human"] if group in grouped_taxa]
     adjacent_pairs = list(zip(pst.GENE_ORDER[:-1], pst.GENE_ORDER[1:]))
+    parent_maps: dict[str, dict[str, str | None]] = {}
+
+    def parent_map_for_gene(gene: str) -> dict[str, str | None]:
+        if gene in parent_maps:
+            return parent_maps[gene]
+        graph = gene_graphs[gene]
+        root = pst.root_node(graph)
+        parent: dict[str, str | None] = {root: None}
+        stack = [root]
+        while stack:
+            node = stack.pop()
+            for child in graph.successors(node):
+                child = str(child)
+                if child in parent:
+                    continue
+                parent[child] = str(node)
+                stack.append(child)
+        parent_maps[gene] = parent
+        return parent
+
+    def ancestor_at_distance(gene: str, node: str, distance: int) -> str | None:
+        parent = parent_map_for_gene(gene)
+        current: str | None = str(node)
+        for _ in range(distance):
+            if current is None:
+                return None
+            current = parent.get(current)
+        return current
 
     def rounded_position(point: np.ndarray | list[float]) -> list[float]:
         array = np.array(point, dtype=float)
@@ -650,12 +682,18 @@ def add_interlayer_species_connections(
         group_index: int,
         pair_index: int,
         group_total: int,
+        context_level: int = 0,
     ) -> tuple[list[float], list[float]]:
         start_array = np.array(start, dtype=float)
         end_array = np.array(end, dtype=float)
         delta = end_array - start_array
-        angle = (-math.pi / 2.0) + (math.tau * group_index / max(group_total, 1)) + (pair_index * 0.10)
-        radius = 0.18 + (0.035 * (group_index % 4))
+        angle = (
+            (-math.pi / 2.0)
+            + (math.tau * group_index / max(group_total, 1))
+            + (pair_index * 0.10)
+            + (context_level * 0.055)
+        )
+        radius = 0.18 + (0.035 * (group_index % 4)) + (0.040 * context_level)
         lane_anchor = np.array(
             [
                 clamp(0.5 + (math.cos(angle) * radius), 0.16, 0.84),
@@ -664,12 +702,12 @@ def add_interlayer_species_connections(
             dtype=float,
         )
         tangent = np.array([-math.sin(angle), math.cos(angle)], dtype=float)
-        pair_splay = 0.018 if pair_index == 0 else -0.018
+        pair_splay = (0.018 + 0.006 * context_level) if pair_index == 0 else (-0.018 - 0.006 * context_level)
         control_a = start_array + (delta * 0.30)
         control_b = start_array + (delta * 0.70)
         control_a[:2] = (control_a[:2] * 0.30) + (lane_anchor * 0.70) + (tangent * pair_splay)
         control_b[:2] = (control_b[:2] * 0.30) + (lane_anchor * 0.70) - (tangent * pair_splay)
-        z_bow = 0.025 * math.sin(angle + pair_index)
+        z_bow = (0.025 + 0.010 * context_level) * math.sin(angle + pair_index)
         control_a[2] = clamp(control_a[2] + z_bow, 0.045, 0.955)
         control_b[2] = clamp(control_b[2] + z_bow, 0.045, 0.955)
         return rounded_position(control_a), rounded_position(control_b)
@@ -822,6 +860,8 @@ def add_interlayer_species_connections(
         target_gene: str,
         flow_kind: str,
         label_suffix: str,
+        path_kind: str = "clade_flow",
+        context_level: int = 0,
     ) -> None:
         gene_pair = f"{source_gene}->{target_gene}"
         start = base.nodes[source]["pos"]
@@ -832,6 +872,7 @@ def add_interlayer_species_connections(
             group_index,
             pair_index,
             len(group_order),
+            context_level=context_level,
         )
         control_a = f"__flow_control__{safe_name(group)}__{source_gene}_{target_gene}__{flow_kind}__a"
         control_b = f"__flow_control__{safe_name(group)}__{source_gene}_{target_gene}__{flow_kind}__b"
@@ -868,7 +909,9 @@ def add_interlayer_species_connections(
             "gene_pair": gene_pair,
             "is_interlayer_connection": True,
             "is_interlayer_clade_flow_edge": True,
+            "is_interlayer_ancestor_context_edge": path_kind == "ancestor_context_flow",
             "flow_kind": flow_kind,
+            "context_level": context_level,
             "interlayer_group": group,
             "interlayer_label": f"{group} {label_suffix}",
             "path_group": "Interlayer clade-level flow corridor",
@@ -887,16 +930,19 @@ def add_interlayer_species_connections(
                 "source": source,
                 "target": target,
                 "flow_kind": flow_kind,
+                "path_kind": path_kind,
+                "context_level": context_level,
                 "path_nodes": [source, control_a, control_b, target],
             }
         )
         path_records.append(
             {
                 "name": f"{gene_pair} {group} {flow_kind}",
-                "kind": "clade_flow",
+                "kind": path_kind,
                 "gene_pair": gene_pair,
                 "group": group,
                 "flow_kind": flow_kind,
+                "context_level": context_level,
                 "taxa": len(grouped_taxa[group]),
                 "path_nodes": [source, control_a, control_b, target],
             }
@@ -938,6 +984,43 @@ def add_interlayer_species_connections(
             flow_kind="diverge_from_middle_mrca",
             label_suffix=f"MRCA-to-MRCA divergence from {middle_gene}",
         )
+        for context_level in ANCESTOR_CONTEXT_LEVELS:
+            first_ancestor = ancestor_at_distance(first_gene, first_mrca, context_level)
+            middle_ancestor = ancestor_at_distance(middle_gene, middle_mrca, context_level)
+            third_ancestor = ancestor_at_distance(third_gene, third_mrca, context_level)
+            if first_ancestor is None or middle_ancestor is None or third_ancestor is None:
+                continue
+            first_ancestor_key = combined_node_id(first_gene, first_ancestor)
+            middle_ancestor_key = combined_node_id(middle_gene, middle_ancestor)
+            third_ancestor_key = combined_node_id(third_gene, third_ancestor)
+            if first_ancestor_key not in base or middle_ancestor_key not in base or third_ancestor_key not in base:
+                continue
+            add_segmented_clade_flow(
+                source=first_ancestor_key,
+                target=middle_ancestor_key,
+                group=group,
+                group_index=group_index,
+                pair_index=0,
+                source_gene=first_gene,
+                target_gene=middle_gene,
+                flow_kind=f"ancestor_context_level_{context_level}",
+                label_suffix=f"ancestor context level {context_level} around {middle_gene}",
+                path_kind="ancestor_context_flow",
+                context_level=context_level,
+            )
+            add_segmented_clade_flow(
+                source=middle_ancestor_key,
+                target=third_ancestor_key,
+                group=group,
+                group_index=group_index,
+                pair_index=1,
+                source_gene=middle_gene,
+                target_gene=third_gene,
+                flow_kind=f"ancestor_context_level_{context_level}",
+                label_suffix=f"ancestor context level {context_level} around {middle_gene}",
+                path_kind="ancestor_context_flow",
+                context_level=context_level,
+            )
 
     history_records = pst.history_flow_records(gene_graphs, layouts)
     taxon_lane_total = max(1, len(history_records))
@@ -1178,7 +1261,16 @@ def build_combined_graphs() -> tuple[list[nx.Graph], dict]:
     ]
     interlayer_taxon_records = interlayer_records["shared_taxa"]
     interlayer_by_group = Counter(record["group"] for record in interlayer_taxon_records)
-    clade_flows_by_pair = Counter(record["gene_pair"] for record in interlayer_records["clade_flow_records"])
+    direct_clade_flow_records = [
+        record for record in interlayer_records["clade_flow_records"]
+        if record.get("path_kind", "clade_flow") == "clade_flow"
+    ]
+    ancestor_context_flow_records = [
+        record for record in interlayer_records["clade_flow_records"]
+        if record.get("path_kind") == "ancestor_context_flow"
+    ]
+    clade_flows_by_pair = Counter(record["gene_pair"] for record in direct_clade_flow_records)
+    ancestor_context_flows_by_pair = Counter(record["gene_pair"] for record in ancestor_context_flow_records)
     selected_taxon_flows_by_pair = Counter(record["gene_pair"] for record in interlayer_records["selected_taxon_flow_records"])
     adjacent_pair_taxa = {
         f"{source_gene}->{target_gene}": len(interlayer_taxon_records)
@@ -1196,19 +1288,23 @@ def build_combined_graphs() -> tuple[list[nx.Graph], dict]:
         "interlayer_clade_flow_edges": len(clade_flow_edge_records),
         "interlayer_selected_taxon_flow_edges": len(taxon_flow_edge_records),
         "interlayer_flow_nodes": len(interlayer_records["flow_nodes"]),
-        "interlayer_clade_flow_segments": len(interlayer_records["clade_flow_records"]),
+        "interlayer_direct_mrca_flow_segments": len(direct_clade_flow_records),
+        "interlayer_ancestor_context_flow_segments": len(ancestor_context_flow_records),
         "interlayer_selected_taxon_flow_tracks": len(interlayer_records["selected_taxon_flow_records"]),
         "explicit_path_records": len(interlayer_records["path_records"]),
         "interlayer_shared_taxa": len(interlayer_taxon_records),
         "adjacent_gene_pair_species_connections": adjacent_pair_taxa,
         "visible_selected_taxon_flows_by_pair": dict(sorted(selected_taxon_flows_by_pair.items())),
         "clade_flow_corridors_by_pair": dict(sorted(clade_flows_by_pair.items())),
+        "ancestor_context_flows_by_pair": dict(sorted(ancestor_context_flows_by_pair.items())),
         "interlayer_shared_taxa_by_group": dict(sorted(interlayer_by_group.items())),
         "interlayer_routing_policy": (
             f"clade-level corridors connect MRCA_{pst.GENE_ORDER[0]}(S) to "
             f"MRCA_{pst.GENE_ORDER[1]}(S) to MRCA_{pst.GENE_ORDER[2]}(S) "
-            "for each shared taxon group S; faint selected same-taxon "
-            "tracks remain separate"
+            "for each shared taxon group S; additional ancestor_context_flow "
+            "paths connect parent/grandparent ancestors around those MRCAs and "
+            "are not labeled as direct most-recent common ancestors; faint "
+            "selected same-taxon tracks remain separate"
         ),
         "per_gene": {},
         "taxon_policy": (
@@ -1360,6 +1456,7 @@ def path_payload_from_scenes(scenes: list[nx.Graph], node_order: list[str]) -> d
             "gene_pair": record.get("gene_pair", ""),
             "group": record.get("group", ""),
             "flow_kind": record.get("flow_kind", ""),
+            "context_level": record.get("context_level", 0),
             "label": record.get("label", ""),
             "score": record.get("score", None),
             "must_show": bool(record.get("must_show", False)),

@@ -83,6 +83,8 @@ The project includes non-native sidecars for agents and downstream tools:
 
 - `paths.json` and `pfile.json["paths"]` store explicit paths as numeric
   DataDiVR node IDs, for example `[[376, 5109, 5110, 2239], ...]`.
+- `ancestor_context_flow` paths connect higher ancestor levels around direct
+  MRCA corridors; they are intentionally not labeled as direct MRCAs.
 - `coordinate_mappings.json` maps numeric DataDiVR node IDs to source node keys,
   annotations, colors, and per-scene coordinates.
 - `analysis/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl` stores the

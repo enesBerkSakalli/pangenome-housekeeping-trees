@@ -42,7 +42,10 @@ textures. The additional path layer is independent:
   `[[1, 2, 3, 4], [4, 6, 7], ...]`.
 - `paths.json["path_records"]` adds metadata for each path, including kind,
   gene pair, clade/group, label, and the same numeric `nodes` list.
-- Current path kinds are `clade_flow` and `selected_taxon_flow`.
+- Current path kinds are `clade_flow`, `ancestor_context_flow`, and
+  `selected_taxon_flow`. `clade_flow` is the direct MRCA-to-MRCA corridor.
+  `ancestor_context_flow` connects parent/grandparent ancestors around those
+  MRCAs and must not be described as the direct most recent common ancestor.
 - Do not infer paths by connected components of interlayer edges. Several
   corridors share MRCA nodes, so component inference can merge distinct paths.
   Use `paths.json` as the source of truth.

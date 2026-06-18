@@ -94401,6 +94401,110 @@
     },
     {
       "id": 5113,
+      "n": "GAPDH->ENO1 Great apes first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Great apes first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5114,
+      "n": "GAPDH->ENO1 Great apes second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Great apes second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5115,
+      "n": "ENO1->RPLP0 Great apes first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Great apes first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5116,
+      "n": "ENO1->RPLP0 Great apes second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Great apes second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5117,
+      "n": "GAPDH->ENO1 Great apes first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Great apes first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5118,
+      "n": "GAPDH->ENO1 Great apes second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Great apes second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5119,
+      "n": "ENO1->RPLP0 Great apes first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Great apes first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5120,
+      "n": "ENO1->RPLP0 Great apes second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Great apes second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Great apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5121,
       "n": "GAPDH->ENO1 Lesser apes first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Lesser apes first MRCA-to-MRCA convergence into ENO1 control",
@@ -94413,7 +94517,7 @@
       }
     },
     {
-      "id": 5114,
+      "id": 5122,
       "n": "GAPDH->ENO1 Lesser apes second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Lesser apes second MRCA-to-MRCA convergence into ENO1 control",
@@ -94426,7 +94530,7 @@
       }
     },
     {
-      "id": 5115,
+      "id": 5123,
       "n": "ENO1->RPLP0 Lesser apes first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Lesser apes first MRCA-to-MRCA divergence from ENO1 control",
@@ -94439,7 +94543,7 @@
       }
     },
     {
-      "id": 5116,
+      "id": 5124,
       "n": "ENO1->RPLP0 Lesser apes second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Lesser apes second MRCA-to-MRCA divergence from ENO1 control",
@@ -94452,7 +94556,111 @@
       }
     },
     {
-      "id": 5117,
+      "id": 5125,
+      "n": "GAPDH->ENO1 Lesser apes first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lesser apes first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5126,
+      "n": "GAPDH->ENO1 Lesser apes second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lesser apes second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5127,
+      "n": "ENO1->RPLP0 Lesser apes first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lesser apes first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5128,
+      "n": "ENO1->RPLP0 Lesser apes second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lesser apes second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5129,
+      "n": "GAPDH->ENO1 Lesser apes first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lesser apes first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5130,
+      "n": "GAPDH->ENO1 Lesser apes second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lesser apes second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5131,
+      "n": "ENO1->RPLP0 Lesser apes first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lesser apes first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5132,
+      "n": "ENO1->RPLP0 Lesser apes second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lesser apes second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lesser apes",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5133,
       "n": "GAPDH->ENO1 Old World monkeys first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Old World monkeys first MRCA-to-MRCA convergence into ENO1 control",
@@ -94465,7 +94673,7 @@
       }
     },
     {
-      "id": 5118,
+      "id": 5134,
       "n": "GAPDH->ENO1 Old World monkeys second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Old World monkeys second MRCA-to-MRCA convergence into ENO1 control",
@@ -94478,7 +94686,7 @@
       }
     },
     {
-      "id": 5119,
+      "id": 5135,
       "n": "ENO1->RPLP0 Old World monkeys first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Old World monkeys first MRCA-to-MRCA divergence from ENO1 control",
@@ -94491,7 +94699,7 @@
       }
     },
     {
-      "id": 5120,
+      "id": 5136,
       "n": "ENO1->RPLP0 Old World monkeys second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Old World monkeys second MRCA-to-MRCA divergence from ENO1 control",
@@ -94504,7 +94712,59 @@
       }
     },
     {
-      "id": 5121,
+      "id": 5137,
+      "n": "GAPDH->ENO1 Old World monkeys first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Old World monkeys first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Old World monkeys",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 14,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5138,
+      "n": "GAPDH->ENO1 Old World monkeys second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Old World monkeys second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Old World monkeys",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 14,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5139,
+      "n": "ENO1->RPLP0 Old World monkeys first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Old World monkeys first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Old World monkeys",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 14,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5140,
+      "n": "ENO1->RPLP0 Old World monkeys second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Old World monkeys second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Old World monkeys",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 14,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5141,
       "n": "GAPDH->ENO1 New World monkeys first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 New World monkeys first MRCA-to-MRCA convergence into ENO1 control",
@@ -94517,7 +94777,7 @@
       }
     },
     {
-      "id": 5122,
+      "id": 5142,
       "n": "GAPDH->ENO1 New World monkeys second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 New World monkeys second MRCA-to-MRCA convergence into ENO1 control",
@@ -94530,7 +94790,7 @@
       }
     },
     {
-      "id": 5123,
+      "id": 5143,
       "n": "ENO1->RPLP0 New World monkeys first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 New World monkeys first MRCA-to-MRCA divergence from ENO1 control",
@@ -94543,7 +94803,7 @@
       }
     },
     {
-      "id": 5124,
+      "id": 5144,
       "n": "ENO1->RPLP0 New World monkeys second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 New World monkeys second MRCA-to-MRCA divergence from ENO1 control",
@@ -94556,7 +94816,111 @@
       }
     },
     {
-      "id": 5125,
+      "id": 5145,
+      "n": "GAPDH->ENO1 New World monkeys first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 New World monkeys first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5146,
+      "n": "GAPDH->ENO1 New World monkeys second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 New World monkeys second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5147,
+      "n": "ENO1->RPLP0 New World monkeys first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 New World monkeys first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5148,
+      "n": "ENO1->RPLP0 New World monkeys second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 New World monkeys second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5149,
+      "n": "GAPDH->ENO1 New World monkeys first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 New World monkeys first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5150,
+      "n": "GAPDH->ENO1 New World monkeys second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 New World monkeys second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5151,
+      "n": "ENO1->RPLP0 New World monkeys first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 New World monkeys first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5152,
+      "n": "ENO1->RPLP0 New World monkeys second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 New World monkeys second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "New World monkeys",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5153,
       "n": "GAPDH->ENO1 Strepsirrhines first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Strepsirrhines first MRCA-to-MRCA convergence into ENO1 control",
@@ -94569,7 +94933,7 @@
       }
     },
     {
-      "id": 5126,
+      "id": 5154,
       "n": "GAPDH->ENO1 Strepsirrhines second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Strepsirrhines second MRCA-to-MRCA convergence into ENO1 control",
@@ -94582,7 +94946,7 @@
       }
     },
     {
-      "id": 5127,
+      "id": 5155,
       "n": "ENO1->RPLP0 Strepsirrhines first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Strepsirrhines first MRCA-to-MRCA divergence from ENO1 control",
@@ -94595,7 +94959,7 @@
       }
     },
     {
-      "id": 5128,
+      "id": 5156,
       "n": "ENO1->RPLP0 Strepsirrhines second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Strepsirrhines second MRCA-to-MRCA divergence from ENO1 control",
@@ -94608,7 +94972,111 @@
       }
     },
     {
-      "id": 5129,
+      "id": 5157,
+      "n": "GAPDH->ENO1 Strepsirrhines first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Strepsirrhines first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5158,
+      "n": "GAPDH->ENO1 Strepsirrhines second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Strepsirrhines second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5159,
+      "n": "ENO1->RPLP0 Strepsirrhines first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Strepsirrhines first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5160,
+      "n": "ENO1->RPLP0 Strepsirrhines second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Strepsirrhines second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5161,
+      "n": "GAPDH->ENO1 Strepsirrhines first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Strepsirrhines first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5162,
+      "n": "GAPDH->ENO1 Strepsirrhines second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Strepsirrhines second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5163,
+      "n": "ENO1->RPLP0 Strepsirrhines first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Strepsirrhines first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5164,
+      "n": "ENO1->RPLP0 Strepsirrhines second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Strepsirrhines second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Strepsirrhines",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5165,
       "n": "GAPDH->ENO1 Scandentia first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Scandentia first MRCA-to-MRCA convergence into ENO1 control",
@@ -94621,7 +95089,7 @@
       }
     },
     {
-      "id": 5130,
+      "id": 5166,
       "n": "GAPDH->ENO1 Scandentia second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Scandentia second MRCA-to-MRCA convergence into ENO1 control",
@@ -94634,7 +95102,7 @@
       }
     },
     {
-      "id": 5131,
+      "id": 5167,
       "n": "ENO1->RPLP0 Scandentia first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Scandentia first MRCA-to-MRCA divergence from ENO1 control",
@@ -94647,7 +95115,7 @@
       }
     },
     {
-      "id": 5132,
+      "id": 5168,
       "n": "ENO1->RPLP0 Scandentia second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Scandentia second MRCA-to-MRCA divergence from ENO1 control",
@@ -94660,7 +95128,111 @@
       }
     },
     {
-      "id": 5133,
+      "id": 5169,
+      "n": "GAPDH->ENO1 Scandentia first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Scandentia first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5170,
+      "n": "GAPDH->ENO1 Scandentia second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Scandentia second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5171,
+      "n": "ENO1->RPLP0 Scandentia first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Scandentia first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5172,
+      "n": "ENO1->RPLP0 Scandentia second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Scandentia second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5173,
+      "n": "GAPDH->ENO1 Scandentia first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Scandentia first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5174,
+      "n": "GAPDH->ENO1 Scandentia second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Scandentia second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5175,
+      "n": "ENO1->RPLP0 Scandentia first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Scandentia first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5176,
+      "n": "ENO1->RPLP0 Scandentia second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Scandentia second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Scandentia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5177,
       "n": "GAPDH->ENO1 Glires first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Glires first MRCA-to-MRCA convergence into ENO1 control",
@@ -94673,7 +95245,7 @@
       }
     },
     {
-      "id": 5134,
+      "id": 5178,
       "n": "GAPDH->ENO1 Glires second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Glires second MRCA-to-MRCA convergence into ENO1 control",
@@ -94686,7 +95258,7 @@
       }
     },
     {
-      "id": 5135,
+      "id": 5179,
       "n": "ENO1->RPLP0 Glires first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Glires first MRCA-to-MRCA divergence from ENO1 control",
@@ -94699,7 +95271,7 @@
       }
     },
     {
-      "id": 5136,
+      "id": 5180,
       "n": "ENO1->RPLP0 Glires second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Glires second MRCA-to-MRCA divergence from ENO1 control",
@@ -94712,7 +95284,111 @@
       }
     },
     {
-      "id": 5137,
+      "id": 5181,
+      "n": "GAPDH->ENO1 Glires first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Glires first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5182,
+      "n": "GAPDH->ENO1 Glires second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Glires second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5183,
+      "n": "ENO1->RPLP0 Glires first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Glires first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5184,
+      "n": "ENO1->RPLP0 Glires second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Glires second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5185,
+      "n": "GAPDH->ENO1 Glires first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Glires first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5186,
+      "n": "GAPDH->ENO1 Glires second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Glires second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5187,
+      "n": "ENO1->RPLP0 Glires first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Glires first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5188,
+      "n": "ENO1->RPLP0 Glires second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Glires second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Glires",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 44,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5189,
       "n": "GAPDH->ENO1 Carnivores first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Carnivores first MRCA-to-MRCA convergence into ENO1 control",
@@ -94725,7 +95401,7 @@
       }
     },
     {
-      "id": 5138,
+      "id": 5190,
       "n": "GAPDH->ENO1 Carnivores second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Carnivores second MRCA-to-MRCA convergence into ENO1 control",
@@ -94738,7 +95414,7 @@
       }
     },
     {
-      "id": 5139,
+      "id": 5191,
       "n": "ENO1->RPLP0 Carnivores first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Carnivores first MRCA-to-MRCA divergence from ENO1 control",
@@ -94751,7 +95427,7 @@
       }
     },
     {
-      "id": 5140,
+      "id": 5192,
       "n": "ENO1->RPLP0 Carnivores second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Carnivores second MRCA-to-MRCA divergence from ENO1 control",
@@ -94764,7 +95440,111 @@
       }
     },
     {
-      "id": 5141,
+      "id": 5193,
+      "n": "GAPDH->ENO1 Carnivores first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Carnivores first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5194,
+      "n": "GAPDH->ENO1 Carnivores second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Carnivores second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5195,
+      "n": "ENO1->RPLP0 Carnivores first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Carnivores first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5196,
+      "n": "ENO1->RPLP0 Carnivores second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Carnivores second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5197,
+      "n": "GAPDH->ENO1 Carnivores first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Carnivores first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5198,
+      "n": "GAPDH->ENO1 Carnivores second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Carnivores second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5199,
+      "n": "ENO1->RPLP0 Carnivores first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Carnivores first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5200,
+      "n": "ENO1->RPLP0 Carnivores second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Carnivores second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Carnivores",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 47,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5201,
       "n": "GAPDH->ENO1 Cetartiodactyla first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Cetartiodactyla first MRCA-to-MRCA convergence into ENO1 control",
@@ -94777,7 +95557,7 @@
       }
     },
     {
-      "id": 5142,
+      "id": 5202,
       "n": "GAPDH->ENO1 Cetartiodactyla second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Cetartiodactyla second MRCA-to-MRCA convergence into ENO1 control",
@@ -94790,7 +95570,7 @@
       }
     },
     {
-      "id": 5143,
+      "id": 5203,
       "n": "ENO1->RPLP0 Cetartiodactyla first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Cetartiodactyla first MRCA-to-MRCA divergence from ENO1 control",
@@ -94803,7 +95583,7 @@
       }
     },
     {
-      "id": 5144,
+      "id": 5204,
       "n": "ENO1->RPLP0 Cetartiodactyla second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Cetartiodactyla second MRCA-to-MRCA divergence from ENO1 control",
@@ -94816,7 +95596,111 @@
       }
     },
     {
-      "id": 5145,
+      "id": 5205,
+      "n": "GAPDH->ENO1 Cetartiodactyla first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cetartiodactyla first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5206,
+      "n": "GAPDH->ENO1 Cetartiodactyla second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cetartiodactyla second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5207,
+      "n": "ENO1->RPLP0 Cetartiodactyla first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cetartiodactyla first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5208,
+      "n": "ENO1->RPLP0 Cetartiodactyla second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cetartiodactyla second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5209,
+      "n": "GAPDH->ENO1 Cetartiodactyla first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cetartiodactyla first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5210,
+      "n": "GAPDH->ENO1 Cetartiodactyla second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cetartiodactyla second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5211,
+      "n": "ENO1->RPLP0 Cetartiodactyla first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cetartiodactyla first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5212,
+      "n": "ENO1->RPLP0 Cetartiodactyla second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cetartiodactyla second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cetartiodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 55,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5213,
       "n": "GAPDH->ENO1 Perissodactyla first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Perissodactyla first MRCA-to-MRCA convergence into ENO1 control",
@@ -94829,7 +95713,7 @@
       }
     },
     {
-      "id": 5146,
+      "id": 5214,
       "n": "GAPDH->ENO1 Perissodactyla second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Perissodactyla second MRCA-to-MRCA convergence into ENO1 control",
@@ -94842,7 +95726,7 @@
       }
     },
     {
-      "id": 5147,
+      "id": 5215,
       "n": "ENO1->RPLP0 Perissodactyla first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Perissodactyla first MRCA-to-MRCA divergence from ENO1 control",
@@ -94855,7 +95739,7 @@
       }
     },
     {
-      "id": 5148,
+      "id": 5216,
       "n": "ENO1->RPLP0 Perissodactyla second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Perissodactyla second MRCA-to-MRCA divergence from ENO1 control",
@@ -94868,7 +95752,111 @@
       }
     },
     {
-      "id": 5149,
+      "id": 5217,
+      "n": "GAPDH->ENO1 Perissodactyla first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Perissodactyla first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5218,
+      "n": "GAPDH->ENO1 Perissodactyla second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Perissodactyla second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5219,
+      "n": "ENO1->RPLP0 Perissodactyla first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Perissodactyla first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5220,
+      "n": "ENO1->RPLP0 Perissodactyla second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Perissodactyla second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5221,
+      "n": "GAPDH->ENO1 Perissodactyla first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Perissodactyla first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5222,
+      "n": "GAPDH->ENO1 Perissodactyla second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Perissodactyla second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5223,
+      "n": "ENO1->RPLP0 Perissodactyla first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Perissodactyla first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5224,
+      "n": "ENO1->RPLP0 Perissodactyla second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Perissodactyla second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Perissodactyla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5225,
       "n": "GAPDH->ENO1 Bats first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Bats first MRCA-to-MRCA convergence into ENO1 control",
@@ -94881,7 +95869,7 @@
       }
     },
     {
-      "id": 5150,
+      "id": 5226,
       "n": "GAPDH->ENO1 Bats second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Bats second MRCA-to-MRCA convergence into ENO1 control",
@@ -94894,7 +95882,7 @@
       }
     },
     {
-      "id": 5151,
+      "id": 5227,
       "n": "ENO1->RPLP0 Bats first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bats first MRCA-to-MRCA divergence from ENO1 control",
@@ -94907,7 +95895,7 @@
       }
     },
     {
-      "id": 5152,
+      "id": 5228,
       "n": "ENO1->RPLP0 Bats second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bats second MRCA-to-MRCA divergence from ENO1 control",
@@ -94920,7 +95908,7 @@
       }
     },
     {
-      "id": 5153,
+      "id": 5229,
       "n": "GAPDH->ENO1 Eulipotyphla first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Eulipotyphla first MRCA-to-MRCA convergence into ENO1 control",
@@ -94933,7 +95921,7 @@
       }
     },
     {
-      "id": 5154,
+      "id": 5230,
       "n": "GAPDH->ENO1 Eulipotyphla second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Eulipotyphla second MRCA-to-MRCA convergence into ENO1 control",
@@ -94946,7 +95934,7 @@
       }
     },
     {
-      "id": 5155,
+      "id": 5231,
       "n": "ENO1->RPLP0 Eulipotyphla first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Eulipotyphla first MRCA-to-MRCA divergence from ENO1 control",
@@ -94959,7 +95947,7 @@
       }
     },
     {
-      "id": 5156,
+      "id": 5232,
       "n": "ENO1->RPLP0 Eulipotyphla second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Eulipotyphla second MRCA-to-MRCA divergence from ENO1 control",
@@ -94972,7 +95960,111 @@
       }
     },
     {
-      "id": 5157,
+      "id": 5233,
+      "n": "GAPDH->ENO1 Eulipotyphla first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Eulipotyphla first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5234,
+      "n": "GAPDH->ENO1 Eulipotyphla second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Eulipotyphla second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5235,
+      "n": "ENO1->RPLP0 Eulipotyphla first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Eulipotyphla first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5236,
+      "n": "ENO1->RPLP0 Eulipotyphla second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Eulipotyphla second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5237,
+      "n": "GAPDH->ENO1 Eulipotyphla first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Eulipotyphla first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5238,
+      "n": "GAPDH->ENO1 Eulipotyphla second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Eulipotyphla second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5239,
+      "n": "ENO1->RPLP0 Eulipotyphla first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Eulipotyphla first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5240,
+      "n": "ENO1->RPLP0 Eulipotyphla second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Eulipotyphla second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Eulipotyphla",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 7,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5241,
       "n": "GAPDH->ENO1 Afrotheria first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Afrotheria first MRCA-to-MRCA convergence into ENO1 control",
@@ -94985,7 +96077,7 @@
       }
     },
     {
-      "id": 5158,
+      "id": 5242,
       "n": "GAPDH->ENO1 Afrotheria second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Afrotheria second MRCA-to-MRCA convergence into ENO1 control",
@@ -94998,7 +96090,7 @@
       }
     },
     {
-      "id": 5159,
+      "id": 5243,
       "n": "ENO1->RPLP0 Afrotheria first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Afrotheria first MRCA-to-MRCA divergence from ENO1 control",
@@ -95011,7 +96103,7 @@
       }
     },
     {
-      "id": 5160,
+      "id": 5244,
       "n": "ENO1->RPLP0 Afrotheria second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Afrotheria second MRCA-to-MRCA divergence from ENO1 control",
@@ -95024,7 +96116,111 @@
       }
     },
     {
-      "id": 5161,
+      "id": 5245,
+      "n": "GAPDH->ENO1 Afrotheria first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Afrotheria first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5246,
+      "n": "GAPDH->ENO1 Afrotheria second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Afrotheria second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5247,
+      "n": "ENO1->RPLP0 Afrotheria first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Afrotheria first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5248,
+      "n": "ENO1->RPLP0 Afrotheria second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Afrotheria second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5249,
+      "n": "GAPDH->ENO1 Afrotheria first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Afrotheria first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5250,
+      "n": "GAPDH->ENO1 Afrotheria second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Afrotheria second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5251,
+      "n": "ENO1->RPLP0 Afrotheria first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Afrotheria first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5252,
+      "n": "ENO1->RPLP0 Afrotheria second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Afrotheria second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Afrotheria",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 6,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5253,
       "n": "GAPDH->ENO1 Xenarthra first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Xenarthra first MRCA-to-MRCA convergence into ENO1 control",
@@ -95037,7 +96233,7 @@
       }
     },
     {
-      "id": 5162,
+      "id": 5254,
       "n": "GAPDH->ENO1 Xenarthra second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Xenarthra second MRCA-to-MRCA convergence into ENO1 control",
@@ -95050,7 +96246,7 @@
       }
     },
     {
-      "id": 5163,
+      "id": 5255,
       "n": "ENO1->RPLP0 Xenarthra first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Xenarthra first MRCA-to-MRCA divergence from ENO1 control",
@@ -95063,7 +96259,7 @@
       }
     },
     {
-      "id": 5164,
+      "id": 5256,
       "n": "ENO1->RPLP0 Xenarthra second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Xenarthra second MRCA-to-MRCA divergence from ENO1 control",
@@ -95076,7 +96272,111 @@
       }
     },
     {
-      "id": 5165,
+      "id": 5257,
+      "n": "GAPDH->ENO1 Xenarthra first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Xenarthra first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5258,
+      "n": "GAPDH->ENO1 Xenarthra second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Xenarthra second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5259,
+      "n": "ENO1->RPLP0 Xenarthra first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Xenarthra first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5260,
+      "n": "ENO1->RPLP0 Xenarthra second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Xenarthra second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5261,
+      "n": "GAPDH->ENO1 Xenarthra first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Xenarthra first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5262,
+      "n": "GAPDH->ENO1 Xenarthra second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Xenarthra second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5263,
+      "n": "ENO1->RPLP0 Xenarthra first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Xenarthra first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5264,
+      "n": "ENO1->RPLP0 Xenarthra second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Xenarthra second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Xenarthra",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 3,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5265,
       "n": "GAPDH->ENO1 Monotremata first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Monotremata first MRCA-to-MRCA convergence into ENO1 control",
@@ -95089,7 +96389,7 @@
       }
     },
     {
-      "id": 5166,
+      "id": 5266,
       "n": "GAPDH->ENO1 Monotremata second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Monotremata second MRCA-to-MRCA convergence into ENO1 control",
@@ -95102,7 +96402,7 @@
       }
     },
     {
-      "id": 5167,
+      "id": 5267,
       "n": "ENO1->RPLP0 Monotremata first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Monotremata first MRCA-to-MRCA divergence from ENO1 control",
@@ -95115,7 +96415,7 @@
       }
     },
     {
-      "id": 5168,
+      "id": 5268,
       "n": "ENO1->RPLP0 Monotremata second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Monotremata second MRCA-to-MRCA divergence from ENO1 control",
@@ -95128,7 +96428,111 @@
       }
     },
     {
-      "id": 5169,
+      "id": 5269,
+      "n": "GAPDH->ENO1 Monotremata first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Monotremata first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5270,
+      "n": "GAPDH->ENO1 Monotremata second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Monotremata second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5271,
+      "n": "ENO1->RPLP0 Monotremata first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Monotremata first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5272,
+      "n": "ENO1->RPLP0 Monotremata second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Monotremata second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5273,
+      "n": "GAPDH->ENO1 Monotremata first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Monotremata first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5274,
+      "n": "GAPDH->ENO1 Monotremata second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Monotremata second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5275,
+      "n": "ENO1->RPLP0 Monotremata first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Monotremata first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5276,
+      "n": "ENO1->RPLP0 Monotremata second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Monotremata second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Monotremata",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5277,
       "n": "GAPDH->ENO1 Marsupialia first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Marsupialia first MRCA-to-MRCA convergence into ENO1 control",
@@ -95141,7 +96545,7 @@
       }
     },
     {
-      "id": 5170,
+      "id": 5278,
       "n": "GAPDH->ENO1 Marsupialia second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Marsupialia second MRCA-to-MRCA convergence into ENO1 control",
@@ -95154,7 +96558,7 @@
       }
     },
     {
-      "id": 5171,
+      "id": 5279,
       "n": "ENO1->RPLP0 Marsupialia first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Marsupialia first MRCA-to-MRCA divergence from ENO1 control",
@@ -95167,7 +96571,7 @@
       }
     },
     {
-      "id": 5172,
+      "id": 5280,
       "n": "ENO1->RPLP0 Marsupialia second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Marsupialia second MRCA-to-MRCA divergence from ENO1 control",
@@ -95180,7 +96584,111 @@
       }
     },
     {
-      "id": 5173,
+      "id": 5281,
+      "n": "GAPDH->ENO1 Marsupialia first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Marsupialia first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5282,
+      "n": "GAPDH->ENO1 Marsupialia second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Marsupialia second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5283,
+      "n": "ENO1->RPLP0 Marsupialia first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Marsupialia first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5284,
+      "n": "ENO1->RPLP0 Marsupialia second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Marsupialia second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5285,
+      "n": "GAPDH->ENO1 Marsupialia first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Marsupialia first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5286,
+      "n": "GAPDH->ENO1 Marsupialia second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Marsupialia second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5287,
+      "n": "ENO1->RPLP0 Marsupialia first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Marsupialia first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5288,
+      "n": "ENO1->RPLP0 Marsupialia second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Marsupialia second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Marsupialia",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 2,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5289,
       "n": "GAPDH->ENO1 Birds first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Birds first MRCA-to-MRCA convergence into ENO1 control",
@@ -95193,7 +96701,7 @@
       }
     },
     {
-      "id": 5174,
+      "id": 5290,
       "n": "GAPDH->ENO1 Birds second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Birds second MRCA-to-MRCA convergence into ENO1 control",
@@ -95206,7 +96714,7 @@
       }
     },
     {
-      "id": 5175,
+      "id": 5291,
       "n": "ENO1->RPLP0 Birds first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Birds first MRCA-to-MRCA divergence from ENO1 control",
@@ -95219,7 +96727,7 @@
       }
     },
     {
-      "id": 5176,
+      "id": 5292,
       "n": "ENO1->RPLP0 Birds second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Birds second MRCA-to-MRCA divergence from ENO1 control",
@@ -95232,7 +96740,111 @@
       }
     },
     {
-      "id": 5177,
+      "id": 5293,
+      "n": "GAPDH->ENO1 Birds first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Birds first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5294,
+      "n": "GAPDH->ENO1 Birds second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Birds second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5295,
+      "n": "ENO1->RPLP0 Birds first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Birds first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5296,
+      "n": "ENO1->RPLP0 Birds second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Birds second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5297,
+      "n": "GAPDH->ENO1 Birds first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Birds first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5298,
+      "n": "GAPDH->ENO1 Birds second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Birds second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5299,
+      "n": "ENO1->RPLP0 Birds first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Birds first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5300,
+      "n": "ENO1->RPLP0 Birds second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Birds second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Birds",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 167,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5301,
       "n": "GAPDH->ENO1 Reptiles first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Reptiles first MRCA-to-MRCA convergence into ENO1 control",
@@ -95245,7 +96857,7 @@
       }
     },
     {
-      "id": 5178,
+      "id": 5302,
       "n": "GAPDH->ENO1 Reptiles second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Reptiles second MRCA-to-MRCA convergence into ENO1 control",
@@ -95258,7 +96870,7 @@
       }
     },
     {
-      "id": 5179,
+      "id": 5303,
       "n": "ENO1->RPLP0 Reptiles first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Reptiles first MRCA-to-MRCA divergence from ENO1 control",
@@ -95271,7 +96883,7 @@
       }
     },
     {
-      "id": 5180,
+      "id": 5304,
       "n": "ENO1->RPLP0 Reptiles second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Reptiles second MRCA-to-MRCA divergence from ENO1 control",
@@ -95284,7 +96896,7 @@
       }
     },
     {
-      "id": 5181,
+      "id": 5305,
       "n": "GAPDH->ENO1 Amphibians first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Amphibians first MRCA-to-MRCA convergence into ENO1 control",
@@ -95297,7 +96909,7 @@
       }
     },
     {
-      "id": 5182,
+      "id": 5306,
       "n": "GAPDH->ENO1 Amphibians second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Amphibians second MRCA-to-MRCA convergence into ENO1 control",
@@ -95310,7 +96922,7 @@
       }
     },
     {
-      "id": 5183,
+      "id": 5307,
       "n": "ENO1->RPLP0 Amphibians first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Amphibians first MRCA-to-MRCA divergence from ENO1 control",
@@ -95323,7 +96935,7 @@
       }
     },
     {
-      "id": 5184,
+      "id": 5308,
       "n": "ENO1->RPLP0 Amphibians second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Amphibians second MRCA-to-MRCA divergence from ENO1 control",
@@ -95336,7 +96948,7 @@
       }
     },
     {
-      "id": 5185,
+      "id": 5309,
       "n": "GAPDH->ENO1 Ray-finned fish first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Ray-finned fish first MRCA-to-MRCA convergence into ENO1 control",
@@ -95349,7 +96961,7 @@
       }
     },
     {
-      "id": 5186,
+      "id": 5310,
       "n": "GAPDH->ENO1 Ray-finned fish second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Ray-finned fish second MRCA-to-MRCA convergence into ENO1 control",
@@ -95362,7 +96974,7 @@
       }
     },
     {
-      "id": 5187,
+      "id": 5311,
       "n": "ENO1->RPLP0 Ray-finned fish first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Ray-finned fish first MRCA-to-MRCA divergence from ENO1 control",
@@ -95375,7 +96987,7 @@
       }
     },
     {
-      "id": 5188,
+      "id": 5312,
       "n": "ENO1->RPLP0 Ray-finned fish second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Ray-finned fish second MRCA-to-MRCA divergence from ENO1 control",
@@ -95388,7 +97000,111 @@
       }
     },
     {
-      "id": 5189,
+      "id": 5313,
+      "n": "GAPDH->ENO1 Ray-finned fish first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Ray-finned fish first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5314,
+      "n": "GAPDH->ENO1 Ray-finned fish second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Ray-finned fish second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5315,
+      "n": "ENO1->RPLP0 Ray-finned fish first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Ray-finned fish first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5316,
+      "n": "ENO1->RPLP0 Ray-finned fish second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Ray-finned fish second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5317,
+      "n": "GAPDH->ENO1 Ray-finned fish first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Ray-finned fish first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5318,
+      "n": "GAPDH->ENO1 Ray-finned fish second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Ray-finned fish second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5319,
+      "n": "ENO1->RPLP0 Ray-finned fish first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Ray-finned fish first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5320,
+      "n": "ENO1->RPLP0 Ray-finned fish second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Ray-finned fish second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Ray-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 198,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5321,
       "n": "GAPDH->ENO1 Cartilaginous fish first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Cartilaginous fish first MRCA-to-MRCA convergence into ENO1 control",
@@ -95401,7 +97117,7 @@
       }
     },
     {
-      "id": 5190,
+      "id": 5322,
       "n": "GAPDH->ENO1 Cartilaginous fish second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Cartilaginous fish second MRCA-to-MRCA convergence into ENO1 control",
@@ -95414,7 +97130,7 @@
       }
     },
     {
-      "id": 5191,
+      "id": 5323,
       "n": "ENO1->RPLP0 Cartilaginous fish first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Cartilaginous fish first MRCA-to-MRCA divergence from ENO1 control",
@@ -95427,7 +97143,7 @@
       }
     },
     {
-      "id": 5192,
+      "id": 5324,
       "n": "ENO1->RPLP0 Cartilaginous fish second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Cartilaginous fish second MRCA-to-MRCA divergence from ENO1 control",
@@ -95440,7 +97156,111 @@
       }
     },
     {
-      "id": 5193,
+      "id": 5325,
+      "n": "GAPDH->ENO1 Cartilaginous fish first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cartilaginous fish first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5326,
+      "n": "GAPDH->ENO1 Cartilaginous fish second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cartilaginous fish second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5327,
+      "n": "ENO1->RPLP0 Cartilaginous fish first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cartilaginous fish first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5328,
+      "n": "ENO1->RPLP0 Cartilaginous fish second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cartilaginous fish second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5329,
+      "n": "GAPDH->ENO1 Cartilaginous fish first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cartilaginous fish first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5330,
+      "n": "GAPDH->ENO1 Cartilaginous fish second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Cartilaginous fish second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5331,
+      "n": "ENO1->RPLP0 Cartilaginous fish first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cartilaginous fish first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5332,
+      "n": "ENO1->RPLP0 Cartilaginous fish second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Cartilaginous fish second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Cartilaginous fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 5,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5333,
       "n": "GAPDH->ENO1 Lobe-finned fish first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Lobe-finned fish first MRCA-to-MRCA convergence into ENO1 control",
@@ -95453,7 +97273,7 @@
       }
     },
     {
-      "id": 5194,
+      "id": 5334,
       "n": "GAPDH->ENO1 Lobe-finned fish second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Lobe-finned fish second MRCA-to-MRCA convergence into ENO1 control",
@@ -95466,7 +97286,7 @@
       }
     },
     {
-      "id": 5195,
+      "id": 5335,
       "n": "ENO1->RPLP0 Lobe-finned fish first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Lobe-finned fish first MRCA-to-MRCA divergence from ENO1 control",
@@ -95479,7 +97299,7 @@
       }
     },
     {
-      "id": 5196,
+      "id": 5336,
       "n": "ENO1->RPLP0 Lobe-finned fish second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Lobe-finned fish second MRCA-to-MRCA divergence from ENO1 control",
@@ -95492,7 +97312,111 @@
       }
     },
     {
-      "id": 5197,
+      "id": 5337,
+      "n": "GAPDH->ENO1 Lobe-finned fish first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lobe-finned fish first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5338,
+      "n": "GAPDH->ENO1 Lobe-finned fish second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lobe-finned fish second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5339,
+      "n": "ENO1->RPLP0 Lobe-finned fish first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lobe-finned fish first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5340,
+      "n": "ENO1->RPLP0 Lobe-finned fish second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lobe-finned fish second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5341,
+      "n": "GAPDH->ENO1 Lobe-finned fish first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lobe-finned fish first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5342,
+      "n": "GAPDH->ENO1 Lobe-finned fish second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Lobe-finned fish second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5343,
+      "n": "ENO1->RPLP0 Lobe-finned fish first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lobe-finned fish first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5344,
+      "n": "ENO1->RPLP0 Lobe-finned fish second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Lobe-finned fish second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Lobe-finned fish",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5345,
       "n": "GAPDH->ENO1 Human first MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Human first MRCA-to-MRCA convergence into ENO1 control",
@@ -95505,7 +97429,7 @@
       }
     },
     {
-      "id": 5198,
+      "id": 5346,
       "n": "GAPDH->ENO1 Human second MRCA-to-MRCA convergence into ENO1 control",
       "attrlist": {
         "display": "GAPDH->ENO1 Human second MRCA-to-MRCA convergence into ENO1 control",
@@ -95518,7 +97442,7 @@
       }
     },
     {
-      "id": 5199,
+      "id": 5347,
       "n": "ENO1->RPLP0 Human first MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Human first MRCA-to-MRCA divergence from ENO1 control",
@@ -95531,7 +97455,7 @@
       }
     },
     {
-      "id": 5200,
+      "id": 5348,
       "n": "ENO1->RPLP0 Human second MRCA-to-MRCA divergence from ENO1 control",
       "attrlist": {
         "display": "ENO1->RPLP0 Human second MRCA-to-MRCA divergence from ENO1 control",
@@ -95544,7 +97468,111 @@
       }
     },
     {
-      "id": 5201,
+      "id": 5349,
+      "n": "GAPDH->ENO1 Human first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Human first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5350,
+      "n": "GAPDH->ENO1 Human second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Human second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5351,
+      "n": "ENO1->RPLP0 Human first ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Human first ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5352,
+      "n": "ENO1->RPLP0 Human second ancestor context level 1 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Human second ancestor context level 1 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5353,
+      "n": "GAPDH->ENO1 Human first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Human first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5354,
+      "n": "GAPDH->ENO1 Human second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "GAPDH->ENO1 Human second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "GAPDH->ENO1",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5355,
+      "n": "ENO1->RPLP0 Human first ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Human first ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5356,
+      "n": "ENO1->RPLP0 Human second ancestor context level 2 around ENO1 control",
+      "attrlist": {
+        "display": "ENO1->RPLP0 Human second ancestor context level 2 around ENO1 control",
+        "node_type": "interlayer clade control",
+        "interlayer_group": "Human",
+        "gene_pair": "ENO1->RPLP0",
+        "connected_taxa": 1,
+        "taxon": "",
+        "meaning": "helper node used to draw a segmented DataDiVR flow path; DataDiVR only supports straight, fixed-width links"
+      }
+    },
+    {
+      "id": 5357,
       "n": "GAPDH->ENO1 Pteropus vampyrus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pteropus vampyrus first history-track control",
@@ -95557,7 +97585,7 @@
       }
     },
     {
-      "id": 5202,
+      "id": 5358,
       "n": "GAPDH->ENO1 Pteropus vampyrus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pteropus vampyrus second history-track control",
@@ -95570,7 +97598,7 @@
       }
     },
     {
-      "id": 5203,
+      "id": 5359,
       "n": "GAPDH->ENO1 Balearica regulorum gibbericeps first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Balearica regulorum gibbericeps first history-track control",
@@ -95583,7 +97611,7 @@
       }
     },
     {
-      "id": 5204,
+      "id": 5360,
       "n": "GAPDH->ENO1 Balearica regulorum gibbericeps second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Balearica regulorum gibbericeps second history-track control",
@@ -95596,7 +97624,7 @@
       }
     },
     {
-      "id": 5205,
+      "id": 5361,
       "n": "GAPDH->ENO1 Rhinopithecus bieti first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Rhinopithecus bieti first history-track control",
@@ -95609,7 +97637,7 @@
       }
     },
     {
-      "id": 5206,
+      "id": 5362,
       "n": "GAPDH->ENO1 Rhinopithecus bieti second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Rhinopithecus bieti second history-track control",
@@ -95622,7 +97650,7 @@
       }
     },
     {
-      "id": 5207,
+      "id": 5363,
       "n": "GAPDH->ENO1 Falco biarmicus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco biarmicus first history-track control",
@@ -95635,7 +97663,7 @@
       }
     },
     {
-      "id": 5208,
+      "id": 5364,
       "n": "GAPDH->ENO1 Falco biarmicus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco biarmicus second history-track control",
@@ -95648,7 +97676,7 @@
       }
     },
     {
-      "id": 5209,
+      "id": 5365,
       "n": "GAPDH->ENO1 Chroicocephalus ridibundus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Chroicocephalus ridibundus first history-track control",
@@ -95661,7 +97689,7 @@
       }
     },
     {
-      "id": 5210,
+      "id": 5366,
       "n": "GAPDH->ENO1 Chroicocephalus ridibundus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Chroicocephalus ridibundus second history-track control",
@@ -95674,7 +97702,7 @@
       }
     },
     {
-      "id": 5211,
+      "id": 5367,
       "n": "GAPDH->ENO1 Falco cherrug first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco cherrug first history-track control",
@@ -95687,7 +97715,7 @@
       }
     },
     {
-      "id": 5212,
+      "id": 5368,
       "n": "GAPDH->ENO1 Falco cherrug second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco cherrug second history-track control",
@@ -95700,7 +97728,7 @@
       }
     },
     {
-      "id": 5213,
+      "id": 5369,
       "n": "GAPDH->ENO1 Charadrius vociferus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Charadrius vociferus first history-track control",
@@ -95713,7 +97741,7 @@
       }
     },
     {
-      "id": 5214,
+      "id": 5370,
       "n": "GAPDH->ENO1 Charadrius vociferus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Charadrius vociferus second history-track control",
@@ -95726,7 +97754,7 @@
       }
     },
     {
-      "id": 5215,
+      "id": 5371,
       "n": "GAPDH->ENO1 Mastomys coucha first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Mastomys coucha first history-track control",
@@ -95739,7 +97767,7 @@
       }
     },
     {
-      "id": 5216,
+      "id": 5372,
       "n": "GAPDH->ENO1 Mastomys coucha second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Mastomys coucha second history-track control",
@@ -95752,7 +97780,7 @@
       }
     },
     {
-      "id": 5217,
+      "id": 5373,
       "n": "GAPDH->ENO1 Falco naumanni first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco naumanni first history-track control",
@@ -95765,7 +97793,7 @@
       }
     },
     {
-      "id": 5218,
+      "id": 5374,
       "n": "GAPDH->ENO1 Falco naumanni second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco naumanni second history-track control",
@@ -95778,7 +97806,7 @@
       }
     },
     {
-      "id": 5219,
+      "id": 5375,
       "n": "GAPDH->ENO1 Galeopterus variegatus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Galeopterus variegatus first history-track control",
@@ -95791,7 +97819,7 @@
       }
     },
     {
-      "id": 5220,
+      "id": 5376,
       "n": "GAPDH->ENO1 Galeopterus variegatus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Galeopterus variegatus second history-track control",
@@ -95804,7 +97832,7 @@
       }
     },
     {
-      "id": 5221,
+      "id": 5377,
       "n": "GAPDH->ENO1 Grus americana first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Grus americana first history-track control",
@@ -95817,7 +97845,7 @@
       }
     },
     {
-      "id": 5222,
+      "id": 5378,
       "n": "GAPDH->ENO1 Grus americana second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Grus americana second history-track control",
@@ -95830,7 +97858,7 @@
       }
     },
     {
-      "id": 5223,
+      "id": 5379,
       "n": "GAPDH->ENO1 Rissa tridactyla first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Rissa tridactyla first history-track control",
@@ -95843,7 +97871,7 @@
       }
     },
     {
-      "id": 5224,
+      "id": 5380,
       "n": "GAPDH->ENO1 Rissa tridactyla second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Rissa tridactyla second history-track control",
@@ -95856,7 +97884,7 @@
       }
     },
     {
-      "id": 5225,
+      "id": 5381,
       "n": "GAPDH->ENO1 Vanellus vanellus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Vanellus vanellus first history-track control",
@@ -95869,7 +97897,7 @@
       }
     },
     {
-      "id": 5226,
+      "id": 5382,
       "n": "GAPDH->ENO1 Vanellus vanellus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Vanellus vanellus second history-track control",
@@ -95882,7 +97910,7 @@
       }
     },
     {
-      "id": 5227,
+      "id": 5383,
       "n": "GAPDH->ENO1 Falco peregrinus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco peregrinus first history-track control",
@@ -95895,7 +97923,7 @@
       }
     },
     {
-      "id": 5228,
+      "id": 5384,
       "n": "GAPDH->ENO1 Falco peregrinus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Falco peregrinus second history-track control",
@@ -95908,7 +97936,7 @@
       }
     },
     {
-      "id": 5229,
+      "id": 5385,
       "n": "GAPDH->ENO1 Grus grus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Grus grus first history-track control",
@@ -95921,7 +97949,7 @@
       }
     },
     {
-      "id": 5230,
+      "id": 5386,
       "n": "GAPDH->ENO1 Grus grus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Grus grus second history-track control",
@@ -95934,7 +97962,7 @@
       }
     },
     {
-      "id": 5231,
+      "id": 5387,
       "n": "GAPDH->ENO1 Pygoscelis adeliae first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pygoscelis adeliae first history-track control",
@@ -95947,7 +97975,7 @@
       }
     },
     {
-      "id": 5232,
+      "id": 5388,
       "n": "GAPDH->ENO1 Pygoscelis adeliae second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pygoscelis adeliae second history-track control",
@@ -95960,7 +97988,7 @@
       }
     },
     {
-      "id": 5233,
+      "id": 5389,
       "n": "GAPDH->ENO1 Anser brachyrhynchus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Anser brachyrhynchus first history-track control",
@@ -95973,7 +98001,7 @@
       }
     },
     {
-      "id": 5234,
+      "id": 5390,
       "n": "GAPDH->ENO1 Anser brachyrhynchus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Anser brachyrhynchus second history-track control",
@@ -95986,7 +98014,7 @@
       }
     },
     {
-      "id": 5235,
+      "id": 5391,
       "n": "GAPDH->ENO1 Crocodylus porosus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Crocodylus porosus first history-track control",
@@ -95999,7 +98027,7 @@
       }
     },
     {
-      "id": 5236,
+      "id": 5392,
       "n": "GAPDH->ENO1 Crocodylus porosus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Crocodylus porosus second history-track control",
@@ -96012,7 +98040,7 @@
       }
     },
     {
-      "id": 5237,
+      "id": 5393,
       "n": "GAPDH->ENO1 Aquila chrysaetos chrysaetos first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Aquila chrysaetos chrysaetos first history-track control",
@@ -96025,7 +98053,7 @@
       }
     },
     {
-      "id": 5238,
+      "id": 5394,
       "n": "GAPDH->ENO1 Aquila chrysaetos chrysaetos second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Aquila chrysaetos chrysaetos second history-track control",
@@ -96038,7 +98066,7 @@
       }
     },
     {
-      "id": 5239,
+      "id": 5395,
       "n": "GAPDH->ENO1 Ornithorhynchus anatinus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Ornithorhynchus anatinus first history-track control",
@@ -96051,7 +98079,7 @@
       }
     },
     {
-      "id": 5240,
+      "id": 5396,
       "n": "GAPDH->ENO1 Ornithorhynchus anatinus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Ornithorhynchus anatinus second history-track control",
@@ -96064,7 +98092,7 @@
       }
     },
     {
-      "id": 5241,
+      "id": 5397,
       "n": "GAPDH->ENO1 Danio rerio first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Danio rerio first history-track control",
@@ -96077,7 +98105,7 @@
       }
     },
     {
-      "id": 5242,
+      "id": 5398,
       "n": "GAPDH->ENO1 Danio rerio second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Danio rerio second history-track control",
@@ -96090,7 +98118,7 @@
       }
     },
     {
-      "id": 5243,
+      "id": 5399,
       "n": "GAPDH->ENO1 Pan paniscus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pan paniscus first history-track control",
@@ -96103,7 +98131,7 @@
       }
     },
     {
-      "id": 5244,
+      "id": 5400,
       "n": "GAPDH->ENO1 Pan paniscus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pan paniscus second history-track control",
@@ -96116,7 +98144,7 @@
       }
     },
     {
-      "id": 5245,
+      "id": 5401,
       "n": "GAPDH->ENO1 Pan troglodytes first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pan troglodytes first history-track control",
@@ -96129,7 +98157,7 @@
       }
     },
     {
-      "id": 5246,
+      "id": 5402,
       "n": "GAPDH->ENO1 Pan troglodytes second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pan troglodytes second history-track control",
@@ -96142,7 +98170,7 @@
       }
     },
     {
-      "id": 5247,
+      "id": 5403,
       "n": "GAPDH->ENO1 Panthera leo first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Panthera leo first history-track control",
@@ -96155,7 +98183,7 @@
       }
     },
     {
-      "id": 5248,
+      "id": 5404,
       "n": "GAPDH->ENO1 Panthera leo second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Panthera leo second history-track control",
@@ -96168,7 +98196,7 @@
       }
     },
     {
-      "id": 5249,
+      "id": 5405,
       "n": "GAPDH->ENO1 Pongo pygmaeus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pongo pygmaeus first history-track control",
@@ -96181,7 +98209,7 @@
       }
     },
     {
-      "id": 5250,
+      "id": 5406,
       "n": "GAPDH->ENO1 Pongo pygmaeus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pongo pygmaeus second history-track control",
@@ -96194,7 +98222,7 @@
       }
     },
     {
-      "id": 5251,
+      "id": 5407,
       "n": "GAPDH->ENO1 Equus asinus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Equus asinus first history-track control",
@@ -96207,7 +98235,7 @@
       }
     },
     {
-      "id": 5252,
+      "id": 5408,
       "n": "GAPDH->ENO1 Equus asinus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Equus asinus second history-track control",
@@ -96220,7 +98248,7 @@
       }
     },
     {
-      "id": 5253,
+      "id": 5409,
       "n": "GAPDH->ENO1 Tursiops truncatus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Tursiops truncatus first history-track control",
@@ -96233,7 +98261,7 @@
       }
     },
     {
-      "id": 5254,
+      "id": 5410,
       "n": "GAPDH->ENO1 Tursiops truncatus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Tursiops truncatus second history-track control",
@@ -96246,7 +98274,7 @@
       }
     },
     {
-      "id": 5255,
+      "id": 5411,
       "n": "GAPDH->ENO1 Callithrix jacchus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Callithrix jacchus first history-track control",
@@ -96259,7 +98287,7 @@
       }
     },
     {
-      "id": 5256,
+      "id": 5412,
       "n": "GAPDH->ENO1 Callithrix jacchus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Callithrix jacchus second history-track control",
@@ -96272,7 +98300,7 @@
       }
     },
     {
-      "id": 5257,
+      "id": 5413,
       "n": "GAPDH->ENO1 Pongo abelii first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pongo abelii first history-track control",
@@ -96285,7 +98313,7 @@
       }
     },
     {
-      "id": 5258,
+      "id": 5414,
       "n": "GAPDH->ENO1 Pongo abelii second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Pongo abelii second history-track control",
@@ -96298,7 +98326,7 @@
       }
     },
     {
-      "id": 5259,
+      "id": 5415,
       "n": "GAPDH->ENO1 Bos taurus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Bos taurus first history-track control",
@@ -96311,7 +98339,7 @@
       }
     },
     {
-      "id": 5260,
+      "id": 5416,
       "n": "GAPDH->ENO1 Bos taurus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Bos taurus second history-track control",
@@ -96324,7 +98352,7 @@
       }
     },
     {
-      "id": 5261,
+      "id": 5417,
       "n": "GAPDH->ENO1 Macaca mulatta first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Macaca mulatta first history-track control",
@@ -96337,7 +98365,7 @@
       }
     },
     {
-      "id": 5262,
+      "id": 5418,
       "n": "GAPDH->ENO1 Macaca mulatta second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Macaca mulatta second history-track control",
@@ -96350,7 +98378,7 @@
       }
     },
     {
-      "id": 5263,
+      "id": 5419,
       "n": "GAPDH->ENO1 Nomascus leucogenys first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Nomascus leucogenys first history-track control",
@@ -96363,7 +98391,7 @@
       }
     },
     {
-      "id": 5264,
+      "id": 5420,
       "n": "GAPDH->ENO1 Nomascus leucogenys second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Nomascus leucogenys second history-track control",
@@ -96376,7 +98404,7 @@
       }
     },
     {
-      "id": 5265,
+      "id": 5421,
       "n": "GAPDH->ENO1 Xenopus tropicalis first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Xenopus tropicalis first history-track control",
@@ -96389,7 +98417,7 @@
       }
     },
     {
-      "id": 5266,
+      "id": 5422,
       "n": "GAPDH->ENO1 Xenopus tropicalis second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Xenopus tropicalis second history-track control",
@@ -96402,7 +98430,7 @@
       }
     },
     {
-      "id": 5267,
+      "id": 5423,
       "n": "GAPDH->ENO1 Canis lupus familiaris first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Canis lupus familiaris first history-track control",
@@ -96415,7 +98443,7 @@
       }
     },
     {
-      "id": 5268,
+      "id": 5424,
       "n": "GAPDH->ENO1 Canis lupus familiaris second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Canis lupus familiaris second history-track control",
@@ -96428,7 +98456,7 @@
       }
     },
     {
-      "id": 5269,
+      "id": 5425,
       "n": "GAPDH->ENO1 Latimeria chalumnae first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Latimeria chalumnae first history-track control",
@@ -96441,7 +98469,7 @@
       }
     },
     {
-      "id": 5270,
+      "id": 5426,
       "n": "GAPDH->ENO1 Latimeria chalumnae second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Latimeria chalumnae second history-track control",
@@ -96454,7 +98482,7 @@
       }
     },
     {
-      "id": 5271,
+      "id": 5427,
       "n": "GAPDH->ENO1 Rattus norvegicus first history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Rattus norvegicus first history-track control",
@@ -96467,7 +98495,7 @@
       }
     },
     {
-      "id": 5272,
+      "id": 5428,
       "n": "GAPDH->ENO1 Rattus norvegicus second history-track control",
       "attrlist": {
         "display": "GAPDH->ENO1 Rattus norvegicus second history-track control",
@@ -96480,7 +98508,7 @@
       }
     },
     {
-      "id": 5273,
+      "id": 5429,
       "n": "ENO1->RPLP0 Pteropus vampyrus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pteropus vampyrus first history-track control",
@@ -96493,7 +98521,7 @@
       }
     },
     {
-      "id": 5274,
+      "id": 5430,
       "n": "ENO1->RPLP0 Pteropus vampyrus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pteropus vampyrus second history-track control",
@@ -96506,7 +98534,7 @@
       }
     },
     {
-      "id": 5275,
+      "id": 5431,
       "n": "ENO1->RPLP0 Rhinopithecus bieti first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Rhinopithecus bieti first history-track control",
@@ -96519,7 +98547,7 @@
       }
     },
     {
-      "id": 5276,
+      "id": 5432,
       "n": "ENO1->RPLP0 Rhinopithecus bieti second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Rhinopithecus bieti second history-track control",
@@ -96532,7 +98560,7 @@
       }
     },
     {
-      "id": 5277,
+      "id": 5433,
       "n": "ENO1->RPLP0 Bison bison bison first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bison bison bison first history-track control",
@@ -96545,7 +98573,7 @@
       }
     },
     {
-      "id": 5278,
+      "id": 5434,
       "n": "ENO1->RPLP0 Bison bison bison second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bison bison bison second history-track control",
@@ -96558,7 +98586,7 @@
       }
     },
     {
-      "id": 5279,
+      "id": 5435,
       "n": "ENO1->RPLP0 Bos indicus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos indicus first history-track control",
@@ -96571,7 +98599,7 @@
       }
     },
     {
-      "id": 5280,
+      "id": 5436,
       "n": "ENO1->RPLP0 Bos indicus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos indicus second history-track control",
@@ -96584,7 +98612,7 @@
       }
     },
     {
-      "id": 5281,
+      "id": 5437,
       "n": "ENO1->RPLP0 Delphinus delphis first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Delphinus delphis first history-track control",
@@ -96597,7 +98625,7 @@
       }
     },
     {
-      "id": 5282,
+      "id": 5438,
       "n": "ENO1->RPLP0 Delphinus delphis second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Delphinus delphis second history-track control",
@@ -96610,7 +98638,7 @@
       }
     },
     {
-      "id": 5283,
+      "id": 5439,
       "n": "ENO1->RPLP0 Bos indicus x Bos taurus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos indicus x Bos taurus first history-track control",
@@ -96623,7 +98651,7 @@
       }
     },
     {
-      "id": 5284,
+      "id": 5440,
       "n": "ENO1->RPLP0 Bos indicus x Bos taurus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos indicus x Bos taurus second history-track control",
@@ -96636,7 +98664,7 @@
       }
     },
     {
-      "id": 5285,
+      "id": 5441,
       "n": "ENO1->RPLP0 Lagenorhynchus albirostris first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Lagenorhynchus albirostris first history-track control",
@@ -96649,7 +98677,7 @@
       }
     },
     {
-      "id": 5286,
+      "id": 5442,
       "n": "ENO1->RPLP0 Lagenorhynchus albirostris second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Lagenorhynchus albirostris second history-track control",
@@ -96662,7 +98690,7 @@
       }
     },
     {
-      "id": 5287,
+      "id": 5443,
       "n": "ENO1->RPLP0 Globicephala melas first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Globicephala melas first history-track control",
@@ -96675,7 +98703,7 @@
       }
     },
     {
-      "id": 5288,
+      "id": 5444,
       "n": "ENO1->RPLP0 Globicephala melas second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Globicephala melas second history-track control",
@@ -96688,7 +98716,7 @@
       }
     },
     {
-      "id": 5289,
+      "id": 5445,
       "n": "ENO1->RPLP0 Bos javanicus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos javanicus first history-track control",
@@ -96701,7 +98729,7 @@
       }
     },
     {
-      "id": 5290,
+      "id": 5446,
       "n": "ENO1->RPLP0 Bos javanicus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos javanicus second history-track control",
@@ -96714,7 +98742,7 @@
       }
     },
     {
-      "id": 5291,
+      "id": 5447,
       "n": "ENO1->RPLP0 Orcinus orca first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Orcinus orca first history-track control",
@@ -96727,7 +98755,7 @@
       }
     },
     {
-      "id": 5292,
+      "id": 5448,
       "n": "ENO1->RPLP0 Orcinus orca second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Orcinus orca second history-track control",
@@ -96740,7 +98768,7 @@
       }
     },
     {
-      "id": 5293,
+      "id": 5449,
       "n": "ENO1->RPLP0 Bos mutus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos mutus first history-track control",
@@ -96753,7 +98781,7 @@
       }
     },
     {
-      "id": 5294,
+      "id": 5450,
       "n": "ENO1->RPLP0 Bos mutus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos mutus second history-track control",
@@ -96766,7 +98794,7 @@
       }
     },
     {
-      "id": 5295,
+      "id": 5451,
       "n": "ENO1->RPLP0 Capra hircus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Capra hircus first history-track control",
@@ -96779,7 +98807,7 @@
       }
     },
     {
-      "id": 5296,
+      "id": 5452,
       "n": "ENO1->RPLP0 Capra hircus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Capra hircus second history-track control",
@@ -96792,7 +98820,7 @@
       }
     },
     {
-      "id": 5297,
+      "id": 5453,
       "n": "ENO1->RPLP0 Capricornis sumatraensis first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Capricornis sumatraensis first history-track control",
@@ -96805,7 +98833,7 @@
       }
     },
     {
-      "id": 5298,
+      "id": 5454,
       "n": "ENO1->RPLP0 Capricornis sumatraensis second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Capricornis sumatraensis second history-track control",
@@ -96818,7 +98846,7 @@
       }
     },
     {
-      "id": 5299,
+      "id": 5455,
       "n": "ENO1->RPLP0 Odobenus rosmarus divergens first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Odobenus rosmarus divergens first history-track control",
@@ -96831,7 +98859,7 @@
       }
     },
     {
-      "id": 5300,
+      "id": 5456,
       "n": "ENO1->RPLP0 Odobenus rosmarus divergens second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Odobenus rosmarus divergens second history-track control",
@@ -96844,7 +98872,7 @@
       }
     },
     {
-      "id": 5301,
+      "id": 5457,
       "n": "ENO1->RPLP0 Ovis aries first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Ovis aries first history-track control",
@@ -96857,7 +98885,7 @@
       }
     },
     {
-      "id": 5302,
+      "id": 5458,
       "n": "ENO1->RPLP0 Ovis aries second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Ovis aries second history-track control",
@@ -96870,7 +98898,7 @@
       }
     },
     {
-      "id": 5303,
+      "id": 5459,
       "n": "ENO1->RPLP0 Eumetopias jubatus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Eumetopias jubatus first history-track control",
@@ -96883,7 +98911,7 @@
       }
     },
     {
-      "id": 5304,
+      "id": 5460,
       "n": "ENO1->RPLP0 Eumetopias jubatus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Eumetopias jubatus second history-track control",
@@ -96896,7 +98924,7 @@
       }
     },
     {
-      "id": 5305,
+      "id": 5461,
       "n": "ENO1->RPLP0 Bos taurus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos taurus first history-track control",
@@ -96909,7 +98937,7 @@
       }
     },
     {
-      "id": 5306,
+      "id": 5462,
       "n": "ENO1->RPLP0 Bos taurus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Bos taurus second history-track control",
@@ -96922,7 +98950,7 @@
       }
     },
     {
-      "id": 5307,
+      "id": 5463,
       "n": "ENO1->RPLP0 Tursiops truncatus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Tursiops truncatus first history-track control",
@@ -96935,7 +98963,7 @@
       }
     },
     {
-      "id": 5308,
+      "id": 5464,
       "n": "ENO1->RPLP0 Tursiops truncatus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Tursiops truncatus second history-track control",
@@ -96948,7 +98976,7 @@
       }
     },
     {
-      "id": 5309,
+      "id": 5465,
       "n": "ENO1->RPLP0 Anser brachyrhynchus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Anser brachyrhynchus first history-track control",
@@ -96961,7 +98989,7 @@
       }
     },
     {
-      "id": 5310,
+      "id": 5466,
       "n": "ENO1->RPLP0 Anser brachyrhynchus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Anser brachyrhynchus second history-track control",
@@ -96974,7 +99002,7 @@
       }
     },
     {
-      "id": 5311,
+      "id": 5467,
       "n": "ENO1->RPLP0 Canis lupus familiaris first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Canis lupus familiaris first history-track control",
@@ -96987,7 +99015,7 @@
       }
     },
     {
-      "id": 5312,
+      "id": 5468,
       "n": "ENO1->RPLP0 Canis lupus familiaris second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Canis lupus familiaris second history-track control",
@@ -97000,7 +99028,7 @@
       }
     },
     {
-      "id": 5313,
+      "id": 5469,
       "n": "ENO1->RPLP0 Equus asinus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Equus asinus first history-track control",
@@ -97013,7 +99041,7 @@
       }
     },
     {
-      "id": 5314,
+      "id": 5470,
       "n": "ENO1->RPLP0 Equus asinus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Equus asinus second history-track control",
@@ -97026,7 +99054,7 @@
       }
     },
     {
-      "id": 5315,
+      "id": 5471,
       "n": "ENO1->RPLP0 Rattus norvegicus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Rattus norvegicus first history-track control",
@@ -97039,7 +99067,7 @@
       }
     },
     {
-      "id": 5316,
+      "id": 5472,
       "n": "ENO1->RPLP0 Rattus norvegicus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Rattus norvegicus second history-track control",
@@ -97052,7 +99080,7 @@
       }
     },
     {
-      "id": 5317,
+      "id": 5473,
       "n": "ENO1->RPLP0 Aquila chrysaetos chrysaetos first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Aquila chrysaetos chrysaetos first history-track control",
@@ -97065,7 +99093,7 @@
       }
     },
     {
-      "id": 5318,
+      "id": 5474,
       "n": "ENO1->RPLP0 Aquila chrysaetos chrysaetos second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Aquila chrysaetos chrysaetos second history-track control",
@@ -97078,7 +99106,7 @@
       }
     },
     {
-      "id": 5319,
+      "id": 5475,
       "n": "ENO1->RPLP0 Danio rerio first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Danio rerio first history-track control",
@@ -97091,7 +99119,7 @@
       }
     },
     {
-      "id": 5320,
+      "id": 5476,
       "n": "ENO1->RPLP0 Danio rerio second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Danio rerio second history-track control",
@@ -97104,7 +99132,7 @@
       }
     },
     {
-      "id": 5321,
+      "id": 5477,
       "n": "ENO1->RPLP0 Xenopus tropicalis first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Xenopus tropicalis first history-track control",
@@ -97117,7 +99145,7 @@
       }
     },
     {
-      "id": 5322,
+      "id": 5478,
       "n": "ENO1->RPLP0 Xenopus tropicalis second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Xenopus tropicalis second history-track control",
@@ -97130,7 +99158,7 @@
       }
     },
     {
-      "id": 5323,
+      "id": 5479,
       "n": "ENO1->RPLP0 Crocodylus porosus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Crocodylus porosus first history-track control",
@@ -97143,7 +99171,7 @@
       }
     },
     {
-      "id": 5324,
+      "id": 5480,
       "n": "ENO1->RPLP0 Crocodylus porosus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Crocodylus porosus second history-track control",
@@ -97156,7 +99184,7 @@
       }
     },
     {
-      "id": 5325,
+      "id": 5481,
       "n": "ENO1->RPLP0 Ornithorhynchus anatinus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Ornithorhynchus anatinus first history-track control",
@@ -97169,7 +99197,7 @@
       }
     },
     {
-      "id": 5326,
+      "id": 5482,
       "n": "ENO1->RPLP0 Ornithorhynchus anatinus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Ornithorhynchus anatinus second history-track control",
@@ -97182,7 +99210,7 @@
       }
     },
     {
-      "id": 5327,
+      "id": 5483,
       "n": "ENO1->RPLP0 Callithrix jacchus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Callithrix jacchus first history-track control",
@@ -97195,7 +99223,7 @@
       }
     },
     {
-      "id": 5328,
+      "id": 5484,
       "n": "ENO1->RPLP0 Callithrix jacchus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Callithrix jacchus second history-track control",
@@ -97208,7 +99236,7 @@
       }
     },
     {
-      "id": 5329,
+      "id": 5485,
       "n": "ENO1->RPLP0 Panthera leo first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Panthera leo first history-track control",
@@ -97221,7 +99249,7 @@
       }
     },
     {
-      "id": 5330,
+      "id": 5486,
       "n": "ENO1->RPLP0 Panthera leo second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Panthera leo second history-track control",
@@ -97234,7 +99262,7 @@
       }
     },
     {
-      "id": 5331,
+      "id": 5487,
       "n": "ENO1->RPLP0 Macaca mulatta first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Macaca mulatta first history-track control",
@@ -97247,7 +99275,7 @@
       }
     },
     {
-      "id": 5332,
+      "id": 5488,
       "n": "ENO1->RPLP0 Macaca mulatta second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Macaca mulatta second history-track control",
@@ -97260,7 +99288,7 @@
       }
     },
     {
-      "id": 5333,
+      "id": 5489,
       "n": "ENO1->RPLP0 Pongo pygmaeus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pongo pygmaeus first history-track control",
@@ -97273,7 +99301,7 @@
       }
     },
     {
-      "id": 5334,
+      "id": 5490,
       "n": "ENO1->RPLP0 Pongo pygmaeus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pongo pygmaeus second history-track control",
@@ -97286,7 +99314,7 @@
       }
     },
     {
-      "id": 5335,
+      "id": 5491,
       "n": "ENO1->RPLP0 Latimeria chalumnae first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Latimeria chalumnae first history-track control",
@@ -97299,7 +99327,7 @@
       }
     },
     {
-      "id": 5336,
+      "id": 5492,
       "n": "ENO1->RPLP0 Latimeria chalumnae second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Latimeria chalumnae second history-track control",
@@ -97312,7 +99340,7 @@
       }
     },
     {
-      "id": 5337,
+      "id": 5493,
       "n": "ENO1->RPLP0 Nomascus leucogenys first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Nomascus leucogenys first history-track control",
@@ -97325,7 +99353,7 @@
       }
     },
     {
-      "id": 5338,
+      "id": 5494,
       "n": "ENO1->RPLP0 Nomascus leucogenys second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Nomascus leucogenys second history-track control",
@@ -97338,7 +99366,7 @@
       }
     },
     {
-      "id": 5339,
+      "id": 5495,
       "n": "ENO1->RPLP0 Pan paniscus first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pan paniscus first history-track control",
@@ -97351,7 +99379,7 @@
       }
     },
     {
-      "id": 5340,
+      "id": 5496,
       "n": "ENO1->RPLP0 Pan paniscus second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pan paniscus second history-track control",
@@ -97364,7 +99392,7 @@
       }
     },
     {
-      "id": 5341,
+      "id": 5497,
       "n": "ENO1->RPLP0 Pongo abelii first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pongo abelii first history-track control",
@@ -97377,7 +99405,7 @@
       }
     },
     {
-      "id": 5342,
+      "id": 5498,
       "n": "ENO1->RPLP0 Pongo abelii second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pongo abelii second history-track control",
@@ -97390,7 +99418,7 @@
       }
     },
     {
-      "id": 5343,
+      "id": 5499,
       "n": "ENO1->RPLP0 Pan troglodytes first history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pan troglodytes first history-track control",
@@ -97403,7 +99431,7 @@
       }
     },
     {
-      "id": 5344,
+      "id": 5500,
       "n": "ENO1->RPLP0 Pan troglodytes second history-track control",
       "attrlist": {
         "display": "ENO1->RPLP0 Pan troglodytes second history-track control",

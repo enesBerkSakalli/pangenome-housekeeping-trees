@@ -11,17 +11,18 @@
     "ENO1",
     "RPLP0"
   ],
-  "nodes": 5345,
-  "edges": 5460,
+  "nodes": 5501,
+  "edges": 5694,
   "within_gene_tree_edges": 5106,
   "interlayer_species_connections": 72,
-  "interlayer_routed_edges": 354,
-  "interlayer_clade_flow_edges": 138,
+  "interlayer_routed_edges": 588,
+  "interlayer_clade_flow_edges": 372,
   "interlayer_selected_taxon_flow_edges": 216,
-  "interlayer_flow_nodes": 236,
-  "interlayer_clade_flow_segments": 46,
+  "interlayer_flow_nodes": 392,
+  "interlayer_direct_mrca_flow_segments": 46,
+  "interlayer_ancestor_context_flow_segments": 78,
   "interlayer_selected_taxon_flow_tracks": 72,
-  "explicit_path_records": 118,
+  "explicit_path_records": 196,
   "interlayer_shared_taxa": 701,
   "adjacent_gene_pair_species_connections": {
     "GAPDH->ENO1": 701,
@@ -34,6 +35,10 @@
   "clade_flow_corridors_by_pair": {
     "ENO1->RPLP0": 23,
     "GAPDH->ENO1": 23
+  },
+  "ancestor_context_flows_by_pair": {
+    "ENO1->RPLP0": 39,
+    "GAPDH->ENO1": 39
   },
   "interlayer_shared_taxa_by_group": {
     "Afrotheria": 6,
@@ -61,7 +66,7 @@
     "Strepsirrhines": 6,
     "Xenarthra": 3
   },
-  "interlayer_routing_policy": "clade-level corridors connect MRCA_GAPDH(S) to MRCA_ENO1(S) to MRCA_RPLP0(S) for each shared taxon group S; faint selected same-taxon tracks remain separate",
+  "interlayer_routing_policy": "clade-level corridors connect MRCA_GAPDH(S) to MRCA_ENO1(S) to MRCA_RPLP0(S) for each shared taxon group S; additional ancestor_context_flow paths connect parent/grandparent ancestors around those MRCAs and are not labeled as direct most-recent common ancestors; faint selected same-taxon tracks remain separate",
   "per_gene": {
     "GAPDH": {
       "nodes": 1703,
@@ -177,15 +182,15 @@
   "available_common_inferred_species": 743,
   "max_displayed_ortholog_species": 700,
   "target_250_taxa_status": "met_for_displayed_leaves_and_real_ortholog_species; 700 displayed ortholog species selected from 743 cached GAPDH/ENO1/RPLP0 shared inferred species. Displayed leaves per gene: {'GAPDH': 852, 'ENO1': 852, 'RPLP0': 852}.",
-  "node_count": 5345,
-  "edge_count": 5460,
+  "node_count": 5501,
+  "edge_count": 5694,
   "scene_count": 4,
   "project_dir": "/Users/berksakalli/Projects/Pangenome/external/DataDiVR_WebApp/static/projects/Pangenome_Housekeeping_Stacked_Trees",
   "merged_json": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json",
   "networkx_scenes": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl",
   "paths_json": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees_paths.json",
   "coordinate_mappings": "/Users/berksakalli/Projects/Pangenome/outputs_3d/datadivr_coordinate_mappings.json",
-  "path_count": 118,
+  "path_count": 196,
   "missing_files": [],
   "finite_positions": true,
   "positions_in_unit_cube": true,
@@ -194,13 +199,14 @@
   "paths_valid": true,
   "path_validation_errors": [],
   "path_validation_error_count": 0,
-  "validated_path_count": 118,
+  "validated_path_count": 196,
   "validated_path_kind_counts": {
     "clade_flow": 46,
+    "ancestor_context_flow": 78,
     "selected_taxon_flow": 72
   },
   "validated_path_gene_pair_counts": {
-    "GAPDH->ENO1": 59,
-    "ENO1->RPLP0": 59
+    "GAPDH->ENO1": 98,
+    "ENO1->RPLP0": 98
   }
 }
