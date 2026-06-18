@@ -23,8 +23,8 @@ gene trees and exports them to Plotly and DataDiVR.
   Runtime copy used by the local DataDiVR checkout.
 - `outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json`: Merged DataDiVR-style
   graph/layout JSON.
-- `outputs_3d/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl`: Four
-  NetworkX scene graphs.
+- `outputs_3d/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl`: Eight
+  pre-rendered NetworkX scene graphs matching the DataDiVR presentation stages.
 - `outputs_3d/Pangenome_Housekeeping_Stacked_Trees_paths.json`: Explicit
   numeric DataDiVR node-id paths only.
 - `outputs_3d/Pangenome_Housekeeping_Stacked_Trees_path_connections.json`:
@@ -59,8 +59,8 @@ textures. The additional path layer is independent:
 
 ## Animation Model
 
-`pfile.json["pathAnimationSettings"]` controls the WebGL preview path-curve
-animation:
+`pfile.json["pathAnimationSettings"]` exists for the optional WebGL preview
+path-curve overlay:
 
 - `enabled`
 - `drawPathCurves`
@@ -73,18 +73,17 @@ animation:
 - `pulseOpacity`
 - `focusSceneSpeedBoost`
 
-The current project keeps `pulseEnabled` false, so path particles are disabled
-and only the thin path curves are drawn. Keep animation settings data-driven in
-`pfile.json`; avoid hard-coding project-specific values inside
-`webGL_preview.js` unless they are stable defaults.
+The current project keeps `enabled`, `drawPathCurves`, and `pulseEnabled` false.
+The connection focus is pre-rendered into native `linksRGB/*.png` scene textures
+instead of drawn as runtime particles or overlay curves.
 
 `pfile.json["subtreeHighlightAnimation"]["presentation"]` controls the staged
-WebGL preview flow. The current sequence starts with all layers visible, then
-shows `GAPDH`, `ENO1`, and `RPLP0` one by one, then highlights the Ray-finned
-fish subtree inside each layer, and finally shows the full Ray-finned fish
-subtree plus its inter-layer connections. Stage names come from `title`; stage
-scene switches use `layoutIndex`; subtree stages set `highlight: true` plus the
-desired setup and link groups.
+WebGL preview flow. Each stage points to a pre-rendered DataDiVR scene in
+`layouts`, `layoutsl`, `layoutsRGB`, `linksRGB`, and `nodesizes`. The current
+sequence starts with all layers visible, then shows `GAPDH`, `ENO1`, and
+`RPLP0` one by one, then shows the pre-rendered Ray-finned fish subtree inside
+each layer, and finally shows the pre-rendered full Ray-finned fish subtree plus
+its inter-layer connections.
 
 ## Validation Commands
 

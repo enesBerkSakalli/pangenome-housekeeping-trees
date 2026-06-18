@@ -42,10 +42,55 @@ OUTPUT_PATHS_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_paths.json
 OUTPUT_PATH_CONNECTIONS_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_path_connections.json")
 OUTPUT_COORDINATES_JSON = os.path.join(ROOT, "outputs_3d", "datadivr_coordinate_mappings.json")
 
-SCENE_NAMES = [
-    "00_all_genes_stacked",
-    *[f"{index:02d}_{gene}_focus" for index, gene in enumerate(pst.GENE_ORDER, start=1)],
+PRESENTATION_STAGE_DEFINITIONS = [
+    {
+        "name": "00_all_tree_layers",
+        "mode": "overview",
+        "title": "All tree layers",
+        "focus_gene": None,
+        "highlight": False,
+    },
+    *[
+        {
+            "name": f"{index:02d}_{gene}_tree_layer",
+            "mode": "layer",
+            "title": f"{gene} tree layer",
+            "focus_gene": gene,
+            "highlight": False,
+        }
+        for index, gene in enumerate(pst.GENE_ORDER, start=1)
+    ],
+    *[
+        {
+            "name": f"{index + 3:02d}_{gene}_ray_finned_fish_subtree",
+            "mode": "subtree_layer",
+            "title": f"Ray-finned fish subtree in {gene}",
+            "focus_gene": gene,
+            "highlight": False,
+            "preRenderedHighlight": True,
+            "setup": "Ray-finned fish",
+            "nodeGroups": ["Ray-finned fish"],
+            "linkGroups": ["Ray-finned fish paths"],
+        }
+        for index, gene in enumerate(pst.GENE_ORDER, start=1)
+    ],
+    {
+        "name": "07_ray_finned_fish_subtree_connections",
+        "mode": "subtree_all",
+        "title": "Ray-finned fish subtree and inter-layer connections",
+        "focus_gene": None,
+        "highlight": False,
+        "preRenderedHighlight": True,
+        "setup": "Ray-finned fish",
+        "nodeGroups": ["Ray-finned fish"],
+        "linkGroups": [
+            "Ray-finned fish paths",
+            "Ray-finned fish clade-level flow corridor",
+            "Ray-finned fish selected same-taxon history tracks",
+        ],
+    },
 ]
+SCENE_NAMES = [stage["name"] for stage in PRESENTATION_STAGE_DEFINITIONS]
 
 INFO = (
     "Three stacked NetworkX unrooted housekeeping-gene trees inferred from "
@@ -67,9 +112,9 @@ INTERLAYER_SELECTED_TAXON_FLOW_ALPHA = 38
 INTERLAYER_SELECTED_TAXON_FOCUS_ALPHA = 92
 
 PATH_ANIMATION_SETTINGS = {
-    "enabled": True,
+    "enabled": False,
     "mode": "flow_pulses",
-    "drawPathCurves": True,
+    "drawPathCurves": False,
     "pulseEnabled": False,
     "maxVisiblePaths": 260,
     "curveSegments": 36,
@@ -92,43 +137,12 @@ SUBTREE_HIGHLIGHT_ANIMATION = {
         "showStageLabel": True,
         "sequence": [
             {
-                "mode": "overview",
-                "title": "All tree layers",
-                "layoutIndex": 0,
-                "highlight": False,
-            },
-            *[
-                {
-                    "mode": "layer",
-                    "title": f"{gene} tree layer",
-                    "layoutIndex": index,
-                    "highlight": False,
-                }
-                for index, gene in enumerate(pst.GENE_ORDER, start=1)
-            ],
-            *[
-                {
-                    "mode": "subtree_layer",
-                    "title": f"Ray-finned fish subtree in {gene}",
-                    "layoutIndex": index,
-                    "setup": "Ray-finned fish",
-                    "highlight": True,
-                    "linkGroups": ["Ray-finned fish paths"],
-                }
-                for index, gene in enumerate(pst.GENE_ORDER, start=1)
-            ],
-            {
-                "mode": "subtree_all",
-                "title": "Ray-finned fish subtree and inter-layer connections",
-                "layoutIndex": 0,
-                "setup": "Ray-finned fish",
-                "highlight": True,
-                "linkGroups": [
-                    "Ray-finned fish paths",
-                    "Ray-finned fish clade-level flow corridor",
-                    "Ray-finned fish selected same-taxon history tracks",
-                ],
-            },
+                key: value
+                for key, value in stage.items()
+                if key not in {"focus_gene", "nodeGroups", "linkGroups"}
+            }
+            | {"layoutIndex": index, "scene": stage["name"]}
+            for index, stage in enumerate(PRESENTATION_STAGE_DEFINITIONS)
         ],
     },
     "dimNonFocus": True,
@@ -609,6 +623,83 @@ def named_link_group_selections(scenes: list[nx.Graph], edge_order: list[tuple[s
                 }
             )
     return selections
+
+
+def node_faded_for_focus(attrs: dict, focus_gene: str | None) -> bool:
+    if not focus_gene:
+        return False
+    if attrs.get("is_interlayer_flow_node"):
+        return focus_gene not in attrs.get("flow_genes", [])
+    return attrs["gene"] != focus_gene
+
+
+def edge_focus_state(attrs: dict, focus_gene: str | None) -> tuple[bool, bool]:
+    if not focus_gene:
+        return False, False
+    if attrs.get("is_interlayer_connection"):
+        flow_genes = attrs.get("flow_genes", [])
+        touches_focus = bool(flow_genes and focus_gene in flow_genes)
+        faded = bool(flow_genes and not touches_focus)
+        return faded, touches_focus
+    faded = attrs["gene"] != focus_gene
+    return faded, attrs["gene"] == focus_gene
+
+
+def apply_prerendered_subtree_stage(scene: nx.Graph, stage: dict) -> None:
+    node_groups = set(stage.get("nodeGroups", []))
+    link_groups = set(stage.get("linkGroups", []))
+    if not node_groups and not link_groups:
+        return
+
+    focus_gene = stage.get("focus_gene")
+    highlighted_nodes = set()
+    highlighted_edges = set()
+    for node, attrs in scene.nodes(data=True):
+        group_name = scene_node_group_name(attrs, node_faded_for_focus(attrs, focus_gene))
+        if group_name in node_groups:
+            highlighted_nodes.add(node)
+
+    for source, target, attrs in scene.edges(data=True):
+        faded, _ = edge_focus_state(attrs, focus_gene)
+        group_name = scene_link_group_name(attrs, faded)
+        if group_name in link_groups:
+            highlighted_edges.add((source, target))
+            highlighted_nodes.add(source)
+            highlighted_nodes.add(target)
+
+    focus_rgb = setup_color_from_animation(stage.get("setup", "Ray-finned fish"))
+    settings = SUBTREE_HIGHLIGHT_ANIMATION
+    dim_node_alpha = max(1, int(255 * float(settings.get("dimNodeOpacity", 0.035))))
+    dim_link_alpha = max(1, int(255 * float(settings.get("dimLinkOpacity", 0.004))))
+    highlight_node_alpha = int(255 * float(settings.get("highlightNodeOpacity", 1.0)))
+    highlight_link_alpha = int(255 * float(settings.get("highlightLinkOpacity", 0.88)))
+
+    for node, attrs in scene.nodes(data=True):
+        if node in highlighted_nodes:
+            attrs["nodecolor"] = (*focus_rgb, highlight_node_alpha)
+            attrs["node_radius"] = round(min(2.4, float(attrs.get("node_radius", 1.0)) * 1.18), 4)
+        else:
+            red, green, blue, _ = attrs["nodecolor"]
+            attrs["nodecolor"] = (red, green, blue, dim_node_alpha)
+
+    for source, target, attrs in scene.edges(data=True):
+        if (source, target) in highlighted_edges or (target, source) in highlighted_edges:
+            attrs["linkcolor"] = (*focus_rgb, highlight_link_alpha)
+        else:
+            red, green, blue, _ = attrs["linkcolor"]
+            attrs["linkcolor"] = (red, green, blue, dim_link_alpha)
+
+    scene.graph["pre_rendered_highlight"] = True
+    scene.graph["pre_rendered_highlight_nodes"] = len(highlighted_nodes)
+    scene.graph["pre_rendered_highlight_links"] = len(highlighted_edges)
+
+
+def setup_color_from_animation(setup_name: str) -> tuple[int, int, int]:
+    for setup in SUBTREE_HIGHLIGHT_ANIMATION.get("setups", []):
+        if setup.get("name") == setup_name and isinstance(setup.get("color"), list):
+            color = setup["color"]
+            return (int(color[0]), int(color[1]), int(color[2]))
+    return (34, 211, 238)
 
 
 def build_inferred_gene_trees() -> tuple[dict[str, nx.DiGraph], dict[str, dict[str, np.ndarray]]]:
@@ -1273,30 +1364,23 @@ def build_combined_graphs() -> tuple[list[nx.Graph], dict]:
     )
 
     scenes = []
-    for scene_name in SCENE_NAMES:
-        focus_gene = scene_name.split("_")[1] if scene_name.endswith("_focus") else None
+    for stage in PRESENTATION_STAGE_DEFINITIONS:
+        scene_name = stage["name"]
+        focus_gene = stage.get("focus_gene")
         scene = nx.Graph()
         scene.graph.update(base.graph)
         scene.graph["layoutname"] = scene_name
         scene.graph["focus_gene"] = focus_gene or "all"
+        scene.graph["presentation_title"] = stage["title"]
+        scene.graph["presentation_mode"] = stage["mode"]
+        scene.graph["pre_rendered_highlight"] = bool(stage.get("preRenderedHighlight", False))
         for node, attrs in base.nodes(data=True):
             copied = copy.deepcopy(attrs)
-            if copied.get("is_interlayer_flow_node"):
-                faded = bool(focus_gene and focus_gene not in copied.get("flow_genes", []))
-                copied["nodecolor"] = faded_node_color(copied["original_attrs"]) if faded else base_node_color(copied)
-            else:
-                faded = bool(focus_gene and copied["gene"] != focus_gene)
-                copied["nodecolor"] = faded_node_color(copied["original_attrs"]) if faded else base_node_color(copied["original_attrs"])
+            faded = node_faded_for_focus(copied, focus_gene)
+            copied["nodecolor"] = faded_node_color(copied["original_attrs"]) if faded else base_node_color(copied["original_attrs"])
             scene.add_node(node, **copied)
         for source, target, attrs in base.edges(data=True):
-            if attrs.get("is_interlayer_connection"):
-                flow_genes = attrs.get("flow_genes", [])
-                touches_focus = bool(focus_gene and focus_gene in flow_genes)
-                faded = bool(focus_gene and flow_genes and not touches_focus)
-                focused = bool(focus_gene and touches_focus)
-            else:
-                faded = bool(focus_gene and attrs["gene"] != focus_gene)
-                focused = bool(focus_gene and attrs["gene"] == focus_gene)
+            faded, focused = edge_focus_state(attrs, focus_gene)
             scene.add_edge(
                 source,
                 target,
@@ -1319,6 +1403,7 @@ def build_combined_graphs() -> tuple[list[nx.Graph], dict]:
                     faded=faded,
                     focused=focused,
                 )
+        apply_prerendered_subtree_stage(scene, stage)
         scenes.append(scene)
 
     interlayer_edge_records = interlayer_records["edges"]
@@ -1802,16 +1887,19 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
             "`DataDiVR_WebApp/static/projects/` and select it from the preview.\n\n"
             "Native DataDiVR files are in the project root plus the `layouts`, "
             "`layoutsl`, `layoutsRGB`, `links`, `linksRGB`, and `nodesizes` "
-            "directories.\n\n"
+            "directories. The eight presentation stages are pre-rendered into "
+            "scene-specific texture files in those directories.\n\n"
             "Additional sidecars:\n\n"
             "- `paths.json` stores only explicit paths as numeric DataDiVR node IDs.\n"
             "- `path_connections.json` stores per-path segment pairs and metadata.\n"
             "- `coordinate_mappings.json` maps numeric node IDs to node keys, "
             "annotations, colors, and coordinates in each scene.\n"
             "- `pfile.json` includes `subtreeHighlightAnimation.presentation`, "
-            "an 8-stage preview sequence: all layers, GAPDH, ENO1, RPLP0, "
-            "the Ray-finned fish subtree in each layer, and finally the full "
-            "Ray-finned fish subtree plus its inter-layer connections.\n"
+            "an 8-stage sequence whose node and link colors are already "
+            "compiled into native DataDiVR scene textures: all layers, GAPDH, "
+            "ENO1, RPLP0, the Ray-finned fish subtree in each layer, and "
+            "finally the full Ray-finned fish subtree plus its inter-layer "
+            "connections.\n"
             "- `analysis/` bundles the merged JSON export, NetworkX scene pickle, "
             "paths, coordinate mappings, and audit files for downstream agents.\n"
         )

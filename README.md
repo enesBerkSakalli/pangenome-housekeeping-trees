@@ -79,7 +79,9 @@ scripts/start_datadivr.sh
 Open `http://127.0.0.1:3000/preview` and select
 `Pangenome_Housekeeping_Stacked_Trees`.
 
-The project starts a data-driven presentation in the WebGL preview:
+The project is pre-rendered as eight native DataDiVR scenes in `layouts`,
+`layoutsl`, `layoutsRGB`, `linksRGB`, and `nodesizes`. The WebGL preview only
+steps through those compiled scenes:
 
 1. all stacked tree layers visible,
 2. GAPDH, ENO1, and RPLP0 layers shown one after another with stage labels,
@@ -104,7 +106,7 @@ The project includes non-native sidecars for agents and downstream tools:
 - `coordinate_mappings.json` maps numeric DataDiVR node IDs to source node keys,
   annotations, colors, and per-scene coordinates.
 - `analysis/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl` stores the
-  full NetworkX scene objects.
+  full NetworkX scene objects for the eight pre-rendered DataDiVR stages.
 - `analysis/manifest.json` lists the bundled analysis files.
 
 The local workspace includes small preview customizations for node radii and

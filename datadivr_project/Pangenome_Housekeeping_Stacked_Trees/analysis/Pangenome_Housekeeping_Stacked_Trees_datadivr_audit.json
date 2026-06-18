@@ -1,10 +1,14 @@
 {
   "project_name": "Pangenome_Housekeeping_Stacked_Trees",
   "scene_names": [
-    "00_all_genes_stacked",
-    "01_GAPDH_focus",
-    "02_ENO1_focus",
-    "03_RPLP0_focus"
+    "00_all_tree_layers",
+    "01_GAPDH_tree_layer",
+    "02_ENO1_tree_layer",
+    "03_RPLP0_tree_layer",
+    "04_GAPDH_ray_finned_fish_subtree",
+    "05_ENO1_ray_finned_fish_subtree",
+    "06_RPLP0_ray_finned_fish_subtree",
+    "07_ray_finned_fish_subtree_connections"
   ],
   "gene_order": [
     "GAPDH",
@@ -184,7 +188,7 @@
   "target_250_taxa_status": "met_for_displayed_leaves_and_real_ortholog_species; 700 displayed ortholog species selected from 743 cached GAPDH/ENO1/RPLP0 shared inferred species. Displayed leaves per gene: {'GAPDH': 852, 'ENO1': 852, 'RPLP0': 852}.",
   "node_count": 5305,
   "edge_count": 5498,
-  "scene_count": 4,
+  "scene_count": 8,
   "project_dir": "/Users/berksakalli/Projects/Pangenome/external/DataDiVR_WebApp/static/projects/Pangenome_Housekeeping_Stacked_Trees",
   "merged_json": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json",
   "networkx_scenes": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl",

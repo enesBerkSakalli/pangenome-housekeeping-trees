@@ -7650,9 +7650,9 @@
     }
   ],
   "animation_settings": {
-    "enabled": true,
+    "enabled": false,
     "mode": "flow_pulses",
-    "drawPathCurves": true,
+    "drawPathCurves": false,
     "pulseEnabled": false,
     "maxVisiblePaths": 260,
     "curveSegments": 36,
