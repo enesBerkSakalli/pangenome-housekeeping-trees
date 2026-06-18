@@ -1,5 +1,5 @@
 diff --git a/static/js/webGL_preview.js b/static/js/webGL_preview.js
-index 7891fe4..1da991a 100644
+index 7891fe4..ff9b13e 100644
 --- a/static/js/webGL_preview.js
 +++ b/static/js/webGL_preview.js
 @@ -9,6 +9,21 @@ var actLinks = 0;
@@ -55,10 +55,22 @@ index 7891fe4..1da991a 100644
  function getLColor(index) {
      var i = index * 4;
      var scene = actLinksRGB;
-@@ -124,6 +156,132 @@ function getLink(index) {
+@@ -124,6 +156,144 @@ function getLink(index) {
      //console.log("created link from " + link["start"] + " to " + link["end"]); 
      return link;
  }
++
++function makeLinkMaterialFromColor(color) {
++    var alpha = Math.max(0, Math.min(1, color[3] / 255));
++    var opacity = Math.max(0.035, Math.min(0.26, alpha * 0.34));
++    return new THREE.LineBasicMaterial({
++        color: RGB2HTML(color[0], color[1], color[2]),
++        opacity: opacity,
++        transparent: true,
++        depthWrite: false,
++        linewidth: 0.5
++    });
++}
 +
 +function activePathSettings() {
 +    return Object.assign({}, pathAnimationSettings, pfile["pathAnimationSettings"] || {});
@@ -188,7 +200,30 @@ index 7891fe4..1da991a 100644
  function updateNodeColors(data) {
  
      for (let i = 0; i < (nodemeshes.length); i++) {
-@@ -219,7 +377,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+@@ -156,21 +326,7 @@ function updateLinkColors(data) {
+     //console.log(linkmeshes);
+     for (let i = 0; i < (linkmeshes.length); i++) {
+         color = [data[link_ids[i] * 4], data[link_ids[i] * 4 + 1], data[link_ids[i] * 4 + 2], data[link_ids[i] * 4 + 3]];
+-        if (color[3] > 100) {
+-            // if alpha is greater than 100, create emissive material
+-            var material1 = new THREE.LineBasicMaterial({
+-                color: RGB2HTML(color[0], color[1], color[2]),
+-                opacity: 0.9, //0.6
+-                transparent: false
+-            })
+-        } else {
+-            // if alpha is not greater than 100, create regular material
+-            var material1 = new THREE.LineBasicMaterial({
+-                color: RGB2HTML(color[0], color[1], color[2]),
+-                opacity: 0.4, //0.15
+-                transparent: true
+-            });
+-        }
++        var material1 = makeLinkMaterialFromColor(color);
+ 
+ 
+         linkmeshes[i].material = material1;
+@@ -219,7 +375,7 @@ async function updateLayoutTemp(path_low, path_hi) {
          for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
              if (i < maxNodesPreview) {
  
@@ -197,7 +232,7 @@ index 7891fe4..1da991a 100644
                  var color = getNColor(i);
  
                  if (color[3] > 100) {
-@@ -242,6 +400,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+@@ -242,6 +398,7 @@ async function updateLayoutTemp(path_low, path_hi) {
                  //const nmaterial = new THREE.MeshBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2])});//"rgb(155, 102, 102)" 
                  const cube = new THREE.Mesh(ngeometry, nmaterial);
                  cube.name = i;//;
@@ -205,7 +240,30 @@ index 7891fe4..1da991a 100644
                  cube.layers.set(0);
                  nodemeshes.push(cube);
  
-@@ -300,6 +459,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+@@ -264,21 +421,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+             var link = getLink(l);
+             var color = getLColor(l);
+ 
+-            if (color[3] > 100) {
+-                // if alpha is greater than 100, create emissive material
+-                var material1 = new THREE.LineBasicMaterial({
+-                    color: RGB2HTML(color[0], color[1], color[2]),
+-                    opacity: 0.9,
+-                    transparent: false
+-                })
+-            } else {
+-                // if alpha is not greater than 100, create regular material
+-                var material1 = new THREE.LineBasicMaterial({
+-                    color: RGB2HTML(color[0], color[1], color[2]),
+-                    opacity: 0.5,
+-                    transparent: true
+-                });
+-            }
++            var material1 = makeLinkMaterialFromColor(color);
+ 
+             //const material1 = new THREE.LineBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2]), transparent: true, opacity: 0.2 });
+             const points = [];
+@@ -300,6 +443,7 @@ async function updateLayoutTemp(path_low, path_hi) {
              linkmeshes.push(line)
              count = l
          }
@@ -213,7 +271,7 @@ index 7891fe4..1da991a 100644
      }
  }
  
-@@ -330,7 +490,7 @@ function makeNetwork() {
+@@ -330,7 +474,7 @@ function makeNetwork() {
          for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
              if (i < maxNodesPreview) {
  
@@ -222,7 +280,7 @@ index 7891fe4..1da991a 100644
                  var color = getNColor(i);
  
  
-@@ -356,6 +516,7 @@ function makeNetwork() {
+@@ -356,6 +500,7 @@ function makeNetwork() {
  
                  const cube = new THREE.Mesh(ngeometry, nmaterial);
                  cube.name = i;//;
@@ -230,7 +288,30 @@ index 7891fe4..1da991a 100644
                  cube.layers.set(0);
                  nodemeshes.push(cube);
                  
-@@ -462,6 +623,7 @@ function makeNetwork() {
+@@ -424,21 +569,7 @@ function makeNetwork() {
+ 
+ 
+             var color = getLColor(l);
+-            if (color[3] > 100) {
+-                // if alpha is greater than 100, create emissive material
+-                var material1 = new THREE.LineBasicMaterial({
+-                    color: RGB2HTML(color[0], color[1], color[2]),
+-                    opacity: 0.6,
+-                    transparent: false
+-                })
+-            } else {
+-                // if alpha is not greater than 100, create regular material
+-                var material1 = new THREE.LineBasicMaterial({
+-                    color: RGB2HTML(color[0], color[1], color[2]),
+-                    opacity: 0.15,
+-                    transparent: true
+-                });
+-            }
++            var material1 = makeLinkMaterialFromColor(color);
+ 
+ 
+             //const material1 = new THREE.LineBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2]), transparent: true, opacity: 0.2 });
+@@ -462,6 +593,7 @@ function makeNetwork() {
          }
  
          //console.log(linkmeshes);
@@ -238,7 +319,7 @@ index 7891fe4..1da991a 100644
      }
  }
  
-@@ -499,6 +661,7 @@ function onWindowResize() {
+@@ -499,6 +631,7 @@ function onWindowResize() {
  function animate() {
      requestAnimationFrame(animate);
      controls.update();
@@ -246,7 +327,7 @@ index 7891fe4..1da991a 100644
      renderer.render(scene, camera);
  }
  function right() {
-@@ -509,8 +672,10 @@ function right() {
+@@ -509,8 +642,10 @@ function right() {
  }
  function nodescale(scale) {
      //console.log(scale);
@@ -258,7 +339,7 @@ index 7891fe4..1da991a 100644
      }
      indexsphere.scale.set(scale + 2, scale + 2, scale + 2);
      //render();
-@@ -639,7 +804,23 @@ function clearProject() {
+@@ -639,7 +774,23 @@ function clearProject() {
      actLinks = 0;
      linksRGB = [];
      actLinksRGB = 0;
@@ -282,7 +363,7 @@ index 7891fe4..1da991a 100644
  }
  
  
-@@ -672,6 +853,25 @@ async function downloadProjectTextures() {
+@@ -672,6 +823,25 @@ async function downloadProjectTextures() {
          linksRGB.push(await DownloadImage(path));
      }
  
@@ -308,7 +389,7 @@ index 7891fe4..1da991a 100644
      makeNetwork(); //
      var text = '{"id":"x", "success": "true", "fn": "projectLoaded"}';
      var out = JSON.parse(text);
-@@ -700,5 +900,3 @@ function hexToTHREEColor(hex) {
+@@ -700,5 +870,3 @@ function hexToTHREEColor(hex) {
      color.set(hex);
      return color;
  }

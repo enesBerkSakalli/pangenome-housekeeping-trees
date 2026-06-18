@@ -51,17 +51,17 @@ INFO = (
     "taxa are used in every gene layer; focus scenes fade non-selected genes."
 )
 PATH_GROUP_DOMINANCE_THRESHOLD = 0.60
-BACKBONE_LINK_COLOR = (202, 220, 250, 132)
-AMBIGUOUS_LINK_COLOR = (142, 160, 190, 104)
-FADED_LINK_COLOR = (52, 60, 76, 30)
-INTERLAYER_HUMAN_CONNECTOR_COLOR = (255, 242, 204, 230)
-INTERLAYER_NEUTRAL_CONNECTOR_COLOR = (207, 230, 255, 210)
+BACKBONE_LINK_COLOR = (202, 220, 250, 70)
+AMBIGUOUS_LINK_COLOR = (142, 160, 190, 48)
+FADED_LINK_COLOR = (52, 60, 76, 10)
+INTERLAYER_HUMAN_CONNECTOR_COLOR = (255, 242, 204, 150)
+INTERLAYER_NEUTRAL_CONNECTOR_COLOR = (207, 230, 255, 128)
 INTERLAYER_FLOW_NODE_COLOR = (18, 24, 34, 35)
 INTERLAYER_PORT_NODE_COLOR = (36, 48, 62, 76)
 INTERLAYER_SELECTED_TAXON_NODE_COLOR = (28, 34, 46, 44)
-INTERLAYER_CLADE_FLOW_ALPHA = 220
-INTERLAYER_SELECTED_TAXON_FLOW_ALPHA = 92
-INTERLAYER_SELECTED_TAXON_FOCUS_ALPHA = 172
+INTERLAYER_CLADE_FLOW_ALPHA = 126
+INTERLAYER_SELECTED_TAXON_FLOW_ALPHA = 38
+INTERLAYER_SELECTED_TAXON_FOCUS_ALPHA = 92
 
 PATH_ANIMATION_SETTINGS = {
     "enabled": True,
@@ -72,7 +72,7 @@ PATH_ANIMATION_SETTINGS = {
     "pulseRadius": 0.072,
     "pulseSpeed": 0.18,
     "pulseStagger": 0.007,
-    "curveOpacity": 0.34,
+    "curveOpacity": 0.14,
     "pulseOpacity": 0.88,
     "focusSceneSpeedBoost": 1.35,
 }
@@ -292,11 +292,11 @@ def edge_color_for_path_group(
     if path_group == "Backbone":
         return BACKBONE_LINK_COLOR
     if path_group == "Human subtree":
-        return hex_to_rgba(pst.HUMAN_SUBTREE_COLOR, 238 if focused else 212)
+        return hex_to_rgba(pst.HUMAN_SUBTREE_COLOR, 142 if focused else 112)
     if path_group in pst.MAMMAL_CLADE_COLORS:
-        alpha = int(178 + 62 * clamp(dominance, PATH_GROUP_DOMINANCE_THRESHOLD, 1.0))
+        alpha = int(86 + 44 * clamp(dominance, PATH_GROUP_DOMINANCE_THRESHOLD, 1.0))
         if focused:
-            alpha = min(248, alpha + 22)
+            alpha = min(152, alpha + 22)
         return hex_to_rgba(pst.MAMMAL_CLADE_COLORS[path_group], alpha)
     return edge_color_for_child({}, faded=faded)
 
@@ -342,10 +342,10 @@ def edge_color_for_interlayer_group(
     else:
         color = hex_to_rgba(
             pst.MAMMAL_CLADE_COLORS.get(group, "#CFE6FF"),
-            214,
+            124,
         )
     if focused:
-        return (color[0], color[1], color[2], min(248, color[3] + 28))
+        return (color[0], color[1], color[2], min(154, color[3] + 20))
     return color
 
 
@@ -369,7 +369,7 @@ def edge_color_for_interlayer_edge(
             return (base[0], base[1], base[2], INTERLAYER_SELECTED_TAXON_FOCUS_ALPHA)
         return (48, 56, 72, INTERLAYER_SELECTED_TAXON_FLOW_ALPHA)
     if focused:
-        return (base[0], base[1], base[2], min(248, base[3] + 24))
+        return (base[0], base[1], base[2], min(154, base[3] + 20))
     return base
 
 
