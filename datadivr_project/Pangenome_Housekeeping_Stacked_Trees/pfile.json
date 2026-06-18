@@ -1030,6 +1030,80 @@
     "enabled": true,
     "mode": "subtree_focus",
     "initialSetup": "Ray-finned fish",
+    "presentation": {
+      "enabled": true,
+      "autoPlay": true,
+      "stageSeconds": 4.0,
+      "showStageLabel": true,
+      "sequence": [
+        {
+          "mode": "overview",
+          "title": "All tree layers",
+          "layoutIndex": 0,
+          "highlight": false
+        },
+        {
+          "mode": "layer",
+          "title": "GAPDH tree layer",
+          "layoutIndex": 1,
+          "highlight": false
+        },
+        {
+          "mode": "layer",
+          "title": "ENO1 tree layer",
+          "layoutIndex": 2,
+          "highlight": false
+        },
+        {
+          "mode": "layer",
+          "title": "RPLP0 tree layer",
+          "layoutIndex": 3,
+          "highlight": false
+        },
+        {
+          "mode": "subtree_layer",
+          "title": "Ray-finned fish subtree in GAPDH",
+          "layoutIndex": 1,
+          "setup": "Ray-finned fish",
+          "highlight": true,
+          "linkGroups": [
+            "Ray-finned fish paths"
+          ]
+        },
+        {
+          "mode": "subtree_layer",
+          "title": "Ray-finned fish subtree in ENO1",
+          "layoutIndex": 2,
+          "setup": "Ray-finned fish",
+          "highlight": true,
+          "linkGroups": [
+            "Ray-finned fish paths"
+          ]
+        },
+        {
+          "mode": "subtree_layer",
+          "title": "Ray-finned fish subtree in RPLP0",
+          "layoutIndex": 3,
+          "setup": "Ray-finned fish",
+          "highlight": true,
+          "linkGroups": [
+            "Ray-finned fish paths"
+          ]
+        },
+        {
+          "mode": "subtree_all",
+          "title": "Ray-finned fish subtree and inter-layer connections",
+          "layoutIndex": 0,
+          "setup": "Ray-finned fish",
+          "highlight": true,
+          "linkGroups": [
+            "Ray-finned fish paths",
+            "Ray-finned fish clade-level flow corridor",
+            "Ray-finned fish selected same-taxon history tracks"
+          ]
+        }
+      ]
+    },
     "dimNonFocus": true,
     "dimNodeOpacity": 0.035,
     "dimLinkOpacity": 0.004,

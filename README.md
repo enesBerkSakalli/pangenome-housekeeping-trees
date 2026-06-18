@@ -79,6 +79,14 @@ scripts/start_datadivr.sh
 Open `http://127.0.0.1:3000/preview` and select
 `Pangenome_Housekeeping_Stacked_Trees`.
 
+The project starts a data-driven presentation in the WebGL preview:
+
+1. all stacked tree layers visible,
+2. GAPDH, ENO1, and RPLP0 layers shown one after another with stage labels,
+3. the Ray-finned fish subtree highlighted inside each layer,
+4. the full Ray-finned fish subtree and its inter-layer connections restored
+   together at the end.
+
 For a ready-made project copy, use:
 
 ```text

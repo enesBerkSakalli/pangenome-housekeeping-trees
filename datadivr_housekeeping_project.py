@@ -85,6 +85,52 @@ SUBTREE_HIGHLIGHT_ANIMATION = {
     "enabled": True,
     "mode": "subtree_focus",
     "initialSetup": "Ray-finned fish",
+    "presentation": {
+        "enabled": True,
+        "autoPlay": True,
+        "stageSeconds": 4.0,
+        "showStageLabel": True,
+        "sequence": [
+            {
+                "mode": "overview",
+                "title": "All tree layers",
+                "layoutIndex": 0,
+                "highlight": False,
+            },
+            *[
+                {
+                    "mode": "layer",
+                    "title": f"{gene} tree layer",
+                    "layoutIndex": index,
+                    "highlight": False,
+                }
+                for index, gene in enumerate(pst.GENE_ORDER, start=1)
+            ],
+            *[
+                {
+                    "mode": "subtree_layer",
+                    "title": f"Ray-finned fish subtree in {gene}",
+                    "layoutIndex": index,
+                    "setup": "Ray-finned fish",
+                    "highlight": True,
+                    "linkGroups": ["Ray-finned fish paths"],
+                }
+                for index, gene in enumerate(pst.GENE_ORDER, start=1)
+            ],
+            {
+                "mode": "subtree_all",
+                "title": "Ray-finned fish subtree and inter-layer connections",
+                "layoutIndex": 0,
+                "setup": "Ray-finned fish",
+                "highlight": True,
+                "linkGroups": [
+                    "Ray-finned fish paths",
+                    "Ray-finned fish clade-level flow corridor",
+                    "Ray-finned fish selected same-taxon history tracks",
+                ],
+            },
+        ],
+    },
     "dimNonFocus": True,
     "dimNodeOpacity": 0.035,
     "dimLinkOpacity": 0.004,
@@ -1762,9 +1808,10 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
             "- `path_connections.json` stores per-path segment pairs and metadata.\n"
             "- `coordinate_mappings.json` maps numeric node IDs to node keys, "
             "annotations, colors, and coordinates in each scene.\n"
-            "- `pfile.json` includes `subtreeHighlightAnimation`, which starts "
-            "with the Ray-finned fish subtree highlighted across all layers and "
-            "then per active layer while non-focused subtrees are dimmed.\n"
+            "- `pfile.json` includes `subtreeHighlightAnimation.presentation`, "
+            "an 8-stage preview sequence: all layers, GAPDH, ENO1, RPLP0, "
+            "the Ray-finned fish subtree in each layer, and finally the full "
+            "Ray-finned fish subtree plus its inter-layer connections.\n"
             "- `analysis/` bundles the merged JSON export, NetworkX scene pickle, "
             "paths, coordinate mappings, and audit files for downstream agents.\n"
         )

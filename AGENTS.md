@@ -59,7 +59,8 @@ textures. The additional path layer is independent:
 
 ## Animation Model
 
-`pfile.json["pathAnimationSettings"]` controls the WebGL preview animation:
+`pfile.json["pathAnimationSettings"]` controls the WebGL preview path-curve
+animation:
 
 - `enabled`
 - `drawPathCurves`
@@ -72,10 +73,18 @@ textures. The additional path layer is independent:
 - `pulseOpacity`
 - `focusSceneSpeedBoost`
 
-The preview uses Three.js curves over the listed node IDs and moves pulse
-markers along the curve with a normalized 0..1 progress value. Keep animation
-settings data-driven in `pfile.json`; avoid hard-coding project-specific values
-inside `webGL_preview.js` unless they are stable defaults.
+The current project keeps `pulseEnabled` false, so path particles are disabled
+and only the thin path curves are drawn. Keep animation settings data-driven in
+`pfile.json`; avoid hard-coding project-specific values inside
+`webGL_preview.js` unless they are stable defaults.
+
+`pfile.json["subtreeHighlightAnimation"]["presentation"]` controls the staged
+WebGL preview flow. The current sequence starts with all layers visible, then
+shows `GAPDH`, `ENO1`, and `RPLP0` one by one, then highlights the Ray-finned
+fish subtree inside each layer, and finally shows the full Ray-finned fish
+subtree plus its inter-layer connections. Stage names come from `title`; stage
+scene switches use `layoutIndex`; subtree stages set `highlight: true` plus the
+desired setup and link groups.
 
 ## Validation Commands
 

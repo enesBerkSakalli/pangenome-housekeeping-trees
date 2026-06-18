@@ -32,6 +32,18 @@ http://127.0.0.1:3000/preview
 
 Select `Pangenome_Housekeeping_Stacked_Trees` in the preview UI.
 
+The generated `pfile.json` includes `subtreeHighlightAnimation.presentation`.
+The local preview patch interprets it as an 8-stage loop:
+
+1. `All tree layers`
+2. `GAPDH tree layer`
+3. `ENO1 tree layer`
+4. `RPLP0 tree layer`
+5. `Ray-finned fish subtree in GAPDH`
+6. `Ray-finned fish subtree in ENO1`
+7. `Ray-finned fish subtree in RPLP0`
+8. `Ray-finned fish subtree and inter-layer connections`
+
 ## Fresh DataDiVR checkout notes
 
 The upstream DataDiVR preview does not know about this project sidecar:
@@ -41,5 +53,6 @@ static/projects/Pangenome_Housekeeping_Stacked_Trees/nodesizes/*.json
 ```
 
 Apply `patches/datadivr-preview-node-radius.patch` to preserve the local preview
-behavior where internal tree support affects node radius and the legend is
-deduplicated by active layout.
+behavior where internal tree support affects node radius, the legend is
+deduplicated by active layout, explicit path sidecars are loaded, and the
+subtree presentation is played from `pfile.json`.
