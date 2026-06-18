@@ -28,16 +28,22 @@ from the scripts when the corresponding cached source data are available.
 
 ## Quickstart
 
-Use Python 3.9 or newer. The local workspace was tested with the checked-in
-scripts and a Python virtual environment.
+Use Python 3.9 through 3.12 for the generator. In this local workspace,
+`/usr/bin/python3` creates the known-good Python 3.9 virtual environment; the
+Homebrew `python3` currently points at a newer interpreter and should not be
+used for this project unless the pinned scientific packages are refreshed.
 
 ```bash
-python3 -m venv .venv
+/usr/bin/python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 python plotly_stacked_trees.py
 python datadivr_housekeeping_project.py
 ```
+
+Keep this root `.venv` separate from `external/DataDiVR_WebApp/venv`. The root
+environment uses the pangenome generator pins such as `numpy==2.0.2`; the
+DataDiVR app environment uses its own older runtime pins for the preview server.
 
 The Plotly HTML outputs are written to `outputs_3d/`. The DataDiVR export is
 written to `outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json`,

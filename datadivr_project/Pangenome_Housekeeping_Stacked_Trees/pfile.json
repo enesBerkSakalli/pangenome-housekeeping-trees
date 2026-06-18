@@ -1026,6 +1026,61 @@
     "pulseOpacity": 0.88,
     "focusSceneSpeedBoost": 1.35
   },
+  "subtreeHighlightAnimation": {
+    "enabled": true,
+    "mode": "subtree_focus",
+    "initialSetup": "Ray-finned fish",
+    "dimNonFocus": true,
+    "dimNodeOpacity": 0.035,
+    "dimLinkOpacity": 0.004,
+    "highlightNodeOpacity": 1.0,
+    "highlightLinkOpacity": 0.88,
+    "linkPulseOpacity": 0.12,
+    "pulseScale": 0.72,
+    "pulseSpeed": 0.85,
+    "setups": [
+      {
+        "name": "Ray-finned fish",
+        "nodeGroup": "Ray-finned fish",
+        "linkGroups": [
+          "Ray-finned fish paths",
+          "Ray-finned fish clade-level flow corridor",
+          "Ray-finned fish selected same-taxon history tracks"
+        ],
+        "color": [
+          34,
+          211,
+          238
+        ],
+        "layouts": [
+          "00_all_genes_stacked",
+          "01_GAPDH_focus",
+          "02_ENO1_focus",
+          "03_RPLP0_focus"
+        ]
+      },
+      {
+        "name": "Glires",
+        "nodeGroup": "Glires",
+        "linkGroups": [
+          "Glires paths",
+          "Glires clade-level flow corridor",
+          "Glires selected same-taxon history tracks"
+        ],
+        "color": [
+          56,
+          189,
+          248
+        ],
+        "layouts": [
+          "00_all_genes_stacked",
+          "01_GAPDH_focus",
+          "02_ENO1_focus",
+          "03_RPLP0_focus"
+        ]
+      }
+    ]
+  },
   "coordinateMappingsFile": "coordinate_mappings",
   "selections": [
     {

@@ -34,6 +34,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 DATADIVR_REPO = os.path.join(ROOT, "external", "DataDiVR_WebApp")
 PROJECT_NAME = "Pangenome_Housekeeping_Stacked_Trees"
 PROJECT_DIR = os.path.join(DATADIVR_REPO, "static", "projects", PROJECT_NAME)
+PORTABLE_PROJECT_DIR = os.path.join(ROOT, "datadivr_project", PROJECT_NAME)
 OUTPUT_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}.json")
 OUTPUT_AUDIT = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_datadivr_audit.json")
 OUTPUT_SCENES_PICKLE = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_networkx_scenes.pkl")
@@ -78,6 +79,44 @@ PATH_ANIMATION_SETTINGS = {
     "curveOpacity": 0.14,
     "pulseOpacity": 0.88,
     "focusSceneSpeedBoost": 1.35,
+}
+
+SUBTREE_HIGHLIGHT_ANIMATION = {
+    "enabled": True,
+    "mode": "subtree_focus",
+    "initialSetup": "Ray-finned fish",
+    "dimNonFocus": True,
+    "dimNodeOpacity": 0.035,
+    "dimLinkOpacity": 0.004,
+    "highlightNodeOpacity": 1.0,
+    "highlightLinkOpacity": 0.88,
+    "linkPulseOpacity": 0.12,
+    "pulseScale": 0.72,
+    "pulseSpeed": 0.85,
+    "setups": [
+        {
+            "name": "Ray-finned fish",
+            "nodeGroup": "Ray-finned fish",
+            "linkGroups": [
+                "Ray-finned fish paths",
+                "Ray-finned fish clade-level flow corridor",
+                "Ray-finned fish selected same-taxon history tracks",
+            ],
+            "color": [34, 211, 238],
+            "layouts": SCENE_NAMES,
+        },
+        {
+            "name": "Glires",
+            "nodeGroup": "Glires",
+            "linkGroups": [
+                "Glires paths",
+                "Glires clade-level flow corridor",
+                "Glires selected same-taxon history tracks",
+            ],
+            "color": [56, 189, 248],
+            "layouts": SCENE_NAMES,
+        },
+    ],
 }
 
 DEFAULT_PDATA = {
@@ -1691,6 +1730,7 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
         "pathMetadataFile": "path_connections",
         "pathConnectionsFile": "path_connections",
         "pathAnimationSettings": PATH_ANIMATION_SETTINGS,
+        "subtreeHighlightAnimation": SUBTREE_HIGHLIGHT_ANIMATION,
         "coordinateMappingsFile": "coordinate_mappings",
         "selections": named_group_selections(scenes, node_order),
         "linkSelections": named_link_group_selections(scenes, edge_order),
@@ -1722,6 +1762,9 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
             "- `path_connections.json` stores per-path segment pairs and metadata.\n"
             "- `coordinate_mappings.json` maps numeric node IDs to node keys, "
             "annotations, colors, and coordinates in each scene.\n"
+            "- `pfile.json` includes `subtreeHighlightAnimation`, which starts "
+            "with the Ray-finned fish subtree highlighted across all layers and "
+            "then per active layer while non-focused subtrees are dimmed.\n"
             "- `analysis/` bundles the merged JSON export, NetworkX scene pickle, "
             "paths, coordinate mappings, and audit files for downstream agents.\n"
         )
@@ -1916,13 +1959,24 @@ def write_project_analysis_bundle(audit: dict) -> None:
         json.dump(audit, fh, indent=2)
 
 
+def mirror_portable_datadivr_project() -> None:
+    os.makedirs(os.path.dirname(PORTABLE_PROJECT_DIR), exist_ok=True)
+    if os.path.exists(PORTABLE_PROJECT_DIR):
+        shutil.rmtree(PORTABLE_PROJECT_DIR)
+    shutil.copytree(PROJECT_DIR, PORTABLE_PROJECT_DIR)
+
+
 def main() -> None:
     scenes, audit = build_combined_graphs()
     summary = write_datadivr_project(scenes)
     audit.update(validate_project(summary, scenes))
+    audit["portable_project_dir"] = PORTABLE_PROJECT_DIR
     with open(OUTPUT_AUDIT, "w") as fh:
         json.dump(audit, fh, indent=2)
     write_project_analysis_bundle(audit)
+    mirror_portable_datadivr_project()
+    with open(OUTPUT_AUDIT, "w") as fh:
+        json.dump(audit, fh, indent=2)
     print(json.dumps(audit, indent=2))
 
 

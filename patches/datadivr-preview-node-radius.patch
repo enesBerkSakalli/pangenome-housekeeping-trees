@@ -1,14 +1,21 @@
 diff --git a/static/js/webGL_preview.js b/static/js/webGL_preview.js
-index 7891fe4..c5f6432 100644
+index 7891fe4..c04e267 100644
 --- a/static/js/webGL_preview.js
 +++ b/static/js/webGL_preview.js
-@@ -9,6 +9,22 @@ var actLinks = 0;
+@@ -9,6 +9,40 @@ var actLinks = 0;
  var linksRGB = [];
  var linksRGBTemp = [];
  var actLinksRGB = 0;
 +var nodeSizes = [];
 +var pathData = null;
 +var pathAnimations = [];
++var subtreeHighlightState = {
++    enabled: false,
++    nodeIds: new Set(),
++    linkIds: new Set(),
++    settings: {},
++    setup: null
++};
 +var pathAnimationSettings = {
 +    enabled: true,
 +    drawPathCurves: true,
@@ -22,10 +29,21 @@ index 7891fe4..c5f6432 100644
 +    pulseOpacity: 0.88,
 +    focusSceneSpeedBoost: 1.35
 +};
++var subtreeHighlightDefaults = {
++    enabled: false,
++    dimNonFocus: true,
++    dimNodeOpacity: 0.035,
++    dimLinkOpacity: 0.004,
++    highlightNodeOpacity: 1.0,
++    highlightLinkOpacity: 0.88,
++    linkPulseOpacity: 0.12,
++    pulseScale: 0.72,
++    pulseSpeed: 0.85
++};
  //var pfile = {"val":{"name":"AUToCOre","layouts":["01-Autocore_globalXYZ","02-Autocore_mix_globalclusterXYZ","03-Autocore_clusterfeaturesXYZ"],"layoutsRGB":["01-Autocore_globalRGB","02-Autocore_mix_globalclusterRGB","03-Autocore_clusterfeaturesRGB"],"links":["Autocore_linksXYZ"],"linksRGB":["Autocore_linksRGB"]},"fn":"project"};
  var pfile = {};
  var mesh, renderer, scene, camera, controls;
-@@ -16,6 +32,7 @@ var mesh, renderer, scene, camera, controls;
+@@ -16,6 +50,7 @@ var mesh, renderer, scene, camera, controls;
  var data = {};
  var scale = 20; //20
  const nscale = .045; //0.04
@@ -33,7 +51,7 @@ index 7891fe4..c5f6432 100644
  var nodemeshes = [];
  var linkmeshes = [];
  var link_ids = [];
-@@ -108,6 +125,22 @@ function getNColor(index) {
+@@ -108,6 +143,22 @@ function getNColor(index) {
      return color;
  }
  
@@ -56,7 +74,7 @@ index 7891fe4..c5f6432 100644
  function getLColor(index) {
      var i = index * 4;
      var scene = actLinksRGB;
-@@ -124,6 +157,150 @@ function getLink(index) {
+@@ -124,6 +175,328 @@ function getLink(index) {
      //console.log("created link from " + link["start"] + " to " + link["end"]); 
      return link;
  }
@@ -204,10 +222,196 @@ index 7891fe4..c5f6432 100644
 +        item.pulseMesh.position.copy(item.curve.getPointAt(t));
 +    }
 +}
++
++function activeSubtreeHighlightSettings() {
++    return Object.assign({}, subtreeHighlightDefaults, pfile["subtreeHighlightAnimation"] || {});
++}
++
++function activeSubtreeHighlightSetup(settings) {
++    const setups = Array.isArray(settings.setups) ? settings.setups : [];
++    if (!setups.length) {
++        return null;
++    }
++    const requestedName = settings.activeSetup || settings.initialSetup || setups[0].name;
++    return setups.find(function(setup) { return setup.name === requestedName; }) || setups[0];
++}
++
++function selectionAppliesToLayout(selection, layoutName) {
++    return !selection.layoutname || !layoutName || selection.layoutname === layoutName;
++}
++
++function collectSelectionIds(selections, names, layoutName, key) {
++    const ids = new Set();
++    const wanted = new Set(Array.isArray(names) ? names : [names]);
++    for (const selection of selections || []) {
++        if (!wanted.has(selection.name) || !selectionAppliesToLayout(selection, layoutName)) {
++            continue;
++        }
++        for (const rawId of selection[key] || []) {
++            const id = Number(rawId);
++            if (Number.isFinite(id)) {
++                ids.add(id);
++            }
++        }
++    }
++    return ids;
++}
++
++function activeSubtreeHighlight() {
++    const settings = activeSubtreeHighlightSettings();
++    const setup = activeSubtreeHighlightSetup(settings);
++    if (!settings.enabled || !setup) {
++        return {
++            enabled: false,
++            nodeIds: new Set(),
++            linkIds: new Set(),
++            settings: settings,
++            setup: setup
++        };
++    }
++    const layoutName = pfile["layouts"] && pfile["layouts"][actLayout] ? pfile["layouts"][actLayout] : "";
++    const nodeGroups = setup.nodeGroups || [setup.nodeGroup || setup.name];
++    const linkGroups = setup.linkGroups || nodeGroups.map(function(group) { return group + " paths"; });
++    return {
++        enabled: true,
++        nodeIds: collectSelectionIds(pfile["selections"], nodeGroups, layoutName, "nodes"),
++        linkIds: collectSelectionIds(pfile["linkSelections"], linkGroups, layoutName, "links"),
++        settings: settings,
++        setup: setup
++    };
++}
++
++function setupColor(setup, fallbackColor) {
++    const color = setup && Array.isArray(setup.color) ? setup.color : fallbackColor;
++    return [
++        Number(color[0]) || fallbackColor[0],
++        Number(color[1]) || fallbackColor[1],
++        Number(color[2]) || fallbackColor[2]
++    ];
++}
++
++function makeDimmedNodeMaterial(color, opacity) {
++    return new THREE.MeshBasicMaterial({
++        color: RGB2HTML(color[0], color[1], color[2]),
++        opacity: Math.max(0.02, Math.min(1.0, opacity)),
++        transparent: true,
++        depthWrite: false
++    });
++}
++
++function makeFocusedNodeMaterial(color, opacity) {
++    const htmlColor = RGB2HTML(color[0], color[1], color[2]);
++    return new THREE.MeshStandardMaterial({
++        color: hexToTHREEColor(htmlColor),
++        emissive: hexToTHREEColor(htmlColor),
++        emissiveIntensity: 1.15,
++        opacity: Math.max(0.2, Math.min(1.0, opacity)),
++        transparent: opacity < 1.0
++    });
++}
++
++function makeSubtreeLinkMaterial(color, opacity) {
++    return new THREE.LineBasicMaterial({
++        color: RGB2HTML(color[0], color[1], color[2]),
++        opacity: Math.max(0.005, Math.min(1.0, opacity)),
++        transparent: true,
++        depthWrite: false,
++        linewidth: 0.5
++    });
++}
++
++function applySubtreeHighlightMaterials() {
++    subtreeHighlightState = activeSubtreeHighlight();
++    if (document && document.body) {
++        document.body.dataset.subtreeHighlightEnabled = String(subtreeHighlightState.enabled);
++        document.body.dataset.subtreeHighlightSetup = subtreeHighlightState.setup ? subtreeHighlightState.setup.name : "";
++        document.body.dataset.subtreeHighlightNodes = String(subtreeHighlightState.nodeIds.size);
++        document.body.dataset.subtreeHighlightLinks = String(subtreeHighlightState.linkIds.size);
++    }
++    if (!subtreeHighlightState.enabled || !subtreeHighlightState.nodeIds.size) {
++        return;
++    }
++    const settings = subtreeHighlightState.settings;
++    const focusColor = setupColor(subtreeHighlightState.setup, [34, 211, 238]);
++
++    for (let i = 0; i < nodemeshes.length; i++) {
++        const node = nodemeshes[i];
++        const color = getNColor(i);
++        const isFocused = subtreeHighlightState.nodeIds.has(i);
++        node.userData.subtreeFocused = isFocused;
++        if (isFocused) {
++            node.material = makeFocusedNodeMaterial(
++                focusColor,
++                Number(settings.highlightNodeOpacity) || 1.0
++            );
++        } else if (settings.dimNonFocus) {
++            node.material = makeDimmedNodeMaterial(
++                color,
++                Number(settings.dimNodeOpacity) || 0.10
++            );
++        }
++    }
++
++    for (let i = 0; i < linkmeshes.length; i++) {
++        const linkId = link_ids[i];
++        const isFocused = subtreeHighlightState.linkIds.has(linkId);
++        linkmeshes[i].userData.subtreeFocused = isFocused;
++        if (isFocused) {
++            linkmeshes[i].material = makeSubtreeLinkMaterial(
++                focusColor,
++                Number(settings.highlightLinkOpacity) || 0.74
++            );
++        } else if (settings.dimNonFocus) {
++            const color = getLColor(linkId);
++            linkmeshes[i].material = makeSubtreeLinkMaterial(
++                color,
++                Number(settings.dimLinkOpacity) || 0.018
++            );
++        }
++    }
++}
++
++function updateSubtreeHighlightAnimation() {
++    if (!subtreeHighlightState.enabled || !subtreeHighlightState.nodeIds.size) {
++        return;
++    }
++    const settings = subtreeHighlightState.settings || {};
++    const now = performance.now() / 1000.0;
++    const phase = (Math.sin(now * (Number(settings.pulseSpeed) || 0.85) * Math.PI * 2.0) + 1.0) / 2.0;
++    const scaleBoost = 1.0 + phase * (Number(settings.pulseScale) || 0.52);
++    const linkOpacity = Math.min(
++        1.0,
++        (Number(settings.highlightLinkOpacity) || 0.74) + phase * (Number(settings.linkPulseOpacity) || 0.16)
++    );
++
++    for (let i = 0; i < nodemeshes.length; i++) {
++        const node = nodemeshes[i];
++        const radius = node.userData.baseRadius || 1.0;
++        const nodeScale = globalNodeScale * radius * (node.userData.subtreeFocused ? scaleBoost : 1.0);
++        node.scale.set(nodeScale, nodeScale, nodeScale);
++        if (node.userData.subtreeFocused && node.material && node.material.emissive) {
++            node.material.emissiveIntensity = 0.95 + phase * 0.85;
++        }
++    }
++
++    for (let i = 0; i < linkmeshes.length; i++) {
++        if (linkmeshes[i].userData.subtreeFocused && linkmeshes[i].material) {
++            linkmeshes[i].material.opacity = linkOpacity;
++        }
++    }
++}
  function updateNodeColors(data) {
  
      for (let i = 0; i < (nodemeshes.length); i++) {
-@@ -156,21 +333,7 @@ function updateLinkColors(data) {
+@@ -149,6 +522,7 @@ function updateNodeColors(data) {
+         nodemeshes[i].material = nmaterial;
+     }
+     console.log("node colors updated")
++    applySubtreeHighlightMaterials();
+ }
+ 
+ function updateLinkColors(data) {
+@@ -156,27 +530,14 @@ function updateLinkColors(data) {
      //console.log(linkmeshes);
      for (let i = 0; i < (linkmeshes.length); i++) {
          color = [data[link_ids[i] * 4], data[link_ids[i] * 4 + 1], data[link_ids[i] * 4 + 2], data[link_ids[i] * 4 + 3]];
@@ -230,7 +434,24 @@ index 7891fe4..c5f6432 100644
  
  
          linkmeshes[i].material = material1;
-@@ -219,7 +382,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+     }
+     //console.log(linkmeshes);
+     console.log("link colors updated")
++    applySubtreeHighlightMaterials();
+ }
+ 
+ async function updateLayoutTemp(path_low, path_hi) {
+@@ -210,7 +571,8 @@ async function updateLayoutTemp(path_low, path_hi) {
+         }
+ 
+         nodemeshes = [];
+-        linkmeshes = []
++        linkmeshes = [];
++        link_ids = [];
+         labels = [];
+ 
+         // make new nodes from temp files
+@@ -219,7 +581,7 @@ async function updateLayoutTemp(path_low, path_hi) {
          for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
              if (i < maxNodesPreview) {
  
@@ -239,7 +460,7 @@ index 7891fe4..c5f6432 100644
                  var color = getNColor(i);
  
                  if (color[3] > 100) {
-@@ -242,6 +405,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+@@ -242,6 +604,7 @@ async function updateLayoutTemp(path_low, path_hi) {
                  //const nmaterial = new THREE.MeshBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2])});//"rgb(155, 102, 102)" 
                  const cube = new THREE.Mesh(ngeometry, nmaterial);
                  cube.name = i;//;
@@ -247,7 +468,7 @@ index 7891fe4..c5f6432 100644
                  cube.layers.set(0);
                  nodemeshes.push(cube);
  
-@@ -264,21 +428,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+@@ -264,29 +627,15 @@ async function updateLayoutTemp(path_low, path_hi) {
              var link = getLink(l);
              var color = getLColor(l);
  
@@ -270,15 +491,39 @@ index 7891fe4..c5f6432 100644
  
              //const material1 = new THREE.LineBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2]), transparent: true, opacity: 0.2 });
              const points = [];
-@@ -300,6 +450,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+             const start = link["start"];
+             const end = link["end"];
+ 
+-            if (start > maxNodesPreview) { continue; }
+-            if (end > maxNodesPreview) { continue; }
++            if (start >= nodemeshes.length) { continue; }
++            if (end >= nodemeshes.length) { continue; }
+ 
+             points.push(nodemeshes[start].position);
+             points.push(nodemeshes[end].position);
+@@ -298,8 +647,11 @@ async function updateLayoutTemp(path_low, path_hi) {
+             line.name = "line"
+             scene.add(line);
              linkmeshes.push(line)
++            link_ids.push(l)
              count = l
          }
 +        makePathAnimations();
++        applySubtreeHighlightMaterials();
      }
  }
  
-@@ -330,7 +481,7 @@ function makeNetwork() {
+@@ -321,7 +673,8 @@ function makeNetwork() {
+         }
+ 
+         nodemeshes = [];
+-        linkmeshes = []
++        linkmeshes = [];
++        link_ids = [];
+         labels = [];
+ 
+         // MAKE NODES
+@@ -330,7 +683,7 @@ function makeNetwork() {
          for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
              if (i < maxNodesPreview) {
  
@@ -287,7 +532,7 @@ index 7891fe4..c5f6432 100644
                  var color = getNColor(i);
  
  
-@@ -356,6 +507,7 @@ function makeNetwork() {
+@@ -356,6 +709,7 @@ function makeNetwork() {
  
                  const cube = new THREE.Mesh(ngeometry, nmaterial);
                  cube.name = i;//;
@@ -295,7 +540,7 @@ index 7891fe4..c5f6432 100644
                  cube.layers.set(0);
                  nodemeshes.push(cube);
                  
-@@ -424,21 +576,7 @@ function makeNetwork() {
+@@ -424,21 +778,7 @@ function makeNetwork() {
  
  
              var color = getLColor(l);
@@ -318,23 +563,25 @@ index 7891fe4..c5f6432 100644
  
  
              //const material1 = new THREE.LineBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2]), transparent: true, opacity: 0.2 });
-@@ -462,6 +600,7 @@ function makeNetwork() {
+@@ -462,6 +802,8 @@ function makeNetwork() {
          }
  
          //console.log(linkmeshes);
 +        makePathAnimations();
++        applySubtreeHighlightMaterials();
      }
  }
  
-@@ -499,6 +638,7 @@ function onWindowResize() {
+@@ -499,6 +841,8 @@ function onWindowResize() {
  function animate() {
      requestAnimationFrame(animate);
      controls.update();
 +    updatePathAnimations();
++    updateSubtreeHighlightAnimation();
      renderer.render(scene, camera);
  }
  function right() {
-@@ -509,8 +649,10 @@ function right() {
+@@ -509,8 +853,10 @@ function right() {
  }
  function nodescale(scale) {
      //console.log(scale);
@@ -346,15 +593,22 @@ index 7891fe4..c5f6432 100644
      }
      indexsphere.scale.set(scale + 2, scale + 2, scale + 2);
      //render();
-@@ -639,7 +781,23 @@ function clearProject() {
+@@ -639,9 +985,32 @@ function clearProject() {
      actLinks = 0;
      linksRGB = [];
      actLinksRGB = 0;
 +    nodeSizes = [];
 +    pathData = null;
++    subtreeHighlightState = {
++        enabled: false,
++        nodeIds: new Set(),
++        linkIds: new Set(),
++        settings: {},
++        setup: null
++    };
 +    clearPathAnimations();
-+
-+}
+ 
+ }
  
 +async function DownloadJSON(url) {
 +    try {
@@ -367,10 +621,12 @@ index 7891fe4..c5f6432 100644
 +        console.warn("optional JSON sidecar not loaded", url, error);
 +        return null;
 +    }
- }
++}
++
  
  
-@@ -672,6 +830,25 @@ async function downloadProjectTextures() {
+ async function downloadProjectTextures() {
+@@ -672,6 +1041,25 @@ async function downloadProjectTextures() {
          linksRGB.push(await DownloadImage(path));
      }
  
@@ -396,182 +652,9 @@ index 7891fe4..c5f6432 100644
      makeNetwork(); //
      var text = '{"id":"x", "success": "true", "fn": "projectLoaded"}';
      var out = JSON.parse(text);
-@@ -700,5 +877,3 @@ function hexToTHREEColor(hex) {
+@@ -700,5 +1088,3 @@ function hexToTHREEColor(hex) {
      color.set(hex);
      return color;
  }
 -
 -
-diff --git a/templates/mLegend.html b/templates/mLegend.html
-index 09ebfc2..e54b6a1 100644
---- a/templates/mLegend.html
-+++ b/templates/mLegend.html
-@@ -183,6 +183,48 @@
-         return div;
-     }
- 
-+    function Legend_uniqueNamedGroups(groups, selectedLayoutName) {
-+        const namedGroups = [];
-+        const seen = {};
-+        if (!Array.isArray(groups)) {
-+            return namedGroups;
-+        }
-+
-+        for (const group of groups) {
-+            if (!group || !group["name"] || !group["labelcolor"]) {
-+                continue;
-+            }
-+            if ("layoutname" in group && group["layoutname"] !== selectedLayoutName) {
-+                continue;
-+            }
-+            const colorKey = group["labelcolor"].slice(0, 3).join(",");
-+            const uniqueKey = colorKey + "::" + group["name"];
-+            if (seen[uniqueKey]) {
-+                continue;
-+            }
-+            seen[uniqueKey] = true;
-+            namedGroups.push({"name": group["name"], "labelcolor": group["labelcolor"]});
-+        }
-+        return namedGroups;
-+    }
-+
-+    function Legend_drawNamedGroups(namedGroups, descriptionDiv, colorDiv) {
-+        for (const group of namedGroups) {
-+            const colorParts = group["labelcolor"].map(Number);
-+            const colorFormatted = 'rgb(' + colorParts.slice(0, 3).join(', ') + ')';
-+
-+            const textdiv = document.createElement("div");
-+            const text = document.createTextNode(group["name"]);
-+            textdiv.style.fontSize = "14px";
-+            textdiv.style.lineHeight = "24px";
-+            textdiv.appendChild(text);
-+            descriptionDiv.appendChild(textdiv);
-+
-+            const colorImg = displayColorAsDiv(colorFormatted, 18.5, 18.5, 5.5, 0);
-+            colorDiv.appendChild(colorImg);
-+        }
-+    }
-+
-     // Node Info by selected ID 
-     function Legend_displayNodeInfobyID(project_selected, selected_id) {
-         if (document.getElementById('legendpanel')) {
-@@ -227,51 +269,15 @@
- 
-                 if (l_layout_with_clusters.includes(layoutname) || layoutname === l_layout_with_clusters) {   // W I T H   D E F I N E D   C L U S T E R S 
-             
--                    const clusterlist = pfiledata["selections"];
--                    //console.log("C_DEBUG - clusterlist = ", clusterlist); //.reverse());
--                    
-                     const allnode_Div = document.getElementById("legend_node_all");
- 
-                     const nodedesc_Div = document.getElementById("legend_nodedescription");
-                     const nodecol_Div = document.getElementById("legend_nodecolor");
-                     nodedesc_Div.innerHTML = "";
-                     nodecol_Div.innerHTML = "";
--                    
--                    // loop through clusterlist 
--                    const labelColorDict = {};
--                    for (const key in clusterlist) {
--
--                        const labelColor = clusterlist[key]['labelcolor']; //value.labelcolor.slice(0, -1).join(',');
--                        const name = clusterlist[key]['name']; //value.name;
- 
--                        //console.log("C_DEBUG: labelcolor: ", labelColor);
--                        //console.log("C_DEBUG: name: ", name);
--
--                        labelColorDict[labelColor] = name;
--                        
--                    }
--                    //: labelColorDict = ", labelColorDict);
--            
--                    let idx = 0;
--                    for (const color in labelColorDict) { 
--                        const keys = Object.keys(labelColorDict);
--                        //const color_reformated = 'rgb(' + color + ')';  
--                        const colorParts = color.split(',').map(Number); // Split and convert to numbers
--                        const color_reformated = 'rgb(' + colorParts.slice(0, 3).join(', ') + ')';
--    
--                        // console.log("C_DEBUG: color =", color_reformated);
--                        
--                        const textdiv = document.createElement("div");
--                        const text = document.createTextNode(labelColorDict[keys[idx]]); //newNamesDict[color]["name"]);                            
--                        textdiv.style.fontSize="14px";
--                        textdiv.style.lineHeight="24px"; // this should be same as colorImg.height+colorImg.marginBottom
--                        textdiv.appendChild(text);
--                        nodedesc_Div.appendChild(textdiv);
--                        const colorImg = displayColorAsDiv(color_reformated, 18.5, 18.5, 5.5, 0); 
--                        nodecol_Div.appendChild(colorImg);
--                        
--                        idx += 1;
--                    } 
-+                    const namedNodeGroups = Legend_uniqueNamedGroups(pfiledata["selections"], layoutname);
-+                    Legend_drawNamedGroups(namedNodeGroups, nodedesc_Div, nodecol_Div);
-                     allnode_Div.appendChild(nodecol_Div);
-                     allnode_Div.appendChild(nodedesc_Div);
-                 } else {                    
-@@ -485,53 +491,17 @@
-                 }
- 
-                 let layoutname = pfiledata["linksRGB"][corrected_id];  // Assuming links also have layout names similar to nodes
--                
--                let l_layout_with_clusters = [];
--                if (pfiledata["selections"].length != 0) {
--                    for (layoutid in pfiledata["selections"]) {
--                        if ("layoutname" in pfiledata["selections"][layoutid]) {
--                            let layout_with_clusters = pfiledata["selections"][layoutid]["layoutname"];
--                            if (!l_layout_with_clusters.includes(layout_with_clusters)) {
--                                l_layout_with_clusters.push(layout_with_clusters); // Push unique layout with clusters
--                            }
--                        }
--                    }
--                }
-+                const activeLinkGroups = Legend_uniqueNamedGroups(pfiledata["linkSelections"], layoutname);
-+                const activeNodeGroups = Legend_uniqueNamedGroups(pfiledata["selections"], layoutname);
- 
-                 const linkdesc_Div = document.getElementById("legend_linkdescription");
-                 const linkcol_Div = document.getElementById("legend_linkcolor");
-                 linkdesc_Div.innerHTML = "";
-                 linkcol_Div.innerHTML = "";
- 
--                if (l_layout_with_clusters.includes(layoutname) || layoutname === l_layout_with_clusters) { 
--                    // Handle case when layout is in selections (with clusters)
--                    const clusterlist = pfiledata["selections"];
--                    const labelColorDict = {};
--
--                    for (const key in clusterlist) {
--                        const labelColor = clusterlist[key]['labelcolor'];
--                        const name = clusterlist[key]['name'];
--                        labelColorDict[labelColor] = name;
--                    }
--
--                    let idx = 0;
--                    for (const color in labelColorDict) { 
--                        const keys = Object.keys(labelColorDict);
--                        const colorParts = color.split(',').map(Number);
--                        const color_reformated = 'rgb(' + colorParts.slice(0, 3).join(', ') + ')';
--
--                        const textdiv = document.createElement("div");
--                        const text = document.createTextNode(labelColorDict[keys[idx]]);
--                        textdiv.style.fontSize = "14px";
--                        textdiv.style.lineHeight = "24px";
--                        textdiv.appendChild(text);
--                        linkdesc_Div.appendChild(textdiv);
--
--                        const colorImg = displayColorAsDiv(color_reformated, 18.5, 18.5, 5.5, 0);
--                        linkcol_Div.appendChild(colorImg);
--
--                        idx += 1;
--                    } 
-+                if (activeLinkGroups.length > 0 || activeNodeGroups.length > 0) { 
-+                    const namedLinkGroups = activeLinkGroups.length > 0 ? activeLinkGroups : activeNodeGroups;
-+                    Legend_drawNamedGroups(namedLinkGroups, linkdesc_Div, linkcol_Div);
-                     alllink_Div.appendChild(linkcol_Div);
-                     alllink_Div.appendChild(linkdesc_Div);
- 
-@@ -861,4 +831,4 @@
- 
- 
- 
--</script>
-\ No newline at end of file
-+</script>

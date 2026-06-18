@@ -209,5 +209,6 @@
   "validated_path_gene_pair_counts": {
     "GAPDH->ENO1": 98,
     "ENO1->RPLP0": 98
-  }
+  },
+  "portable_project_dir": "/Users/berksakalli/Projects/Pangenome/datadivr_project/Pangenome_Housekeeping_Stacked_Trees"
 }
