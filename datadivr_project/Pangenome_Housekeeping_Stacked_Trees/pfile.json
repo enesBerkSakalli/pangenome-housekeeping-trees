@@ -743,6 +743,7 @@
     "enabled": true,
     "mode": "flow_pulses",
     "drawPathCurves": true,
+    "pulseEnabled": false,
     "maxVisiblePaths": 180,
     "curveSegments": 36,
     "pulseRadius": 0.072,

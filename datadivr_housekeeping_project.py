@@ -67,6 +67,7 @@ PATH_ANIMATION_SETTINGS = {
     "enabled": True,
     "mode": "flow_pulses",
     "drawPathCurves": True,
+    "pulseEnabled": False,
     "maxVisiblePaths": 180,
     "curveSegments": 36,
     "pulseRadius": 0.072,
@@ -653,19 +654,24 @@ def add_interlayer_species_connections(
         start_array = np.array(start, dtype=float)
         end_array = np.array(end, dtype=float)
         delta = end_array - start_array
-        angle = (-math.pi / 2.0) + (math.tau * group_index / max(group_total, 1)) + (pair_index * 0.055)
-        radius = 0.052 + (0.018 * (group_index % 3))
-        lane_xy = np.array(
+        angle = (-math.pi / 2.0) + (math.tau * group_index / max(group_total, 1)) + (pair_index * 0.10)
+        radius = 0.18 + (0.035 * (group_index % 4))
+        lane_anchor = np.array(
             [
-                clamp(0.5 + (math.cos(angle) * radius), 0.42, 0.58),
-                clamp(0.5 + (math.sin(angle) * radius), 0.42, 0.58),
+                clamp(0.5 + (math.cos(angle) * radius), 0.16, 0.84),
+                clamp(0.5 + (math.sin(angle) * radius), 0.16, 0.84),
             ],
             dtype=float,
         )
+        tangent = np.array([-math.sin(angle), math.cos(angle)], dtype=float)
+        pair_splay = 0.018 if pair_index == 0 else -0.018
         control_a = start_array + (delta * 0.30)
         control_b = start_array + (delta * 0.70)
-        control_a[:2] = lane_xy
-        control_b[:2] = lane_xy
+        control_a[:2] = (control_a[:2] * 0.30) + (lane_anchor * 0.70) + (tangent * pair_splay)
+        control_b[:2] = (control_b[:2] * 0.30) + (lane_anchor * 0.70) - (tangent * pair_splay)
+        z_bow = 0.025 * math.sin(angle + pair_index)
+        control_a[2] = clamp(control_a[2] + z_bow, 0.045, 0.955)
+        control_b[2] = clamp(control_b[2] + z_bow, 0.045, 0.955)
         return rounded_position(control_a), rounded_position(control_b)
 
     def flow_node_attrs(
@@ -1654,6 +1660,11 @@ def validate_project(summary: dict, scenes: list[nx.Graph]) -> dict:
             position_values.extend(attrs["pos"])
     finite_positions = all(math.isfinite(value) for value in position_values)
     in_unit_cube = all(0.0 <= value <= 1.0 for value in position_values)
+    path_validation = validate_paths_file(
+        os.path.join(PROJECT_DIR, "paths.json"),
+        os.path.join(PROJECT_DIR, "pfile.json"),
+        scenes[0],
+    )
     return {
         **summary,
         "missing_files": missing,
@@ -1661,6 +1672,67 @@ def validate_project(summary: dict, scenes: list[nx.Graph]) -> dict:
         "positions_in_unit_cube": in_unit_cube,
         "min_position": min(position_values) if position_values else None,
         "max_position": max(position_values) if position_values else None,
+        **path_validation,
+    }
+
+
+def validate_paths_file(paths_path: str, pfile_path: str, scene: nx.Graph) -> dict:
+    if not os.path.exists(paths_path) or not os.path.exists(pfile_path):
+        return {
+            "paths_valid": False,
+            "path_validation_errors": ["paths.json or pfile.json missing"],
+        }
+
+    with open(paths_path) as fh:
+        path_payload = json.load(fh)
+    with open(pfile_path) as fh:
+        pfile = json.load(fh)
+
+    node_order = list(scene.nodes())
+    node_count = len(node_order)
+    edge_pairs = {
+        tuple(sorted((source, target)))
+        for source, target in (
+            (node_order.index(source), node_order.index(target))
+            for source, target in scene.edges()
+        )
+    }
+    errors = []
+    paths = path_payload.get("paths", [])
+    records = path_payload.get("path_records", [])
+    if pfile.get("paths") != paths:
+        errors.append("pfile paths do not match paths.json paths")
+    if len(paths) != len(records):
+        errors.append("paths and path_records length mismatch")
+    for index, path in enumerate(paths):
+        if not isinstance(path, list) or len(path) < 2:
+            errors.append(f"path {index} is not a list with at least two nodes")
+            continue
+        if not all(isinstance(node_id, int) for node_id in path):
+            errors.append(f"path {index} contains non-integer node ids")
+            continue
+        missing_nodes = [node_id for node_id in path if node_id < 0 or node_id >= node_count]
+        if missing_nodes:
+            errors.append(f"path {index} references missing node ids: {missing_nodes[:5]}")
+        for source, target in zip(path[:-1], path[1:]):
+            if tuple(sorted((source, target))) not in edge_pairs:
+                errors.append(f"path {index} segment {source}->{target} is not a project link")
+        if index < len(records):
+            record_nodes = records[index].get("nodes")
+            if record_nodes != path:
+                errors.append(f"path {index} record nodes do not match path")
+            if records[index].get("source") != path[0] or records[index].get("target") != path[-1]:
+                errors.append(f"path {index} source/target metadata does not match path")
+
+    kind_counts = Counter(record.get("kind", "") for record in records)
+    gene_pair_counts = Counter(record.get("gene_pair", "") for record in records)
+    return {
+        "paths_valid": not errors,
+        "path_validation_errors": errors[:20],
+        "path_validation_error_count": len(errors),
+        "validated_path_count": len(paths),
+        "validated_path_kind_counts": dict(kind_counts),
+        "validated_path_gene_pair_counts": dict(gene_pair_counts),
     }
 
 

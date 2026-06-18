@@ -190,5 +190,17 @@
   "finite_positions": true,
   "positions_in_unit_cube": true,
   "min_position": 0.045,
-  "max_position": 0.955
+  "max_position": 0.955,
+  "paths_valid": true,
+  "path_validation_errors": [],
+  "path_validation_error_count": 0,
+  "validated_path_count": 118,
+  "validated_path_kind_counts": {
+    "clade_flow": 46,
+    "selected_taxon_flow": 72
+  },
+  "validated_path_gene_pair_counts": {
+    "GAPDH->ENO1": 59,
+    "ENO1->RPLP0": 59
+  }
 }
