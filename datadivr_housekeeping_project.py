@@ -38,6 +38,7 @@ OUTPUT_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}.json")
 OUTPUT_AUDIT = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_datadivr_audit.json")
 OUTPUT_SCENES_PICKLE = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_networkx_scenes.pkl")
 OUTPUT_PATHS_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_paths.json")
+OUTPUT_PATH_CONNECTIONS_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_path_connections.json")
 OUTPUT_COORDINATES_JSON = os.path.join(ROOT, "outputs_3d", "datadivr_coordinate_mappings.json")
 
 SCENE_NAMES = [
@@ -656,7 +657,7 @@ def add_interlayer_species_connections(
         lane_index: int,
         lane_total: int,
         offset_scale: float,
-    ) -> tuple[list[float], list[float]]:
+    ) -> list[float]:
         start_array = np.array(start, dtype=float)
         end_array = np.array(end, dtype=float)
         delta = end_array - start_array
@@ -670,11 +671,9 @@ def add_interlayer_species_connections(
             ],
             dtype=float,
         )
-        control_a = start_array + (delta * 0.30)
-        control_b = start_array + (delta * 0.70)
-        control_a[:2] = lane_xy
-        control_b[:2] = lane_xy
-        return rounded_position(control_a), rounded_position(control_b)
+        control = start_array + (delta * 0.50)
+        control[:2] = lane_xy
+        return rounded_position(control)
 
     def clade_corridor_control_positions(
         start: list[float],
@@ -683,7 +682,7 @@ def add_interlayer_species_connections(
         pair_index: int,
         group_total: int,
         context_level: int = 0,
-    ) -> tuple[list[float], list[float]]:
+    ) -> list[float]:
         start_array = np.array(start, dtype=float)
         end_array = np.array(end, dtype=float)
         delta = end_array - start_array
@@ -703,14 +702,11 @@ def add_interlayer_species_connections(
         )
         tangent = np.array([-math.sin(angle), math.cos(angle)], dtype=float)
         pair_splay = (0.018 + 0.006 * context_level) if pair_index == 0 else (-0.018 - 0.006 * context_level)
-        control_a = start_array + (delta * 0.30)
-        control_b = start_array + (delta * 0.70)
-        control_a[:2] = (control_a[:2] * 0.30) + (lane_anchor * 0.70) + (tangent * pair_splay)
-        control_b[:2] = (control_b[:2] * 0.30) + (lane_anchor * 0.70) - (tangent * pair_splay)
+        control = start_array + (delta * 0.50)
+        control[:2] = (control[:2] * 0.25) + (lane_anchor * 0.75) + (tangent * pair_splay)
         z_bow = (0.025 + 0.010 * context_level) * math.sin(angle + pair_index)
-        control_a[2] = clamp(control_a[2] + z_bow, 0.045, 0.955)
-        control_b[2] = clamp(control_b[2] + z_bow, 0.045, 0.955)
-        return rounded_position(control_a), rounded_position(control_b)
+        control[2] = clamp(control[2] + z_bow, 0.045, 0.955)
+        return rounded_position(control)
 
     def flow_node_attrs(
         node_id: str,
@@ -866,7 +862,7 @@ def add_interlayer_species_connections(
         gene_pair = f"{source_gene}->{target_gene}"
         start = base.nodes[source]["pos"]
         end = base.nodes[target]["pos"]
-        control_a_pos, control_b_pos = clade_corridor_control_positions(
+        control_pos = clade_corridor_control_positions(
             start,
             end,
             group_index,
@@ -874,35 +870,30 @@ def add_interlayer_species_connections(
             len(group_order),
             context_level=context_level,
         )
-        control_a = f"__flow_control__{safe_name(group)}__{source_gene}_{target_gene}__{flow_kind}__a"
-        control_b = f"__flow_control__{safe_name(group)}__{source_gene}_{target_gene}__{flow_kind}__b"
+        control = f"__flow_control__{safe_name(group)}__{source_gene}_{target_gene}__{flow_kind}"
         flow_genes = [source_gene, target_gene]
-        for control_node, control_pos, control_label in (
-            (control_a, control_a_pos, "first"),
-            (control_b, control_b_pos, "second"),
-        ):
-            base.add_node(
-                control_node,
-                **flow_node_attrs(
-                    node_id=control_node,
-                    label=f"{gene_pair} {group} {control_label} {label_suffix} control",
-                    pos=control_pos,
-                    group=group,
-                    node_kind="clade_control",
-                    flow_genes=flow_genes,
-                    gene_pair=gene_pair,
-                    taxon_count=len(grouped_taxa[group]),
-                ),
-            )
-            node_records.append(
-                {
-                    "node": control_node,
-                    "group": group,
-                    "gene_pair": gene_pair,
-                    "kind": "clade_control",
-                    "flow_kind": flow_kind,
-                }
-            )
+        base.add_node(
+            control,
+            **flow_node_attrs(
+                node_id=control,
+                label=f"{gene_pair} {group} {label_suffix} control",
+                pos=control_pos,
+                group=group,
+                node_kind="clade_control",
+                flow_genes=flow_genes,
+                gene_pair=gene_pair,
+                taxon_count=len(grouped_taxa[group]),
+            ),
+        )
+        node_records.append(
+            {
+                "node": control,
+                "group": group,
+                "gene_pair": gene_pair,
+                "kind": "clade_control",
+                "flow_kind": flow_kind,
+            }
+        )
         flow_attrs = {
             "gene": "interlayer",
             "flow_genes": flow_genes,
@@ -919,9 +910,8 @@ def add_interlayer_species_connections(
             "path_group_leaf_count": len(grouped_taxa[group]),
             "path_group_counts": {group: len(grouped_taxa[group])},
         }
-        add_flow_edge(source, control_a, copy.deepcopy(flow_attrs), "clade_flow_segment")
-        add_flow_edge(control_a, control_b, copy.deepcopy(flow_attrs), "clade_flow_segment")
-        add_flow_edge(control_b, target, copy.deepcopy(flow_attrs), "clade_flow_segment")
+        add_flow_edge(source, control, copy.deepcopy(flow_attrs), "clade_flow_segment")
+        add_flow_edge(control, target, copy.deepcopy(flow_attrs), "clade_flow_segment")
         clade_flow_records.append(
             {
                 "gene_pair": gene_pair,
@@ -932,7 +922,7 @@ def add_interlayer_species_connections(
                 "flow_kind": flow_kind,
                 "path_kind": path_kind,
                 "context_level": context_level,
-                "path_nodes": [source, control_a, control_b, target],
+                "path_nodes": [source, control, target],
             }
         )
         path_records.append(
@@ -944,7 +934,7 @@ def add_interlayer_species_connections(
                 "flow_kind": flow_kind,
                 "context_level": context_level,
                 "taxa": len(grouped_taxa[group]),
-                "path_nodes": [source, control_a, control_b, target],
+                "path_nodes": [source, control, target],
             }
         )
 
@@ -1037,44 +1027,39 @@ def add_interlayer_species_connections(
         group = interlayer_taxon_group(source_attrs)
         label = interlayer_taxon_label(source_attrs)
         gene_pair = f"{source_gene}->{target_gene}"
-        control_a_pos, control_b_pos = flow_control_positions(
+        control_pos = flow_control_positions(
             base.nodes[source_key]["pos"],
             base.nodes[target_key]["pos"],
             flow_index,
             taxon_lane_total,
-                offset_scale=0.090,
-            )
+            offset_scale=0.090,
+        )
         safe_key = safe_name(record["key"])
-        control_a = f"__taxon_flow_control__{safe_key}__{source_gene}_{target_gene}__a"
-        control_b = f"__taxon_flow_control__{safe_key}__{source_gene}_{target_gene}__b"
+        control = f"__taxon_flow_control__{safe_key}__{source_gene}_{target_gene}"
         flow_genes = [source_gene, target_gene]
-        for control_node, control_pos, control_label in (
-            (control_a, control_a_pos, "first"),
-            (control_b, control_b_pos, "second"),
-        ):
-            base.add_node(
-                control_node,
-                **flow_node_attrs(
-                    node_id=control_node,
-                    label=f"{gene_pair} {label} {control_label} history-track control",
-                    pos=control_pos,
-                    group=group,
-                    node_kind="taxon_control",
-                    flow_genes=flow_genes,
-                    gene_pair=gene_pair,
-                    taxon_count=1,
-                    taxon_label=label,
-                ),
-            )
-            node_records.append(
-                {
-                    "node": control_node,
-                    "group": group,
-                    "gene_pair": gene_pair,
-                    "kind": "taxon_control",
-                    "taxon": label,
-                }
-            )
+        base.add_node(
+            control,
+            **flow_node_attrs(
+                node_id=control,
+                label=f"{gene_pair} {label} history-track control",
+                pos=control_pos,
+                group=group,
+                node_kind="taxon_control",
+                flow_genes=flow_genes,
+                gene_pair=gene_pair,
+                taxon_count=1,
+                taxon_label=label,
+            ),
+        )
+        node_records.append(
+            {
+                "node": control,
+                "group": group,
+                "gene_pair": gene_pair,
+                "kind": "taxon_control",
+                "taxon": label,
+            }
+        )
         taxon_flow_attrs = {
             "gene": "interlayer",
             "flow_genes": flow_genes,
@@ -1095,9 +1080,8 @@ def add_interlayer_species_connections(
             "identity_delta": round(float(record["identity_delta"]), 6),
             "must_show": bool(record["must_show"]),
         }
-        add_flow_edge(source_key, control_a, copy.deepcopy(taxon_flow_attrs), "taxon_flow_segment")
-        add_flow_edge(control_a, control_b, copy.deepcopy(taxon_flow_attrs), "taxon_flow_segment")
-        add_flow_edge(control_b, target_key, copy.deepcopy(taxon_flow_attrs), "taxon_flow_segment")
+        add_flow_edge(source_key, control, copy.deepcopy(taxon_flow_attrs), "taxon_flow_segment")
+        add_flow_edge(control, target_key, copy.deepcopy(taxon_flow_attrs), "taxon_flow_segment")
         selected_taxon_flow_records.append(
             {
                 "gene_pair": gene_pair,
@@ -1106,7 +1090,7 @@ def add_interlayer_species_connections(
                 "group": group,
                 "score": round(float(record["score"]), 6),
                 "must_show": bool(record["must_show"]),
-                "path_nodes": [source_key, control_a, control_b, target_key],
+                "path_nodes": [source_key, control, target_key],
             }
         )
         path_records.append(
@@ -1119,7 +1103,7 @@ def add_interlayer_species_connections(
                 "label": label,
                 "score": round(float(record["score"]), 6),
                 "must_show": bool(record["must_show"]),
-                "path_nodes": [source_key, control_a, control_b, target_key],
+                "path_nodes": [source_key, control, target_key],
             }
         )
 
@@ -1475,6 +1459,36 @@ def path_payload_from_scenes(scenes: list[nx.Graph], node_order: list[str]) -> d
     }
 
 
+def path_ids_payload(path_payload: dict) -> dict:
+    return {"paths": path_payload["paths"]}
+
+
+def path_connections_payload(path_payload: dict) -> dict:
+    connections = []
+    for record in path_payload["path_records"]:
+        nodes = record["nodes"]
+        connections.append(
+            {
+                "id": record["id"],
+                "kind": record.get("kind", ""),
+                "gene_pair": record.get("gene_pair", ""),
+                "group": record.get("group", ""),
+                "flow_kind": record.get("flow_kind", ""),
+                "context_level": record.get("context_level", 0),
+                "segments": [[source, target] for source, target in zip(nodes[:-1], nodes[1:])],
+                "source": nodes[0],
+                "target": nodes[-1],
+            }
+        )
+    return {
+        "projectname": PROJECT_NAME,
+        "node_id_contract": "All path connections use numeric DataDiVR node ids.",
+        "path_connections": connections,
+        "path_records": path_payload["path_records"],
+        "animation_settings": path_payload["animation_settings"],
+    }
+
+
 def coordinate_payload_from_scenes(
     scenes: list[nx.Graph],
     node_order: list[str],
@@ -1610,6 +1624,8 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
     node_to_id = {node: index for index, node in enumerate(node_order)}
     edge_id_pairs = [(node_to_id[source], node_to_id[target]) for source, target in edge_order]
     path_payload = path_payload_from_scenes(scenes, node_order)
+    paths_only_payload = path_ids_payload(path_payload)
+    path_connections = path_connections_payload(path_payload)
     coordinate_payload = coordinate_payload_from_scenes(scenes, node_order, edge_order)
 
     nodes_json = {
@@ -1634,7 +1650,9 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
     with open(os.path.join(PROJECT_DIR, "links.json"), "w") as fh:
         json.dump(links_json, fh, indent=2)
     with open(os.path.join(PROJECT_DIR, "paths.json"), "w") as fh:
-        json.dump(path_payload, fh, indent=2)
+        json.dump(paths_only_payload, fh, indent=2)
+    with open(os.path.join(PROJECT_DIR, "path_connections.json"), "w") as fh:
+        json.dump(path_connections, fh, indent=2)
     with open(os.path.join(PROJECT_DIR, "coordinate_mappings.json"), "w") as fh:
         json.dump(coordinate_payload, fh, indent=2)
 
@@ -1670,7 +1688,8 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
         "linksRGB": SCENE_NAMES,
         "nodeSizes": SCENE_NAMES,
         "paths": path_payload["paths"],
-        "pathMetadataFile": "paths",
+        "pathMetadataFile": "path_connections",
+        "pathConnectionsFile": "path_connections",
         "pathAnimationSettings": PATH_ANIMATION_SETTINGS,
         "coordinateMappingsFile": "coordinate_mappings",
         "selections": named_group_selections(scenes, node_order),
@@ -1699,7 +1718,8 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
             "`layoutsl`, `layoutsRGB`, `links`, `linksRGB`, and `nodesizes` "
             "directories.\n\n"
             "Additional sidecars:\n\n"
-            "- `paths.json` stores explicit paths as numeric DataDiVR node IDs.\n"
+            "- `paths.json` stores only explicit paths as numeric DataDiVR node IDs.\n"
+            "- `path_connections.json` stores per-path segment pairs and metadata.\n"
             "- `coordinate_mappings.json` maps numeric node IDs to node keys, "
             "annotations, colors, and coordinates in each scene.\n"
             "- `analysis/` bundles the merged JSON export, NetworkX scene pickle, "
@@ -1711,7 +1731,9 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
     with open(OUTPUT_JSON, "w") as fh:
         json.dump(merged, fh, indent=2)
     with open(OUTPUT_PATHS_JSON, "w") as fh:
-        json.dump(path_payload, fh, indent=2)
+        json.dump(paths_only_payload, fh, indent=2)
+    with open(OUTPUT_PATH_CONNECTIONS_JSON, "w") as fh:
+        json.dump(path_connections, fh, indent=2)
     with open(OUTPUT_COORDINATES_JSON, "w") as fh:
         json.dump(coordinate_payload, fh, indent=2)
     with open(OUTPUT_SCENES_PICKLE, "wb") as fh:
@@ -1725,6 +1747,7 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
         "merged_json": OUTPUT_JSON,
         "networkx_scenes": OUTPUT_SCENES_PICKLE,
         "paths_json": OUTPUT_PATHS_JSON,
+        "path_connections_json": OUTPUT_PATH_CONNECTIONS_JSON,
         "coordinate_mappings": OUTPUT_COORDINATES_JSON,
         "path_count": len(path_payload["paths"]),
     }
@@ -1736,6 +1759,7 @@ def validate_project(summary: dict, scenes: list[nx.Graph]) -> dict:
         os.path.join(PROJECT_DIR, "nodes.json"),
         os.path.join(PROJECT_DIR, "links.json"),
         os.path.join(PROJECT_DIR, "paths.json"),
+        os.path.join(PROJECT_DIR, "path_connections.json"),
         os.path.join(PROJECT_DIR, "coordinate_mappings.json"),
     ]
     for scene_name in SCENE_NAMES:
@@ -1759,6 +1783,7 @@ def validate_project(summary: dict, scenes: list[nx.Graph]) -> dict:
     in_unit_cube = all(0.0 <= value <= 1.0 for value in position_values)
     path_validation = validate_paths_file(
         os.path.join(PROJECT_DIR, "paths.json"),
+        os.path.join(PROJECT_DIR, "path_connections.json"),
         os.path.join(PROJECT_DIR, "pfile.json"),
         scenes[0],
     )
@@ -1773,15 +1798,17 @@ def validate_project(summary: dict, scenes: list[nx.Graph]) -> dict:
     }
 
 
-def validate_paths_file(paths_path: str, pfile_path: str, scene: nx.Graph) -> dict:
-    if not os.path.exists(paths_path) or not os.path.exists(pfile_path):
+def validate_paths_file(paths_path: str, connections_path: str, pfile_path: str, scene: nx.Graph) -> dict:
+    if not os.path.exists(paths_path) or not os.path.exists(connections_path) or not os.path.exists(pfile_path):
         return {
             "paths_valid": False,
-            "path_validation_errors": ["paths.json or pfile.json missing"],
+            "path_validation_errors": ["paths.json, path_connections.json, or pfile.json missing"],
         }
 
     with open(paths_path) as fh:
         path_payload = json.load(fh)
+    with open(connections_path) as fh:
+        connection_payload = json.load(fh)
     with open(pfile_path) as fh:
         pfile = json.load(fh)
 
@@ -1796,11 +1823,16 @@ def validate_paths_file(paths_path: str, pfile_path: str, scene: nx.Graph) -> di
     }
     errors = []
     paths = path_payload.get("paths", [])
-    records = path_payload.get("path_records", [])
+    records = connection_payload.get("path_records", [])
+    connections = connection_payload.get("path_connections", [])
     if pfile.get("paths") != paths:
         errors.append("pfile paths do not match paths.json paths")
+    if pfile.get("pathMetadataFile") != "path_connections":
+        errors.append("pfile pathMetadataFile does not point at path_connections")
     if len(paths) != len(records):
         errors.append("paths and path_records length mismatch")
+    if len(paths) != len(connections):
+        errors.append("paths and path_connections length mismatch")
     for index, path in enumerate(paths):
         if not isinstance(path, list) or len(path) < 2:
             errors.append(f"path {index} is not a list with at least two nodes")
@@ -1820,6 +1852,10 @@ def validate_paths_file(paths_path: str, pfile_path: str, scene: nx.Graph) -> di
                 errors.append(f"path {index} record nodes do not match path")
             if records[index].get("source") != path[0] or records[index].get("target") != path[-1]:
                 errors.append(f"path {index} source/target metadata does not match path")
+        if index < len(connections):
+            expected_segments = [[source, target] for source, target in zip(path[:-1], path[1:])]
+            if connections[index].get("segments") != expected_segments:
+                errors.append(f"path {index} connection segments do not match path")
 
     kind_counts = Counter(record.get("kind", "") for record in records)
     gene_pair_counts = Counter(record.get("gene_pair", "") for record in records)
@@ -1842,7 +1878,8 @@ def write_project_analysis_bundle(audit: dict) -> None:
         "files": {
             f"{PROJECT_NAME}.json": "Merged human-readable NetworkX/DataDiVR export.",
             f"{PROJECT_NAME}_networkx_scenes.pkl": "Pickled NetworkX scene graphs with node, edge, layout, and flow metadata.",
-            f"{PROJECT_NAME}_paths.json": "Explicit numeric DataDiVR node-id paths and per-path metadata.",
+            f"{PROJECT_NAME}_paths.json": "Explicit numeric DataDiVR node-id paths only.",
+            f"{PROJECT_NAME}_path_connections.json": "Per-path node-id segment pairs plus path metadata.",
             "datadivr_coordinate_mappings.json": "Per-scene node ids, source node keys, coordinates, colors, and edge ids.",
             f"{PROJECT_NAME}_datadivr_audit.json": "Generation and validation audit.",
         },
@@ -1857,7 +1894,9 @@ def write_project_analysis_bundle(audit: dict) -> None:
             "the project root; scripts and agents should use these sidecars for "
             "path semantics, coordinate lookup, and NetworkX-level inspection.\n\n"
             "- `../paths.json` and `Pangenome_Housekeeping_Stacked_Trees_paths.json` "
-            "use numeric DataDiVR node ids.\n"
+            "contain only numeric DataDiVR node-id paths.\n"
+            "- `../path_connections.json` and `Pangenome_Housekeeping_Stacked_Trees_path_connections.json` "
+            "contain segment pairs and path metadata.\n"
             "- `datadivr_coordinate_mappings.json` maps those ids back to node keys "
             "and per-scene coordinates.\n"
             "- `Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl` contains "
@@ -1867,6 +1906,7 @@ def write_project_analysis_bundle(audit: dict) -> None:
         OUTPUT_JSON,
         OUTPUT_SCENES_PICKLE,
         OUTPUT_PATHS_JSON,
+        OUTPUT_PATH_CONNECTIONS_JSON,
         OUTPUT_COORDINATES_JSON,
         OUTPUT_AUDIT,
     ):

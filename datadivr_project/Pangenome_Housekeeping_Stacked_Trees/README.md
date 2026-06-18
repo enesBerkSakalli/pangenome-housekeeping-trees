@@ -6,6 +6,7 @@ Native DataDiVR files are in the project root plus the `layouts`, `layoutsl`, `l
 
 Additional sidecars:
 
-- `paths.json` stores explicit paths as numeric DataDiVR node IDs.
+- `paths.json` stores only explicit paths as numeric DataDiVR node IDs.
+- `path_connections.json` stores per-path segment pairs and metadata.
 - `coordinate_mappings.json` maps numeric node IDs to node keys, annotations, colors, and coordinates in each scene.
 - `analysis/` bundles the merged JSON export, NetworkX scene pickle, paths, coordinate mappings, and audit files for downstream agents.

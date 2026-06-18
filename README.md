@@ -81,8 +81,10 @@ datadivr_project/Pangenome_Housekeeping_Stacked_Trees/
 
 The project includes non-native sidecars for agents and downstream tools:
 
-- `paths.json` and `pfile.json["paths"]` store explicit paths as numeric
-  DataDiVR node IDs, for example `[[376, 5109, 5110, 2239], ...]`.
+- `paths.json` and `pfile.json["paths"]` store only explicit paths as numeric
+  DataDiVR node IDs, for example `[[376, 5109, 2239], ...]`.
+- `path_connections.json` stores the segment pairs and path metadata for those
+  numeric paths.
 - `ancestor_context_flow` paths connect higher ancestor levels around direct
   MRCA corridors; they are intentionally not labeled as direct MRCAs.
 - `coordinate_mappings.json` maps numeric DataDiVR node IDs to source node keys,

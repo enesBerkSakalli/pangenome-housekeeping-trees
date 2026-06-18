@@ -9,8 +9,8 @@ gene trees and exports them to Plotly and DataDiVR.
   3D trees, Plotly HTML views, and layout audits.
 - `datadivr_housekeeping_project.py`: Converts the inferred NetworkX trees into
   a DataDiVR project. This is the main exporter for `pfile.json`, texture files,
-  `nodes.json`, `links.json`, `paths.json`, NetworkX scene pickles, and the
-  merged JSON export.
+  `nodes.json`, `links.json`, `paths.json`, `path_connections.json`, NetworkX
+  scene pickles, and the merged JSON export.
 - `external/DataDiVR_WebApp/static/js/webGL_preview.js`: Local DataDiVR preview
   customization. It reads node-size sidecars and explicit path metadata, then
   renders path curves and animated pulses.
@@ -26,7 +26,9 @@ gene trees and exports them to Plotly and DataDiVR.
 - `outputs_3d/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl`: Four
   NetworkX scene graphs.
 - `outputs_3d/Pangenome_Housekeeping_Stacked_Trees_paths.json`: Explicit
-  path metadata.
+  numeric DataDiVR node-id paths only.
+- `outputs_3d/Pangenome_Housekeeping_Stacked_Trees_path_connections.json`:
+  Path segment pairs plus per-path metadata.
 - `outputs_3d/datadivr_coordinate_mappings.json`: Per-scene normalized
   DataDiVR coordinate mappings.
 - `datadivr_project/Pangenome_Housekeeping_Stacked_Trees/analysis/`: The same
@@ -38,17 +40,22 @@ gene trees and exports them to Plotly and DataDiVR.
 DataDiVR still receives ordinary pairwise links in `links.json` and link
 textures. The additional path layer is independent:
 
-- `pfile.json["paths"]` is a list of paths as numeric DataDiVR node IDs:
+- `pfile.json["paths"]` and `paths.json["paths"]` are lists of paths as numeric
+  DataDiVR node IDs only:
   `[[1, 2, 3, 4], [4, 6, 7], ...]`.
-- `paths.json["path_records"]` adds metadata for each path, including kind,
-  gene pair, clade/group, label, and the same numeric `nodes` list.
+- `path_connections.json["path_connections"]` stores each path as segment pairs
+  such as `[[1, 2], [2, 3]]`.
+- `path_connections.json["path_records"]` adds metadata for each path,
+  including kind, gene pair, clade/group, label, and the same numeric `nodes`
+  list.
 - Current path kinds are `clade_flow`, `ancestor_context_flow`, and
   `selected_taxon_flow`. `clade_flow` is the direct MRCA-to-MRCA corridor.
   `ancestor_context_flow` connects parent/grandparent ancestors around those
   MRCAs and must not be described as the direct most recent common ancestor.
 - Do not infer paths by connected components of interlayer edges. Several
   corridors share MRCA nodes, so component inference can merge distinct paths.
-  Use `paths.json` as the source of truth.
+  Use `paths.json` as the source of truth for path membership and
+  `path_connections.json` for segment metadata.
 
 ## Animation Model
 

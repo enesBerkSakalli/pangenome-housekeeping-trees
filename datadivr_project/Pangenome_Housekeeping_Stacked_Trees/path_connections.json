@@ -1,0 +1,7666 @@
+{
+  "projectname": "Pangenome_Housekeeping_Stacked_Trees",
+  "node_id_contract": "All path connections use numeric DataDiVR node ids.",
+  "path_connections": [
+    {
+      "id": 0,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          376,
+          5109
+        ],
+        [
+          5109,
+          2239
+        ]
+      ],
+      "source": 376,
+      "target": 2239
+    },
+    {
+      "id": 1,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2239,
+          5110
+        ],
+        [
+          5110,
+          4303
+        ]
+      ],
+      "source": 2239,
+      "target": 4303
+    },
+    {
+      "id": 2,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          374,
+          5111
+        ],
+        [
+          5111,
+          2215
+        ]
+      ],
+      "source": 374,
+      "target": 2215
+    },
+    {
+      "id": 3,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2215,
+          5112
+        ],
+        [
+          5112,
+          4301
+        ]
+      ],
+      "source": 2215,
+      "target": 4301
+    },
+    {
+      "id": 4,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          372,
+          5113
+        ],
+        [
+          5113,
+          2214
+        ]
+      ],
+      "source": 372,
+      "target": 2214
+    },
+    {
+      "id": 5,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2214,
+          5114
+        ],
+        [
+          5114,
+          4299
+        ]
+      ],
+      "source": 2214,
+      "target": 4299
+    },
+    {
+      "id": 6,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          384,
+          5115
+        ],
+        [
+          5115,
+          2208
+        ]
+      ],
+      "source": 384,
+      "target": 2208
+    },
+    {
+      "id": 7,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2208,
+          5116
+        ],
+        [
+          5116,
+          4297
+        ]
+      ],
+      "source": 2208,
+      "target": 4297
+    },
+    {
+      "id": 8,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          382,
+          5117
+        ],
+        [
+          5117,
+          2207
+        ]
+      ],
+      "source": 382,
+      "target": 2207
+    },
+    {
+      "id": 9,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2207,
+          5118
+        ],
+        [
+          5118,
+          4295
+        ]
+      ],
+      "source": 2207,
+      "target": 4295
+    },
+    {
+      "id": 10,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          381,
+          5119
+        ],
+        [
+          5119,
+          2206
+        ]
+      ],
+      "source": 381,
+      "target": 2206
+    },
+    {
+      "id": 11,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2206,
+          5120
+        ],
+        [
+          5120,
+          4293
+        ]
+      ],
+      "source": 2206,
+      "target": 4293
+    },
+    {
+      "id": 12,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          368,
+          5121
+        ],
+        [
+          5121,
+          1705
+        ]
+      ],
+      "source": 368,
+      "target": 1705
+    },
+    {
+      "id": 13,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          1705,
+          5122
+        ],
+        [
+          5122,
+          4108
+        ]
+      ],
+      "source": 1705,
+      "target": 4108
+    },
+    {
+      "id": 14,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          367,
+          5123
+        ],
+        [
+          5123,
+          1703
+        ]
+      ],
+      "source": 367,
+      "target": 1703
+    },
+    {
+      "id": 15,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          1703,
+          5124
+        ],
+        [
+          5124,
+          4104
+        ]
+      ],
+      "source": 1703,
+      "target": 4104
+    },
+    {
+      "id": 16,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          374,
+          5125
+        ],
+        [
+          5125,
+          2252
+        ]
+      ],
+      "source": 374,
+      "target": 2252
+    },
+    {
+      "id": 17,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2252,
+          5126
+        ],
+        [
+          5126,
+          4108
+        ]
+      ],
+      "source": 2252,
+      "target": 4108
+    },
+    {
+      "id": 18,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          372,
+          5127
+        ],
+        [
+          5127,
+          2214
+        ]
+      ],
+      "source": 372,
+      "target": 2214
+    },
+    {
+      "id": 19,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2214,
+          5128
+        ],
+        [
+          5128,
+          4104
+        ]
+      ],
+      "source": 2214,
+      "target": 4104
+    },
+    {
+      "id": 20,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          368,
+          5129
+        ],
+        [
+          5129,
+          2208
+        ]
+      ],
+      "source": 368,
+      "target": 2208
+    },
+    {
+      "id": 21,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2208,
+          5130
+        ],
+        [
+          5130,
+          4102
+        ]
+      ],
+      "source": 2208,
+      "target": 4102
+    },
+    {
+      "id": 22,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Strepsirrhines",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          14,
+          5131
+        ],
+        [
+          5131,
+          2129
+        ]
+      ],
+      "source": 14,
+      "target": 2129
+    },
+    {
+      "id": 23,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Strepsirrhines",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2129,
+          5132
+        ],
+        [
+          5132,
+          4026
+        ]
+      ],
+      "source": 2129,
+      "target": 4026
+    },
+    {
+      "id": 24,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          12,
+          5133
+        ],
+        [
+          5133,
+          2128
+        ]
+      ],
+      "source": 12,
+      "target": 2128
+    },
+    {
+      "id": 25,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2128,
+          5134
+        ],
+        [
+          5134,
+          3968
+        ]
+      ],
+      "source": 2128,
+      "target": 3968
+    },
+    {
+      "id": 26,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          11,
+          5135
+        ],
+        [
+          5135,
+          2127
+        ]
+      ],
+      "source": 11,
+      "target": 2127
+    },
+    {
+      "id": 27,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2127,
+          5136
+        ],
+        [
+          5136,
+          3920
+        ]
+      ],
+      "source": 2127,
+      "target": 3920
+    },
+    {
+      "id": 28,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Scandentia",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          527,
+          5137
+        ],
+        [
+          5137,
+          2275
+        ]
+      ],
+      "source": 527,
+      "target": 2275
+    },
+    {
+      "id": 29,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Scandentia",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2275,
+          5138
+        ],
+        [
+          5138,
+          3910
+        ]
+      ],
+      "source": 2275,
+      "target": 3910
+    },
+    {
+      "id": 30,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          526,
+          5139
+        ],
+        [
+          5139,
+          2273
+        ]
+      ],
+      "source": 526,
+      "target": 2273
+    },
+    {
+      "id": 31,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2273,
+          5140
+        ],
+        [
+          5140,
+          3909
+        ]
+      ],
+      "source": 2273,
+      "target": 3909
+    },
+    {
+      "id": 32,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          525,
+          5141
+        ],
+        [
+          5141,
+          2271
+        ]
+      ],
+      "source": 525,
+      "target": 2271
+    },
+    {
+      "id": 33,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2271,
+          5142
+        ],
+        [
+          5142,
+          3881
+        ]
+      ],
+      "source": 2271,
+      "target": 3881
+    },
+    {
+      "id": 34,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          4,
+          5143
+        ],
+        [
+          5143,
+          2129
+        ]
+      ],
+      "source": 4,
+      "target": 2129
+    },
+    {
+      "id": 35,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2129,
+          5144
+        ],
+        [
+          5144,
+          3413
+        ]
+      ],
+      "source": 2129,
+      "target": 3413
+    },
+    {
+      "id": 36,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2,
+          5145
+        ],
+        [
+          5145,
+          2128
+        ]
+      ],
+      "source": 2,
+      "target": 2128
+    },
+    {
+      "id": 37,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2128,
+          5146
+        ],
+        [
+          5146,
+          3412
+        ]
+      ],
+      "source": 2128,
+      "target": 3412
+    },
+    {
+      "id": 38,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          0,
+          5147
+        ],
+        [
+          5147,
+          2127
+        ]
+      ],
+      "source": 0,
+      "target": 2127
+    },
+    {
+      "id": 39,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2127,
+          5148
+        ],
+        [
+          5148,
+          3410
+        ]
+      ],
+      "source": 2127,
+      "target": 3410
+    },
+    {
+      "id": 40,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          365,
+          5149
+        ],
+        [
+          5149,
+          2326
+        ]
+      ],
+      "source": 365,
+      "target": 2326
+    },
+    {
+      "id": 41,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2326,
+          5150
+        ],
+        [
+          5150,
+          3920
+        ]
+      ],
+      "source": 2326,
+      "target": 3920
+    },
+    {
+      "id": 42,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          363,
+          5151
+        ],
+        [
+          5151,
+          2325
+        ]
+      ],
+      "source": 363,
+      "target": 2325
+    },
+    {
+      "id": 43,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2325,
+          5152
+        ],
+        [
+          5152,
+          3919
+        ]
+      ],
+      "source": 2325,
+      "target": 3919
+    },
+    {
+      "id": 44,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          29,
+          5153
+        ],
+        [
+          5153,
+          2324
+        ]
+      ],
+      "source": 29,
+      "target": 2324
+    },
+    {
+      "id": 45,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2324,
+          5154
+        ],
+        [
+          5154,
+          3915
+        ]
+      ],
+      "source": 2324,
+      "target": 3915
+    },
+    {
+      "id": 46,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          515,
+          5155
+        ],
+        [
+          5155,
+          2129
+        ]
+      ],
+      "source": 515,
+      "target": 2129
+    },
+    {
+      "id": 47,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2129,
+          5156
+        ],
+        [
+          5156,
+          3920
+        ]
+      ],
+      "source": 2129,
+      "target": 3920
+    },
+    {
+      "id": 48,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          513,
+          5157
+        ],
+        [
+          5157,
+          2128
+        ]
+      ],
+      "source": 513,
+      "target": 2128
+    },
+    {
+      "id": 49,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2128,
+          5158
+        ],
+        [
+          5158,
+          3919
+        ]
+      ],
+      "source": 2128,
+      "target": 3919
+    },
+    {
+      "id": 50,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          501,
+          5159
+        ],
+        [
+          5159,
+          2127
+        ]
+      ],
+      "source": 501,
+      "target": 2127
+    },
+    {
+      "id": 51,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2127,
+          5160
+        ],
+        [
+          5160,
+          3915
+        ]
+      ],
+      "source": 2127,
+      "target": 3915
+    },
+    {
+      "id": 52,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          702,
+          5161
+        ],
+        [
+          5161,
+          2385
+        ]
+      ],
+      "source": 702,
+      "target": 2385
+    },
+    {
+      "id": 53,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2385,
+          5162
+        ],
+        [
+          5162,
+          4169
+        ]
+      ],
+      "source": 2385,
+      "target": 4169
+    },
+    {
+      "id": 54,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          518,
+          5163
+        ],
+        [
+          5163,
+          2347
+        ]
+      ],
+      "source": 518,
+      "target": 2347
+    },
+    {
+      "id": 55,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2347,
+          5164
+        ],
+        [
+          5164,
+          4167
+        ]
+      ],
+      "source": 2347,
+      "target": 4167
+    },
+    {
+      "id": 56,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          517,
+          5165
+        ],
+        [
+          5165,
+          2346
+        ]
+      ],
+      "source": 517,
+      "target": 2346
+    },
+    {
+      "id": 57,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2346,
+          5166
+        ],
+        [
+          5166,
+          4166
+        ]
+      ],
+      "source": 2346,
+      "target": 4166
+    },
+    {
+      "id": 58,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Bats",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          431,
+          5167
+        ],
+        [
+          5167,
+          1703
+        ]
+      ],
+      "source": 431,
+      "target": 1703
+    },
+    {
+      "id": 59,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Bats",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          1703,
+          5168
+        ],
+        [
+          5168,
+          4089
+        ]
+      ],
+      "source": 1703,
+      "target": 4089
+    },
+    {
+      "id": 60,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Eulipotyphla",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          427,
+          5169
+        ],
+        [
+          5169,
+          2128
+        ]
+      ],
+      "source": 427,
+      "target": 2128
+    },
+    {
+      "id": 61,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Eulipotyphla",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2128,
+          5170
+        ],
+        [
+          5170,
+          3914
+        ]
+      ],
+      "source": 2128,
+      "target": 3914
+    },
+    {
+      "id": 62,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          367,
+          5171
+        ],
+        [
+          5171,
+          2127
+        ]
+      ],
+      "source": 367,
+      "target": 2127
+    },
+    {
+      "id": 63,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2127,
+          5172
+        ],
+        [
+          5172,
+          3913
+        ]
+      ],
+      "source": 2127,
+      "target": 3913
+    },
+    {
+      "id": 64,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          365,
+          5173
+        ],
+        [
+          5173,
+          1731
+        ]
+      ],
+      "source": 365,
+      "target": 1731
+    },
+    {
+      "id": 65,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          1731,
+          5174
+        ],
+        [
+          5174,
+          3911
+        ]
+      ],
+      "source": 1731,
+      "target": 3911
+    },
+    {
+      "id": 66,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Afrotheria",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          7,
+          5175
+        ],
+        [
+          5175,
+          1717
+        ]
+      ],
+      "source": 7,
+      "target": 1717
+    },
+    {
+      "id": 67,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Afrotheria",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          1717,
+          5176
+        ],
+        [
+          5176,
+          3913
+        ]
+      ],
+      "source": 1717,
+      "target": 3913
+    },
+    {
+      "id": 68,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          6,
+          5177
+        ],
+        [
+          5177,
+          1707
+        ]
+      ],
+      "source": 6,
+      "target": 1707
+    },
+    {
+      "id": 69,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          1707,
+          5178
+        ],
+        [
+          5178,
+          3911
+        ]
+      ],
+      "source": 1707,
+      "target": 3911
+    },
+    {
+      "id": 70,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          4,
+          5179
+        ],
+        [
+          5179,
+          1705
+        ]
+      ],
+      "source": 4,
+      "target": 1705
+    },
+    {
+      "id": 71,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          1705,
+          5180
+        ],
+        [
+          5180,
+          3909
+        ]
+      ],
+      "source": 1705,
+      "target": 3909
+    },
+    {
+      "id": 72,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Xenarthra",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          432,
+          5181
+        ],
+        [
+          5181,
+          2583
+        ]
+      ],
+      "source": 432,
+      "target": 2583
+    },
+    {
+      "id": 73,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Xenarthra",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2583,
+          5182
+        ],
+        [
+          5182,
+          4082
+        ]
+      ],
+      "source": 2583,
+      "target": 4082
+    },
+    {
+      "id": 74,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          431,
+          5183
+        ],
+        [
+          5183,
+          2173
+        ]
+      ],
+      "source": 431,
+      "target": 2173
+    },
+    {
+      "id": 75,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2173,
+          5184
+        ],
+        [
+          5184,
+          4080
+        ]
+      ],
+      "source": 2173,
+      "target": 4080
+    },
+    {
+      "id": 76,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          429,
+          5185
+        ],
+        [
+          5185,
+          2171
+        ]
+      ],
+      "source": 429,
+      "target": 2171
+    },
+    {
+      "id": 77,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2171,
+          5186
+        ],
+        [
+          5186,
+          4028
+        ]
+      ],
+      "source": 2171,
+      "target": 4028
+    },
+    {
+      "id": 78,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          493,
+          5187
+        ],
+        [
+          5187,
+          3050
+        ]
+      ],
+      "source": 493,
+      "target": 3050
+    },
+    {
+      "id": 79,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          3050,
+          5188
+        ],
+        [
+          5188,
+          4378
+        ]
+      ],
+      "source": 3050,
+      "target": 4378
+    },
+    {
+      "id": 80,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          492,
+          5189
+        ],
+        [
+          5189,
+          2598
+        ]
+      ],
+      "source": 492,
+      "target": 2598
+    },
+    {
+      "id": 81,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2598,
+          5190
+        ],
+        [
+          5190,
+          3880
+        ]
+      ],
+      "source": 2598,
+      "target": 3880
+    },
+    {
+      "id": 82,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          491,
+          5191
+        ],
+        [
+          5191,
+          2596
+        ]
+      ],
+      "source": 491,
+      "target": 2596
+    },
+    {
+      "id": 83,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2596,
+          5192
+        ],
+        [
+          5192,
+          3879
+        ]
+      ],
+      "source": 2596,
+      "target": 3879
+    },
+    {
+      "id": 84,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Marsupialia",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          363,
+          5193
+        ],
+        [
+          5193,
+          3086
+        ]
+      ],
+      "source": 363,
+      "target": 3086
+    },
+    {
+      "id": 85,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Marsupialia",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          3086,
+          5194
+        ],
+        [
+          5194,
+          4383
+        ]
+      ],
+      "source": 3086,
+      "target": 4383
+    },
+    {
+      "id": 86,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          29,
+          5195
+        ],
+        [
+          5195,
+          1730
+        ]
+      ],
+      "source": 29,
+      "target": 1730
+    },
+    {
+      "id": 87,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          1730,
+          5196
+        ],
+        [
+          5196,
+          4381
+        ]
+      ],
+      "source": 1730,
+      "target": 4381
+    },
+    {
+      "id": 88,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          27,
+          5197
+        ],
+        [
+          5197,
+          1726
+        ]
+      ],
+      "source": 27,
+      "target": 1726
+    },
+    {
+      "id": 89,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          1726,
+          5198
+        ],
+        [
+          5198,
+          3879
+        ]
+      ],
+      "source": 1726,
+      "target": 3879
+    },
+    {
+      "id": 90,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          30,
+          5199
+        ],
+        [
+          5199,
+          2594
+        ]
+      ],
+      "source": 30,
+      "target": 2594
+    },
+    {
+      "id": 91,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2594,
+          5200
+        ],
+        [
+          5200,
+          3479
+        ]
+      ],
+      "source": 2594,
+      "target": 3479
+    },
+    {
+      "id": 92,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          29,
+          5201
+        ],
+        [
+          5201,
+          2593
+        ]
+      ],
+      "source": 29,
+      "target": 2593
+    },
+    {
+      "id": 93,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2593,
+          5202
+        ],
+        [
+          5202,
+          3425
+        ]
+      ],
+      "source": 2593,
+      "target": 3425
+    },
+    {
+      "id": 94,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          27,
+          5203
+        ],
+        [
+          5203,
+          2127
+        ]
+      ],
+      "source": 27,
+      "target": 2127
+    },
+    {
+      "id": 95,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2127,
+          5204
+        ],
+        [
+          5204,
+          3415
+        ]
+      ],
+      "source": 2127,
+      "target": 3415
+    },
+    {
+      "id": 96,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Reptiles",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          0,
+          5205
+        ],
+        [
+          5205,
+          2596
+        ]
+      ],
+      "source": 0,
+      "target": 2596
+    },
+    {
+      "id": 97,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Reptiles",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2596,
+          5206
+        ],
+        [
+          5206,
+          3408
+        ]
+      ],
+      "source": 2596,
+      "target": 3408
+    },
+    {
+      "id": 98,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Amphibians",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2,
+          5207
+        ],
+        [
+          5207,
+          1719
+        ]
+      ],
+      "source": 2,
+      "target": 1719
+    },
+    {
+      "id": 99,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Amphibians",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          1719,
+          5208
+        ],
+        [
+          5208,
+          3406
+        ]
+      ],
+      "source": 1719,
+      "target": 3406
+    },
+    {
+      "id": 100,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          10,
+          5209
+        ],
+        [
+          5209,
+          1725
+        ]
+      ],
+      "source": 10,
+      "target": 1725
+    },
+    {
+      "id": 101,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          1725,
+          5210
+        ],
+        [
+          5210,
+          3410
+        ]
+      ],
+      "source": 1725,
+      "target": 3410
+    },
+    {
+      "id": 102,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          9,
+          5211
+        ],
+        [
+          5211,
+          1719
+        ]
+      ],
+      "source": 9,
+      "target": 1719
+    },
+    {
+      "id": 103,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          1719,
+          5212
+        ],
+        [
+          5212,
+          3408
+        ]
+      ],
+      "source": 1719,
+      "target": 3408
+    },
+    {
+      "id": 104,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          7,
+          5213
+        ],
+        [
+          5213,
+          1717
+        ]
+      ],
+      "source": 7,
+      "target": 1717
+    },
+    {
+      "id": 105,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          1717,
+          5214
+        ],
+        [
+          5214,
+          3406
+        ]
+      ],
+      "source": 1717,
+      "target": 3406
+    },
+    {
+      "id": 106,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cartilaginous fish",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          1355,
+          5215
+        ],
+        [
+          5215,
+          1708
+        ]
+      ],
+      "source": 1355,
+      "target": 1708
+    },
+    {
+      "id": 107,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cartilaginous fish",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          1708,
+          5216
+        ],
+        [
+          5216,
+          3416
+        ]
+      ],
+      "source": 1708,
+      "target": 3416
+    },
+    {
+      "id": 108,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          1353,
+          5217
+        ],
+        [
+          5217,
+          1707
+        ]
+      ],
+      "source": 1353,
+      "target": 1707
+    },
+    {
+      "id": 109,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          1707,
+          5218
+        ],
+        [
+          5218,
+          3415
+        ]
+      ],
+      "source": 1707,
+      "target": 3415
+    },
+    {
+      "id": 110,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          9,
+          5219
+        ],
+        [
+          5219,
+          1705
+        ]
+      ],
+      "source": 9,
+      "target": 1705
+    },
+    {
+      "id": 111,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          1705,
+          5220
+        ],
+        [
+          5220,
+          3413
+        ]
+      ],
+      "source": 1705,
+      "target": 3413
+    },
+    {
+      "id": 112,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          949,
+          5221
+        ],
+        [
+          5221,
+          3092
+        ]
+      ],
+      "source": 949,
+      "target": 3092
+    },
+    {
+      "id": 113,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          3092,
+          5222
+        ],
+        [
+          5222,
+          3427
+        ]
+      ],
+      "source": 3092,
+      "target": 3427
+    },
+    {
+      "id": 114,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          948,
+          5223
+        ],
+        [
+          5223,
+          3091
+        ]
+      ],
+      "source": 948,
+      "target": 3091
+    },
+    {
+      "id": 115,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          3091,
+          5224
+        ],
+        [
+          5224,
+          3426
+        ]
+      ],
+      "source": 3091,
+      "target": 3426
+    },
+    {
+      "id": 116,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          942,
+          5225
+        ],
+        [
+          5225,
+          3089
+        ]
+      ],
+      "source": 942,
+      "target": 3089
+    },
+    {
+      "id": 117,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          3089,
+          5226
+        ],
+        [
+          5226,
+          3425
+        ]
+      ],
+      "source": 3089,
+      "target": 3425
+    },
+    {
+      "id": 118,
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Human",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          400,
+          5227
+        ],
+        [
+          5227,
+          2212
+        ]
+      ],
+      "source": 400,
+      "target": 2212
+    },
+    {
+      "id": 119,
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Human",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "segments": [
+        [
+          2212,
+          5228
+        ],
+        [
+          5228,
+          4338
+        ]
+      ],
+      "source": 2212,
+      "target": 4338
+    },
+    {
+      "id": 120,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          399,
+          5229
+        ],
+        [
+          5229,
+          2211
+        ]
+      ],
+      "source": 399,
+      "target": 2211
+    },
+    {
+      "id": 121,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "segments": [
+        [
+          2211,
+          5230
+        ],
+        [
+          5230,
+          4337
+        ]
+      ],
+      "source": 2211,
+      "target": 4337
+    },
+    {
+      "id": 122,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          397,
+          5231
+        ],
+        [
+          5231,
+          2209
+        ]
+      ],
+      "source": 397,
+      "target": 2209
+    },
+    {
+      "id": 123,
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "segments": [
+        [
+          2209,
+          5232
+        ],
+        [
+          5232,
+          4335
+        ]
+      ],
+      "source": 2209,
+      "target": 4335
+    },
+    {
+      "id": 124,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Bats",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          540,
+          5233
+        ],
+        [
+          5233,
+          1704
+        ]
+      ],
+      "source": 540,
+      "target": 1704
+    },
+    {
+      "id": 125,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          71,
+          5234
+        ],
+        [
+          5234,
+          2849
+        ]
+      ],
+      "source": 71,
+      "target": 2849
+    },
+    {
+      "id": 126,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          403,
+          5235
+        ],
+        [
+          5235,
+          1706
+        ]
+      ],
+      "source": 403,
+      "target": 1706
+    },
+    {
+      "id": 127,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          127,
+          5236
+        ],
+        [
+          5236,
+          2850
+        ]
+      ],
+      "source": 127,
+      "target": 2850
+    },
+    {
+      "id": 128,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          330,
+          5237
+        ],
+        [
+          5237,
+          2831
+        ]
+      ],
+      "source": 330,
+      "target": 2831
+    },
+    {
+      "id": 129,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          128,
+          5238
+        ],
+        [
+          5238,
+          2847
+        ]
+      ],
+      "source": 128,
+      "target": 2847
+    },
+    {
+      "id": 130,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          333,
+          5239
+        ],
+        [
+          5239,
+          2830
+        ]
+      ],
+      "source": 333,
+      "target": 2830
+    },
+    {
+      "id": 131,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          5,
+          5240
+        ],
+        [
+          5240,
+          2163
+        ]
+      ],
+      "source": 5,
+      "target": 2163
+    },
+    {
+      "id": 132,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          125,
+          5241
+        ],
+        [
+          5241,
+          2845
+        ]
+      ],
+      "source": 125,
+      "target": 2845
+    },
+    {
+      "id": 133,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Species ortholog context",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          25,
+          5242
+        ],
+        [
+          5242,
+          2272
+        ]
+      ],
+      "source": 25,
+      "target": 2272
+    },
+    {
+      "id": 134,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          72,
+          5243
+        ],
+        [
+          5243,
+          2837
+        ]
+      ],
+      "source": 72,
+      "target": 2837
+    },
+    {
+      "id": 135,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          324,
+          5244
+        ],
+        [
+          5244,
+          2828
+        ]
+      ],
+      "source": 324,
+      "target": 2828
+    },
+    {
+      "id": 136,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          334,
+          5245
+        ],
+        [
+          5245,
+          2833
+        ]
+      ],
+      "source": 334,
+      "target": 2833
+    },
+    {
+      "id": 137,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          123,
+          5246
+        ],
+        [
+          5246,
+          2843
+        ]
+      ],
+      "source": 123,
+      "target": 2843
+    },
+    {
+      "id": 138,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          69,
+          5247
+        ],
+        [
+          5247,
+          2835
+        ]
+      ],
+      "source": 69,
+      "target": 2835
+    },
+    {
+      "id": 139,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          353,
+          5248
+        ],
+        [
+          5248,
+          2823
+        ]
+      ],
+      "source": 353,
+      "target": 2823
+    },
+    {
+      "id": 140,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          300,
+          5249
+        ],
+        [
+          5249,
+          2782
+        ]
+      ],
+      "source": 300,
+      "target": 2782
+    },
+    {
+      "id": 141,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Reptiles",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          1,
+          5250
+        ],
+        [
+          5250,
+          3008
+        ]
+      ],
+      "source": 1,
+      "target": 3008
+    },
+    {
+      "id": 142,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          169,
+          5251
+        ],
+        [
+          5251,
+          2813
+        ]
+      ],
+      "source": 169,
+      "target": 2813
+    },
+    {
+      "id": 143,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          494,
+          5252
+        ],
+        [
+          5252,
+          3051
+        ]
+      ],
+      "source": 494,
+      "target": 3051
+    },
+    {
+      "id": 144,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          1262,
+          5253
+        ],
+        [
+          5253,
+          1866
+        ]
+      ],
+      "source": 1262,
+      "target": 1866
+    },
+    {
+      "id": 145,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          398,
+          5254
+        ],
+        [
+          5254,
+          2248
+        ]
+      ],
+      "source": 398,
+      "target": 2248
+    },
+    {
+      "id": 146,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          396,
+          5255
+        ],
+        [
+          5255,
+          2246
+        ]
+      ],
+      "source": 396,
+      "target": 2246
+    },
+    {
+      "id": 147,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          661,
+          5256
+        ],
+        [
+          5256,
+          2370
+        ]
+      ],
+      "source": 661,
+      "target": 2370
+    },
+    {
+      "id": 148,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          379,
+          5257
+        ],
+        [
+          5257,
+          2244
+        ]
+      ],
+      "source": 379,
+      "target": 2244
+    },
+    {
+      "id": 149,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          705,
+          5258
+        ],
+        [
+          5258,
+          2391
+        ]
+      ],
+      "source": 705,
+      "target": 2391
+    },
+    {
+      "id": 150,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          794,
+          5259
+        ],
+        [
+          5259,
+          2471
+        ]
+      ],
+      "source": 794,
+      "target": 2471
+    },
+    {
+      "id": 151,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          383,
+          5260
+        ],
+        [
+          5260,
+          2257
+        ]
+      ],
+      "source": 383,
+      "target": 2257
+    },
+    {
+      "id": 152,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          378,
+          5261
+        ],
+        [
+          5261,
+          2240
+        ]
+      ],
+      "source": 378,
+      "target": 2240
+    },
+    {
+      "id": 153,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          744,
+          5262
+        ],
+        [
+          5262,
+          2500
+        ]
+      ],
+      "source": 744,
+      "target": 2500
+    },
+    {
+      "id": 154,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          423,
+          5263
+        ],
+        [
+          5263,
+          2238
+        ]
+      ],
+      "source": 423,
+      "target": 2238
+    },
+    {
+      "id": 155,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          391,
+          5264
+        ],
+        [
+          5264,
+          2242
+        ]
+      ],
+      "source": 391,
+      "target": 2242
+    },
+    {
+      "id": 156,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Amphibians",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          1354,
+          5265
+        ],
+        [
+          5265,
+          3094
+        ]
+      ],
+      "source": 1354,
+      "target": 3094
+    },
+    {
+      "id": 157,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          582,
+          5266
+        ],
+        [
+          5266,
+          2340
+        ]
+      ],
+      "source": 582,
+      "target": 2340
+    },
+    {
+      "id": 158,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          949,
+          5267
+        ],
+        [
+          5267,
+          3092
+        ]
+      ],
+      "source": 949,
+      "target": 3092
+    },
+    {
+      "id": 159,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          446,
+          5268
+        ],
+        [
+          5268,
+          2154
+        ]
+      ],
+      "source": 446,
+      "target": 2154
+    },
+    {
+      "id": 160,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Bats",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          1704,
+          5269
+        ],
+        [
+          5269,
+          4201
+        ]
+      ],
+      "source": 1704,
+      "target": 4201
+    },
+    {
+      "id": 161,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          1706,
+          5270
+        ],
+        [
+          5270,
+          4302
+        ]
+      ],
+      "source": 1706,
+      "target": 4302
+    },
+    {
+      "id": 162,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2512,
+          5271
+        ],
+        [
+          5271,
+          3963
+        ]
+      ],
+      "source": 2512,
+      "target": 3963
+    },
+    {
+      "id": 163,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2513,
+          5272
+        ],
+        [
+          5272,
+          3964
+        ]
+      ],
+      "source": 2513,
+      "target": 3964
+    },
+    {
+      "id": 164,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2483,
+          5273
+        ],
+        [
+          5273,
+          4019
+        ]
+      ],
+      "source": 2483,
+      "target": 4019
+    },
+    {
+      "id": 165,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2510,
+          5274
+        ],
+        [
+          5274,
+          3961
+        ]
+      ],
+      "source": 2510,
+      "target": 3961
+    },
+    {
+      "id": 166,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2481,
+          5275
+        ],
+        [
+          5275,
+          4020
+        ]
+      ],
+      "source": 2481,
+      "target": 4020
+    },
+    {
+      "id": 167,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2484,
+          5276
+        ],
+        [
+          5276,
+          4024
+        ]
+      ],
+      "source": 2484,
+      "target": 4024
+    },
+    {
+      "id": 168,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2508,
+          5277
+        ],
+        [
+          5277,
+          3959
+        ]
+      ],
+      "source": 2508,
+      "target": 3959
+    },
+    {
+      "id": 169,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2479,
+          5278
+        ],
+        [
+          5278,
+          4013
+        ]
+      ],
+      "source": 2479,
+      "target": 4013
+    },
+    {
+      "id": 170,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2506,
+          5279
+        ],
+        [
+          5279,
+          3957
+        ]
+      ],
+      "source": 2506,
+      "target": 3957
+    },
+    {
+      "id": 171,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2522,
+          5280
+        ],
+        [
+          5280,
+          3945
+        ]
+      ],
+      "source": 2522,
+      "target": 3945
+    },
+    {
+      "id": 172,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2523,
+          5281
+        ],
+        [
+          5281,
+          3946
+        ]
+      ],
+      "source": 2523,
+      "target": 3946
+    },
+    {
+      "id": 173,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2412,
+          5282
+        ],
+        [
+          5282,
+          3939
+        ]
+      ],
+      "source": 2412,
+      "target": 3939
+    },
+    {
+      "id": 174,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2520,
+          5283
+        ],
+        [
+          5283,
+          3951
+        ]
+      ],
+      "source": 2520,
+      "target": 3951
+    },
+    {
+      "id": 175,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2411,
+          5284
+        ],
+        [
+          5284,
+          3941
+        ]
+      ],
+      "source": 2411,
+      "target": 3941
+    },
+    {
+      "id": 176,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2500,
+          5285
+        ],
+        [
+          5285,
+          3955
+        ]
+      ],
+      "source": 2500,
+      "target": 3955
+    },
+    {
+      "id": 177,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2471,
+          5286
+        ],
+        [
+          5286,
+          4003
+        ]
+      ],
+      "source": 2471,
+      "target": 4003
+    },
+    {
+      "id": 178,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2782,
+          5287
+        ],
+        [
+          5287,
+          3587
+        ]
+      ],
+      "source": 2782,
+      "target": 3587
+    },
+    {
+      "id": 179,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2340,
+          5288
+        ],
+        [
+          5288,
+          4269
+        ]
+      ],
+      "source": 2340,
+      "target": 4269
+    },
+    {
+      "id": 180,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2391,
+          5289
+        ],
+        [
+          5289,
+          4267
+        ]
+      ],
+      "source": 2391,
+      "target": 4267
+    },
+    {
+      "id": 181,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2154,
+          5290
+        ],
+        [
+          5290,
+          4031
+        ]
+      ],
+      "source": 2154,
+      "target": 4031
+    },
+    {
+      "id": 182,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2813,
+          5291
+        ],
+        [
+          5291,
+          3730
+        ]
+      ],
+      "source": 2813,
+      "target": 3730
+    },
+    {
+      "id": 183,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          1866,
+          5292
+        ],
+        [
+          5292,
+          4442
+        ]
+      ],
+      "source": 1866,
+      "target": 4442
+    },
+    {
+      "id": 184,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Amphibians",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          3094,
+          5293
+        ],
+        [
+          5293,
+          3407
+        ]
+      ],
+      "source": 3094,
+      "target": 3407
+    },
+    {
+      "id": 185,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Reptiles",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          3008,
+          5294
+        ],
+        [
+          5294,
+          3531
+        ]
+      ],
+      "source": 3008,
+      "target": 3531
+    },
+    {
+      "id": 186,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          3051,
+          5295
+        ],
+        [
+          5295,
+          4379
+        ]
+      ],
+      "source": 3051,
+      "target": 4379
+    },
+    {
+      "id": 187,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2257,
+          5296
+        ],
+        [
+          5296,
+          4137
+        ]
+      ],
+      "source": 2257,
+      "target": 4137
+    },
+    {
+      "id": 188,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2370,
+          5297
+        ],
+        [
+          5297,
+          4221
+        ]
+      ],
+      "source": 2370,
+      "target": 4221
+    },
+    {
+      "id": 189,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2238,
+          5298
+        ],
+        [
+          5298,
+          4324
+        ]
+      ],
+      "source": 2238,
+      "target": 4324
+    },
+    {
+      "id": 190,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2244,
+          5299
+        ],
+        [
+          5299,
+          4304
+        ]
+      ],
+      "source": 2244,
+      "target": 4304
+    },
+    {
+      "id": 191,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          3092,
+          5300
+        ],
+        [
+          5300,
+          3427
+        ]
+      ],
+      "source": 3092,
+      "target": 3427
+    },
+    {
+      "id": 192,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2242,
+          5301
+        ],
+        [
+          5301,
+          4314
+        ]
+      ],
+      "source": 2242,
+      "target": 4314
+    },
+    {
+      "id": 193,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2248,
+          5302
+        ],
+        [
+          5302,
+          4312
+        ]
+      ],
+      "source": 2248,
+      "target": 4312
+    },
+    {
+      "id": 194,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2240,
+          5303
+        ],
+        [
+          5303,
+          4306
+        ]
+      ],
+      "source": 2240,
+      "target": 4306
+    },
+    {
+      "id": 195,
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "segments": [
+        [
+          2246,
+          5304
+        ],
+        [
+          5304,
+          4310
+        ]
+      ],
+      "source": 2246,
+      "target": 4310
+    }
+  ],
+  "path_records": [
+    {
+      "id": 0,
+      "name": "GAPDH->ENO1 Great apes converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        376,
+        5109,
+        2239
+      ],
+      "source": 376,
+      "target": 2239
+    },
+    {
+      "id": 1,
+      "name": "ENO1->RPLP0 Great apes diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2239,
+        5110,
+        4303
+      ],
+      "source": 2239,
+      "target": 4303
+    },
+    {
+      "id": 2,
+      "name": "GAPDH->ENO1 Great apes ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        374,
+        5111,
+        2215
+      ],
+      "source": 374,
+      "target": 2215
+    },
+    {
+      "id": 3,
+      "name": "ENO1->RPLP0 Great apes ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2215,
+        5112,
+        4301
+      ],
+      "source": 2215,
+      "target": 4301
+    },
+    {
+      "id": 4,
+      "name": "GAPDH->ENO1 Great apes ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        372,
+        5113,
+        2214
+      ],
+      "source": 372,
+      "target": 2214
+    },
+    {
+      "id": 5,
+      "name": "ENO1->RPLP0 Great apes ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2214,
+        5114,
+        4299
+      ],
+      "source": 2214,
+      "target": 4299
+    },
+    {
+      "id": 6,
+      "name": "GAPDH->ENO1 Lesser apes converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        384,
+        5115,
+        2208
+      ],
+      "source": 384,
+      "target": 2208
+    },
+    {
+      "id": 7,
+      "name": "ENO1->RPLP0 Lesser apes diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2208,
+        5116,
+        4297
+      ],
+      "source": 2208,
+      "target": 4297
+    },
+    {
+      "id": 8,
+      "name": "GAPDH->ENO1 Lesser apes ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        382,
+        5117,
+        2207
+      ],
+      "source": 382,
+      "target": 2207
+    },
+    {
+      "id": 9,
+      "name": "ENO1->RPLP0 Lesser apes ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2207,
+        5118,
+        4295
+      ],
+      "source": 2207,
+      "target": 4295
+    },
+    {
+      "id": 10,
+      "name": "GAPDH->ENO1 Lesser apes ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        381,
+        5119,
+        2206
+      ],
+      "source": 381,
+      "target": 2206
+    },
+    {
+      "id": 11,
+      "name": "ENO1->RPLP0 Lesser apes ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2206,
+        5120,
+        4293
+      ],
+      "source": 2206,
+      "target": 4293
+    },
+    {
+      "id": 12,
+      "name": "GAPDH->ENO1 Old World monkeys converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        368,
+        5121,
+        1705
+      ],
+      "source": 368,
+      "target": 1705
+    },
+    {
+      "id": 13,
+      "name": "ENO1->RPLP0 Old World monkeys diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1705,
+        5122,
+        4108
+      ],
+      "source": 1705,
+      "target": 4108
+    },
+    {
+      "id": 14,
+      "name": "GAPDH->ENO1 Old World monkeys ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        367,
+        5123,
+        1703
+      ],
+      "source": 367,
+      "target": 1703
+    },
+    {
+      "id": 15,
+      "name": "ENO1->RPLP0 Old World monkeys ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1703,
+        5124,
+        4104
+      ],
+      "source": 1703,
+      "target": 4104
+    },
+    {
+      "id": 16,
+      "name": "GAPDH->ENO1 New World monkeys converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        374,
+        5125,
+        2252
+      ],
+      "source": 374,
+      "target": 2252
+    },
+    {
+      "id": 17,
+      "name": "ENO1->RPLP0 New World monkeys diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2252,
+        5126,
+        4108
+      ],
+      "source": 2252,
+      "target": 4108
+    },
+    {
+      "id": 18,
+      "name": "GAPDH->ENO1 New World monkeys ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        372,
+        5127,
+        2214
+      ],
+      "source": 372,
+      "target": 2214
+    },
+    {
+      "id": 19,
+      "name": "ENO1->RPLP0 New World monkeys ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2214,
+        5128,
+        4104
+      ],
+      "source": 2214,
+      "target": 4104
+    },
+    {
+      "id": 20,
+      "name": "GAPDH->ENO1 New World monkeys ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        368,
+        5129,
+        2208
+      ],
+      "source": 368,
+      "target": 2208
+    },
+    {
+      "id": 21,
+      "name": "ENO1->RPLP0 New World monkeys ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2208,
+        5130,
+        4102
+      ],
+      "source": 2208,
+      "target": 4102
+    },
+    {
+      "id": 22,
+      "name": "GAPDH->ENO1 Strepsirrhines converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Strepsirrhines",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        14,
+        5131,
+        2129
+      ],
+      "source": 14,
+      "target": 2129
+    },
+    {
+      "id": 23,
+      "name": "ENO1->RPLP0 Strepsirrhines diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Strepsirrhines",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2129,
+        5132,
+        4026
+      ],
+      "source": 2129,
+      "target": 4026
+    },
+    {
+      "id": 24,
+      "name": "GAPDH->ENO1 Strepsirrhines ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        12,
+        5133,
+        2128
+      ],
+      "source": 12,
+      "target": 2128
+    },
+    {
+      "id": 25,
+      "name": "ENO1->RPLP0 Strepsirrhines ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2128,
+        5134,
+        3968
+      ],
+      "source": 2128,
+      "target": 3968
+    },
+    {
+      "id": 26,
+      "name": "GAPDH->ENO1 Strepsirrhines ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        11,
+        5135,
+        2127
+      ],
+      "source": 11,
+      "target": 2127
+    },
+    {
+      "id": 27,
+      "name": "ENO1->RPLP0 Strepsirrhines ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Strepsirrhines",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2127,
+        5136,
+        3920
+      ],
+      "source": 2127,
+      "target": 3920
+    },
+    {
+      "id": 28,
+      "name": "GAPDH->ENO1 Scandentia converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Scandentia",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        527,
+        5137,
+        2275
+      ],
+      "source": 527,
+      "target": 2275
+    },
+    {
+      "id": 29,
+      "name": "ENO1->RPLP0 Scandentia diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Scandentia",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2275,
+        5138,
+        3910
+      ],
+      "source": 2275,
+      "target": 3910
+    },
+    {
+      "id": 30,
+      "name": "GAPDH->ENO1 Scandentia ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        526,
+        5139,
+        2273
+      ],
+      "source": 526,
+      "target": 2273
+    },
+    {
+      "id": 31,
+      "name": "ENO1->RPLP0 Scandentia ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2273,
+        5140,
+        3909
+      ],
+      "source": 2273,
+      "target": 3909
+    },
+    {
+      "id": 32,
+      "name": "GAPDH->ENO1 Scandentia ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        525,
+        5141,
+        2271
+      ],
+      "source": 525,
+      "target": 2271
+    },
+    {
+      "id": 33,
+      "name": "ENO1->RPLP0 Scandentia ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Scandentia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2271,
+        5142,
+        3881
+      ],
+      "source": 2271,
+      "target": 3881
+    },
+    {
+      "id": 34,
+      "name": "GAPDH->ENO1 Glires converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        4,
+        5143,
+        2129
+      ],
+      "source": 4,
+      "target": 2129
+    },
+    {
+      "id": 35,
+      "name": "ENO1->RPLP0 Glires diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2129,
+        5144,
+        3413
+      ],
+      "source": 2129,
+      "target": 3413
+    },
+    {
+      "id": 36,
+      "name": "GAPDH->ENO1 Glires ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2,
+        5145,
+        2128
+      ],
+      "source": 2,
+      "target": 2128
+    },
+    {
+      "id": 37,
+      "name": "ENO1->RPLP0 Glires ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2128,
+        5146,
+        3412
+      ],
+      "source": 2128,
+      "target": 3412
+    },
+    {
+      "id": 38,
+      "name": "GAPDH->ENO1 Glires ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        0,
+        5147,
+        2127
+      ],
+      "source": 0,
+      "target": 2127
+    },
+    {
+      "id": 39,
+      "name": "ENO1->RPLP0 Glires ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2127,
+        5148,
+        3410
+      ],
+      "source": 2127,
+      "target": 3410
+    },
+    {
+      "id": 40,
+      "name": "GAPDH->ENO1 Carnivores converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        365,
+        5149,
+        2326
+      ],
+      "source": 365,
+      "target": 2326
+    },
+    {
+      "id": 41,
+      "name": "ENO1->RPLP0 Carnivores diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2326,
+        5150,
+        3920
+      ],
+      "source": 2326,
+      "target": 3920
+    },
+    {
+      "id": 42,
+      "name": "GAPDH->ENO1 Carnivores ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        363,
+        5151,
+        2325
+      ],
+      "source": 363,
+      "target": 2325
+    },
+    {
+      "id": 43,
+      "name": "ENO1->RPLP0 Carnivores ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2325,
+        5152,
+        3919
+      ],
+      "source": 2325,
+      "target": 3919
+    },
+    {
+      "id": 44,
+      "name": "GAPDH->ENO1 Carnivores ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        29,
+        5153,
+        2324
+      ],
+      "source": 29,
+      "target": 2324
+    },
+    {
+      "id": 45,
+      "name": "ENO1->RPLP0 Carnivores ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2324,
+        5154,
+        3915
+      ],
+      "source": 2324,
+      "target": 3915
+    },
+    {
+      "id": 46,
+      "name": "GAPDH->ENO1 Cetartiodactyla converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        515,
+        5155,
+        2129
+      ],
+      "source": 515,
+      "target": 2129
+    },
+    {
+      "id": 47,
+      "name": "ENO1->RPLP0 Cetartiodactyla diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2129,
+        5156,
+        3920
+      ],
+      "source": 2129,
+      "target": 3920
+    },
+    {
+      "id": 48,
+      "name": "GAPDH->ENO1 Cetartiodactyla ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        513,
+        5157,
+        2128
+      ],
+      "source": 513,
+      "target": 2128
+    },
+    {
+      "id": 49,
+      "name": "ENO1->RPLP0 Cetartiodactyla ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2128,
+        5158,
+        3919
+      ],
+      "source": 2128,
+      "target": 3919
+    },
+    {
+      "id": 50,
+      "name": "GAPDH->ENO1 Cetartiodactyla ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        501,
+        5159,
+        2127
+      ],
+      "source": 501,
+      "target": 2127
+    },
+    {
+      "id": 51,
+      "name": "ENO1->RPLP0 Cetartiodactyla ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2127,
+        5160,
+        3915
+      ],
+      "source": 2127,
+      "target": 3915
+    },
+    {
+      "id": 52,
+      "name": "GAPDH->ENO1 Perissodactyla converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        702,
+        5161,
+        2385
+      ],
+      "source": 702,
+      "target": 2385
+    },
+    {
+      "id": 53,
+      "name": "ENO1->RPLP0 Perissodactyla diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2385,
+        5162,
+        4169
+      ],
+      "source": 2385,
+      "target": 4169
+    },
+    {
+      "id": 54,
+      "name": "GAPDH->ENO1 Perissodactyla ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        518,
+        5163,
+        2347
+      ],
+      "source": 518,
+      "target": 2347
+    },
+    {
+      "id": 55,
+      "name": "ENO1->RPLP0 Perissodactyla ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2347,
+        5164,
+        4167
+      ],
+      "source": 2347,
+      "target": 4167
+    },
+    {
+      "id": 56,
+      "name": "GAPDH->ENO1 Perissodactyla ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        517,
+        5165,
+        2346
+      ],
+      "source": 517,
+      "target": 2346
+    },
+    {
+      "id": 57,
+      "name": "ENO1->RPLP0 Perissodactyla ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2346,
+        5166,
+        4166
+      ],
+      "source": 2346,
+      "target": 4166
+    },
+    {
+      "id": 58,
+      "name": "GAPDH->ENO1 Bats converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Bats",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        431,
+        5167,
+        1703
+      ],
+      "source": 431,
+      "target": 1703
+    },
+    {
+      "id": 59,
+      "name": "ENO1->RPLP0 Bats diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Bats",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1703,
+        5168,
+        4089
+      ],
+      "source": 1703,
+      "target": 4089
+    },
+    {
+      "id": 60,
+      "name": "GAPDH->ENO1 Eulipotyphla converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Eulipotyphla",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        427,
+        5169,
+        2128
+      ],
+      "source": 427,
+      "target": 2128
+    },
+    {
+      "id": 61,
+      "name": "ENO1->RPLP0 Eulipotyphla diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Eulipotyphla",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2128,
+        5170,
+        3914
+      ],
+      "source": 2128,
+      "target": 3914
+    },
+    {
+      "id": 62,
+      "name": "GAPDH->ENO1 Eulipotyphla ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        367,
+        5171,
+        2127
+      ],
+      "source": 367,
+      "target": 2127
+    },
+    {
+      "id": 63,
+      "name": "ENO1->RPLP0 Eulipotyphla ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2127,
+        5172,
+        3913
+      ],
+      "source": 2127,
+      "target": 3913
+    },
+    {
+      "id": 64,
+      "name": "GAPDH->ENO1 Eulipotyphla ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        365,
+        5173,
+        1731
+      ],
+      "source": 365,
+      "target": 1731
+    },
+    {
+      "id": 65,
+      "name": "ENO1->RPLP0 Eulipotyphla ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Eulipotyphla",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1731,
+        5174,
+        3911
+      ],
+      "source": 1731,
+      "target": 3911
+    },
+    {
+      "id": 66,
+      "name": "GAPDH->ENO1 Afrotheria converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Afrotheria",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        7,
+        5175,
+        1717
+      ],
+      "source": 7,
+      "target": 1717
+    },
+    {
+      "id": 67,
+      "name": "ENO1->RPLP0 Afrotheria diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Afrotheria",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1717,
+        5176,
+        3913
+      ],
+      "source": 1717,
+      "target": 3913
+    },
+    {
+      "id": 68,
+      "name": "GAPDH->ENO1 Afrotheria ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        6,
+        5177,
+        1707
+      ],
+      "source": 6,
+      "target": 1707
+    },
+    {
+      "id": 69,
+      "name": "ENO1->RPLP0 Afrotheria ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1707,
+        5178,
+        3911
+      ],
+      "source": 1707,
+      "target": 3911
+    },
+    {
+      "id": 70,
+      "name": "GAPDH->ENO1 Afrotheria ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        4,
+        5179,
+        1705
+      ],
+      "source": 4,
+      "target": 1705
+    },
+    {
+      "id": 71,
+      "name": "ENO1->RPLP0 Afrotheria ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Afrotheria",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1705,
+        5180,
+        3909
+      ],
+      "source": 1705,
+      "target": 3909
+    },
+    {
+      "id": 72,
+      "name": "GAPDH->ENO1 Xenarthra converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Xenarthra",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        432,
+        5181,
+        2583
+      ],
+      "source": 432,
+      "target": 2583
+    },
+    {
+      "id": 73,
+      "name": "ENO1->RPLP0 Xenarthra diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Xenarthra",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2583,
+        5182,
+        4082
+      ],
+      "source": 2583,
+      "target": 4082
+    },
+    {
+      "id": 74,
+      "name": "GAPDH->ENO1 Xenarthra ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        431,
+        5183,
+        2173
+      ],
+      "source": 431,
+      "target": 2173
+    },
+    {
+      "id": 75,
+      "name": "ENO1->RPLP0 Xenarthra ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2173,
+        5184,
+        4080
+      ],
+      "source": 2173,
+      "target": 4080
+    },
+    {
+      "id": 76,
+      "name": "GAPDH->ENO1 Xenarthra ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        429,
+        5185,
+        2171
+      ],
+      "source": 429,
+      "target": 2171
+    },
+    {
+      "id": 77,
+      "name": "ENO1->RPLP0 Xenarthra ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Xenarthra",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2171,
+        5186,
+        4028
+      ],
+      "source": 2171,
+      "target": 4028
+    },
+    {
+      "id": 78,
+      "name": "GAPDH->ENO1 Monotremata converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        493,
+        5187,
+        3050
+      ],
+      "source": 493,
+      "target": 3050
+    },
+    {
+      "id": 79,
+      "name": "ENO1->RPLP0 Monotremata diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        3050,
+        5188,
+        4378
+      ],
+      "source": 3050,
+      "target": 4378
+    },
+    {
+      "id": 80,
+      "name": "GAPDH->ENO1 Monotremata ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        492,
+        5189,
+        2598
+      ],
+      "source": 492,
+      "target": 2598
+    },
+    {
+      "id": 81,
+      "name": "ENO1->RPLP0 Monotremata ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2598,
+        5190,
+        3880
+      ],
+      "source": 2598,
+      "target": 3880
+    },
+    {
+      "id": 82,
+      "name": "GAPDH->ENO1 Monotremata ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        491,
+        5191,
+        2596
+      ],
+      "source": 491,
+      "target": 2596
+    },
+    {
+      "id": 83,
+      "name": "ENO1->RPLP0 Monotremata ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2596,
+        5192,
+        3879
+      ],
+      "source": 2596,
+      "target": 3879
+    },
+    {
+      "id": 84,
+      "name": "GAPDH->ENO1 Marsupialia converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Marsupialia",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        363,
+        5193,
+        3086
+      ],
+      "source": 363,
+      "target": 3086
+    },
+    {
+      "id": 85,
+      "name": "ENO1->RPLP0 Marsupialia diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Marsupialia",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        3086,
+        5194,
+        4383
+      ],
+      "source": 3086,
+      "target": 4383
+    },
+    {
+      "id": 86,
+      "name": "GAPDH->ENO1 Marsupialia ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        29,
+        5195,
+        1730
+      ],
+      "source": 29,
+      "target": 1730
+    },
+    {
+      "id": 87,
+      "name": "ENO1->RPLP0 Marsupialia ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1730,
+        5196,
+        4381
+      ],
+      "source": 1730,
+      "target": 4381
+    },
+    {
+      "id": 88,
+      "name": "GAPDH->ENO1 Marsupialia ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        27,
+        5197,
+        1726
+      ],
+      "source": 27,
+      "target": 1726
+    },
+    {
+      "id": 89,
+      "name": "ENO1->RPLP0 Marsupialia ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Marsupialia",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1726,
+        5198,
+        3879
+      ],
+      "source": 1726,
+      "target": 3879
+    },
+    {
+      "id": 90,
+      "name": "GAPDH->ENO1 Birds converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        30,
+        5199,
+        2594
+      ],
+      "source": 30,
+      "target": 2594
+    },
+    {
+      "id": 91,
+      "name": "ENO1->RPLP0 Birds diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2594,
+        5200,
+        3479
+      ],
+      "source": 2594,
+      "target": 3479
+    },
+    {
+      "id": 92,
+      "name": "GAPDH->ENO1 Birds ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        29,
+        5201,
+        2593
+      ],
+      "source": 29,
+      "target": 2593
+    },
+    {
+      "id": 93,
+      "name": "ENO1->RPLP0 Birds ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2593,
+        5202,
+        3425
+      ],
+      "source": 2593,
+      "target": 3425
+    },
+    {
+      "id": 94,
+      "name": "GAPDH->ENO1 Birds ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        27,
+        5203,
+        2127
+      ],
+      "source": 27,
+      "target": 2127
+    },
+    {
+      "id": 95,
+      "name": "ENO1->RPLP0 Birds ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2127,
+        5204,
+        3415
+      ],
+      "source": 2127,
+      "target": 3415
+    },
+    {
+      "id": 96,
+      "name": "GAPDH->ENO1 Reptiles converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Reptiles",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        0,
+        5205,
+        2596
+      ],
+      "source": 0,
+      "target": 2596
+    },
+    {
+      "id": 97,
+      "name": "ENO1->RPLP0 Reptiles diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Reptiles",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2596,
+        5206,
+        3408
+      ],
+      "source": 2596,
+      "target": 3408
+    },
+    {
+      "id": 98,
+      "name": "GAPDH->ENO1 Amphibians converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Amphibians",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2,
+        5207,
+        1719
+      ],
+      "source": 2,
+      "target": 1719
+    },
+    {
+      "id": 99,
+      "name": "ENO1->RPLP0 Amphibians diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Amphibians",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1719,
+        5208,
+        3406
+      ],
+      "source": 1719,
+      "target": 3406
+    },
+    {
+      "id": 100,
+      "name": "GAPDH->ENO1 Ray-finned fish converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        10,
+        5209,
+        1725
+      ],
+      "source": 10,
+      "target": 1725
+    },
+    {
+      "id": 101,
+      "name": "ENO1->RPLP0 Ray-finned fish diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1725,
+        5210,
+        3410
+      ],
+      "source": 1725,
+      "target": 3410
+    },
+    {
+      "id": 102,
+      "name": "GAPDH->ENO1 Ray-finned fish ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        9,
+        5211,
+        1719
+      ],
+      "source": 9,
+      "target": 1719
+    },
+    {
+      "id": 103,
+      "name": "ENO1->RPLP0 Ray-finned fish ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1719,
+        5212,
+        3408
+      ],
+      "source": 1719,
+      "target": 3408
+    },
+    {
+      "id": 104,
+      "name": "GAPDH->ENO1 Ray-finned fish ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        7,
+        5213,
+        1717
+      ],
+      "source": 7,
+      "target": 1717
+    },
+    {
+      "id": 105,
+      "name": "ENO1->RPLP0 Ray-finned fish ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1717,
+        5214,
+        3406
+      ],
+      "source": 1717,
+      "target": 3406
+    },
+    {
+      "id": 106,
+      "name": "GAPDH->ENO1 Cartilaginous fish converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cartilaginous fish",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1355,
+        5215,
+        1708
+      ],
+      "source": 1355,
+      "target": 1708
+    },
+    {
+      "id": 107,
+      "name": "ENO1->RPLP0 Cartilaginous fish diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cartilaginous fish",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1708,
+        5216,
+        3416
+      ],
+      "source": 1708,
+      "target": 3416
+    },
+    {
+      "id": 108,
+      "name": "GAPDH->ENO1 Cartilaginous fish ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1353,
+        5217,
+        1707
+      ],
+      "source": 1353,
+      "target": 1707
+    },
+    {
+      "id": 109,
+      "name": "ENO1->RPLP0 Cartilaginous fish ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1707,
+        5218,
+        3415
+      ],
+      "source": 1707,
+      "target": 3415
+    },
+    {
+      "id": 110,
+      "name": "GAPDH->ENO1 Cartilaginous fish ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        9,
+        5219,
+        1705
+      ],
+      "source": 9,
+      "target": 1705
+    },
+    {
+      "id": 111,
+      "name": "ENO1->RPLP0 Cartilaginous fish ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cartilaginous fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        1705,
+        5220,
+        3413
+      ],
+      "source": 1705,
+      "target": 3413
+    },
+    {
+      "id": 112,
+      "name": "GAPDH->ENO1 Lobe-finned fish converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        949,
+        5221,
+        3092
+      ],
+      "source": 949,
+      "target": 3092
+    },
+    {
+      "id": 113,
+      "name": "ENO1->RPLP0 Lobe-finned fish diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        3092,
+        5222,
+        3427
+      ],
+      "source": 3092,
+      "target": 3427
+    },
+    {
+      "id": 114,
+      "name": "GAPDH->ENO1 Lobe-finned fish ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        948,
+        5223,
+        3091
+      ],
+      "source": 948,
+      "target": 3091
+    },
+    {
+      "id": 115,
+      "name": "ENO1->RPLP0 Lobe-finned fish ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        3091,
+        5224,
+        3426
+      ],
+      "source": 3091,
+      "target": 3426
+    },
+    {
+      "id": 116,
+      "name": "GAPDH->ENO1 Lobe-finned fish ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        942,
+        5225,
+        3089
+      ],
+      "source": 942,
+      "target": 3089
+    },
+    {
+      "id": 117,
+      "name": "ENO1->RPLP0 Lobe-finned fish ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        3089,
+        5226,
+        3425
+      ],
+      "source": 3089,
+      "target": 3425
+    },
+    {
+      "id": 118,
+      "name": "GAPDH->ENO1 Human converge_to_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Human",
+      "flow_kind": "converge_to_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        400,
+        5227,
+        2212
+      ],
+      "source": 400,
+      "target": 2212
+    },
+    {
+      "id": 119,
+      "name": "ENO1->RPLP0 Human diverge_from_middle_mrca",
+      "kind": "clade_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Human",
+      "flow_kind": "diverge_from_middle_mrca",
+      "context_level": 0,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2212,
+        5228,
+        4338
+      ],
+      "source": 2212,
+      "target": 4338
+    },
+    {
+      "id": 120,
+      "name": "GAPDH->ENO1 Human ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        399,
+        5229,
+        2211
+      ],
+      "source": 399,
+      "target": 2211
+    },
+    {
+      "id": 121,
+      "name": "ENO1->RPLP0 Human ancestor_context_level_1",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_1",
+      "context_level": 1,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2211,
+        5230,
+        4337
+      ],
+      "source": 2211,
+      "target": 4337
+    },
+    {
+      "id": 122,
+      "name": "GAPDH->ENO1 Human ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        397,
+        5231,
+        2209
+      ],
+      "source": 397,
+      "target": 2209
+    },
+    {
+      "id": 123,
+      "name": "ENO1->RPLP0 Human ancestor_context_level_2",
+      "kind": "ancestor_context_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Human",
+      "flow_kind": "ancestor_context_level_2",
+      "context_level": 2,
+      "label": "",
+      "score": null,
+      "must_show": false,
+      "nodes": [
+        2209,
+        5232,
+        4335
+      ],
+      "source": 2209,
+      "target": 4335
+    },
+    {
+      "id": 124,
+      "name": "GAPDH->ENO1 Pteropus vampyrus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Bats",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pteropus vampyrus",
+      "score": 495.471791,
+      "must_show": false,
+      "nodes": [
+        540,
+        5233,
+        1704
+      ],
+      "source": 540,
+      "target": 1704
+    },
+    {
+      "id": 125,
+      "name": "GAPDH->ENO1 Balearica regulorum gibbericeps",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Balearica regulorum gibbericeps",
+      "score": 376.658369,
+      "must_show": false,
+      "nodes": [
+        71,
+        5234,
+        2849
+      ],
+      "source": 71,
+      "target": 2849
+    },
+    {
+      "id": 126,
+      "name": "GAPDH->ENO1 Rhinopithecus bieti",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Rhinopithecus bieti",
+      "score": 374.484621,
+      "must_show": false,
+      "nodes": [
+        403,
+        5235,
+        1706
+      ],
+      "source": 403,
+      "target": 1706
+    },
+    {
+      "id": 127,
+      "name": "GAPDH->ENO1 Falco biarmicus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Falco biarmicus",
+      "score": 351.323825,
+      "must_show": false,
+      "nodes": [
+        127,
+        5236,
+        2850
+      ],
+      "source": 127,
+      "target": 2850
+    },
+    {
+      "id": 128,
+      "name": "GAPDH->ENO1 Chroicocephalus ridibundus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Chroicocephalus ridibundus",
+      "score": 344.936062,
+      "must_show": false,
+      "nodes": [
+        330,
+        5237,
+        2831
+      ],
+      "source": 330,
+      "target": 2831
+    },
+    {
+      "id": 129,
+      "name": "GAPDH->ENO1 Falco cherrug",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Falco cherrug",
+      "score": 344.021008,
+      "must_show": false,
+      "nodes": [
+        128,
+        5238,
+        2847
+      ],
+      "source": 128,
+      "target": 2847
+    },
+    {
+      "id": 130,
+      "name": "GAPDH->ENO1 Charadrius vociferus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Charadrius vociferus",
+      "score": 341.51658,
+      "must_show": false,
+      "nodes": [
+        333,
+        5239,
+        2830
+      ],
+      "source": 333,
+      "target": 2830
+    },
+    {
+      "id": 131,
+      "name": "GAPDH->ENO1 Mastomys coucha",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Mastomys coucha",
+      "score": 336.193072,
+      "must_show": false,
+      "nodes": [
+        5,
+        5240,
+        2163
+      ],
+      "source": 5,
+      "target": 2163
+    },
+    {
+      "id": 132,
+      "name": "GAPDH->ENO1 Falco naumanni",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Falco naumanni",
+      "score": 335.624385,
+      "must_show": false,
+      "nodes": [
+        125,
+        5241,
+        2845
+      ],
+      "source": 125,
+      "target": 2845
+    },
+    {
+      "id": 133,
+      "name": "GAPDH->ENO1 Galeopterus variegatus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Species ortholog context",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Galeopterus variegatus",
+      "score": 334.888677,
+      "must_show": false,
+      "nodes": [
+        25,
+        5242,
+        2272
+      ],
+      "source": 25,
+      "target": 2272
+    },
+    {
+      "id": 134,
+      "name": "GAPDH->ENO1 Grus americana",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Grus americana",
+      "score": 331.010732,
+      "must_show": false,
+      "nodes": [
+        72,
+        5243,
+        2837
+      ],
+      "source": 72,
+      "target": 2837
+    },
+    {
+      "id": 135,
+      "name": "GAPDH->ENO1 Rissa tridactyla",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Rissa tridactyla",
+      "score": 330.202093,
+      "must_show": false,
+      "nodes": [
+        324,
+        5244,
+        2828
+      ],
+      "source": 324,
+      "target": 2828
+    },
+    {
+      "id": 136,
+      "name": "GAPDH->ENO1 Vanellus vanellus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Vanellus vanellus",
+      "score": 329.117773,
+      "must_show": false,
+      "nodes": [
+        334,
+        5245,
+        2833
+      ],
+      "source": 334,
+      "target": 2833
+    },
+    {
+      "id": 137,
+      "name": "GAPDH->ENO1 Falco peregrinus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Falco peregrinus",
+      "score": 327.259155,
+      "must_show": false,
+      "nodes": [
+        123,
+        5246,
+        2843
+      ],
+      "source": 123,
+      "target": 2843
+    },
+    {
+      "id": 138,
+      "name": "GAPDH->ENO1 Grus grus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Grus grus",
+      "score": 321.262637,
+      "must_show": false,
+      "nodes": [
+        69,
+        5247,
+        2835
+      ],
+      "source": 69,
+      "target": 2835
+    },
+    {
+      "id": 139,
+      "name": "GAPDH->ENO1 Pygoscelis adeliae",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pygoscelis adeliae",
+      "score": 320.727145,
+      "must_show": false,
+      "nodes": [
+        353,
+        5248,
+        2823
+      ],
+      "source": 353,
+      "target": 2823
+    },
+    {
+      "id": 140,
+      "name": "GAPDH->ENO1 Anser brachyrhynchus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Anser brachyrhynchus",
+      "score": 309.025365,
+      "must_show": true,
+      "nodes": [
+        300,
+        5249,
+        2782
+      ],
+      "source": 300,
+      "target": 2782
+    },
+    {
+      "id": 141,
+      "name": "GAPDH->ENO1 Crocodylus porosus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Reptiles",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Crocodylus porosus",
+      "score": 285.843048,
+      "must_show": true,
+      "nodes": [
+        1,
+        5250,
+        3008
+      ],
+      "source": 1,
+      "target": 3008
+    },
+    {
+      "id": 142,
+      "name": "GAPDH->ENO1 Aquila chrysaetos chrysaetos",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Aquila chrysaetos chrysaetos",
+      "score": 263.263246,
+      "must_show": true,
+      "nodes": [
+        169,
+        5251,
+        2813
+      ],
+      "source": 169,
+      "target": 2813
+    },
+    {
+      "id": 143,
+      "name": "GAPDH->ENO1 Ornithorhynchus anatinus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Monotremata",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Ornithorhynchus anatinus",
+      "score": 219.754769,
+      "must_show": true,
+      "nodes": [
+        494,
+        5252,
+        3051
+      ],
+      "source": 494,
+      "target": 3051
+    },
+    {
+      "id": 144,
+      "name": "GAPDH->ENO1 Danio rerio",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Ray-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Danio rerio",
+      "score": 124.41899,
+      "must_show": true,
+      "nodes": [
+        1262,
+        5253,
+        1866
+      ],
+      "source": 1262,
+      "target": 1866
+    },
+    {
+      "id": 145,
+      "name": "GAPDH->ENO1 Pan paniscus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pan paniscus",
+      "score": 124.304255,
+      "must_show": true,
+      "nodes": [
+        398,
+        5254,
+        2248
+      ],
+      "source": 398,
+      "target": 2248
+    },
+    {
+      "id": 146,
+      "name": "GAPDH->ENO1 Pan troglodytes",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pan troglodytes",
+      "score": 122.916375,
+      "must_show": true,
+      "nodes": [
+        396,
+        5255,
+        2246
+      ],
+      "source": 396,
+      "target": 2246
+    },
+    {
+      "id": 147,
+      "name": "GAPDH->ENO1 Panthera leo",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Panthera leo",
+      "score": 120.512101,
+      "must_show": true,
+      "nodes": [
+        661,
+        5256,
+        2370
+      ],
+      "source": 661,
+      "target": 2370
+    },
+    {
+      "id": 148,
+      "name": "GAPDH->ENO1 Pongo pygmaeus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pongo pygmaeus",
+      "score": 116.575873,
+      "must_show": true,
+      "nodes": [
+        379,
+        5257,
+        2244
+      ],
+      "source": 379,
+      "target": 2244
+    },
+    {
+      "id": 149,
+      "name": "GAPDH->ENO1 Equus asinus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Perissodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Equus asinus",
+      "score": 112.473489,
+      "must_show": true,
+      "nodes": [
+        705,
+        5258,
+        2391
+      ],
+      "source": 705,
+      "target": 2391
+    },
+    {
+      "id": 150,
+      "name": "GAPDH->ENO1 Tursiops truncatus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Tursiops truncatus",
+      "score": 111.150786,
+      "must_show": true,
+      "nodes": [
+        794,
+        5259,
+        2471
+      ],
+      "source": 794,
+      "target": 2471
+    },
+    {
+      "id": 151,
+      "name": "GAPDH->ENO1 Callithrix jacchus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "New World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Callithrix jacchus",
+      "score": 105.913833,
+      "must_show": true,
+      "nodes": [
+        383,
+        5260,
+        2257
+      ],
+      "source": 383,
+      "target": 2257
+    },
+    {
+      "id": 152,
+      "name": "GAPDH->ENO1 Pongo abelii",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pongo abelii",
+      "score": 102.08995,
+      "must_show": true,
+      "nodes": [
+        378,
+        5261,
+        2240
+      ],
+      "source": 378,
+      "target": 2240
+    },
+    {
+      "id": 153,
+      "name": "GAPDH->ENO1 Bos taurus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Bos taurus",
+      "score": 95.800113,
+      "must_show": true,
+      "nodes": [
+        744,
+        5262,
+        2500
+      ],
+      "source": 744,
+      "target": 2500
+    },
+    {
+      "id": 154,
+      "name": "GAPDH->ENO1 Macaca mulatta",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Macaca mulatta",
+      "score": 95.165574,
+      "must_show": true,
+      "nodes": [
+        423,
+        5263,
+        2238
+      ],
+      "source": 423,
+      "target": 2238
+    },
+    {
+      "id": 155,
+      "name": "GAPDH->ENO1 Nomascus leucogenys",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lesser apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Nomascus leucogenys",
+      "score": 79.132574,
+      "must_show": true,
+      "nodes": [
+        391,
+        5264,
+        2242
+      ],
+      "source": 391,
+      "target": 2242
+    },
+    {
+      "id": 156,
+      "name": "GAPDH->ENO1 Xenopus tropicalis",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Amphibians",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Xenopus tropicalis",
+      "score": 62.00158,
+      "must_show": true,
+      "nodes": [
+        1354,
+        5265,
+        3094
+      ],
+      "source": 1354,
+      "target": 3094
+    },
+    {
+      "id": 157,
+      "name": "GAPDH->ENO1 Canis lupus familiaris",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Canis lupus familiaris",
+      "score": 50.078148,
+      "must_show": true,
+      "nodes": [
+        582,
+        5266,
+        2340
+      ],
+      "source": 582,
+      "target": 2340
+    },
+    {
+      "id": 158,
+      "name": "GAPDH->ENO1 Latimeria chalumnae",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Lobe-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Latimeria chalumnae",
+      "score": 33.077566,
+      "must_show": true,
+      "nodes": [
+        949,
+        5267,
+        3092
+      ],
+      "source": 949,
+      "target": 3092
+    },
+    {
+      "id": 159,
+      "name": "GAPDH->ENO1 Rattus norvegicus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "GAPDH->ENO1",
+      "group": "Glires",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Rattus norvegicus",
+      "score": 29.360041,
+      "must_show": true,
+      "nodes": [
+        446,
+        5268,
+        2154
+      ],
+      "source": 446,
+      "target": 2154
+    },
+    {
+      "id": 160,
+      "name": "ENO1->RPLP0 Pteropus vampyrus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Bats",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pteropus vampyrus",
+      "score": 558.759461,
+      "must_show": false,
+      "nodes": [
+        1704,
+        5269,
+        4201
+      ],
+      "source": 1704,
+      "target": 4201
+    },
+    {
+      "id": 161,
+      "name": "ENO1->RPLP0 Rhinopithecus bieti",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Rhinopithecus bieti",
+      "score": 456.138664,
+      "must_show": false,
+      "nodes": [
+        1706,
+        5270,
+        4302
+      ],
+      "source": 1706,
+      "target": 4302
+    },
+    {
+      "id": 162,
+      "name": "ENO1->RPLP0 Bison bison bison",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Bison bison bison",
+      "score": 363.168779,
+      "must_show": false,
+      "nodes": [
+        2512,
+        5271,
+        3963
+      ],
+      "source": 2512,
+      "target": 3963
+    },
+    {
+      "id": 163,
+      "name": "ENO1->RPLP0 Bos indicus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Bos indicus",
+      "score": 363.115165,
+      "must_show": false,
+      "nodes": [
+        2513,
+        5272,
+        3964
+      ],
+      "source": 2513,
+      "target": 3964
+    },
+    {
+      "id": 164,
+      "name": "ENO1->RPLP0 Delphinus delphis",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Delphinus delphis",
+      "score": 354.108024,
+      "must_show": false,
+      "nodes": [
+        2483,
+        5273,
+        4019
+      ],
+      "source": 2483,
+      "target": 4019
+    },
+    {
+      "id": 165,
+      "name": "ENO1->RPLP0 Bos indicus x Bos taurus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Bos indicus x Bos taurus",
+      "score": 352.868978,
+      "must_show": false,
+      "nodes": [
+        2510,
+        5274,
+        3961
+      ],
+      "source": 2510,
+      "target": 3961
+    },
+    {
+      "id": 166,
+      "name": "ENO1->RPLP0 Lagenorhynchus albirostris",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Lagenorhynchus albirostris",
+      "score": 346.985808,
+      "must_show": false,
+      "nodes": [
+        2481,
+        5275,
+        4020
+      ],
+      "source": 2481,
+      "target": 4020
+    },
+    {
+      "id": 167,
+      "name": "ENO1->RPLP0 Globicephala melas",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Globicephala melas",
+      "score": 344.743388,
+      "must_show": false,
+      "nodes": [
+        2484,
+        5276,
+        4024
+      ],
+      "source": 2484,
+      "target": 4024
+    },
+    {
+      "id": 168,
+      "name": "ENO1->RPLP0 Bos javanicus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Bos javanicus",
+      "score": 342.668286,
+      "must_show": false,
+      "nodes": [
+        2508,
+        5277,
+        3959
+      ],
+      "source": 2508,
+      "target": 3959
+    },
+    {
+      "id": 169,
+      "name": "ENO1->RPLP0 Orcinus orca",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Orcinus orca",
+      "score": 336.47987,
+      "must_show": false,
+      "nodes": [
+        2479,
+        5278,
+        4013
+      ],
+      "source": 2479,
+      "target": 4013
+    },
+    {
+      "id": 170,
+      "name": "ENO1->RPLP0 Bos mutus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Bos mutus",
+      "score": 332.5182,
+      "must_show": false,
+      "nodes": [
+        2506,
+        5279,
+        3957
+      ],
+      "source": 2506,
+      "target": 3957
+    },
+    {
+      "id": 171,
+      "name": "ENO1->RPLP0 Capra hircus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Capra hircus",
+      "score": 329.748465,
+      "must_show": false,
+      "nodes": [
+        2522,
+        5280,
+        3945
+      ],
+      "source": 2522,
+      "target": 3945
+    },
+    {
+      "id": 172,
+      "name": "ENO1->RPLP0 Capricornis sumatraensis",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Capricornis sumatraensis",
+      "score": 329.644288,
+      "must_show": false,
+      "nodes": [
+        2523,
+        5281,
+        3946
+      ],
+      "source": 2523,
+      "target": 3946
+    },
+    {
+      "id": 173,
+      "name": "ENO1->RPLP0 Odobenus rosmarus divergens",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Odobenus rosmarus divergens",
+      "score": 326.640973,
+      "must_show": false,
+      "nodes": [
+        2412,
+        5282,
+        3939
+      ],
+      "source": 2412,
+      "target": 3939
+    },
+    {
+      "id": 174,
+      "name": "ENO1->RPLP0 Ovis aries",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Ovis aries",
+      "score": 326.123992,
+      "must_show": false,
+      "nodes": [
+        2520,
+        5283,
+        3951
+      ],
+      "source": 2520,
+      "target": 3951
+    },
+    {
+      "id": 175,
+      "name": "ENO1->RPLP0 Eumetopias jubatus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Eumetopias jubatus",
+      "score": 324.674788,
+      "must_show": false,
+      "nodes": [
+        2411,
+        5284,
+        3941
+      ],
+      "source": 2411,
+      "target": 3941
+    },
+    {
+      "id": 176,
+      "name": "ENO1->RPLP0 Bos taurus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Bos taurus",
+      "score": 309.509012,
+      "must_show": true,
+      "nodes": [
+        2500,
+        5285,
+        3955
+      ],
+      "source": 2500,
+      "target": 3955
+    },
+    {
+      "id": 177,
+      "name": "ENO1->RPLP0 Tursiops truncatus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Cetartiodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Tursiops truncatus",
+      "score": 303.214849,
+      "must_show": true,
+      "nodes": [
+        2471,
+        5286,
+        4003
+      ],
+      "source": 2471,
+      "target": 4003
+    },
+    {
+      "id": 178,
+      "name": "ENO1->RPLP0 Anser brachyrhynchus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Anser brachyrhynchus",
+      "score": 242.417964,
+      "must_show": true,
+      "nodes": [
+        2782,
+        5287,
+        3587
+      ],
+      "source": 2782,
+      "target": 3587
+    },
+    {
+      "id": 179,
+      "name": "ENO1->RPLP0 Canis lupus familiaris",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Canis lupus familiaris",
+      "score": 226.677998,
+      "must_show": true,
+      "nodes": [
+        2340,
+        5288,
+        4269
+      ],
+      "source": 2340,
+      "target": 4269
+    },
+    {
+      "id": 180,
+      "name": "ENO1->RPLP0 Equus asinus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Perissodactyla",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Equus asinus",
+      "score": 209.601952,
+      "must_show": true,
+      "nodes": [
+        2391,
+        5289,
+        4267
+      ],
+      "source": 2391,
+      "target": 4267
+    },
+    {
+      "id": 181,
+      "name": "ENO1->RPLP0 Rattus norvegicus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Glires",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Rattus norvegicus",
+      "score": 209.472756,
+      "must_show": true,
+      "nodes": [
+        2154,
+        5290,
+        4031
+      ],
+      "source": 2154,
+      "target": 4031
+    },
+    {
+      "id": 182,
+      "name": "ENO1->RPLP0 Aquila chrysaetos chrysaetos",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Birds",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Aquila chrysaetos chrysaetos",
+      "score": 168.614429,
+      "must_show": true,
+      "nodes": [
+        2813,
+        5291,
+        3730
+      ],
+      "source": 2813,
+      "target": 3730
+    },
+    {
+      "id": 183,
+      "name": "ENO1->RPLP0 Danio rerio",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Ray-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Danio rerio",
+      "score": 137.110262,
+      "must_show": true,
+      "nodes": [
+        1866,
+        5292,
+        4442
+      ],
+      "source": 1866,
+      "target": 4442
+    },
+    {
+      "id": 184,
+      "name": "ENO1->RPLP0 Xenopus tropicalis",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Amphibians",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Xenopus tropicalis",
+      "score": 134.757388,
+      "must_show": true,
+      "nodes": [
+        3094,
+        5293,
+        3407
+      ],
+      "source": 3094,
+      "target": 3407
+    },
+    {
+      "id": 185,
+      "name": "ENO1->RPLP0 Crocodylus porosus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Reptiles",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Crocodylus porosus",
+      "score": 116.332473,
+      "must_show": true,
+      "nodes": [
+        3008,
+        5294,
+        3531
+      ],
+      "source": 3008,
+      "target": 3531
+    },
+    {
+      "id": 186,
+      "name": "ENO1->RPLP0 Ornithorhynchus anatinus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Monotremata",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Ornithorhynchus anatinus",
+      "score": 103.797633,
+      "must_show": true,
+      "nodes": [
+        3051,
+        5295,
+        4379
+      ],
+      "source": 3051,
+      "target": 4379
+    },
+    {
+      "id": 187,
+      "name": "ENO1->RPLP0 Callithrix jacchus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "New World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Callithrix jacchus",
+      "score": 102.868195,
+      "must_show": true,
+      "nodes": [
+        2257,
+        5296,
+        4137
+      ],
+      "source": 2257,
+      "target": 4137
+    },
+    {
+      "id": 188,
+      "name": "ENO1->RPLP0 Panthera leo",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Carnivores",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Panthera leo",
+      "score": 67.802583,
+      "must_show": true,
+      "nodes": [
+        2370,
+        5297,
+        4221
+      ],
+      "source": 2370,
+      "target": 4221
+    },
+    {
+      "id": 189,
+      "name": "ENO1->RPLP0 Macaca mulatta",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Old World monkeys",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Macaca mulatta",
+      "score": 48.003233,
+      "must_show": true,
+      "nodes": [
+        2238,
+        5298,
+        4324
+      ],
+      "source": 2238,
+      "target": 4324
+    },
+    {
+      "id": 190,
+      "name": "ENO1->RPLP0 Pongo pygmaeus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pongo pygmaeus",
+      "score": 47.629142,
+      "must_show": true,
+      "nodes": [
+        2244,
+        5299,
+        4304
+      ],
+      "source": 2244,
+      "target": 4304
+    },
+    {
+      "id": 191,
+      "name": "ENO1->RPLP0 Latimeria chalumnae",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lobe-finned fish",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Latimeria chalumnae",
+      "score": 46.133551,
+      "must_show": true,
+      "nodes": [
+        3092,
+        5300,
+        3427
+      ],
+      "source": 3092,
+      "target": 3427
+    },
+    {
+      "id": 192,
+      "name": "ENO1->RPLP0 Nomascus leucogenys",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Lesser apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Nomascus leucogenys",
+      "score": 44.969984,
+      "must_show": true,
+      "nodes": [
+        2242,
+        5301,
+        4314
+      ],
+      "source": 2242,
+      "target": 4314
+    },
+    {
+      "id": 193,
+      "name": "ENO1->RPLP0 Pan paniscus",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pan paniscus",
+      "score": 40.954463,
+      "must_show": true,
+      "nodes": [
+        2248,
+        5302,
+        4312
+      ],
+      "source": 2248,
+      "target": 4312
+    },
+    {
+      "id": 194,
+      "name": "ENO1->RPLP0 Pongo abelii",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pongo abelii",
+      "score": 40.535879,
+      "must_show": true,
+      "nodes": [
+        2240,
+        5303,
+        4306
+      ],
+      "source": 2240,
+      "target": 4306
+    },
+    {
+      "id": 195,
+      "name": "ENO1->RPLP0 Pan troglodytes",
+      "kind": "selected_taxon_flow",
+      "gene_pair": "ENO1->RPLP0",
+      "group": "Great apes",
+      "flow_kind": "",
+      "context_level": 0,
+      "label": "Pan troglodytes",
+      "score": 39.801352,
+      "must_show": true,
+      "nodes": [
+        2246,
+        5304,
+        4310
+      ],
+      "source": 2246,
+      "target": 4310
+    }
+  ],
+  "animation_settings": {
+    "enabled": true,
+    "mode": "flow_pulses",
+    "drawPathCurves": true,
+    "pulseEnabled": false,
+    "maxVisiblePaths": 260,
+    "curveSegments": 36,
+    "pulseRadius": 0.072,
+    "pulseSpeed": 0.18,
+    "pulseStagger": 0.007,
+    "curveOpacity": 0.14,
+    "pulseOpacity": 0.88,
+    "focusSceneSpeedBoost": 1.35
+  }
+}
