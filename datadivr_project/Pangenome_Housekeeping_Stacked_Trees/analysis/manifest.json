@@ -1,0 +1,11 @@
+{
+  "projectname": "Pangenome_Housekeeping_Stacked_Trees",
+  "purpose": "Self-contained DataDiVR handoff files for downstream agents and notebooks.",
+  "files": {
+    "Pangenome_Housekeeping_Stacked_Trees.json": "Merged human-readable NetworkX/DataDiVR export.",
+    "Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl": "Pickled NetworkX scene graphs with node, edge, layout, and flow metadata.",
+    "Pangenome_Housekeeping_Stacked_Trees_paths.json": "Explicit numeric DataDiVR node-id paths and per-path metadata.",
+    "datadivr_coordinate_mappings.json": "Per-scene node ids, source node keys, coordinates, colors, and edge ids.",
+    "Pangenome_Housekeeping_Stacked_Trees_datadivr_audit.json": "Generation and validation audit."
+  }
+}

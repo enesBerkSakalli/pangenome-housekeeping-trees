@@ -1,36 +1,11 @@
-# Pangenome_Housekeeping_Stacked_Trees
+# Pangenome Housekeeping Stacked Trees
 
-Fertiges DataDiVR-Projekt fuer die gestapelten housekeeping-gene trees.
+This folder is a complete DataDiVR project. Copy the whole `Pangenome_Housekeeping_Stacked_Trees` directory into `DataDiVR_WebApp/static/projects/` and select it from the preview.
 
-## Inhalt
+Native DataDiVR files are in the project root plus the `layouts`, `layoutsl`, `layoutsRGB`, `links`, `linksRGB`, and `nodesizes` directories.
 
-- `00_all_genes_stacked`: alle drei Gen-Layer gemeinsam.
-- `01_GAPDH_focus`: Fokus auf GAPDH.
-- `02_ENO1_focus`: Fokus auf ENO1.
-- `03_RPLP0_focus`: Fokus auf RPLP0.
+Additional sidecars:
 
-Das Projekt enthaelt 5.345 Nodes und 5.460 Edges. Die Tree-Layer nutzen GAPDH,
-ENO1 und RPLP0 mit denselben 700 Ortholog-Spezies plus neutralem Human-Subtree.
-
-## Nutzung
-
-Lege diesen Ordner unter `DataDiVR_WebApp/static/projects/` ab, starte den
-DataDiVR Flask-Server und oeffne:
-
-```text
-http://127.0.0.1:3000/preview
-```
-
-Dann im Preview-UI `Pangenome_Housekeeping_Stacked_Trees` auswaehlen.
-
-## Validierung
-
-Der Export wurde mit `datadivr_housekeeping_project.py` erzeugt. Das zugehoerige
-Audit liegt hier:
-
-```text
-outputs_3d/Pangenome_Housekeeping_Stacked_Trees_datadivr_audit.json
-```
-
-Der aktuelle Audit-Status: keine fehlenden Dateien, finite Positionen,
-Positionen im Unit-Cube.
+- `paths.json` stores explicit paths as numeric DataDiVR node IDs.
+- `coordinate_mappings.json` maps numeric node IDs to node keys, annotations, colors, and coordinates in each scene.
+- `analysis/` bundles the merged JSON export, NetworkX scene pickle, paths, coordinate mappings, and audit files for downstream agents.

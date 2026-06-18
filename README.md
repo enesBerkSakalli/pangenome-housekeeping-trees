@@ -18,7 +18,7 @@ subtree in every layer.
 - `outputs_3d/datadivr_coordinate_mappings.json` exposes explicit per-scene
   DataDiVR node coordinates in the normalized 0..1 unit cube.
 - `datadivr_project/Pangenome_Housekeeping_Stacked_Trees/` is a ready-to-copy
-  DataDiVR project folder.
+  DataDiVR project folder. This is the final handoff artifact.
 - `external/DataDiVR_WebApp` is an external DataDiVR checkout used for the local
   WebGL/VR preview.
 
@@ -78,6 +78,16 @@ For a ready-made project copy, use:
 ```text
 datadivr_project/Pangenome_Housekeeping_Stacked_Trees/
 ```
+
+The project includes non-native sidecars for agents and downstream tools:
+
+- `paths.json` and `pfile.json["paths"]` store explicit paths as numeric
+  DataDiVR node IDs, for example `[[376, 5109, 5110, 2239], ...]`.
+- `coordinate_mappings.json` maps numeric DataDiVR node IDs to source node keys,
+  annotations, colors, and per-scene coordinates.
+- `analysis/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl` stores the
+  full NetworkX scene objects.
+- `analysis/manifest.json` lists the bundled analysis files.
 
 The local workspace includes small preview customizations for node radii and
 cleaner legends. They are captured in

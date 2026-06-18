@@ -1,16 +1,30 @@
 diff --git a/static/js/webGL_preview.js b/static/js/webGL_preview.js
-index 7891fe4..1be7b27 100644
+index 7891fe4..1da991a 100644
 --- a/static/js/webGL_preview.js
 +++ b/static/js/webGL_preview.js
-@@ -9,6 +9,7 @@ var actLinks = 0;
+@@ -9,6 +9,21 @@ var actLinks = 0;
  var linksRGB = [];
  var linksRGBTemp = [];
  var actLinksRGB = 0;
 +var nodeSizes = [];
++var pathData = null;
++var pathAnimations = [];
++var pathAnimationSettings = {
++    enabled: true,
++    drawPathCurves: true,
++    maxVisiblePaths: 180,
++    curveSegments: 36,
++    pulseRadius: 0.072,
++    pulseSpeed: 0.18,
++    pulseStagger: 0.007,
++    curveOpacity: 0.34,
++    pulseOpacity: 0.88,
++    focusSceneSpeedBoost: 1.35
++};
  //var pfile = {"val":{"name":"AUToCOre","layouts":["01-Autocore_globalXYZ","02-Autocore_mix_globalclusterXYZ","03-Autocore_clusterfeaturesXYZ"],"layoutsRGB":["01-Autocore_globalRGB","02-Autocore_mix_globalclusterRGB","03-Autocore_clusterfeaturesRGB"],"links":["Autocore_linksXYZ"],"linksRGB":["Autocore_linksRGB"]},"fn":"project"};
  var pfile = {};
  var mesh, renderer, scene, camera, controls;
-@@ -16,6 +17,7 @@ var mesh, renderer, scene, camera, controls;
+@@ -16,6 +31,7 @@ var mesh, renderer, scene, camera, controls;
  var data = {};
  var scale = 20; //20
  const nscale = .045; //0.04
@@ -18,7 +32,7 @@ index 7891fe4..1be7b27 100644
  var nodemeshes = [];
  var linkmeshes = [];
  var link_ids = [];
-@@ -108,6 +110,22 @@ function getNColor(index) {
+@@ -108,6 +124,22 @@ function getNColor(index) {
      return color;
  }
  
@@ -41,7 +55,140 @@ index 7891fe4..1be7b27 100644
  function getLColor(index) {
      var i = index * 4;
      var scene = actLinksRGB;
-@@ -219,7 +237,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+@@ -124,6 +156,132 @@ function getLink(index) {
+     //console.log("created link from " + link["start"] + " to " + link["end"]); 
+     return link;
+ }
++
++function activePathSettings() {
++    return Object.assign({}, pathAnimationSettings, pfile["pathAnimationSettings"] || {});
++}
++
++function colorForPathRecord(record, fallbackIndex) {
++    const palette = [
++        0xCFE6FF,
++        0xFFF2CC,
++        0x8BE9FD,
++        0xA7F3D0,
++        0xFACC15,
++        0xF9A8D4,
++        0xC084FC
++    ];
++    if (record && record["kind"] === "selected_taxon_flow") {
++        return 0xFFF2CC;
++    }
++    return palette[fallbackIndex % palette.length];
++}
++
++function clearPathAnimations() {
++    if (!scene) {
++        pathAnimations = [];
++        return;
++    }
++    for (const item of pathAnimations) {
++        if (item.curveMesh) {
++            scene.remove(item.curveMesh);
++        }
++        if (item.pulseMesh) {
++            scene.remove(item.pulseMesh);
++        }
++    }
++    pathAnimations = [];
++}
++
++function pathRecordVisibleInActiveScene(record) {
++    if (!record || !record["gene_pair"]) {
++        return true;
++    }
++    const layoutName = pfile["layouts"] && pfile["layouts"][actLayout] ? pfile["layouts"][actLayout] : "";
++    if (!layoutName || layoutName === "00_all_genes_stacked") {
++        return true;
++    }
++    const parts = record["gene_pair"].split("->");
++    return parts.some(function(gene) { return layoutName.indexOf(gene) >= 0; });
++}
++
++function makePathAnimations() {
++    clearPathAnimations();
++    const settings = activePathSettings();
++    if (!settings.enabled || !pathData || !Array.isArray(pathData["path_records"])) {
++        return;
++    }
++    const visibleRecords = pathData["path_records"].filter(pathRecordVisibleInActiveScene);
++    const maxVisible = Math.min(Number(settings.maxVisiblePaths) || 0, visibleRecords.length);
++    const segmentCount = Math.max(4, Number(settings.curveSegments) || 36);
++    for (let index = 0; index < maxVisible; index++) {
++        const record = visibleRecords[index];
++        const nodeIds = Array.isArray(record["nodes"]) ? record["nodes"] : [];
++        const points = [];
++        for (const nodeId of nodeIds) {
++            if (nodeId < nodemeshes.length && nodemeshes[nodeId]) {
++                points.push(nodemeshes[nodeId].position.clone());
++            }
++        }
++        if (points.length < 2) {
++            continue;
++        }
++        const curve = points.length > 2
++            ? new THREE.CatmullRomCurve3(points, false, "centripetal", 0.35)
++            : new THREE.LineCurve3(points[0], points[1]);
++        let curveMesh = null;
++        const color = colorForPathRecord(record, index);
++        if (settings.drawPathCurves) {
++            const curveGeometry = new THREE.BufferGeometry().setFromPoints(curve.getPoints(segmentCount));
++            const curveMaterial = new THREE.LineBasicMaterial({
++                color: color,
++                opacity: Math.max(0.02, Math.min(1.0, Number(settings.curveOpacity) || 0.34)),
++                transparent: true
++            });
++            curveMesh = new THREE.Line(curveGeometry, curveMaterial);
++            curveMesh.layers.set(1);
++            curveMesh.name = "animated_path_curve";
++            scene.add(curveMesh);
++        }
++        const pulseGeometry = new THREE.SphereGeometry(
++            Math.max(0.01, Number(settings.pulseRadius) || 0.072),
++            16,
++            8
++        );
++        const pulseMaterial = new THREE.MeshBasicMaterial({
++            color: color,
++            opacity: Math.max(0.05, Math.min(1.0, Number(settings.pulseOpacity) || 0.88)),
++            transparent: true
++        });
++        const pulseMesh = new THREE.Mesh(pulseGeometry, pulseMaterial);
++        pulseMesh.layers.set(1);
++        pulseMesh.name = "animated_path_pulse";
++        scene.add(pulseMesh);
++        pathAnimations.push({
++            curve: curve,
++            curveMesh: curveMesh,
++            pulseMesh: pulseMesh,
++            offset: (index * (Number(settings.pulseStagger) || 0.007)) % 1.0,
++            speed: Number(settings.pulseSpeed) || 0.18,
++            record: record
++        });
++    }
++}
++
++function updatePathAnimations() {
++    if (!pathAnimations.length) {
++        return;
++    }
++    const settings = activePathSettings();
++    const boost = pfile["layouts"] && pfile["layouts"][actLayout] !== "00_all_genes_stacked"
++        ? (Number(settings.focusSceneSpeedBoost) || 1.0)
++        : 1.0;
++    const now = performance.now() / 1000.0;
++    for (const item of pathAnimations) {
++        const t = (item.offset + (now * item.speed * boost)) % 1.0;
++        item.pulseMesh.position.copy(item.curve.getPointAt(t));
++    }
++}
+ function updateNodeColors(data) {
+ 
+     for (let i = 0; i < (nodemeshes.length); i++) {
+@@ -219,7 +377,7 @@ async function updateLayoutTemp(path_low, path_hi) {
          for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
              if (i < maxNodesPreview) {
  
@@ -50,7 +197,7 @@ index 7891fe4..1be7b27 100644
                  var color = getNColor(i);
  
                  if (color[3] > 100) {
-@@ -242,6 +260,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+@@ -242,6 +400,7 @@ async function updateLayoutTemp(path_low, path_hi) {
                  //const nmaterial = new THREE.MeshBasicMaterial({ color: RGB2HTML(color[0], color[1], color[2])});//"rgb(155, 102, 102)" 
                  const cube = new THREE.Mesh(ngeometry, nmaterial);
                  cube.name = i;//;
@@ -58,7 +205,15 @@ index 7891fe4..1be7b27 100644
                  cube.layers.set(0);
                  nodemeshes.push(cube);
  
-@@ -330,7 +349,7 @@ function makeNetwork() {
+@@ -300,6 +459,7 @@ async function updateLayoutTemp(path_low, path_hi) {
+             linkmeshes.push(line)
+             count = l
+         }
++        makePathAnimations();
+     }
+ }
+ 
+@@ -330,7 +490,7 @@ function makeNetwork() {
          for (let i = 0; i < (pfile["nodecount"] + pfile["labelcount"]); i++) {
              if (i < maxNodesPreview) {
  
@@ -67,7 +222,7 @@ index 7891fe4..1be7b27 100644
                  var color = getNColor(i);
  
  
-@@ -356,6 +375,7 @@ function makeNetwork() {
+@@ -356,6 +516,7 @@ function makeNetwork() {
  
                  const cube = new THREE.Mesh(ngeometry, nmaterial);
                  cube.name = i;//;
@@ -75,7 +230,23 @@ index 7891fe4..1be7b27 100644
                  cube.layers.set(0);
                  nodemeshes.push(cube);
                  
-@@ -509,8 +529,10 @@ function right() {
+@@ -462,6 +623,7 @@ function makeNetwork() {
+         }
+ 
+         //console.log(linkmeshes);
++        makePathAnimations();
+     }
+ }
+ 
+@@ -499,6 +661,7 @@ function onWindowResize() {
+ function animate() {
+     requestAnimationFrame(animate);
+     controls.update();
++    updatePathAnimations();
+     renderer.render(scene, camera);
+ }
+ function right() {
+@@ -509,8 +672,10 @@ function right() {
  }
  function nodescale(scale) {
      //console.log(scale);
@@ -87,11 +258,13 @@ index 7891fe4..1be7b27 100644
      }
      indexsphere.scale.set(scale + 2, scale + 2, scale + 2);
      //render();
-@@ -639,7 +661,21 @@ function clearProject() {
+@@ -639,7 +804,23 @@ function clearProject() {
      actLinks = 0;
      linksRGB = [];
      actLinksRGB = 0;
 +    nodeSizes = [];
++    pathData = null;
++    clearPathAnimations();
 +
 +}
  
@@ -109,7 +282,7 @@ index 7891fe4..1be7b27 100644
  }
  
  
-@@ -672,6 +708,13 @@ async function downloadProjectTextures() {
+@@ -672,6 +853,25 @@ async function downloadProjectTextures() {
          linksRGB.push(await DownloadImage(path));
      }
  
@@ -120,13 +293,26 @@ index 7891fe4..1be7b27 100644
 +        }
 +    }
 +
++    if (pfile["pathMetadataFile"]) {
++        var pathMetadata = "/static/projects/" + pfile["name"] + "/" + pfile["pathMetadataFile"] + ".json";
++        pathData = await DownloadJSON(pathMetadata);
++    } else if (pfile["paths"]) {
++        pathData = {
++            "paths": pfile["paths"],
++            "path_records": pfile["paths"].map(function(nodes, index) {
++                return {"id": index, "name": "path " + index, "nodes": nodes};
++            })
++        };
++    }
++
      makeNetwork(); //
      var text = '{"id":"x", "success": "true", "fn": "projectLoaded"}';
      var out = JSON.parse(text);
-@@ -701,4 +744,3 @@ function hexToTHREEColor(hex) {
+@@ -700,5 +900,3 @@ function hexToTHREEColor(hex) {
+     color.set(hex);
      return color;
  }
- 
+-
 -
 diff --git a/templates/mLegend.html b/templates/mLegend.html
 index 09ebfc2..e54b6a1 100644

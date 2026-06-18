@@ -37,6 +37,8 @@ PROJECT_DIR = os.path.join(DATADIVR_REPO, "static", "projects", PROJECT_NAME)
 OUTPUT_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}.json")
 OUTPUT_AUDIT = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_datadivr_audit.json")
 OUTPUT_SCENES_PICKLE = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_networkx_scenes.pkl")
+OUTPUT_PATHS_JSON = os.path.join(ROOT, "outputs_3d", f"{PROJECT_NAME}_paths.json")
+OUTPUT_COORDINATES_JSON = os.path.join(ROOT, "outputs_3d", "datadivr_coordinate_mappings.json")
 
 SCENE_NAMES = [
     "00_all_genes_stacked",
@@ -60,6 +62,20 @@ INTERLAYER_SELECTED_TAXON_NODE_COLOR = (28, 34, 46, 44)
 INTERLAYER_CLADE_FLOW_ALPHA = 220
 INTERLAYER_SELECTED_TAXON_FLOW_ALPHA = 92
 INTERLAYER_SELECTED_TAXON_FOCUS_ALPHA = 172
+
+PATH_ANIMATION_SETTINGS = {
+    "enabled": True,
+    "mode": "flow_pulses",
+    "drawPathCurves": True,
+    "maxVisiblePaths": 180,
+    "curveSegments": 36,
+    "pulseRadius": 0.072,
+    "pulseSpeed": 0.18,
+    "pulseStagger": 0.007,
+    "curveOpacity": 0.34,
+    "pulseOpacity": 0.88,
+    "focusSceneSpeedBoost": 1.35,
+}
 
 DEFAULT_PDATA = {
     "layoutsDD": "0",
@@ -578,6 +594,7 @@ def add_interlayer_species_connections(
     node_records = []
     clade_flow_records = []
     selected_taxon_flow_records = []
+    path_records = []
     group_order = [group for group in [*pst.MAMMAL_CLADE_ORDER, "Human"] if group in grouped_taxa]
     adjacent_pairs = list(zip(pst.GENE_ORDER[:-1], pst.GENE_ORDER[1:]))
 
@@ -864,6 +881,18 @@ def add_interlayer_species_connections(
                 "source": source,
                 "target": target,
                 "flow_kind": flow_kind,
+                "path_nodes": [source, control_a, control_b, target],
+            }
+        )
+        path_records.append(
+            {
+                "name": f"{gene_pair} {group} {flow_kind}",
+                "kind": "clade_flow",
+                "gene_pair": gene_pair,
+                "group": group,
+                "flow_kind": flow_kind,
+                "taxa": len(grouped_taxa[group]),
+                "path_nodes": [source, control_a, control_b, target],
             }
         )
 
@@ -988,6 +1017,20 @@ def add_interlayer_species_connections(
                 "group": group,
                 "score": round(float(record["score"]), 6),
                 "must_show": bool(record["must_show"]),
+                "path_nodes": [source_key, control_a, control_b, target_key],
+            }
+        )
+        path_records.append(
+            {
+                "name": f"{gene_pair} {label}",
+                "kind": "selected_taxon_flow",
+                "gene_pair": gene_pair,
+                "group": group,
+                "taxon_key": record["key"],
+                "label": label,
+                "score": round(float(record["score"]), 6),
+                "must_show": bool(record["must_show"]),
+                "path_nodes": [source_key, control_a, control_b, target_key],
             }
         )
 
@@ -997,6 +1040,7 @@ def add_interlayer_species_connections(
         "edges": edge_records,
         "clade_flow_records": clade_flow_records,
         "selected_taxon_flow_records": selected_taxon_flow_records,
+        "path_records": path_records,
     }
 
 
@@ -1066,6 +1110,7 @@ def build_combined_graphs() -> tuple[list[nx.Graph], dict]:
             "info": INFO,
             "geometry": "stacked_3d_hyperbolic_unrooted_tree_layouts",
             "source": "plotly_stacked_trees.py inferred NetworkX trees",
+            "path_records": interlayer_records["path_records"],
         }
     )
 
@@ -1147,6 +1192,7 @@ def build_combined_graphs() -> tuple[list[nx.Graph], dict]:
         "interlayer_flow_nodes": len(interlayer_records["flow_nodes"]),
         "interlayer_clade_flow_segments": len(interlayer_records["clade_flow_records"]),
         "interlayer_selected_taxon_flow_tracks": len(interlayer_records["selected_taxon_flow_records"]),
+        "explicit_path_records": len(interlayer_records["path_records"]),
         "interlayer_shared_taxa": len(interlayer_taxon_records),
         "adjacent_gene_pair_species_connections": adjacent_pair_taxa,
         "visible_selected_taxon_flows_by_pair": dict(sorted(selected_taxon_flows_by_pair.items())),
@@ -1289,11 +1335,116 @@ def rgba_texture_pixels(colors: list[tuple[int, int, int, int]], width: int, hei
 
 def project_subdirs(project_dir: str) -> None:
     os.makedirs(project_dir, exist_ok=True)
-    for dirname in ("layouts", "layoutsl", "layoutsRGB", "links", "linksRGB", "nodesizes", "legends"):
+    for dirname in ("layouts", "layoutsl", "layoutsRGB", "links", "linksRGB", "nodesizes", "legends", "analysis"):
         os.makedirs(os.path.join(project_dir, dirname), exist_ok=True)
 
 
-def merged_json_from_scenes(scenes: list[nx.Graph], node_order: list[str], edge_order: list[tuple[str, str]]) -> dict:
+def path_payload_from_scenes(scenes: list[nx.Graph], node_order: list[str]) -> dict:
+    node_to_id = {node: index for index, node in enumerate(node_order)}
+    records = []
+    paths = []
+    for index, record in enumerate(scenes[0].graph.get("path_records", [])):
+        node_ids = [node_to_id[node] for node in record["path_nodes"] if node in node_to_id]
+        if len(node_ids) < 2:
+            continue
+        path_record = {
+            "id": index,
+            "name": record.get("name", f"path {index}"),
+            "kind": record.get("kind", ""),
+            "gene_pair": record.get("gene_pair", ""),
+            "group": record.get("group", ""),
+            "flow_kind": record.get("flow_kind", ""),
+            "label": record.get("label", ""),
+            "score": record.get("score", None),
+            "must_show": bool(record.get("must_show", False)),
+            "nodes": node_ids,
+            "source": node_ids[0],
+            "target": node_ids[-1],
+        }
+        records.append(path_record)
+        paths.append(node_ids)
+    return {
+        "projectname": PROJECT_NAME,
+        "coordinate_system": "DataDiVR node ids; use layout textures or datadivr_coordinate_mappings.json for scene-specific coordinates",
+        "animation_settings": PATH_ANIMATION_SETTINGS,
+        "paths": paths,
+        "path_records": records,
+    }
+
+
+def coordinate_payload_from_scenes(
+    scenes: list[nx.Graph],
+    node_order: list[str],
+    edge_order: list[tuple[str, str]],
+) -> dict:
+    node_to_id = {node: index for index, node in enumerate(node_order)}
+    edge_to_id = {edge: index for index, edge in enumerate(edge_order)}
+    base_nodes = []
+    for node in node_order:
+        attrs = scenes[0].nodes[node]
+        annotation = attrs.get("annotation", {})
+        base_nodes.append(
+            {
+                "id": node_to_id[node],
+                "node_key": node,
+                "name": attrs.get("name", node),
+                "annotation": annotation,
+                "gene": annotation.get("gene"),
+                "source_node_id": annotation.get("node_id"),
+                "node_radius": attrs.get("node_radius", 1.0),
+            }
+        )
+
+    scene_payload = {}
+    for scene in scenes:
+        layout_name = scene.graph["layoutname"]
+        scene_payload[layout_name] = {
+            "nodes": [
+                {
+                    "id": node_to_id[node],
+                    "node_key": node,
+                    "position_unit_cube": scene.nodes[node]["pos"],
+                    "position_preview": [
+                        scene.nodes[node]["pos"][1] * -20.0,
+                        scene.nodes[node]["pos"][2] * 20.0,
+                        scene.nodes[node]["pos"][0] * 20.0,
+                    ],
+                    "rgba": scene.nodes[node]["nodecolor"],
+                    "node_radius": scene.nodes[node].get("node_radius", 1.0),
+                    "cluster": scene.nodes[node].get("cluster"),
+                }
+                for node in node_order
+            ],
+            "links": [
+                {
+                    "id": edge_to_id[(source, target)],
+                    "source": node_to_id[source],
+                    "target": node_to_id[target],
+                    "source_key": source,
+                    "target_key": target,
+                    "rgba": scene.edges[source, target]["linkcolor"],
+                }
+                for source, target in edge_order
+            ],
+        }
+
+    return {
+        "projectname": PROJECT_NAME,
+        "node_id_contract": "Numeric ids match nodes.json, pfile paths, paths.json, and all DataDiVR textures.",
+        "position_unit_cube": "DataDiVR texture coordinates before preview transform.",
+        "position_preview": "Preview-space coordinates after webGL_preview.js transform with scale=20.",
+        "nodes": base_nodes,
+        "scenes": scene_payload,
+    }
+
+
+def merged_json_from_scenes(
+    scenes: list[nx.Graph],
+    node_order: list[str],
+    edge_order: list[tuple[str, str]],
+    path_payload: dict,
+    coordinate_payload: dict,
+) -> dict:
     node_to_id = {node: index for index, node in enumerate(node_order)}
     return {
         "directed": False,
@@ -1302,6 +1453,10 @@ def merged_json_from_scenes(scenes: list[nx.Graph], node_order: list[str], edge_
         "info": INFO,
         "graphlayouts": [scene.graph["layoutname"] for scene in scenes],
         "annotationTypes": True,
+        "paths": path_payload["paths"],
+        "path_records": path_payload["path_records"],
+        "path_animation_settings": path_payload["animation_settings"],
+        "coordinate_mappings": coordinate_payload,
         "nodes": [
             {
                 "id": node_to_id[node],
@@ -1351,6 +1506,8 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
     edge_order = list(scenes[0].edges())
     node_to_id = {node: index for index, node in enumerate(node_order)}
     edge_id_pairs = [(node_to_id[source], node_to_id[target]) for source, target in edge_order]
+    path_payload = path_payload_from_scenes(scenes, node_order)
+    coordinate_payload = coordinate_payload_from_scenes(scenes, node_order, edge_order)
 
     nodes_json = {
         "nodes": [
@@ -1373,6 +1530,10 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
         json.dump(nodes_json, fh, indent=2)
     with open(os.path.join(PROJECT_DIR, "links.json"), "w") as fh:
         json.dump(links_json, fh, indent=2)
+    with open(os.path.join(PROJECT_DIR, "paths.json"), "w") as fh:
+        json.dump(path_payload, fh, indent=2)
+    with open(os.path.join(PROJECT_DIR, "coordinate_mappings.json"), "w") as fh:
+        json.dump(coordinate_payload, fh, indent=2)
 
     for scene in scenes:
         name = scene.graph["layoutname"]
@@ -1405,6 +1566,10 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
         "links": [SCENE_NAMES[0]],
         "linksRGB": SCENE_NAMES,
         "nodeSizes": SCENE_NAMES,
+        "paths": path_payload["paths"],
+        "pathMetadataFile": "paths",
+        "pathAnimationSettings": PATH_ANIMATION_SETTINGS,
+        "coordinateMappingsFile": "coordinate_mappings",
         "selections": named_group_selections(scenes, node_order),
         "linkSelections": named_link_group_selections(scenes, edge_order),
         "scenes": SCENE_NAMES,
@@ -1421,11 +1586,31 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
         json.dump(pfile, fh, indent=2)
     with open(os.path.join(PROJECT_DIR, "pdata.json"), "w") as fh:
         json.dump(DEFAULT_PDATA, fh, indent=2)
+    with open(os.path.join(PROJECT_DIR, "README.md"), "w") as fh:
+        fh.write(
+            "# Pangenome Housekeeping Stacked Trees\n\n"
+            "This folder is a complete DataDiVR project. Copy the whole "
+            "`Pangenome_Housekeeping_Stacked_Trees` directory into "
+            "`DataDiVR_WebApp/static/projects/` and select it from the preview.\n\n"
+            "Native DataDiVR files are in the project root plus the `layouts`, "
+            "`layoutsl`, `layoutsRGB`, `links`, `linksRGB`, and `nodesizes` "
+            "directories.\n\n"
+            "Additional sidecars:\n\n"
+            "- `paths.json` stores explicit paths as numeric DataDiVR node IDs.\n"
+            "- `coordinate_mappings.json` maps numeric node IDs to node keys, "
+            "annotations, colors, and coordinates in each scene.\n"
+            "- `analysis/` bundles the merged JSON export, NetworkX scene pickle, "
+            "paths, coordinate mappings, and audit files for downstream agents.\n"
+        )
 
-    merged = merged_json_from_scenes(scenes, node_order, edge_order)
+    merged = merged_json_from_scenes(scenes, node_order, edge_order, path_payload, coordinate_payload)
     os.makedirs(os.path.dirname(OUTPUT_JSON), exist_ok=True)
     with open(OUTPUT_JSON, "w") as fh:
         json.dump(merged, fh, indent=2)
+    with open(OUTPUT_PATHS_JSON, "w") as fh:
+        json.dump(path_payload, fh, indent=2)
+    with open(OUTPUT_COORDINATES_JSON, "w") as fh:
+        json.dump(coordinate_payload, fh, indent=2)
     with open(OUTPUT_SCENES_PICKLE, "wb") as fh:
         pickle.dump(scenes, fh)
 
@@ -1436,6 +1621,9 @@ def write_datadivr_project(scenes: list[nx.Graph]) -> dict:
         "project_dir": PROJECT_DIR,
         "merged_json": OUTPUT_JSON,
         "networkx_scenes": OUTPUT_SCENES_PICKLE,
+        "paths_json": OUTPUT_PATHS_JSON,
+        "coordinate_mappings": OUTPUT_COORDINATES_JSON,
+        "path_count": len(path_payload["paths"]),
     }
 
 
@@ -1444,6 +1632,8 @@ def validate_project(summary: dict, scenes: list[nx.Graph]) -> dict:
         os.path.join(PROJECT_DIR, "pfile.json"),
         os.path.join(PROJECT_DIR, "nodes.json"),
         os.path.join(PROJECT_DIR, "links.json"),
+        os.path.join(PROJECT_DIR, "paths.json"),
+        os.path.join(PROJECT_DIR, "coordinate_mappings.json"),
     ]
     for scene_name in SCENE_NAMES:
         required.extend(
@@ -1474,12 +1664,56 @@ def validate_project(summary: dict, scenes: list[nx.Graph]) -> dict:
     }
 
 
+def write_project_analysis_bundle(audit: dict) -> None:
+    analysis_dir = os.path.join(PROJECT_DIR, "analysis")
+    os.makedirs(analysis_dir, exist_ok=True)
+    manifest = {
+        "projectname": PROJECT_NAME,
+        "purpose": "Self-contained DataDiVR handoff files for downstream agents and notebooks.",
+        "files": {
+            f"{PROJECT_NAME}.json": "Merged human-readable NetworkX/DataDiVR export.",
+            f"{PROJECT_NAME}_networkx_scenes.pkl": "Pickled NetworkX scene graphs with node, edge, layout, and flow metadata.",
+            f"{PROJECT_NAME}_paths.json": "Explicit numeric DataDiVR node-id paths and per-path metadata.",
+            "datadivr_coordinate_mappings.json": "Per-scene node ids, source node keys, coordinates, colors, and edge ids.",
+            f"{PROJECT_NAME}_datadivr_audit.json": "Generation and validation audit.",
+        },
+    }
+    with open(os.path.join(analysis_dir, "manifest.json"), "w") as fh:
+        json.dump(manifest, fh, indent=2)
+    with open(os.path.join(analysis_dir, "README.md"), "w") as fh:
+        fh.write(
+            "# DataDiVR analysis bundle\n\n"
+            "This directory keeps the non-native analysis sidecars inside the "
+            "DataDiVR project. DataDiVR renders the texture and JSON files in "
+            "the project root; scripts and agents should use these sidecars for "
+            "path semantics, coordinate lookup, and NetworkX-level inspection.\n\n"
+            "- `../paths.json` and `Pangenome_Housekeeping_Stacked_Trees_paths.json` "
+            "use numeric DataDiVR node ids.\n"
+            "- `datadivr_coordinate_mappings.json` maps those ids back to node keys "
+            "and per-scene coordinates.\n"
+            "- `Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl` contains "
+            "the full NetworkX scene objects.\n"
+        )
+    for path in (
+        OUTPUT_JSON,
+        OUTPUT_SCENES_PICKLE,
+        OUTPUT_PATHS_JSON,
+        OUTPUT_COORDINATES_JSON,
+        OUTPUT_AUDIT,
+    ):
+        if os.path.exists(path):
+            shutil.copy2(path, os.path.join(analysis_dir, os.path.basename(path)))
+    with open(os.path.join(analysis_dir, "audit_summary.json"), "w") as fh:
+        json.dump(audit, fh, indent=2)
+
+
 def main() -> None:
     scenes, audit = build_combined_graphs()
     summary = write_datadivr_project(scenes)
     audit.update(validate_project(summary, scenes))
     with open(OUTPUT_AUDIT, "w") as fh:
         json.dump(audit, fh, indent=2)
+    write_project_analysis_bundle(audit)
     print(json.dumps(audit, indent=2))
 
 

@@ -21,6 +21,7 @@
   "interlayer_flow_nodes": 236,
   "interlayer_clade_flow_segments": 46,
   "interlayer_selected_taxon_flow_tracks": 72,
+  "explicit_path_records": 118,
   "interlayer_shared_taxa": 701,
   "adjacent_gene_pair_species_connections": {
     "GAPDH->ENO1": 701,
@@ -182,6 +183,9 @@
   "project_dir": "/Users/berksakalli/Projects/Pangenome/external/DataDiVR_WebApp/static/projects/Pangenome_Housekeeping_Stacked_Trees",
   "merged_json": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees.json",
   "networkx_scenes": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees_networkx_scenes.pkl",
+  "paths_json": "/Users/berksakalli/Projects/Pangenome/outputs_3d/Pangenome_Housekeeping_Stacked_Trees_paths.json",
+  "coordinate_mappings": "/Users/berksakalli/Projects/Pangenome/outputs_3d/datadivr_coordinate_mappings.json",
+  "path_count": 118,
   "missing_files": [],
   "finite_positions": true,
   "positions_in_unit_cube": true,
